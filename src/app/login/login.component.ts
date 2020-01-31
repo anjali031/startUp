@@ -18,8 +18,13 @@ export class LoginComponent implements OnInit {
 
   OnSubmit(username, password) {
     this.userService.loginUser(username, password).subscribe((data: any) => {
-     localStorage.setItem('token', data.token);
-     this.router.navigate(['/forms']);
+      localStorage.setItem('token', data.token);
+      if (data.IS_JEWELLER == true ) {
+        this.router.navigate(['/createview']);
+      } else {
+        this.router.navigate(['/customer']);
+      }
+
    },
    (err: HttpErrorResponse) => {
      this.isLoginError = true;
@@ -27,3 +32,4 @@ export class LoginComponent implements OnInit {
  }
 
 }
+

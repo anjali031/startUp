@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../shared/user.service';
 import { NgForm } from '@angular/forms';
 import {User} from '../shared/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-as-jeweler',
@@ -11,7 +12,7 @@ import {User} from '../shared/user.model';
 export class AsJewelerComponent implements OnInit {
   user: User;
   emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$';
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
     this.resetForm();
@@ -35,6 +36,7 @@ export class AsJewelerComponent implements OnInit {
     .subscribe(
       res => {
         console.log(res);
+        this.router.navigate(['./login']);
       },
       err => {
         console.log(err.message);

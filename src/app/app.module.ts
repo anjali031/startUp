@@ -12,6 +12,10 @@ import { AsCitizenComponent } from './as-citizen/as-citizen.component';
 import { LoginComponent } from './login/login.component';
 import { FormsComponent } from './forms/forms.component';
 import { PasswordChangeComponent } from './password-change/password-change.component';
+import { CustomerComponent } from './customer/customer.component';
+import { CreateViewComponent } from './create-view/create-view.component';
+import { ReadComponent } from './read/read.component';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { PasswordChangeComponent } from './password-change/password-change.compo
     AsCitizenComponent,
     LoginComponent,
     FormsComponent,
-    PasswordChangeComponent
+    PasswordChangeComponent,
+    CustomerComponent,
+    CreateViewComponent,
+    ReadComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
