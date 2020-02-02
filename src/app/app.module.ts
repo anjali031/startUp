@@ -18,6 +18,10 @@ import { ReadComponent } from './read/read.component';
 import { UpdateComponent } from './update/update.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { PasswordComponent } from './password/password.component';
+import { ToastrModule } from 'ngx-toastr';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +45,9 @@ import { PasswordComponent } from './password/password.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

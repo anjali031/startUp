@@ -15,10 +15,10 @@
           </div>
           <div class="row">
               <div class="input_feild col s6">
-                  <input type="password" class="validate" name="password" #password="ngModel" [(ngModel)]="user.password" required placeholder="Password">
+                  <input type="password" class="validate" name="password" #password="ngModel" [(ngModel)]="user.password" [pattern]="passwordPattern" required placeholder="Password">
               </div>
               <div class="input_feild col s6">
-                  <input type="password" class="validate" name="confirm_password" #confirm_password="ngModel" [(ngModel)]="user.confirm_password" required placeholder="ConfirmPassword">
+                  <input type="password" class="validate" name="confirm_password" #confirm_password="ngModel" [(ngModel)]="user.confirm_password" [pattern]="passwordPattern" required placeholder="ConfirmPassword">
               </div>
           </div>
           <div class="row">
