@@ -16,6 +16,8 @@ import { CustomerComponent } from './customer/customer.component';
 import { CreateViewComponent } from './create-view/create-view.component';
 import { ReadComponent } from './read/read.component';
 import { UpdateComponent } from './update/update.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { PasswordComponent } from './password/password.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { UpdateComponent } from './update/update.component';
     CustomerComponent,
     CreateViewComponent,
     ReadComponent,
-    UpdateComponent
+    UpdateComponent,
+    DropdownComponent,
+    PasswordComponent
   ],
   imports: [
     BrowserModule,

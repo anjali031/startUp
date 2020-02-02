@@ -76,7 +76,7 @@ export class UserService {
   readForm() {
   const Headers = new HttpHeaders()
     .set('Authorization', 'token ' + localStorage.getItem('token'));
-  return this.http.get(this.rootURL+'/api/jeweller/v1/3/', {headers: Headers});
+  return this.http.get(this.rootURL+'/api/jeweller/v1/7/', {headers: Headers});
 }
   update(jeweller: JewellerInfo) {
     const info: JewellerInfo = {
@@ -95,6 +95,6 @@ export class UserService {
     };
     const Headers = new HttpHeaders()
       .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL+'/api/jeweller/v1/3/update/', info, {headers: Headers});
+    return this.http.put(this.rootURL+'/api/jeweller/v1/7/update/', info, {headers: Headers});
   }
 }

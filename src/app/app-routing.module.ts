@@ -10,6 +10,8 @@ import { CustomerComponent } from './customer/customer.component';
 import { CreateViewComponent } from './create-view/create-view.component';
 import { ReadComponent } from './read/read.component';
 import { UpdateComponent } from './update/update.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { PasswordComponent } from './password/password.component';
 
 
 const routes: Routes = [
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: 'update', component: UpdateComponent},
   { path: 'read', component: ReadComponent},
   { path: 'forms', component: FormsComponent},
+  { path: 'dropdown', component: DropdownComponent},
+  { path: 'password' , component: PasswordComponent },
   { path: '' , redirectTo: '/user', pathMatch : 'full'}
 ];
 

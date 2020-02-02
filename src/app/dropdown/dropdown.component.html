@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col s8 offset-s2">
+      <div class="card">
+        <div class="sm-jumbotron center-align">
+          <h2>create profile</h2>
+        </div>
+          <form class="col s12 white" #createViewForm="ngForm" (ngSubmit)="OnSubmit(createViewForm)">
+            <div class="row">
+              <div class="input-field col s6"> 
+                <input type="text" class="validate" name="NAME_OF_FIRM" #NAME_OF_FIRM="ngModel" [(ngModel)]="jeweller.NAME_OF_FIRM"  required placeholder="NAME_OF_FIRM">
+              </div>
+              <div class="input-field col s6">
+                  <input class="validate" type="text" name="ADDRESS_OF_FIRM" #ADDRESS_OF_FIRM="ngModel" [(ngModel)]="jeweller.ADDRESS_OF_FIRM" required  placeholder="ADDRESS_OF_FIRM">
+              </div>
+            </div>
+            <div class="row">
+                <div class="row col s6">
+                  <select class="browser-default" name="CITY" #CITY="ngModel" [(ngModel)]="jeweller.CITY">
+                    <option value="" disabled selected>Choose your City</option>
+                    <option  value="Pune"> Pune</option>
+                    <option value="Maharashtra" >Maharashtra</option>
+                    <option   value="Vadodra" >Vadodra</option>
+                    <option   value="Ahmedabad" >Ahmedabad</option>
+                  </select>
+                </div>
+                <div class="row col s6">
+                  <select class="browser-default" name="STATE" #STATE="ngModel" [(ngModel)]="jeweller.STATE">
+                    <option value="" disabled selected>Choose your City</option>
+                    <option value="Maharashtra"> Maharashtra</option>
+                    <option value="Gujrat" >Gujrat</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6"> 
+                  <input type="text" class="validate" name="CONTACT_NAME" #CONTACT_NAME="ngModel" [(ngModel)]="jeweller.CONTACT_NAME" required placeholder="CONTACT_NAME">
+                </div>
+                <div class="input-field col s6">
+                    <input class="validate" type="text" name="CONTACT_NUMBER" #CONTACT_NUMBER="ngModel" [(ngModel)]="jeweller.CONTACT_NUMBER" required  placeholder="CONTACT_NUMBER">
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6"> 
+                  <input type="text" class="validate" name="CONTACT_MAIL_ID" #CONTACT_MAIL_ID="ngModel" [(ngModel)]="jeweller.CONTACT_MAIL_ID" [pattern]="emailPattern" required placeholder="CONTACT_MAIL_ID">
+                </div>
+                <div class="input-field col s6">
+                    <input class="validate" type="text" name="GST_NUMBER" #GST_NUMBER="ngModel" [(ngModel)]="jeweller.GST_NUMBER" required  placeholder="GST_NUMBER">
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6"> 
+                  <input type="text" class="validate" name="PAN_NUMBER" #PAN_NUMBER="ngModel" [(ngModel)]="jeweller.PAN_NUMBER" required placeholder="PAN_NUMBER">
+                </div>
+                <div class="input-field col s6">
+                    <input class="validate" type="text" name="OWNER_NAME" #OWNER_NAME="ngModel" [(ngModel)]="jeweller.OWNER_NAME" required  placeholder="OWNER_NAME">
+                </div>
+              </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" class="validate" name="OWNER_NUMBER" #OWNER_NUMBER="ngModel" [(ngModel)]="jeweller.OWNER_NUMBER" required placeholder="OWNER_NUMBER">
+                </div>
+                <div class="input-field col s6">
+                    <input type="text" class="validate" name="OWNER_EMAIL" #OWNER_EMAIL="ngModel" [(ngModel)]="jeweller.OWNER_EMAIL" [pattern]="emailPattern" required placeholder="OWNER_EMAIL">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                  <button [disabled]="!createViewForm.valid" class="btn-large btn-submit" type="submit">Submit</button>
+                </div>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+
+

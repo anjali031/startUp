@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     this.userService.loginUser(username, password).subscribe((data: any) => {
       localStorage.setItem('token', data.token);
       if (data.IS_JEWELLER == true ) {
-        this.router.navigate(['/createview']);
+        this.router.navigate(['/forms']);
       } else {
         this.router.navigate(['/customer']);
       }
