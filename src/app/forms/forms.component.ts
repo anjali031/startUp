@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../shared/user.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-forms',
@@ -9,7 +10,7 @@ import { UserService } from '../shared/user.service';
 })
 export class FormsComponent implements OnInit {
 
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private router: Router, private userService: UserService , private toastr: ToastrService) { }
 
   ngOnInit() {
   }
@@ -20,6 +21,7 @@ export class FormsComponent implements OnInit {
   Logout() {
     localStorage.removeItem('token');
     console.log('You Are Logged Out');
+    this.toastr.error('logged out');
     this.router.navigate(['/login']);
   }
 }

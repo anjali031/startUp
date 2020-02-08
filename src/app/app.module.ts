@@ -21,6 +21,9 @@ import { PasswordComponent } from './password/password.component';
 import { ToastrModule } from 'ngx-toastr';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OrnamentsComponent } from './ornaments/ornaments.component';
+import { RingsComponent } from './ornaments/rings/rings.component';
+import { NeckComponent } from './ornaments/neck/neck.component';
 
 
 @NgModule({
@@ -38,7 +41,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReadComponent,
     UpdateComponent,
     DropdownComponent,
-    PasswordComponent
+    PasswordComponent,
+    OrnamentsComponent,
+    RingsComponent,
+    NeckComponent
   ],
   imports: [
     BrowserModule,

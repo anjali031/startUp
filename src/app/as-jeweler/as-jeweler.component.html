@@ -6,19 +6,27 @@
       </div>
         <form class="col s12 white" #jewelerRegistrationForm="ngForm" (ngSubmit)="OnSubmit(jewelerRegistrationForm)">
           <div class="row">
-            <div class="input-feild col s6"> 
-              <input type="text" class="validate" name="email" #email="ngModel" [(ngModel)]="user.email" [pattern]="emailPattern" required placeholder="Email">
+            <div class="input-field col s6"> 
+              <input id="email" type="text" class="validate" name="email" #email="ngModel" [(ngModel)]="user.email" [pattern]="emailPattern" required >
+              <label for="email">Email</label>
+              <span class="helper-text" data-error="Invalid Email!"></span>
             </div>
-            <div class="input-feild col s6">
-                <input class="validate" type="text" name="username" #username="ngModel" [(ngModel)]="user.username" required  placeholder="Username">
+            <div class="input-field col s6">
+                <input id="username" class="validate" type="text" name="username" #username="ngModel" [(ngModel)]="user.username" required >
+                <label for="username">Username</label>
+                <span class="helper-text" data-error="Required Username !" ></span>
             </div>
           </div>
           <div class="row">
-              <div class="input_feild col s6">
-                  <input type="password" class="validate" name="password" #password="ngModel" [(ngModel)]="user.password" [pattern]="passwordPattern" required placeholder="Password">
+              <div class="input-field col s6">
+                  <input id="password" type="text" class="validate" name="password" #password="ngModel" [(ngModel)]="user.password" [pattern]="passwordPattern" required >
+                  <label for="password">Password</label>
+                  <span class="helper-text" data-error="Password requires uppercase lowercase symbols and numbers!"></span>
               </div>
-              <div class="input_feild col s6">
-                  <input type="password" class="validate" name="confirm_password" #confirm_password="ngModel" [(ngModel)]="user.confirm_password" [pattern]="passwordPattern" required placeholder="ConfirmPassword">
+              <div class="input-field col s6">
+                  <input id="confirm_password" type="text" class="validate" name="confirm_password" #confirm_password="ngModel" [(ngModel)]="user.confirm_password" [pattern]="passwordPattern" required >
+                  <label for="confirm_password">Confirm Password</label>
+                  <span class="helper-text" data-error="Password requires uppercase lowercase symbols and numbers!"></span>
               </div>
           </div>
           <div class="row">
@@ -38,10 +46,11 @@
           </div>
           <div class="row">
               <div class="input-field col s12">
-                <button [disabled]="!jewelerRegistrationForm.valid" class="btn-large btn-submit" type="submit">Submit</button>
+                <button [disabled]="!jewelerRegistrationForm.valid" class="btn-large btn-submit" type="submit">Register</button>
               </div>
           </div>
         </form>
     </div>
   </div>
-</div>
+</div> 
+WEje3@WEje

@@ -12,6 +12,9 @@ import { ReadComponent } from './read/read.component';
 import { UpdateComponent } from './update/update.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { PasswordComponent } from './password/password.component';
+import { OrnamentsComponent } from './ornaments/ornaments.component';
+import { RingsComponent } from './ornaments/rings/rings.component';
+import { NeckComponent } from './ornaments/neck/neck.component';
 
 
 const routes: Routes = [
@@ -27,6 +30,12 @@ const routes: Routes = [
   { path: 'forms', component: FormsComponent},
   { path: 'dropdown', component: DropdownComponent},
   { path: 'password' , component: PasswordComponent },
+  { path: 'rings' , component: OrnamentsComponent,
+    children: [{ path : '' , component : RingsComponent }]
+  },
+  { path: 'neck' , component: OrnamentsComponent,
+    children: [{ path : '' , component : NeckComponent }]
+  },
   { path: '' , redirectTo: '/user', pathMatch : 'full'}
 ];
 

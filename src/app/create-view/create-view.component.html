@@ -7,50 +7,90 @@
           <form class="col s12 white" #createViewForm="ngForm" (ngSubmit)="OnSubmit(createViewForm)">
             <div class="row">
               <div class="input-field col s6"> 
-                <input type="text" class="validate" name="NAME_OF_FIRM" #NAME_OF_FIRM="ngModel" [(ngModel)]="jeweller.NAME_OF_FIRM"  required placeholder="NAME_OF_FIRM">
+                <input id="name_of_firm" type="text" class="validate" name="NAME_OF_FIRM" #NAME_OF_FIRM="ngModel" [(ngModel)]="jeweller.NAME_OF_FIRM"  required >
+                <label for="name_of_firm">Name of Firm</label>
+                <span class="helper-text" data-error="Required Field!" data-success="right"></span>
+
               </div>
               <div class="input-field col s6">
-                  <input class="validate" type="text" name="ADDRESS_OF_FIRM" #ADDRESS_OF_FIRM="ngModel" [(ngModel)]="jeweller.ADDRESS_OF_FIRM" required  placeholder="ADDRESS_OF_FIRM">
+                  <input id="address_of_firm" class="validate" type="text" name="ADDRESS_OF_FIRM" #ADDRESS_OF_FIRM="ngModel" [(ngModel)]="jeweller.ADDRESS_OF_FIRM" required  >
+                  <label for="address_of_firm">ADDRESS OF FIRM</label>
+                  <span class="helper-text" data-error="required!field" data-success="right"></span>
+
               </div>
             </div>
             <div class="row">
-                <div class="input-field col s6"> 
-                  <input type="text" class="validate" name="CITY" #CITY="ngModel" [(ngModel)]="jeweller.CITY"  required placeholder="CITY">
+                <div class="row col s6"> 
+                  <select class="browser-default" name="CITY" #CITY="ngModel" [(ngModel)]="jeweller.CITY">
+                    <option value="" disabled selected>Choose your City</option>
+                    <option  value="Pune"> Pune</option>
+                    <option value="Mumbai" >Mumbai</option>
+                    <option   value="Vadodra" >Vadodra</option>
+                    <option   value="Ahmedabad" >Ahmedabad</option>
+                  </select>
                 </div>
-                <div class="input-field col s6">
-                    <input class="validate" type="text" name="STATE" #STATE="ngModel" [(ngModel)]="jeweller.STATE" required  placeholder="STATE">
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s6"> 
-                  <input type="text" class="validate" name="CONTACT_NAME" #CONTACT_NAME="ngModel" [(ngModel)]="jeweller.CONTACT_NAME" required placeholder="CONTACT_NAME">
-                </div>
-                <div class="input-field col s6">
-                    <input class="validate" type="text" name="CONTACT_NUMBER" #CONTACT_NUMBER="ngModel" [(ngModel)]="jeweller.CONTACT_NUMBER" required  placeholder="CONTACT_NUMBER">
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s6"> 
-                  <input type="text" class="validate" name="CONTACT_MAIL_ID" #CONTACT_MAIL_ID="ngModel" [(ngModel)]="jeweller.CONTACT_MAIL_ID" [pattern]="emailPattern" required placeholder="CONTACT_MAIL_ID">
-                </div>
-                <div class="input-field col s6">
-                    <input class="validate" type="text" name="GST_NUMBER" #GST_NUMBER="ngModel" [(ngModel)]="jeweller.GST_NUMBER" required  placeholder="GST_NUMBER">
+                <div class="row col s6">
+                  <select class="browser-default" name="STATE" #STATE="ngModel" [(ngModel)]="jeweller.STATE">
+                    <option value="" disabled selected>Choose your City</option>
+                    <option value="Maharashtra"> Maharashtra</option>
+                    <option value="Gujrat" >Gujrat</option>
+                  </select>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s6"> 
-                  <input type="text" class="validate" name="PAN_NUMBER" #PAN_NUMBER="ngModel" [(ngModel)]="jeweller.PAN_NUMBER" required placeholder="PAN_NUMBER">
+                  <input id="contact_name" type="text" class="validate" name="CONTACT_NAME" #CONTACT_NAME="ngModel" [(ngModel)]="jeweller.CONTACT_NAME" required >
+                  <label for="contact_name">CONTACT_NAME</label>
+                  <span class="helper-text" data-error="Required Field!" data-success="right"></span>
+
                 </div>
                 <div class="input-field col s6">
-                    <input class="validate" type="text" name="OWNER_NAME" #OWNER_NAME="ngModel" [(ngModel)]="jeweller.OWNER_NAME" required  placeholder="OWNER_NAME">
+                    <input id="contact_number" class="validate" type="text" name="CONTACT_NUMBER" #CONTACT_NUMBER="ngModel" [(ngModel)]="jeweller.CONTACT_NUMBER" required >
+                    <label for="contact_number">CONTACT_NUMBER</label>
+                    <span class="helper-text" data-error="Required Field!" data-success="right"></span>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6"> 
+                  <input id="contact_mail_id" type="text" class="validate" name="CONTACT_MAIL_ID" #CONTACT_MAIL_ID="ngModel" [(ngModel)]="jeweller.CONTACT_MAIL_ID" [pattern]="emailPattern" required >
+                  <label for="contact_mail_id">CONTACT MAIL ID</label>
+                  <span class="helper-text" data-error="Invalid Email!" data-success="right"></span>
+
+                </div>
+                <div class="input-field col s6">
+                    <input id="gst_number" class="validate" type="text" name="GST_NUMBER" #GST_NUMBER="ngModel" [(ngModel)]="jeweller.GST_NUMBER" required  >
+                    <label for="gst_number">GST NUMBER</label>
+                    <span class="helper-text" data-error="GST Number should contain 15 characters" data-success="right"></span>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6"> 
+                  <input id="pan_number" type="text" class="validate" name="PAN_NUMBER" #PAN_NUMBER="ngModel" [(ngModel)]="jeweller.PAN_NUMBER" required >
+                  <label for="pan_number">PAN NUMBER</label>
+                  <span class="helper-text" data-error="Required Field!" data-success="right"></span>
+
+                </div>
+                <div class="input-field col s6">
+                    <input id="owner_name" class="validate" type="text" name="OWNER_NAME" #OWNER_NAME="ngModel" [(ngModel)]="jeweller.OWNER_NAME" required >
+                    <label for="owner_name">OWNER_NAME</label>
+                    <span class="helper-text" data-error="Required Field!" data-success="right"></span>
+
                 </div>
               </div>
             <div class="row">
                 <div class="input-field col s6">
-                    <input type="text" class="validate" name="OWNER_NUMBER" #OWNER_NUMBER="ngModel" [(ngModel)]="jeweller.OWNER_NUMBER" required placeholder="OWNER_NUMBER">
+                    <input id="owner_number" type="text" class="validate" name="OWNER_NUMBER" #OWNER_NUMBER="ngModel" [(ngModel)]="jeweller.OWNER_NUMBER" required >
+                    <label for="owner_number">OWNER_NUMBER</label>
+                    <span class="helper-text" data-error="Required Number!" data-success="right"></span>
+
                 </div>
                 <div class="input-field col s6">
-                    <input type="text" class="validate" name="OWNER_EMAIL" #OWNER_EMAIL="ngModel" [(ngModel)]="jeweller.OWNER_EMAIL" [pattern]="emailPattern" required placeholder="OWNER_EMAIL">
+                    <input id="owner_email" type="text" class="validate" name="OWNER_EMAIL" #OWNER_EMAIL="ngModel" [(ngModel)]="jeweller.OWNER_EMAIL" [pattern]="emailPattern" required >
+                    <label for="owner_email">OWNER_EMAIL</label>
+                    <span class="helper-text" data-error="Invalid Email!" data-success="right"></span>
+
                 </div>
             </div>
             <div class="row">

@@ -18,4 +18,21 @@ button.btn-submit:focus,button.btn-submit:hover{
 /* input.ng-invalid.ng-dirty{
     border-bottom-color : #e91e63 !important;
     box-shadow: 0 1px 0 0 #e91e63 !important;
-} */
+} ABab1@abAB*/
+
+.tabs{
+    height: 65px;
+}
+.tabs .tab{
+    text-transform : none !important;
+    line-height: 65px;
+    height: 65px;
+}
+.tabs .tab a{
+    font-size: 25px;
+    color: rgb(0, 0, 0) !important;
+}
+
+.tabs .tab a.active{
+    background-color: rgb(255, 255, 255) !important;
+}

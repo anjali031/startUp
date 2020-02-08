@@ -38,7 +38,8 @@ export class AsJewelerComponent implements OnInit {
     .subscribe((data: any) => {
       if (data.response === 201) {
         console.log(data);
-        this.toastr.success('user Registration Succecced');
+        this.resetForm();
+        this.toastr.success('User Registration Succeeded');
       } else {
         console.log(data);
         this.toastr.error(data.error_message);

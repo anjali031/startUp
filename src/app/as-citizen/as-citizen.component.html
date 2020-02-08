@@ -4,13 +4,24 @@
       <div class="sm-jumbotron center-align">
         <h2>User Registration</h2>
       </div>
-      <form class="col s12 white" #citizenRegistrationForm="ngForm" (ngSubmit)="OnSubmit(citizenRegistrationForm)">
+      <form class="col s12 white" autocomplete="off" #citizenRegistrationForm="ngForm" (ngSubmit)="OnSubmit(citizenRegistrationForm)">
           <div class="row">
-            <div class="input-feild col s6"> 
-              <input type="text" class="validate" name="email" #email="ngModel" [(ngModel)]="user.email" [pattern]="emailPattern" required placeholder="Email">
+            <div class="input-field col s6"> 
+              
+              <input id="email" type="text"   class="validate" name="email" #email="ngModel" [(ngModel)]="user.email" [pattern]="emailPattern" required >
+              <label for="email" >Email</label>
+              <span class="helper-text" data-error="Required Field!" data-success="right"></span>
             </div>
-            <div class="input-feild col s6">
-                <input class="validate" type="text" name="username" #username="ngModel" [(ngModel)]="user.username" required  placeholder="Username">
+            <div class="input-field col s6">
+              <input class="validate" type="text" id="username" name="username" #username="ngModel" [(ngModel)]="user.username" required  >
+              <label for="username">Username</label>
+              <span class="helper-text" data-error="Required Field!" data-success="right"></span>
+                
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate" required>
+              <label for="last_name">Last Name</label>
+              <span class="helper-text" data-error="Required Field!" data-success="right"></span>
             </div>
           </div>
           <div class="row">

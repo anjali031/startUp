@@ -9,7 +9,8 @@ import { JewellerInfo } from './jeweller-info.model';
 export class UserService {
   formData: JewellerInfo;
   constructor( public http: HttpClient ) { }
-  readonly rootURL = 'http://harshil21.pythonanywhere.com'
+  readonly rootURL = 'https://harshil21.pythonanywhere.com';
+
   asJeweler(user: User) {
     const body: User = {
       email: user.email,
@@ -76,7 +77,7 @@ export class UserService {
   readForm() {
   const Headers = new HttpHeaders()
     .set('Authorization', 'token ' + localStorage.getItem('token'));
-  return this.http.get(this.rootURL+'/api/jeweller/v1/7/', {headers: Headers});
+  return this.http.get(this.rootURL+'/api/jeweller/v1/detail/', {headers: Headers});
 }
   update(jeweller: JewellerInfo) {
     const info: JewellerInfo = {

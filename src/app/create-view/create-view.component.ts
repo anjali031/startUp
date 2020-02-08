@@ -48,7 +48,7 @@ export class CreateViewComponent implements OnInit {
     this.userService.createView(form.value)
     .subscribe(
       res => {
-       // console.log(res);
+        console.log(res);
         this.router.navigate(['./read']);
       },
       err => {
