@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../shared/user.service';
 import { JewellerInfo } from '../shared/jeweller-info.model';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-read',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ReadComponent implements OnInit {
   data: any = {};
-  constructor(private userService: UserService, private router: Router)  { }
+  constructor(private userService: UserService, private router: Router, private toastr: ToastrService)  { }
 
   ngOnInit() {
     this.readuser();
@@ -23,5 +24,14 @@ export class ReadComponent implements OnInit {
   }
   update() {
     this.router.navigate(['/update']);
+  }
+  changepassword() {
+    this.router.navigate(['/changepassword']);
+  }
+  Logout() {
+    localStorage.removeItem('token');
+    console.log('You Are Logged Out');
+    this.toastr.error('logged out');
+    this.router.navigate(['/login']);
   }
 }
