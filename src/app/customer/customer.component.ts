@@ -12,13 +12,5 @@ export class CustomerComponent implements OnInit {
 
   ngOnInit() {
   }
-  changepassword() {
-    this.router.navigate(['/changepassword']);
-  }
-  Logout() {
-    localStorage.removeItem('token');
-    console.log('You Are Logged Out');
-    this.router.navigate(['/login']);
-  }
 }
 

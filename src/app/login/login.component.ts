@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('token' , data.data.token );
         this.toastr.success(data.message);
         if (data.data.IS_JEWELLER == true) {
-          this.router.navigate(['/forms']);
+          this.router.navigate(['/createview']);
         } else {
           this.router.navigate(['/customer']);
         }
