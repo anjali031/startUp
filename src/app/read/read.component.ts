@@ -20,6 +20,11 @@ export class ReadComponent implements OnInit {
     this.userService.readForm().subscribe(data => {
       console.log(data);
       this.data = data;
+      if (data.status === 200) {
+        this.toastr.success('welcome back');
+      } else {
+        this.router.navigate (['/createview']);
+      }
     });
   }
   update() {
@@ -35,3 +40,15 @@ export class ReadComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 }
+
+// if (data.response == 200 ) {
+  // localStorage.setItem('token' , data.data.token );
+  // this.toastr.success(data.message);
+ // if (data.data.IS_JEWELLER == true) {
+  //  this.router.navigate(['/createview']);
+  // } else {
+   // this.router.navigate(['/customer']);
+  // }
+ // } else {
+ // this.toastr.error(data.message);
+// }
