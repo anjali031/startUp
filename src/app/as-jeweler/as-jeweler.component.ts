@@ -39,6 +39,7 @@ export class AsJewelerComponent implements OnInit {
       if (data.response === 201) {
         console.log(data);
         this.resetForm();
+        this.router.navigate(['/login']);
         this.toastr.success('User Registration Succeeded');
       } else {
         console.log(data);

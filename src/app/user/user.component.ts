@@ -15,7 +15,5 @@ export class UserComponent implements OnInit {
   jeweler() {
     this.router.navigate(['/jeweler']);
   }
-  citizen() {
-    this.router.navigate(['/citizen']);
-  }
+
 }
