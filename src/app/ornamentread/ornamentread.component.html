@@ -8,18 +8,6 @@
             <p>{{question.WEIGHT}}</p>
             <p><strong>Your ornament : </strong> <img src="{{question.ornament_file_field.IMAGE_FILE_ONE}}" style="width: 100px;" ></p>          
           </div>
-          <div class="card_action white white-text">
-            <ul class="collection answer">
-              <ng-container *ngFor ="let answer of question.Question; let i = index">
-               <li>
-                <label>
-                  <input type="checkbox" class="filled-in" (click)="Answer(answer.Weightage, answer.from_Domain)"/>
-                  <span>{{answer.Answer_text}}</span>
-                </label>
-               </li> 
-              </ng-container>
-            </ul>
-          </div>
         </div>
     </div>
 </div>

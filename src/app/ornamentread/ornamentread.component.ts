@@ -11,6 +11,7 @@ export class OrnamentreadComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.page1();
   }
   page1() {
     this.userService.readorn().subscribe(data => {

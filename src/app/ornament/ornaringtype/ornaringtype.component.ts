@@ -21,6 +21,7 @@ export class OrnaringtypeComponent implements OnInit {
   Curated: any = {};
   Festival: any = {};
   Ringsize: any = {};
+  ORNAMENT_OCCASION = '';
   
 
   asion: any = [];

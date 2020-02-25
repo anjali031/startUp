@@ -60,7 +60,7 @@
                     <ng-container *ngFor ="let answer of Occasion.ORNAMENT_OCCASION; let i = index">
                      <li>
                       <label>
-                        <input type="checkbox" class="filled-in" value ="1"(click)="Answer(answer.pk)" #ORNAMENT_OCCASION ngModel name="ORNAMENT_OCCASION"  required/>
+                        <input type="checkbox" class="filled-in" value ="1"(change)="Answer(answer.pk)" #ORNAMENT_OCCASION ngModel name="ORNAMENT_OCCASION"  required/>
                         <span>{{answer.OCCASION}}</span>
                       </label>
                      </li> 
@@ -75,7 +75,7 @@
                 <ng-container *ngFor ="let answer of Gift.ORNAMENT_GIFT; let i = index"  >
                  <li>
                   <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornagift(answer.pk)" #ORNAMENT_GIFT ngModel name="ORNAMENT_GIFT"  required/>
+                    <input type="checkbox" class="filled-in" value ="1" (change)="Ornagift(answer.pk)" #ORNAMENT_GIFT ngModel name="ORNAMENT_GIFT"  required/>
                     <span>{{answer.GIFT}}</span>
                   </label>
                  </li> 
@@ -88,7 +88,7 @@
                 <ng-container *ngFor ="let answer of Theme.ORNAMENT_THEME; let i = index"  >
                  <li>
                   <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornatheme(answer.pk)" #ORNAMENT_THEME ngModel name="ORNAMENT_THEME"  required/>
+                    <input type="checkbox" class="filled-in" value ="1" (change)="Ornatheme(answer.pk)" #ORNAMENT_THEME ngModel name="ORNAMENT_THEME"  required/>
                     <span>{{answer.THEME}}</span>
                   </label>
                  </li> 
@@ -102,7 +102,7 @@
                 <ng-container *ngFor ="let answer of Curated.ORNAMENT_CURATED_BY; let i = index"  >
                  <li>
                   <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="OrnaCurated(answer.pk)" #ORNAMENT_CURATED_BY ngModel name="ORNAMENT_CURATED_BY"  required/>
+                    <input type="checkbox" class="filled-in" value ="1" (change)="OrnaCurated(answer.pk)" #ORNAMENT_CURATED_BY ngModel name="ORNAMENT_CURATED_BY"  required/>
                     <span>{{answer.CURATED_BY}}</span>
                   </label>
                  </li> 
@@ -114,7 +114,7 @@
                 <ng-container *ngFor ="let answer of Festival.ORNAMENT_FESTIVAL; let i = index"  >
                  <li>
                   <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornafesti(answer.pk)" #ORNAMENT_FESTIVAL ngModel name="ORNAMENT_FESTIVAL"  required/>
+                    <input type="checkbox" class="filled-in" value ="1" (change)="Ornafesti(answer.pk)" #ORNAMENT_FESTIVAL ngModel name="ORNAMENT_FESTIVAL"  required/>
                     <span>{{answer.FESTIVAL}}</span>
                   </label>
                  </li> 
@@ -128,7 +128,7 @@
                 <ng-container *ngFor ="let answer of Ringsize.ORNAMENT_RING_SIZE; let i = index"  >
                  <li>
                   <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="Size(answer.pk)" #ORNAMENT_RING_SIZE ngModel name="ORNAMENT_RING_SIZE"  required/>
+                    <input type="checkbox" class="filled-in" value ="1" (change)="Size(answer.pk)" #ORNAMENT_RING_SIZE ngModel name="ORNAMENT_RING_SIZE"  required/>
                     <span>{{answer.RING_SIZE}}</span>
                   </label>
                  </li> 
