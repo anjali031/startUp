@@ -46,6 +46,7 @@ import { SetsComponent } from './ornament/sets/sets.component';
 import { PendantComponent } from './ornament/pendant/pendant.component';
 import { OrnamentcufflinkComponent } from './ornamentcufflink/ornamentcufflink.component';
 import { CufflinkComponent } from './ornament/cufflink/cufflink.component';
+import { ChangeComponent } from './ornament/change/change.component';
 
 
 @NgModule({
@@ -87,7 +88,8 @@ import { CufflinkComponent } from './ornament/cufflink/cufflink.component';
     SetsComponent,
     PendantComponent,
     OrnamentcufflinkComponent,
-    CufflinkComponent
+    CufflinkComponent,
+    ChangeComponent
   ],
   imports: [
     BrowserModule,

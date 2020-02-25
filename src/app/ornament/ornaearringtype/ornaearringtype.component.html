@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-      <div class="col s8 offset-2">
+      <div class="col s10 offset-s2">
         <div class="card-panel teal lighten-2">
           <h4 class="center white-text">Ornament Ear Ring</h4>
         </div>
@@ -25,8 +25,6 @@
                 <option value="5" >Casting Plain</option>
               </select>
             </div>
-          </div>
-          <div class="row">
             <div class="input-field col s6">
               <select class="browser-default"#ORNAMENT_SHOPFOR ngModel name="ORNAMENT_SHOPFOR" required>
                 <option value="" disabled selected>Choose Shopfor</option>
@@ -43,8 +41,6 @@
                 <option value="4" >4</option>
               </select>
             </div>
-          </div>
-          <div class="row">
             <div class="input-field col s6">
               <select class="browser-default" #ORNAMENT_METAL ngModel name="ORNAMENT_METAL" required>
                 <option value="" disabled selected>Choose your Ornament Metal</option>
@@ -55,21 +51,39 @@
                 <option value="5">Casting Plain</option>
               </select>
             </div>
-            <div class="input-field col s6">
-                <ul class="collection answer">
-                    <ng-container *ngFor ="let answer of Occasion.ORNAMENT_OCCASION; let i = index">
-                     <li>
-                      <label>
-                        <input type="checkbox" class="filled-in" value ="1"(click)="Answer(answer.pk)" #ORNAMENT_OCCASION ngModel name="ORNAMENT_OCCASION"  required/>
-                        <span>{{answer.OCCASION}}</span>
-                      </label>
-                     </li> 
-                    </ng-container>
-                </ul>
-              </div>
+            <div class="input-field col s6 ">
+              <select class="browser-default" #ORNAMENT_EARRING_STYLE ngModel name="ORNAMENT_EARRING_STYLE"  required>
+                  <option value="" disabled selected>Choose ornament STYLE</option>
+                  <option value="1"> Drops and Dangler</option>
+                  <option value="2" >Studs and Tops</option>
+                  <option value="3" >Hoops and Huggies</option>
+                  <option value="4" >Jhumkas</option>
+                  <option value="5" >Sui Dhaga</option>
+                  <option value="6" >Ear Cuffs and Hugs</option>
+                  <option value="7" >Chandeliers</option>
+                  <option value="8" >Chand Bali</option>
+                  <option value="9" >Mismatched</option>
+                  <option value="10" >Multi Pierced</option>
+                  <option value="11" >Ear Jackets</option>
+                  <option value="12" >Stud with Chain Clips</option>
+              </select>
+            </div>
+            
           </div>
           <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s4">
+              <ul class="collection answer">
+                  <ng-container *ngFor ="let answer of Occasion.ORNAMENT_OCCASION; let i = index">
+                   <li>
+                    <label>
+                      <input type="checkbox" class="filled-in" value ="1"(click)="Answer(answer.pk)" #ORNAMENT_OCCASION ngModel name="ORNAMENT_OCCASION"  required/>
+                      <span>{{answer.OCCASION}}</span>
+                    </label>
+                   </li> 
+                  </ng-container>
+              </ul>
+            </div>
+            <div class="input-field col s4">
 
               <ul class="collection answer">
                 <ng-container *ngFor ="let answer of Gift.ORNAMENT_GIFT; let i = index"  >
@@ -82,7 +96,7 @@
                 </ng-container>
               </ul>
             </div>
-            <div class="input-field col s6">
+            <div class="input-field col s4">
 
               <ul class="collection answer">
                 <ng-container *ngFor ="let answer of Theme.ORNAMENT_THEME; let i = index"  >
@@ -121,25 +135,7 @@
                 </ng-container>
               </ul>
             </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6 ">
-                <select class="browser-default" #ORNAMENT_EARRING_STYLE ngModel name="ORNAMENT_EARRING_STYLE"  required>
-                    <option value="" disabled selected>Choose ornament STYLE</option>
-                    <option value="1"> Drops and Dangler</option>
-                    <option value="2" >Studs and Tops</option>
-                    <option value="3" >Hoops and Huggies</option>
-                    <option value="4" >Jhumkas</option>
-                    <option value="5" >Sui Dhaga</option>
-                    <option value="6" >Ear Cuffs and Hugs</option>
-                    <option value="7" >Chandeliers</option>
-                    <option value="8" >Chand Bali</option>
-                    <option value="9" >Mismatched</option>
-                    <option value="10" >Multi Pierced</option>
-                    <option value="11" >Ear Jackets</option>
-                    <option value="12" >Stud with Chain Clips</option>
-                </select>
-            </div>
+
           </div>
           <input type="file" #CAD_FILE accept="image/*" (change)="handleFileInput($event.target.files)">
 
