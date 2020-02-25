@@ -32,6 +32,9 @@ export class AsJewelerComponent implements OnInit {
     };
   }
 
+  jeweler() {
+    this.router.navigate(['/login']);
+  }
 
   OnSubmit(form: NgForm) {
     this.userService.asJeweler(form.value)

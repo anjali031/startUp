@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DropdownComponent } from './dropdown.component';
+import { PendantearringtypeComponent } from './pendantearringtype.component';
 
-describe('DropdownComponent', () => {
-  let component: DropdownComponent;
-  let fixture: ComponentFixture<DropdownComponent>;
+describe('PendantearringtypeComponent', () => {
+  let component: PendantearringtypeComponent;
+  let fixture: ComponentFixture<PendantearringtypeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DropdownComponent ]
+      declarations: [ PendantearringtypeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DropdownComponent);
+    fixture = TestBed.createComponent(PendantearringtypeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

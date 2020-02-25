@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class CreateViewComponent implements OnInit {
   jeweller: JewellerInfo;
   emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$';
-  M: any;
+
   constructor(private userService: UserService , private router: Router) { }
 
 

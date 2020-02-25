@@ -11,6 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ReadComponent implements OnInit {
   data: any = {};
+
   constructor(private userService: UserService, private router: Router, private toastr: ToastrService)  { }
 
   ngOnInit() {
@@ -20,15 +21,19 @@ export class ReadComponent implements OnInit {
     this.userService.readForm().subscribe(data => {
       console.log(data);
       this.data = data;
-      if (data.status === 200) {
+      if (this.data.statuscode === 200) {
         this.toastr.success('welcome back');
       } else {
+        this.toastr.success('As you are our New Customer we want you to fill this form to complete your profile');
         this.router.navigate (['/createview']);
       }
     });
   }
   update() {
     this.router.navigate(['/update']);
+  }
+  ornament() {
+    this.router.navigate(['/types']);
   }
   changepassword() {
     this.router.navigate(['/changepassword']);

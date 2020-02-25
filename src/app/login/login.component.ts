@@ -21,10 +21,10 @@ export class LoginComponent implements OnInit {
     this.userService.loginUser(username, password).subscribe((data: any) => {
      // localStorage.setItem('token', data.data.token);
       console.log(data);
-      if (data.response == 200 ) {
+      if (data.response === 200 ) {
         localStorage.setItem('token' , data.data.token );
         this.toastr.success(data.message);
-        if (data.data.IS_JEWELLER == true) {
+        if (data.data.IS_JEWELLER === true) {
           this.router.navigate(['/read']);
         } else {
           this.router.navigate(['/customer']);

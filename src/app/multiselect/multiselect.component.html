@@ -1,0 +1,139 @@
+<div class="container">
+    <div class="row">
+      <div class="col s8 offset-2">
+        <div class="card-panel teal lighten-2">
+          <h4 class="center white-text">Image Library</h4>
+        </div>
+        <form #imageForm=ngForm (ngSubmit)="OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)">
+          <div class="row">
+            <div class="input-field col s12">
+                <select class="browser-default" #ORNAMENT_TYPE ngModel name="ORNAMENT_TYPE" id="ORNAMENT_TYPE" required>
+                    <option value="" disabled selected>Choose</option>
+                    <option value="1"> 1</option>
+                    <option value="2" >2</option>
+                    <option value="3" >3</option>
+                    <option value="4" >4</option>
+
+                </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <select class="browser-default"#ORNAMENT_MATERIAL ngModel name="ORNAMENT_MATERIAL"  required>
+                <option value="" disabled selected>Choose</option>
+                <option value="1"> 1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+            </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <select class="browser-default"#ORNAMENT_SHOPFOR ngModel name="ORNAMENT_SHOPFOR" required>
+                <option value="" disabled selected>Choose</option>
+                <option value="1"> 1</option>
+                <option value="2" >2</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <select class="browser-default" #WEIGHT ngModel name="WEIGHT" id="WEIGHT" required>
+                <option value="" disabled selected>Choose</option>
+                <option value="1"> 1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <select class="browser-default" #ORNAMENT_METAL ngModel name="ORNAMENT_METAL" required>
+                <option value="" disabled selected>Choose</option>
+                <option value="1"> 1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <select class="browser-default" #ORNAMENT_OCCASION ngModel name="ORNAMENT_OCCASION"  required>
+                <option value="" disabled selected>Choose</option>
+                <option value="1"> 1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <select class="browser-default" #ORNAMENT_GIFT ngModel name="ORNAMENT_GIFT"  required>
+                <option value="" disabled selected>Choose</option>
+                <option value="1"> 1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <select class="browser-default" #ORNAMENT_THEME ngModel name="ORNAMENT_THEME"  required>
+                <option value="" disabled selected>Choose</option>
+                <option value="1"> 1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <select class="browser-default" #ORNAMENT_CURATED_BY ngModel name="ORNAMENT_CURATED_BY"  required>
+                <option value="" disabled selected>Choose</option>
+                <option value="1"> 1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <h6>check these two option to confirm you are signing up as:</h6>
+              <p>
+                <label>
+                  <input #ORNAMENT_FESTIVAL ngModel name="ORNAMENT_FESTIVAL" type="radio" id="oradio" value="1"  required/>
+                  <span>1 in ORNAMENT_FESTIVAL</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input #ORNAMENT_FESTIVAL ngModel name="ORNAMENT_FESTIVAL" type="radio" id="tradio" value="2"  required/>
+                  <span>2 in ORNAMENT_FESTIVAL</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input #ORNAMENT_FESTIVAL ngModel name="ORNAMENT_FESTIVAL" type="radio" id="rradio" value="3"  required/>
+                  <span>3 in ORNAMENT_FESTIVAL</span>
+                </label>
+              </p>
+          </div>
+          <input type="file" #CAD_FILE accept="image/*" (change)="handleFileInput($event.target.files)">
+
+          <input type="file" #IMAGE_FILE_ONE accept="image/*" (change)="handleFileInputone($event.target.files)">
+
+          <input type="file" #IMAGE_FILE_TWO accept="image/*" (change)="handleFileInputtwo($event.target.files)">
+
+          <input type="file" #IMAGE_FILE_THREE accept="image/*" (change)="handleFileInputthree($event.target.files)">
+
+          <button type="submit" class="btn-large btn-submit" [disabled]="CAD_FILE.value=='' || !imageForm.valid">Create Multi</button>
+        </form>
+      </div>
+    </div>
+</div>
