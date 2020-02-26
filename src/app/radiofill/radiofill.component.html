@@ -89,13 +89,11 @@
               <div class="row">
                 <div class="input-field col s6">
                     <input id="owner_number" type="text" class="validate" name="OWNER_NUMBER" #OWNER_NUMBER="ngModel" [(ngModel)]="jeweller.OWNER_NUMBER" value="" required >
-                    <label for="owner_number">OWNER_NUMBER</label>
                     <span class="helper-text" data-error="Required Number!" data-success="right"></span>
 
                 </div>
                 <div class="input-field col s6">
                     <input id="owner_email" type="text" class="validate" name="OWNER_EMAIL" #OWNER_EMAIL="ngModel" [(ngModel)]="jeweller.OWNER_EMAIL"  [pattern]="emailPattern" value ="" required >
-                    <label for="owner_email">OWNER_EMAIL</label>
                     <span class="helper-text" data-error="Invalid Email!" data-success="right"></span>
 
                 </div>
@@ -111,26 +109,4 @@
   </div>
 
  
-    <legend><b>Primary Address</b></legend>      
-    <label for ="primaryaddress">Address:</label>          
-    <input type = "text" name = "Address" id = "primaryaddress" value="" required><br/>  
-    <label for = "primaryzip">Zip code:</label>      
-    <input type = "text" name = "Zip code" id = "primaryzip" 
-                      pattern = "[0-9]{6}" value="" required><br/> 
-    
-     
-    <p>
-        <label>
-          <input input type="checkbox" id="same" name="same" (change)= "address()"/>
-          <span>Red</span>
-        </label>
-    </p>
-
-    // Fields for secondary address  
-                                 
-    <legend><b>Secondary Address</b></legend>              
-    <label for ="secondaryaddress">Address:</label>      
-    <input type = "text" name = "Address" id = "secondaryaddress" value="" required><br/>              
-    <label for = "secondaryzip">Zip code:</label>          
-    <input type = "text" name = "Zip code" id = "secondaryzip" 
-                      pattern = "[0-9]{6}" value="" required><br/>  
+   

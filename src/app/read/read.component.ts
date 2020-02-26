@@ -25,7 +25,7 @@ export class ReadComponent implements OnInit {
         this.toastr.success('welcome back');
       } else {
         this.toastr.success('As you are our New Customer we want you to fill this form to complete your profile');
-        this.router.navigate (['/createview']);
+        this.router.navigate (['/radiofill']);
       }
     });
   }

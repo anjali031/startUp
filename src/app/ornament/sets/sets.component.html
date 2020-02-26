@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-      <div class="col s8 offset-s2">
+      <div class="col s10 offset-s1">
         <div class="card-panel teal lighten-2">
           <h4 class="center white-text">Ornament Sets</h4>
         </div>
@@ -27,14 +27,14 @@
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s4">
               <select class="browser-default"#ORNAMENT_SHOPFOR ngModel name="ORNAMENT_SHOPFOR" required>
                 <option value="" disabled selected>Choose Shopfor</option>
                 <option value="1"> Women</option>
                 <option value="2" >Men</option>
               </select>
             </div>
-            <div class="input-field col s6">
+            <div class="input-field col s4">
               <select class="browser-default" #WEIGHT ngModel name="WEIGHT" id="WEIGHT" required>
                 <option value="" disabled selected>Choose your Ornament Weight</option>
                 <option value="1"> 1</option>
@@ -43,9 +43,7 @@
                 <option value="4" >4</option>
               </select>
             </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s4">
               <select class="browser-default" #ORNAMENT_METAL ngModel name="ORNAMENT_METAL" required>
                 <option value="" disabled selected>Choose your Ornament Metal</option>
                 <option value="1"> Diamond Studded</option>
@@ -55,7 +53,11 @@
                 <option value="5">Casting Plain</option>
               </select>
             </div>
-            <div class="input-field col s6">
+            
+          </div>
+          <div class="row">
+
+            <div class="input-field col s4">
                 <ul class="collection answer">
                     <ng-container *ngFor ="let answer of Occasion.ORNAMENT_OCCASION; let i = index">
                      <li>
@@ -67,9 +69,7 @@
                     </ng-container>
                 </ul>
               </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s4">
 
               <ul class="collection answer">
                 <ng-container *ngFor ="let answer of Gift.ORNAMENT_GIFT; let i = index"  >
@@ -82,7 +82,7 @@
                 </ng-container>
               </ul>
             </div>
-            <div class="input-field col s6">
+            <div class="input-field col s4">
 
               <ul class="collection answer">
                 <ng-container *ngFor ="let answer of Theme.ORNAMENT_THEME; let i = index"  >

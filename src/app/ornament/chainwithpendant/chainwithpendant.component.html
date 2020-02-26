@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-      <div class="col s8 offset-s2">
+      <div class="col s10 offset-s1">
         <div class="card-panel teal lighten-2">
           <h4 class="center white-text">Ornament Chain with Pendant</h4>
         </div>
@@ -45,7 +45,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s4">
               <select class="browser-default" #ORNAMENT_METAL ngModel name="ORNAMENT_METAL" required>
                 <option value="" disabled selected>Choose your Ornament Metal</option>
                 <option value="1"> Diamond Studded</option>
@@ -55,7 +55,31 @@
                 <option value="5">Casting Plain</option>
               </select>
             </div>
-            <div class="input-field col s6">
+            <div class="input-field col s4 ">
+                <select class="browser-default" #ORNAMENT_CHAIN_STYLE ngModel name="ORNAMENT_CHAIN_STYLE"  required>
+                    <option value="" disabled selected>Choose Chain Style</option>
+                    <option value="1"> Flat Gold Chain</option>
+                    <option value="2" >Gold Chain for Men"</option>
+                    <option value="3" >"Gold Curb Chain</option>
+                    <option value="4" >Gold Link Chain</option>
+                    <option value="5" >Gold Figaro Chain</option>
+                    <option value="6" >Gold Rope Chain</option>
+                    <option value="7" >Flexible</option>
+                </select>
+            </div>          
+            <div class="input-field col s4 ">
+                <select class="browser-default" #ORNAMENT_PENDANT_STYLE ngModel name="ORNAMENT_PENDANT_STYLE"  required>
+                    <option value="" disabled selected>Choose Chain Style</option>
+                    <option value="1">Casual </option>
+                    <option value="2" >Initials</option>
+                    <option value="3" >Mother-Daughter</option>
+                    <option value="4" >Personalised</option>
+                </select>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="input-field col s4">
                 <ul class="collection answer">
                     <ng-container *ngFor ="let answer of Occasion.ORNAMENT_OCCASION; let i = index">
                      <li>
@@ -67,9 +91,7 @@
                     </ng-container>
                 </ul>
               </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s4">
 
               <ul class="collection answer">
                 <ng-container *ngFor ="let answer of Gift.ORNAMENT_GIFT; let i = index"  >
@@ -82,7 +104,7 @@
                 </ng-container>
               </ul>
             </div>
-            <div class="input-field col s6">
+            <div class="input-field col s4">
 
               <ul class="collection answer">
                 <ng-container *ngFor ="let answer of Theme.ORNAMENT_THEME; let i = index"  >
@@ -97,7 +119,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s4">
               <ul class="collection answer">
                 <ng-container *ngFor ="let answer of Curated.ORNAMENT_CURATED_BY; let i = index"  >
                  <li>
@@ -109,7 +131,7 @@
                 </ng-container>
               </ul>
             </div>
-            <div class="input-field col s6 ">
+            <div class="input-field col s4 ">
               <ul class="collection answer">
                 <ng-container *ngFor ="let answer of Festival.ORNAMENT_FESTIVAL; let i = index"  >
                  <li>
@@ -121,44 +143,20 @@
                 </ng-container>
               </ul>
             </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <ul class="collection answer">
-                <ng-container *ngFor ="let answer of Bsize.ORNAMENT_CHAIN_LENGTH; let i = index"  >
-                 <li>
-                  <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="Size(answer.pk)" #ORNAMENT_CHAIN_LENGTH ngModel name="ORNAMENT_CHAIN_LENGTH"  required/>
-                    <span>{{answer.CHAIN_LENGTH}}</span>
-                  </label>
-                 </li> 
-                </ng-container>
-              </ul>
-            </div>
-            <div class="input-field col s6 ">
-                <select class="browser-default" #ORNAMENT_CHAIN_STYLE ngModel name="ORNAMENT_CHAIN_STYLE"  required>
-                    <option value="" disabled selected>Choose Chain Style</option>
-                    <option value="1"> Flat Gold Chain</option>
-                    <option value="2" >Gold Chain for Men"</option>
-                    <option value="3" >"Gold Curb Chain</option>
-                    <option value="4" >Gold Link Chain</option>
-                    <option value="5" >Gold Figaro Chain</option>
-                    <option value="6" >Gold Rope Chain</option>
-                    <option value="7" >Flexible</option>
-                </select>
+            <div class="input-field col s4">
+                <ul class="collection answer">
+                  <ng-container *ngFor ="let answer of Bsize.ORNAMENT_CHAIN_LENGTH; let i = index"  >
+                   <li>
+                    <label>
+                      <input type="checkbox" class="filled-in" value ="1" (click)="Size(answer.pk)" #ORNAMENT_CHAIN_LENGTH ngModel name="ORNAMENT_CHAIN_LENGTH"  required/>
+                      <span>{{answer.CHAIN_LENGTH}}</span>
+                    </label>
+                   </li> 
+                  </ng-container>
+                </ul>
             </div>
           </div>
-          <div class="row">
-            <div class="input-field col s6 ">
-                <select class="browser-default" #ORNAMENT_PENDANT_STYLE ngModel name="ORNAMENT_PENDANT_STYLE"  required>
-                    <option value="" disabled selected>Choose Chain Style</option>
-                    <option value="1">Casual </option>
-                    <option value="2" >Initials</option>
-                    <option value="3" >Mother-Daughter</option>
-                    <option value="4" >Personalised</option>
-                </select>
-            </div>
-          </div>
+          
           <input type="file" #CAD_FILE accept="image/*" (change)="handleFileInput($event.target.files)">
 
           <input type="file" #IMAGE_FILE_ONE accept="image/*" (change)="handleFileInputone($event.target.files)">

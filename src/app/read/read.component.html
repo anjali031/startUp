@@ -31,13 +31,13 @@
             <p><strong>Owner Number : </strong> {{data.data.OWNER_NUMBER}}</p>
             <p><strong>Owner Email : </strong> {{data.data.OWNER_EMAIL}}</p>
             <p><strong>Username : </strong>{{data.data.username}}</p> 
-            <p><strong>Jeweller ID : </strong> {{data.data.jeweller_id}}</p>
           </div>
         </div>
         <div class="sm-jumbotron center-align">
             <a class="waves-effect waves-light btn-large"  (click)=update()>Update</a>
-            <a class="waves-effect waves-light btn-large"  (click)=ornament()>Ornament</a>
           </div>
+          <hr>
+          <button class="btn-large btn-submit" type="submit" (click)=ornament()>Ornament</button>
     </div>
 </div>
 

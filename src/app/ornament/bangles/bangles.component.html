@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-      <div class="col s8 offset-s2">
+      <div class="col s10 offset-s1">
         <div class="card-panel teal lighten-2">
           <h4 class="center white-text">Ornament Bangles</h4>
         </div>
@@ -55,7 +55,24 @@
                 <option value="5">Casting Plain</option>
               </select>
             </div>
-            <div class="input-field col s6">
+
+            <div class="input-field col s6 ">
+                <select class="browser-default" #ORNAMENT_BANGLE_STYLE ngModel name="ORNAMENT_BANGLE_STYLE"  required>
+                    <option value="" disabled selected>Choose ornament STYLE</option>
+                    <option value="1"> Broad Bangles</option>
+                    <option value="2" >Oval</option>
+                    <option value="3" >Single Line</option>
+                    <option value="4" >Thin Bangles</option>
+                    <option value="5" >Stackable</option>
+                    <option value="6" >Mens Kada</option>
+                    <option value="7" >Flexible</option>
+                </select>
+            </div>
+            
+          </div>
+          <div class="row">
+
+            <div class="input-field col s4">
                 <ul class="collection answer">
                     <ng-container *ngFor ="let answer of Occasion.ORNAMENT_OCCASION; let i = index">
                      <li>
@@ -66,10 +83,8 @@
                      </li> 
                     </ng-container>
                 </ul>
-              </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
+            </div>
+            <div class="input-field col s4">
 
               <ul class="collection answer">
                 <ng-container *ngFor ="let answer of Gift.ORNAMENT_GIFT; let i = index"  >
@@ -82,7 +97,7 @@
                 </ng-container>
               </ul>
             </div>
-            <div class="input-field col s6">
+            <div class="input-field col s4">
 
               <ul class="collection answer">
                 <ng-container *ngFor ="let answer of Theme.ORNAMENT_THEME; let i = index"  >
@@ -97,7 +112,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s4">
               <ul class="collection answer">
                 <ng-container *ngFor ="let answer of Curated.ORNAMENT_CURATED_BY; let i = index"  >
                  <li>
@@ -109,7 +124,7 @@
                 </ng-container>
               </ul>
             </div>
-            <div class="input-field col s6 ">
+            <div class="input-field col s4 ">
               <ul class="collection answer">
                 <ng-container *ngFor ="let answer of Festival.ORNAMENT_FESTIVAL; let i = index"  >
                  <li>
@@ -121,33 +136,20 @@
                 </ng-container>
               </ul>
             </div>
+            <div class="input-field col s4">
+                <ul class="collection answer">
+                  <ng-container *ngFor ="let answer of Bsize.ORNAMENT_BANGLE_SIZE; let i = index"  >
+                   <li>
+                    <label>
+                      <input type="checkbox" class="filled-in" value ="1" (click)="Size(answer.pk)" #ORNAMENT_BANGLE_SIZE ngModel name="ORNAMENT_BANGLE_SIZE"  required/>
+                      <span>{{answer.BANGLE_SIZE}}</span>
+                    </label>
+                   </li> 
+                  </ng-container>
+                </ul>
+              </div>
           </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <ul class="collection answer">
-                <ng-container *ngFor ="let answer of Bsize.ORNAMENT_BANGLE_SIZE; let i = index"  >
-                 <li>
-                  <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="Size(answer.pk)" #ORNAMENT_BANGLE_SIZE ngModel name="ORNAMENT_BANGLE_SIZE"  required/>
-                    <span>{{answer.BANGLE_SIZE}}</span>
-                  </label>
-                 </li> 
-                </ng-container>
-              </ul>
-            </div>
-            <div class="input-field col s6 ">
-                <select class="browser-default" #ORNAMENT_BANGLE_STYLE ngModel name="ORNAMENT_BANGLE_STYLE"  required>
-                    <option value="" disabled selected>Choose ornament STYLE</option>
-                    <option value="1"> Broad Bangles</option>
-                    <option value="2" >Oval</option>
-                    <option value="3" >Single Line</option>
-                    <option value="4" >Thin Bangles</option>
-                    <option value="5" >Stackable</option>
-                    <option value="6" >Mens Kada</option>
-                    <option value="7" >Flexible</option>
-                </select>
-            </div>
-          </div>
+          
           <input type="file" #CAD_FILE accept="image/*" (change)="handleFileInput($event.target.files)">
 
           <input type="file" #IMAGE_FILE_ONE accept="image/*" (change)="handleFileInputone($event.target.files)">

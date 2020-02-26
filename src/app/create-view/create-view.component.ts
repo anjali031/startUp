@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class CreateViewComponent implements OnInit {
   jeweller: JewellerInfo;
-  emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$';
+  emailPattern = '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$';
 
   constructor(private userService: UserService , private router: Router) { }
 

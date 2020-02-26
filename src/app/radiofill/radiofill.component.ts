@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class RadiofillComponent implements OnInit {
   jeweller: JewellerInfo;
-  emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$';
+  emailPattern = '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$';
 
   constructor(private userService: UserService , private router: Router) { }
 
@@ -20,7 +20,6 @@ export class RadiofillComponent implements OnInit {
 
   ngOnInit() {
     this.resetForm();
-    this.address();
   }
 
 
@@ -44,22 +43,22 @@ export class RadiofillComponent implements OnInit {
     };
   }
 
-  address() {
-  if ((document.getElementById('same')as HTMLInputElement).checked)  {
-    (document.getElementById('secondaryaddress')as HTMLInputElement).value = (document.
-             getElementById('primaryaddress')as HTMLInputElement).value;
-    (document.getElementById('secondaryzip')as HTMLInputElement).value = (document.
-             getElementById('primaryzip')as HTMLInputElement).value;
-    } else {
-      (document.getElementById('secondaryaddress')as HTMLInputElement).value = '';
-      (document.getElementById('secondaryzip')as HTMLInputElement).value = '';
-    }
-  (document.getElementById('secondaryaddress')as HTMLInputElement).value = (document.
-      getElementById('primaryaddress')as HTMLInputElement).value;
-  (document.getElementById('secondaryzip')as HTMLInputElement).value = (document.
-      getElementById('primaryzip')as HTMLInputElement).value;
+ // address() {
+  // if ((document.getElementById('same')as HTMLInputElement).checked)  {
+    // (document.getElementById('secondaryaddress')as HTMLInputElement).value = (document.
+      //       getElementById('primaryaddress')as HTMLInputElement).value;
+   // (document.getElementById('secondaryzip')as HTMLInputElement).value = (document.
+     //   /     getElementById('primaryzip')as HTMLInputElement).value;
+//    } else {
+  //    (document.getElementById('secondaryaddress')as HTMLInputElement).value = '';
+    //  (document.getElementById('secondaryzip')as HTMLInputElement).value = '';
+   // }
+  // (document.getElementById('secondaryaddress')as HTMLInputElement).value = (document.
+    //  getElementById('primaryaddress')as HTMLInputElement).value;
+//  (document.getElementById('secondaryzip')as HTMLInputElement).value = (document.
+  //    getElementById('primaryzip')as HTMLInputElement).value;
 
-  }
+  // }
 
   addres() {
     if ((document.getElementById('same')as HTMLInputElement).checked) {

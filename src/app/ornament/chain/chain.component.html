@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-      <div class="col s8 offset-s2">
+      <div class="col s10 offset-s1">
         <div class="card-panel teal lighten-2">
           <h4 class="center white-text">Ornament Chain</h4>
         </div>
@@ -55,86 +55,7 @@
                 <option value="5">Casting Plain</option>
               </select>
             </div>
-            <div class="input-field col s6">
-                <ul class="collection answer">
-                    <ng-container *ngFor ="let answer of Occasion.ORNAMENT_OCCASION; let i = index">
-                     <li>
-                      <label>
-                        <input type="checkbox" class="filled-in" value ="1"(click)="Answer(answer.pk)" #ORNAMENT_OCCASION ngModel name="ORNAMENT_OCCASION"  required/>
-                        <span>{{answer.OCCASION}}</span>
-                      </label>
-                     </li> 
-                    </ng-container>
-                </ul>
-              </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
 
-              <ul class="collection answer">
-                <ng-container *ngFor ="let answer of Gift.ORNAMENT_GIFT; let i = index"  >
-                 <li>
-                  <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornagift(answer.pk)" #ORNAMENT_GIFT ngModel name="ORNAMENT_GIFT"  required/>
-                    <span>{{answer.GIFT}}</span>
-                  </label>
-                 </li> 
-                </ng-container>
-              </ul>
-            </div>
-            <div class="input-field col s6">
-
-              <ul class="collection answer">
-                <ng-container *ngFor ="let answer of Theme.ORNAMENT_THEME; let i = index"  >
-                 <li>
-                  <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornatheme(answer.pk)" #ORNAMENT_THEME ngModel name="ORNAMENT_THEME"  required/>
-                    <span>{{answer.THEME}}</span>
-                  </label>
-                 </li> 
-                </ng-container>
-              </ul>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <ul class="collection answer">
-                <ng-container *ngFor ="let answer of Curated.ORNAMENT_CURATED_BY; let i = index"  >
-                 <li>
-                  <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="OrnaCurated(answer.pk)" #ORNAMENT_CURATED_BY ngModel name="ORNAMENT_CURATED_BY"  required/>
-                    <span>{{answer.CURATED_BY}}</span>
-                  </label>
-                 </li> 
-                </ng-container>
-              </ul>
-            </div>
-            <div class="input-field col s6 ">
-              <ul class="collection answer">
-                <ng-container *ngFor ="let answer of Festival.ORNAMENT_FESTIVAL; let i = index"  >
-                 <li>
-                  <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornafesti(answer.pk)" #ORNAMENT_FESTIVAL ngModel name="ORNAMENT_FESTIVAL"  required/>
-                    <span>{{answer.FESTIVAL}}</span>
-                  </label>
-                 </li> 
-                </ng-container>
-              </ul>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <ul class="collection answer">
-                <ng-container *ngFor ="let answer of Bsize.ORNAMENT_CHAIN_LENGTH; let i = index"  >
-                 <li>
-                  <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="Size(answer.pk)" #ORNAMENT_CHAIN_LENGTH ngModel name="ORNAMENT_CHAIN_LENGTH"  required/>
-                    <span>{{answer.CHAIN_LENGTH}}</span>
-                  </label>
-                 </li> 
-                </ng-container>
-              </ul>
-            </div>
             <div class="input-field col s6 ">
                 <select class="browser-default" #ORNAMENT_CHAIN_STYLE ngModel name="ORNAMENT_CHAIN_STYLE"  required>
                     <option value="" disabled selected>Choose Chain Style</option>
@@ -147,6 +68,94 @@
                     <option value="7" >Flexible</option>
                 </select>
             </div>
+            
+            
+          </div>
+          <div class="row">
+
+            <div class="input-field col s4">
+                <ul class="collection answer">
+                    <p> Select your Occasion</p>
+
+                    <ng-container *ngFor ="let answer of Occasion.ORNAMENT_OCCASION; let i = index">
+                     <li>
+                      <label>
+                        <input type="checkbox" class="filled-in" value ="1"(click)="Answer(answer.pk)" #ORNAMENT_OCCASION ngModel name="ORNAMENT_OCCASION"  required/>
+                        <span>{{answer.OCCASION}}</span>
+                      </label>
+                     </li> 
+                    </ng-container>
+                </ul>
+            </div>
+            <div class="input-field col s4">
+              <ul class="collection answer">
+                <p> Select your Gift</p>
+
+                <ng-container *ngFor ="let answer of Gift.ORNAMENT_GIFT; let i = index"  >
+                 <li>
+                  <label>
+                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornagift(answer.pk)" #ORNAMENT_GIFT ngModel name="ORNAMENT_GIFT"  required/>
+                    <span>{{answer.GIFT}}</span>
+                  </label>
+                 </li> 
+                </ng-container>
+              </ul>
+            </div>
+            <div class="input-field col s4">
+              <ul class="collection answer">
+                <p> Select your Theme</p>
+
+                <ng-container *ngFor ="let answer of Theme.ORNAMENT_THEME; let i = index"  >
+                 <li>
+                  <label>
+                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornatheme(answer.pk)" #ORNAMENT_THEME ngModel name="ORNAMENT_THEME"  required/>
+                    <span>{{answer.THEME}}</span>
+                  </label>
+                 </li> 
+                </ng-container>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4">
+                <ul class="collection answer">
+                    <p> Select your Curated by</p>
+
+                  <ng-container *ngFor ="let answer of Curated.ORNAMENT_CURATED_BY; let i = index"  >
+                   <li>
+                    <label>
+                      <input type="checkbox" class="filled-in" value ="1" (click)="OrnaCurated(answer.pk)" #ORNAMENT_CURATED_BY ngModel name="ORNAMENT_CURATED_BY"  required/>
+                      <span>{{answer.CURATED_BY}}</span>
+                    </label>
+                   </li> 
+                  </ng-container>
+                </ul>
+            </div>         
+            <div class="input-field col s4 ">
+              <ul class="collection answer">
+                <ng-container *ngFor ="let answer of Festival.ORNAMENT_FESTIVAL; let i = index"  >
+                 <li>
+                  <label>
+                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornafesti(answer.pk)" #ORNAMENT_FESTIVAL ngModel name="ORNAMENT_FESTIVAL"  required/>
+                    <span>{{answer.FESTIVAL}}</span>
+                  </label>
+                 </li> 
+                </ng-container>
+              </ul>
+            </div>
+            <div class="input-field col s4">
+              <ul class="collection answer">
+                <ng-container *ngFor ="let answer of Bsize.ORNAMENT_CHAIN_LENGTH; let i = index"  >
+                 <li>
+                  <label>
+                    <input type="checkbox" class="filled-in" value ="1" (click)="Size(answer.pk)" #ORNAMENT_CHAIN_LENGTH ngModel name="ORNAMENT_CHAIN_LENGTH"  required/>
+                    <span>{{answer.CHAIN_LENGTH}}</span>
+                  </label>
+                 </li> 
+                </ng-container>
+              </ul>
+            </div>
+            
           </div>
           <input type="file" #CAD_FILE accept="image/*" (change)="handleFileInput($event.target.files)">
 

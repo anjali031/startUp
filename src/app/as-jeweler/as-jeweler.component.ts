@@ -13,7 +13,7 @@ import { ToastrService } from 'ngx-toastr';
 export class AsJewelerComponent implements OnInit {
   user: User;
   passwordPattern = '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}';
-  emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$';
+  emailPattern = '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$';
   constructor(private userService: UserService, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit() {
@@ -35,8 +35,14 @@ export class AsJewelerComponent implements OnInit {
   jeweler() {
     this.router.navigate(['/login']);
   }
+  check() {
+    if ((document.getElementById('password') as HTMLInputElement).value != (document.getElementById('confirm_password')as HTMLInputElement).value) {
+      alert ("password dont match")
+    }
+  }
 
   OnSubmit(form: NgForm) {
+    this.check();
     this.userService.asJeweler(form.value)
     .subscribe((data: any) => {
       if (data.response === 201) {
