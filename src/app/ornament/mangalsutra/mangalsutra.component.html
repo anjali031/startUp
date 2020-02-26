@@ -58,6 +58,7 @@
 
             <div class="input-field col s4">
                 <ul class="collection answer">
+                    <p>Select your Occasion</p>
                     <ng-container *ngFor ="let answer of Occasion.ORNAMENT_OCCASION; let i = index">
                      <li>
                       <label>
@@ -71,6 +72,7 @@
             <div class="input-field col s4">
 
               <ul class="collection answer">
+                  <p>Select your Gift type</p>
                 <ng-container *ngFor ="let answer of Gift.ORNAMENT_GIFT; let i = index"  >
                  <li>
                   <label>
@@ -82,8 +84,9 @@
               </ul>
             </div>
             <div class="input-field col s4">
-
+  
               <ul class="collection answer">
+                  <p>SSelect Your Theme</p>
                 <ng-container *ngFor ="let answer of Theme.ORNAMENT_THEME; let i = index"  >
                  <li>
                   <label>
@@ -98,6 +101,7 @@
           <div class="row">
             <div class="input-field col s6">
               <ul class="collection answer">
+                  <p>Select your Curated By</p>
                 <ng-container *ngFor ="let answer of Curated.ORNAMENT_CURATED_BY; let i = index"  >
                  <li>
                   <label>
@@ -110,6 +114,8 @@
             </div>
             <div class="input-field col s6 ">
               <ul class="collection answer">
+
+                <p>Select your Festival</p>
                 <ng-container *ngFor ="let answer of Festival.ORNAMENT_FESTIVAL; let i = index"  >
                  <li>
                   <label>
@@ -122,7 +128,7 @@
             </div>
           </div>
           
-          <input type="file" #CAD_FILE accept="image/*" (change)="handleFileInput($event.target.files)">
+          <input type="file" #CAD_FILE accept="" (change)="handleFileInput($event.target.files)">
 
           <input type="file" #IMAGE_FILE_ONE accept="image/*" (change)="handleFileInputone($event.target.files)">
 

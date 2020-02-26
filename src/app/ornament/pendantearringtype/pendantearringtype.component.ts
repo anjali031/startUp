@@ -150,4 +150,5 @@ export class PendantearringtypeComponent implements OnInit {
       }
     );
    }
+   
 }

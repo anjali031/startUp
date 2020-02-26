@@ -74,6 +74,7 @@
 
             <div class="input-field col s4">
                 <ul class="collection answer">
+                    <p>select Your Occasion</p>
                     <ng-container *ngFor ="let answer of Occasion.ORNAMENT_OCCASION; let i = index">
                      <li>
                       <label>
@@ -87,6 +88,7 @@
             <div class="input-field col s4">
 
               <ul class="collection answer">
+                <p>Select Your Gift</p>
                 <ng-container *ngFor ="let answer of Gift.ORNAMENT_GIFT; let i = index"  >
                  <li>
                   <label>
@@ -98,8 +100,8 @@
               </ul>
             </div>
             <div class="input-field col s4">
-
               <ul class="collection answer">
+                <p>Select your  Theme</p>
                 <ng-container *ngFor ="let answer of Theme.ORNAMENT_THEME; let i = index"  >
                  <li>
                   <label>
@@ -114,6 +116,7 @@
           <div class="row">
             <div class="input-field col s4">
               <ul class="collection answer">
+                <p>Select your Currated by</p>
                 <ng-container *ngFor ="let answer of Curated.ORNAMENT_CURATED_BY; let i = index"  >
                  <li>
                   <label>
@@ -126,6 +129,7 @@
             </div>
             <div class="input-field col s4 ">
               <ul class="collection answer">
+                <p>Select Your Festival</p>
                 <ng-container *ngFor ="let answer of Festival.ORNAMENT_FESTIVAL; let i = index"  >
                  <li>
                   <label>
@@ -138,6 +142,7 @@
             </div>
             <div class="input-field col s4">
                 <ul class="collection answer">
+                  <p>Select Your Bangle Size</p>
                   <ng-container *ngFor ="let answer of Bsize.ORNAMENT_BANGLE_SIZE; let i = index"  >
                    <li>
                     <label>
@@ -150,7 +155,7 @@
               </div>
           </div>
           
-          <input type="file" #CAD_FILE accept="image/*" (change)="handleFileInput($event.target.files)">
+          <input type="file" #CAD_FILE accept="image/*" (change)="handleFileInput($event.target.files)" >
 
           <input type="file" #IMAGE_FILE_ONE accept="image/*" (change)="handleFileInputone($event.target.files)">
 
