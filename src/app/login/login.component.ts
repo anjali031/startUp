@@ -30,7 +30,9 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/customer']);
         }
       } else {
-        this.toastr.error(data.message);
+        this.toastr.error(data.message );
+        this.toastr.error(' Make sure your Username is in Lowercase');
+
       }
 
    },
