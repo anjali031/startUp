@@ -9,8 +9,13 @@ import { JewellerInfo } from './jeweller-info.model';
 export class UserService {
   formData: JewellerInfo;
   occasion: number;
+  arr: any = [1, 2, 5];
+  ar: any;
+
   constructor( public http: HttpClient ) { }
   readonly rootURL = 'https://harshil21.pythonanywhere.com';
+
+
 
   asJeweler(user: User) {
     const body: User = {
@@ -23,7 +28,11 @@ export class UserService {
     const reqHeader = new HttpHeaders({'Content-Type': 'application/json'});
     return this.http.post(this.rootURL + '/api/user/v1/register/', body, {headers : reqHeader});
   }
-
+  main() {
+    for (let  i of this.arr) {
+      console.log('Ornameny_type' + ':' + i);
+    }
+  }
 
   asCitizen(user: User) {
     const body: User = {
@@ -83,121 +92,121 @@ export class UserService {
 
   readorn() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/ornament-list/?page=1', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=1', {headers: Headers});
   }
 
   r2() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/ornament-list/?page=2', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=2', {headers: Headers});
   }
 
   r3() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/ornament-list/?page=3', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=3', {headers: Headers});
   }
 
   r4() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/ornament-list/?page=4', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=4', {headers: Headers});
   }
 
   r5() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/ornament-list/?page=5', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=5', {headers: Headers});
   }
 
   r6() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/ornament-list/?page=6', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=6', {headers: Headers});
   }
 
   r7() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/ornament-list/?page=7', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=7', {headers: Headers});
   }
 
   r8() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/ornament-list/?page=8', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=8', {headers: Headers});
   }
 
   r9() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/ornament-list/?page=9', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=9', {headers: Headers});
   }
 
   r10() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/ornament-list/?page=10', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=10', {headers: Headers});
   }
 
   r11() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/ornament-list/?page=11', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=11', {headers: Headers});
   }
 
   r12() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/ornament-list/?page=12', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=12', {headers: Headers});
   }
 
   r13() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/ornament-list/?page=13', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=13', {headers: Headers});
   }
 
   r14() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/ornament-list/?page=14', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=14', {headers: Headers});
   }
 
   ornoccasion() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/choice-field/occasion/', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/occasion/', {headers: Headers});
   }
 
   ornGift() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/choice-field/gift/', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/gift/', {headers: Headers});
   }
 
   ornTheme() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/choice-field/theme/', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/theme/', {headers: Headers});
   }
 
   ornCurated() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/choice-field/curatedby/', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/curatedby/', {headers: Headers});
   }
 
   ornFestival() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/choice-field/festival/', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/festival/', {headers: Headers});
   }
 
   ornRstyle() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/choice-field/ring-style/', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/ring-style/', {headers: Headers});
   }
   ornRsize() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/choice-field/ring-size/', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/ring-size/', {headers: Headers});
   }
 
   ornBsize() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/choice-field/bracelet-size/', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/bracelet-size/', {headers: Headers});
   }
 
   ornBanglesize() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/choice-field/bangle-size/', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/bangle-size/', {headers: Headers});
   }
 
   ornChainlength() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL+'/api/jeweller/v1/ornament/choice-field/chain-length/', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/chain-length/', {headers: Headers});
   }
 
   update(jeweller: JewellerInfo) {
@@ -285,7 +294,7 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  multi(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan:any, asin: any, themea: any,themeb: any ,curateda: any,curatedb: any,festia: any,festib:any,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  multi(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -312,7 +321,8 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  muli(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan:any, asin: any, themea: any,themeb: any ,curateda: any,curatedb: any,festia: any,festib:any, rsizea: any,rsizeb: any, ORNAMENT_RING_STYLE: string,fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  // tslint:disable-next-line: max-line-length
+  muli(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion: any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, rsizea: any, rsizeb: any, ORNAMENT_RING_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -342,7 +352,8 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  ear(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan:any, asin: any, themea: any,themeb: any ,curateda: any,curatedb: any,festia: any,festib:any,ORNAMENT_EARRING_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  // tslint:disable-next-line: max-line-length
+  ear(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion: any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_EARRING_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -372,7 +383,8 @@ export class UserService {
   }
 
 
-  nosepin(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan:any, asin: any, themea: any,themeb: any ,curateda: any,curatedb: any,festia: any,festib:any,ORNAMENT_NOSEPIN_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  // tslint:disable-next-line: max-line-length
+  nosepin(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion: any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_NOSEPIN_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -401,7 +413,8 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  pendantwithearing(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan:any, asin: any, themea: any,themeb: any ,curateda: any,curatedb: any,festia: any,festib:any,ORNAMENT_EARRING_STYLE: string,ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  // tslint:disable-next-line: max-line-length
+  pendantwithearing(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion: any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_EARRING_STYLE: string, ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -431,7 +444,8 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  bracelet(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan:any, asin: any, themea: any,themeb: any ,curateda: any,curatedb: any,festia: any,festib:any, bsizea: any,bsizeb: any, ORNAMENT_BRACELET_STYLE: string,fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  // tslint:disable-next-line: max-line-length
+  bracelet(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_BRACELET_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -461,7 +475,8 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  bangles(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan:any, asin: any, themea: any,themeb: any ,curateda: any,curatedb: any,festia: any,festib:any, bsizea: any,bsizeb: any, ORNAMENT_BANGLE_STYLE: string,fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  // tslint:disable-next-line: max-line-length
+  bangles(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_BANGLE_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -491,7 +506,8 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  chain(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan:any, asin: any, themea: any,themeb: any ,curateda: any,curatedb: any,festia: any,festib:any, bsizea: any,bsizeb: any, ORNAMENT_CHAIN_STYLE: string,fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  // tslint:disable-next-line: max-line-length
+  chain(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_CHAIN_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -521,7 +537,8 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  necklace(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan:any, asin: any, themea: any,themeb: any ,curateda: any,curatedb: any,festia: any,festib:any,ORNAMENT_NECKLACE_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  // tslint:disable-next-line: max-line-length
+  necklace(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_NECKLACE_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -552,7 +569,8 @@ export class UserService {
 
 
 
-  chaitpen(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan:any, asin: any, themea: any,themeb: any ,curateda: any,curatedb: any,festia: any,festib:any, bsizea: any,bsizeb: any, ORNAMENT_CHAIN_STYLE: string, ORNAMENT_PENDANT_STYLE: string,fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  // tslint:disable-next-line: max-line-length
+  chaitpen(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_CHAIN_STYLE: string, ORNAMENT_PENDANT_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -584,7 +602,8 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  pendant(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan:any, asin: any, themea: any,themeb: any ,curateda: any,curatedb: any,festia: any,festib:any,ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  // tslint:disable-next-line: max-line-length
+  pendant(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -613,6 +632,7 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
+  // tslint:disable-next-line: max-line-length
   postupdate(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, ORNAMENT_OCCASION: string, ORNAMENT_GIFT: string, ORNAMENT_THEME: string, ORNAMENT_CURATED_BY: string, ORNAMENT_FESTIVAL: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
