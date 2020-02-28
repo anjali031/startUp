@@ -4912,21 +4912,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion = pk;
+          this.asion.push(pk);
           console.log(this.asion);
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan = k;
+          this.asan.push(k);
           console.log(this.asan);
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea = k;
+          this.themea.push(k);
           console.log(this.themea);
           console.log(this.themeb);
         }
@@ -4934,7 +4934,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda = k;
+          this.curateda.push(k);
           console.log(this.curateda);
           console.log(this.curatedb);
         }
@@ -4942,7 +4942,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia = k;
+          this.festia.push(k);
           console.log(this.festia);
           console.log(this.festib);
         }
@@ -5157,39 +5157,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion = pk;
+          this.asion.push(pk);
           console.log(this.asion);
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan = k;
+          this.asan.push(k);
           console.log(this.asan);
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea = k;
+          this.themea.push(k);
           console.log(this.themea);
-          console.log(this.themeb);
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda = k;
+          this.curateda.push(k);
           console.log(this.curateda);
-          console.log(this.curatedb);
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia = k;
+          this.festia.push(k);
           console.log(this.festia);
-          console.log(this.festib);
         }
       }, {
         key: "handleFileInput",
@@ -6401,21 +6398,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion = pk;
+          this.asion.push(pk);
           console.log(this.asion);
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan = k;
+          this.asan.push(k);
           console.log(this.asan);
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea = k;
+          this.themea.push(k);
           console.log(this.themea);
           console.log(this.themeb);
         }
@@ -6423,7 +6420,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda = k;
+          this.curateda.push(k);
           console.log(this.curateda);
           console.log(this.curatedb);
         }
@@ -6431,7 +6428,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia = k;
+          this.festia.push(k);
           console.log(this.festia);
           console.log(this.festib);
         }
@@ -6902,39 +6899,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion = pk;
+          this.asion.push(pk);
           console.log(this.asion);
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan = k;
-          console.log(this.asan);
+          this.asan.push(k);
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea = k;
+          this.themea.push(k);
           console.log(this.themea);
-          console.log(this.themeb);
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda = k;
+          this.curateda.push(k);
           console.log(this.curateda);
-          console.log(this.curatedb);
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia = k;
+          this.festia.push(k);
           console.log(this.festia);
-          console.log(this.festib);
         }
       }, {
         key: "handleFileInput",
@@ -9039,19 +9032,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
-        key: "postFiel",
-        value: function postFiel(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT) {
-          var formData = new FormData();
-          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-          formData.append('WEIGHT', WEIGHT);
-          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
-          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
-            headers: Headers
-          });
-        }
-      }, {
         key: "postFeil",
         value: function postFeil(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
           var formData = new FormData();
@@ -9083,66 +9063,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
           formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-          formData.append('ORNAMENT_OCCASION', asion);
-          formData.append('ORNAMENT_OCCASION', asian);
-          formData.append('ORNAMENT_GIFT', asan);
-          formData.append('ORNAMENT_GIFT', asin);
-          formData.append('ORNAMENT_THEME', themea);
-          formData.append('ORNAMENT_THEME', themeb);
-          formData.append('ORNAMENT_CURATED_BY', curateda);
-          formData.append('ORNAMENT_CURATED_BY', curatedb);
-          formData.append('ORNAMENT_FESTIVAL', festia);
-          formData.append('ORNAMENT_FESTIVAL', festib);
-          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
-          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
-            headers: Headers
-          });
-        } // tslint:disable-next-line: max-line-length
-
-      }, {
-        key: "muli",
-        value: function muli(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, rsizea, rsizeb, ORNAMENT_RING_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
-          var formData = new FormData();
-          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-          formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-          formData.append('ORNAMENT_OCCASION', asion);
-          formData.append('ORNAMENT_OCCASION', asian);
-          formData.append('ORNAMENT_GIFT', asan);
-          formData.append('ORNAMENT_GIFT', asin);
-          formData.append('ORNAMENT_THEME', themea);
-          formData.append('ORNAMENT_THEME', themeb);
-          formData.append('ORNAMENT_CURATED_BY', curateda);
-          formData.append('ORNAMENT_CURATED_BY', curatedb);
-          formData.append('ORNAMENT_FESTIVAL', festia);
-          formData.append('ORNAMENT_FESTIVAL', festib);
-          formData.append('ORNAMENT_RING_STYLE', ORNAMENT_RING_STYLE);
-          formData.append('ORNAMENT_RING_SIZE', rsizea);
-          formData.append('ORNAMENT_RING_SIZE', rsizeb);
-          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
-          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
-            headers: Headers
-          });
-        }
-      }, {
-        key: "mli",
-        value: function mli(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, rsizea, rsizeb, ORNAMENT_RING_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
-          var formData = new FormData();
-          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-          formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion = true;
           var _didIteratorError = false;
           var _iteratorError = undefined;
@@ -9151,8 +9071,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             for (var _iterator = asion[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
               var i = _step.value;
               formData.append('ORNAMENT_OCCASION', i);
-            } // formData.append('ORNAMENT_OCCASION', asian);
-
+            }
           } catch (err) {
             _didIteratorError = true;
             _iteratorError = err;
@@ -9176,8 +9095,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             for (var _iterator2 = asan[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
               var i = _step2.value;
               formData.append('ORNAMENT_GIFT', i);
-            } // formData.append('ORNAMENT_GIFT', asin);
-
+            }
           } catch (err) {
             _didIteratorError2 = true;
             _iteratorError2 = err;
@@ -9265,17 +9183,65 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
+            headers: Headers
+          });
+        } // tslint:disable-next-line: max-line-length
+
+      }, {
+        key: "muli",
+        value: function muli(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, rsizea, rsizeb, ORNAMENT_RING_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+          var formData = new FormData();
+          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+          formData.append('WEIGHT', WEIGHT);
+          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+          formData.append('ORNAMENT_OCCASION', asion);
+          formData.append('ORNAMENT_OCCASION', asian);
+          formData.append('ORNAMENT_GIFT', asan);
+          formData.append('ORNAMENT_GIFT', asin);
+          formData.append('ORNAMENT_THEME', themea);
+          formData.append('ORNAMENT_THEME', themeb);
+          formData.append('ORNAMENT_CURATED_BY', curateda);
+          formData.append('ORNAMENT_CURATED_BY', curatedb);
+          formData.append('ORNAMENT_FESTIVAL', festia);
+          formData.append('ORNAMENT_FESTIVAL', festib);
           formData.append('ORNAMENT_RING_STYLE', ORNAMENT_RING_STYLE);
+          formData.append('ORNAMENT_RING_SIZE', rsizea);
+          formData.append('ORNAMENT_RING_SIZE', rsizeb);
+          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
+            headers: Headers
+          });
+        }
+      }, {
+        key: "mli",
+        value: function mli(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, rsizea, rsizeb, ORNAMENT_RING_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+          var formData = new FormData();
+          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+          formData.append('WEIGHT', WEIGHT);
+          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion6 = true;
           var _didIteratorError6 = false;
           var _iteratorError6 = undefined;
 
           try {
-            for (var _iterator6 = rsizea[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+            for (var _iterator6 = asion[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
               var i = _step6.value;
-              formData.append('ORNAMENT_RING_SIZE', i);
-            } // formData.append('ORNAMENT_RING_SIZE', rsizea);
-            // formData.append('ORNAMENT_RING_SIZE', rsizeb);
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
 
           } catch (err) {
             _didIteratorError6 = true;
@@ -9292,34 +9258,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
-          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
-            headers: Headers
-          });
-        } // tslint:disable-next-line: max-line-length
-
-      }, {
-        key: "ear",
-        value: function ear(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_EARRING_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
-          var formData = new FormData();
-          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-          formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion7 = true;
           var _didIteratorError7 = false;
           var _iteratorError7 = undefined;
 
           try {
-            for (var _iterator7 = asion[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+            for (var _iterator7 = asan[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
               var i = _step7.value;
-              formData.append('ORNAMENT_OCCASION', i);
-            } // formData.append('ORNAMENT_OCCASION', asian);
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
 
           } catch (err) {
             _didIteratorError7 = true;
@@ -9341,11 +9288,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError8 = undefined;
 
           try {
-            for (var _iterator8 = asan[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+            for (var _iterator8 = themea[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
               var i = _step8.value;
-              formData.append('ORNAMENT_GIFT', i);
-            } // formData.append('ORNAMENT_GIFT', asin);
-
+              formData.append('ORNAMENT_THEME', i);
+            }
           } catch (err) {
             _didIteratorError8 = true;
             _iteratorError8 = err;
@@ -9366,11 +9312,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError9 = undefined;
 
           try {
-            for (var _iterator9 = themea[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
+            for (var _iterator9 = curateda[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
               var i = _step9.value;
-              formData.append('ORNAMENT_THEME', i);
-            } // formData.append('ORNAMENT_THEME', themeb);
-
+              formData.append('ORNAMENT_CURATED_BY', i);
+            }
           } catch (err) {
             _didIteratorError9 = true;
             _iteratorError9 = err;
@@ -9391,11 +9336,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError10 = undefined;
 
           try {
-            for (var _iterator10 = curateda[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
+            for (var _iterator10 = festia[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
               var i = _step10.value;
-              formData.append('ORNAMENT_CURATED_BY', i);
-            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
-
+              formData.append('ORNAMENT_FESTIVAL', i);
+            }
           } catch (err) {
             _didIteratorError10 = true;
             _iteratorError10 = err;
@@ -9411,15 +9355,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          formData.append('ORNAMENT_RING_STYLE', ORNAMENT_RING_STYLE);
           var _iteratorNormalCompletion11 = true;
           var _didIteratorError11 = false;
           var _iteratorError11 = undefined;
 
           try {
-            for (var _iterator11 = festia[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
+            for (var _iterator11 = rsizea[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
               var i = _step11.value;
-              formData.append('ORNAMENT_FESTIVAL', i);
-            } // formData.append('ORNAMENT_FESTIVAL', festib);
+              formData.append('ORNAMENT_RING_SIZE', i);
+            } // formData.append('ORNAMENT_RING_SIZE', rsizea);
+            // formData.append('ORNAMENT_RING_SIZE', rsizeb);
 
           } catch (err) {
             _didIteratorError11 = true;
@@ -9436,7 +9382,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
           formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
           formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
           formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -9448,8 +9393,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         } // tslint:disable-next-line: max-line-length
 
       }, {
-        key: "nosepin",
-        value: function nosepin(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_NOSEPIN_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+        key: "ear",
+        value: function ear(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_EARRING_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
           var formData = new FormData();
           formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
           formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -9581,7 +9526,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_NOSEPIN_STYLE', ORNAMENT_NOSEPIN_STYLE);
+          formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
           formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
           formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
           formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -9593,8 +9538,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         } // tslint:disable-next-line: max-line-length
 
       }, {
-        key: "pendantwithearing",
-        value: function pendantwithearing(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_EARRING_STYLE, ORNAMENT_PENDANT_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+        key: "nosepin",
+        value: function nosepin(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_NOSEPIN_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
           var formData = new FormData();
           formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
           formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -9684,7 +9629,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             for (var _iterator20 = curateda[Symbol.iterator](), _step20; !(_iteratorNormalCompletion20 = (_step20 = _iterator20.next()).done); _iteratorNormalCompletion20 = true) {
               var i = _step20.value;
               formData.append('ORNAMENT_CURATED_BY', i);
-            } //  formData.append('ORNAMENT_CURATED_BY', curatedb);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
 
           } catch (err) {
             _didIteratorError20 = true;
@@ -9726,8 +9671,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
-          formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
+          formData.append('ORNAMENT_NOSEPIN_STYLE', ORNAMENT_NOSEPIN_STYLE);
           formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
           formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
           formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -9739,8 +9683,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         } // tslint:disable-next-line: max-line-length
 
       }, {
-        key: "bracelet",
-        value: function bracelet(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, bsizea, bsizeb, ORNAMENT_BRACELET_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+        key: "pendantwithearing",
+        value: function pendantwithearing(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_EARRING_STYLE, ORNAMENT_PENDANT_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
           var formData = new FormData();
           formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
           formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -9830,7 +9774,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             for (var _iterator25 = curateda[Symbol.iterator](), _step25; !(_iteratorNormalCompletion25 = (_step25 = _iterator25.next()).done); _iteratorNormalCompletion25 = true) {
               var i = _step25.value;
               formData.append('ORNAMENT_CURATED_BY', i);
-            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+            } //  formData.append('ORNAMENT_CURATED_BY', curatedb);
 
           } catch (err) {
             _didIteratorError25 = true;
@@ -9872,16 +9816,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_BRACELET_STYLE', ORNAMENT_BRACELET_STYLE);
+          formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
+          formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
+          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
+            headers: Headers
+          });
+        } // tslint:disable-next-line: max-line-length
+
+      }, {
+        key: "bracelet",
+        value: function bracelet(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, bsizea, bsizeb, ORNAMENT_BRACELET_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+          var formData = new FormData();
+          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+          formData.append('WEIGHT', WEIGHT);
+          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion27 = true;
           var _didIteratorError27 = false;
           var _iteratorError27 = undefined;
 
           try {
-            for (var _iterator27 = bsizea[Symbol.iterator](), _step27; !(_iteratorNormalCompletion27 = (_step27 = _iterator27.next()).done); _iteratorNormalCompletion27 = true) {
+            for (var _iterator27 = asion[Symbol.iterator](), _step27; !(_iteratorNormalCompletion27 = (_step27 = _iterator27.next()).done); _iteratorNormalCompletion27 = true) {
               var i = _step27.value;
-              formData.append('ORNAMENT_BRACELET_SIZE', i);
-            } // formData.append('ORNAMENT_BRACELET_SIZE', bsizeb);
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
 
           } catch (err) {
             _didIteratorError27 = true;
@@ -9894,6 +9858,132 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             } finally {
               if (_didIteratorError27) {
                 throw _iteratorError27;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion28 = true;
+          var _didIteratorError28 = false;
+          var _iteratorError28 = undefined;
+
+          try {
+            for (var _iterator28 = asan[Symbol.iterator](), _step28; !(_iteratorNormalCompletion28 = (_step28 = _iterator28.next()).done); _iteratorNormalCompletion28 = true) {
+              var i = _step28.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError28 = true;
+            _iteratorError28 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion28 && _iterator28.return != null) {
+                _iterator28.return();
+              }
+            } finally {
+              if (_didIteratorError28) {
+                throw _iteratorError28;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion29 = true;
+          var _didIteratorError29 = false;
+          var _iteratorError29 = undefined;
+
+          try {
+            for (var _iterator29 = themea[Symbol.iterator](), _step29; !(_iteratorNormalCompletion29 = (_step29 = _iterator29.next()).done); _iteratorNormalCompletion29 = true) {
+              var i = _step29.value;
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
+
+          } catch (err) {
+            _didIteratorError29 = true;
+            _iteratorError29 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion29 && _iterator29.return != null) {
+                _iterator29.return();
+              }
+            } finally {
+              if (_didIteratorError29) {
+                throw _iteratorError29;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion30 = true;
+          var _didIteratorError30 = false;
+          var _iteratorError30 = undefined;
+
+          try {
+            for (var _iterator30 = curateda[Symbol.iterator](), _step30; !(_iteratorNormalCompletion30 = (_step30 = _iterator30.next()).done); _iteratorNormalCompletion30 = true) {
+              var i = _step30.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+
+          } catch (err) {
+            _didIteratorError30 = true;
+            _iteratorError30 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion30 && _iterator30.return != null) {
+                _iterator30.return();
+              }
+            } finally {
+              if (_didIteratorError30) {
+                throw _iteratorError30;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion31 = true;
+          var _didIteratorError31 = false;
+          var _iteratorError31 = undefined;
+
+          try {
+            for (var _iterator31 = festia[Symbol.iterator](), _step31; !(_iteratorNormalCompletion31 = (_step31 = _iterator31.next()).done); _iteratorNormalCompletion31 = true) {
+              var i = _step31.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
+
+          } catch (err) {
+            _didIteratorError31 = true;
+            _iteratorError31 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion31 && _iterator31.return != null) {
+                _iterator31.return();
+              }
+            } finally {
+              if (_didIteratorError31) {
+                throw _iteratorError31;
+              }
+            }
+          }
+
+          formData.append('ORNAMENT_BRACELET_STYLE', ORNAMENT_BRACELET_STYLE);
+          var _iteratorNormalCompletion32 = true;
+          var _didIteratorError32 = false;
+          var _iteratorError32 = undefined;
+
+          try {
+            for (var _iterator32 = bsizea[Symbol.iterator](), _step32; !(_iteratorNormalCompletion32 = (_step32 = _iterator32.next()).done); _iteratorNormalCompletion32 = true) {
+              var i = _step32.value;
+              formData.append('ORNAMENT_BRACELET_SIZE', i);
+            } // formData.append('ORNAMENT_BRACELET_SIZE', bsizeb);
+
+          } catch (err) {
+            _didIteratorError32 = true;
+            _iteratorError32 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion32 && _iterator32.return != null) {
+                _iterator32.return();
+              }
+            } finally {
+              if (_didIteratorError32) {
+                throw _iteratorError32;
               }
             }
           }
@@ -9917,141 +10007,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
           formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-          var _iteratorNormalCompletion28 = true;
-          var _didIteratorError28 = false;
-          var _iteratorError28 = undefined;
-
-          try {
-            for (var _iterator28 = asion[Symbol.iterator](), _step28; !(_iteratorNormalCompletion28 = (_step28 = _iterator28.next()).done); _iteratorNormalCompletion28 = true) {
-              var i = _step28.value;
-              formData.append('ORNAMENT_OCCASION', i);
-            } // formData.append('ORNAMENT_OCCASION', asian);
-
-          } catch (err) {
-            _didIteratorError28 = true;
-            _iteratorError28 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion28 && _iterator28.return != null) {
-                _iterator28.return();
-              }
-            } finally {
-              if (_didIteratorError28) {
-                throw _iteratorError28;
-              }
-            }
-          }
-
-          var _iteratorNormalCompletion29 = true;
-          var _didIteratorError29 = false;
-          var _iteratorError29 = undefined;
-
-          try {
-            for (var _iterator29 = asan[Symbol.iterator](), _step29; !(_iteratorNormalCompletion29 = (_step29 = _iterator29.next()).done); _iteratorNormalCompletion29 = true) {
-              var i = _step29.value;
-              formData.append('ORNAMENT_GIFT', i);
-            } // formData.append('ORNAMENT_GIFT', asin);
-
-          } catch (err) {
-            _didIteratorError29 = true;
-            _iteratorError29 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion29 && _iterator29.return != null) {
-                _iterator29.return();
-              }
-            } finally {
-              if (_didIteratorError29) {
-                throw _iteratorError29;
-              }
-            }
-          }
-
-          var _iteratorNormalCompletion30 = true;
-          var _didIteratorError30 = false;
-          var _iteratorError30 = undefined;
-
-          try {
-            for (var _iterator30 = themea[Symbol.iterator](), _step30; !(_iteratorNormalCompletion30 = (_step30 = _iterator30.next()).done); _iteratorNormalCompletion30 = true) {
-              var i = _step30.value;
-              formData.append('ORNAMENT_THEME', i);
-            } // formData.append('ORNAMENT_THEME', themeb);
-
-          } catch (err) {
-            _didIteratorError30 = true;
-            _iteratorError30 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion30 && _iterator30.return != null) {
-                _iterator30.return();
-              }
-            } finally {
-              if (_didIteratorError30) {
-                throw _iteratorError30;
-              }
-            }
-          }
-
-          var _iteratorNormalCompletion31 = true;
-          var _didIteratorError31 = false;
-          var _iteratorError31 = undefined;
-
-          try {
-            for (var _iterator31 = curateda[Symbol.iterator](), _step31; !(_iteratorNormalCompletion31 = (_step31 = _iterator31.next()).done); _iteratorNormalCompletion31 = true) {
-              var i = _step31.value;
-              formData.append('ORNAMENT_CURATED_BY', i);
-            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
-
-          } catch (err) {
-            _didIteratorError31 = true;
-            _iteratorError31 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion31 && _iterator31.return != null) {
-                _iterator31.return();
-              }
-            } finally {
-              if (_didIteratorError31) {
-                throw _iteratorError31;
-              }
-            }
-          }
-
-          var _iteratorNormalCompletion32 = true;
-          var _didIteratorError32 = false;
-          var _iteratorError32 = undefined;
-
-          try {
-            for (var _iterator32 = festia[Symbol.iterator](), _step32; !(_iteratorNormalCompletion32 = (_step32 = _iterator32.next()).done); _iteratorNormalCompletion32 = true) {
-              var i = _step32.value;
-              formData.append('ORNAMENT_FESTIVAL', i);
-            } // formData.append('ORNAMENT_FESTIVAL', festib);
-
-          } catch (err) {
-            _didIteratorError32 = true;
-            _iteratorError32 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion32 && _iterator32.return != null) {
-                _iterator32.return();
-              }
-            } finally {
-              if (_didIteratorError32) {
-                throw _iteratorError32;
-              }
-            }
-          }
-
-          formData.append('ORNAMENT_BANGLE_STYLE', ORNAMENT_BANGLE_STYLE);
           var _iteratorNormalCompletion33 = true;
           var _didIteratorError33 = false;
           var _iteratorError33 = undefined;
 
           try {
-            for (var _iterator33 = bsizea[Symbol.iterator](), _step33; !(_iteratorNormalCompletion33 = (_step33 = _iterator33.next()).done); _iteratorNormalCompletion33 = true) {
+            for (var _iterator33 = asion[Symbol.iterator](), _step33; !(_iteratorNormalCompletion33 = (_step33 = _iterator33.next()).done); _iteratorNormalCompletion33 = true) {
               var i = _step33.value;
-              formData.append('ORNAMENT_BANGLE_SIZE', i);
-            } // formData.append('ORNAMENT_BANGLE_SIZE', bsizeb);
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
 
           } catch (err) {
             _didIteratorError33 = true;
@@ -10064,6 +10028,132 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             } finally {
               if (_didIteratorError33) {
                 throw _iteratorError33;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion34 = true;
+          var _didIteratorError34 = false;
+          var _iteratorError34 = undefined;
+
+          try {
+            for (var _iterator34 = asan[Symbol.iterator](), _step34; !(_iteratorNormalCompletion34 = (_step34 = _iterator34.next()).done); _iteratorNormalCompletion34 = true) {
+              var i = _step34.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError34 = true;
+            _iteratorError34 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion34 && _iterator34.return != null) {
+                _iterator34.return();
+              }
+            } finally {
+              if (_didIteratorError34) {
+                throw _iteratorError34;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion35 = true;
+          var _didIteratorError35 = false;
+          var _iteratorError35 = undefined;
+
+          try {
+            for (var _iterator35 = themea[Symbol.iterator](), _step35; !(_iteratorNormalCompletion35 = (_step35 = _iterator35.next()).done); _iteratorNormalCompletion35 = true) {
+              var i = _step35.value;
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
+
+          } catch (err) {
+            _didIteratorError35 = true;
+            _iteratorError35 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion35 && _iterator35.return != null) {
+                _iterator35.return();
+              }
+            } finally {
+              if (_didIteratorError35) {
+                throw _iteratorError35;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion36 = true;
+          var _didIteratorError36 = false;
+          var _iteratorError36 = undefined;
+
+          try {
+            for (var _iterator36 = curateda[Symbol.iterator](), _step36; !(_iteratorNormalCompletion36 = (_step36 = _iterator36.next()).done); _iteratorNormalCompletion36 = true) {
+              var i = _step36.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+
+          } catch (err) {
+            _didIteratorError36 = true;
+            _iteratorError36 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion36 && _iterator36.return != null) {
+                _iterator36.return();
+              }
+            } finally {
+              if (_didIteratorError36) {
+                throw _iteratorError36;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion37 = true;
+          var _didIteratorError37 = false;
+          var _iteratorError37 = undefined;
+
+          try {
+            for (var _iterator37 = festia[Symbol.iterator](), _step37; !(_iteratorNormalCompletion37 = (_step37 = _iterator37.next()).done); _iteratorNormalCompletion37 = true) {
+              var i = _step37.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
+
+          } catch (err) {
+            _didIteratorError37 = true;
+            _iteratorError37 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion37 && _iterator37.return != null) {
+                _iterator37.return();
+              }
+            } finally {
+              if (_didIteratorError37) {
+                throw _iteratorError37;
+              }
+            }
+          }
+
+          formData.append('ORNAMENT_BANGLE_STYLE', ORNAMENT_BANGLE_STYLE);
+          var _iteratorNormalCompletion38 = true;
+          var _didIteratorError38 = false;
+          var _iteratorError38 = undefined;
+
+          try {
+            for (var _iterator38 = bsizea[Symbol.iterator](), _step38; !(_iteratorNormalCompletion38 = (_step38 = _iterator38.next()).done); _iteratorNormalCompletion38 = true) {
+              var i = _step38.value;
+              formData.append('ORNAMENT_BANGLE_SIZE', i);
+            } // formData.append('ORNAMENT_BANGLE_SIZE', bsizeb);
+
+          } catch (err) {
+            _didIteratorError38 = true;
+            _iteratorError38 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion38 && _iterator38.return != null) {
+                _iterator38.return();
+              }
+            } finally {
+              if (_didIteratorError38) {
+                throw _iteratorError38;
               }
             }
           }
@@ -10087,141 +10177,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
           formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-          var _iteratorNormalCompletion34 = true;
-          var _didIteratorError34 = false;
-          var _iteratorError34 = undefined;
-
-          try {
-            for (var _iterator34 = asion[Symbol.iterator](), _step34; !(_iteratorNormalCompletion34 = (_step34 = _iterator34.next()).done); _iteratorNormalCompletion34 = true) {
-              var i = _step34.value;
-              formData.append('ORNAMENT_OCCASION', i);
-            } // formData.append('ORNAMENT_OCCASION', asian);
-
-          } catch (err) {
-            _didIteratorError34 = true;
-            _iteratorError34 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion34 && _iterator34.return != null) {
-                _iterator34.return();
-              }
-            } finally {
-              if (_didIteratorError34) {
-                throw _iteratorError34;
-              }
-            }
-          }
-
-          var _iteratorNormalCompletion35 = true;
-          var _didIteratorError35 = false;
-          var _iteratorError35 = undefined;
-
-          try {
-            for (var _iterator35 = asan[Symbol.iterator](), _step35; !(_iteratorNormalCompletion35 = (_step35 = _iterator35.next()).done); _iteratorNormalCompletion35 = true) {
-              var i = _step35.value;
-              formData.append('ORNAMENT_GIFT', i);
-            } // formData.append('ORNAMENT_GIFT', asin);
-
-          } catch (err) {
-            _didIteratorError35 = true;
-            _iteratorError35 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion35 && _iterator35.return != null) {
-                _iterator35.return();
-              }
-            } finally {
-              if (_didIteratorError35) {
-                throw _iteratorError35;
-              }
-            }
-          }
-
-          var _iteratorNormalCompletion36 = true;
-          var _didIteratorError36 = false;
-          var _iteratorError36 = undefined;
-
-          try {
-            for (var _iterator36 = themea[Symbol.iterator](), _step36; !(_iteratorNormalCompletion36 = (_step36 = _iterator36.next()).done); _iteratorNormalCompletion36 = true) {
-              var i = _step36.value;
-              formData.append('ORNAMENT_THEME', i);
-            } // formData.append('ORNAMENT_THEME', themeb);
-
-          } catch (err) {
-            _didIteratorError36 = true;
-            _iteratorError36 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion36 && _iterator36.return != null) {
-                _iterator36.return();
-              }
-            } finally {
-              if (_didIteratorError36) {
-                throw _iteratorError36;
-              }
-            }
-          }
-
-          var _iteratorNormalCompletion37 = true;
-          var _didIteratorError37 = false;
-          var _iteratorError37 = undefined;
-
-          try {
-            for (var _iterator37 = curateda[Symbol.iterator](), _step37; !(_iteratorNormalCompletion37 = (_step37 = _iterator37.next()).done); _iteratorNormalCompletion37 = true) {
-              var i = _step37.value;
-              formData.append('ORNAMENT_CURATED_BY', i);
-            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
-
-          } catch (err) {
-            _didIteratorError37 = true;
-            _iteratorError37 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion37 && _iterator37.return != null) {
-                _iterator37.return();
-              }
-            } finally {
-              if (_didIteratorError37) {
-                throw _iteratorError37;
-              }
-            }
-          }
-
-          var _iteratorNormalCompletion38 = true;
-          var _didIteratorError38 = false;
-          var _iteratorError38 = undefined;
-
-          try {
-            for (var _iterator38 = festia[Symbol.iterator](), _step38; !(_iteratorNormalCompletion38 = (_step38 = _iterator38.next()).done); _iteratorNormalCompletion38 = true) {
-              var i = _step38.value;
-              formData.append('ORNAMENT_FESTIVAL', i);
-            } // formData.append('ORNAMENT_FESTIVAL', festib);
-
-          } catch (err) {
-            _didIteratorError38 = true;
-            _iteratorError38 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion38 && _iterator38.return != null) {
-                _iterator38.return();
-              }
-            } finally {
-              if (_didIteratorError38) {
-                throw _iteratorError38;
-              }
-            }
-          }
-
-          formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
           var _iteratorNormalCompletion39 = true;
           var _didIteratorError39 = false;
           var _iteratorError39 = undefined;
 
           try {
-            for (var _iterator39 = bsizea[Symbol.iterator](), _step39; !(_iteratorNormalCompletion39 = (_step39 = _iterator39.next()).done); _iteratorNormalCompletion39 = true) {
+            for (var _iterator39 = asion[Symbol.iterator](), _step39; !(_iteratorNormalCompletion39 = (_step39 = _iterator39.next()).done); _iteratorNormalCompletion39 = true) {
               var i = _step39.value;
-              formData.append('ORNAMENT_CHAIN_LENGTH', i);
-            } // formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
 
           } catch (err) {
             _didIteratorError39 = true;
@@ -10238,34 +10202,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
-          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
-            headers: Headers
-          });
-        } // tslint:disable-next-line: max-line-length
-
-      }, {
-        key: "necklace",
-        value: function necklace(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_NECKLACE_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
-          var formData = new FormData();
-          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-          formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion40 = true;
           var _didIteratorError40 = false;
           var _iteratorError40 = undefined;
 
           try {
-            for (var _iterator40 = asion[Symbol.iterator](), _step40; !(_iteratorNormalCompletion40 = (_step40 = _iterator40.next()).done); _iteratorNormalCompletion40 = true) {
+            for (var _iterator40 = asan[Symbol.iterator](), _step40; !(_iteratorNormalCompletion40 = (_step40 = _iterator40.next()).done); _iteratorNormalCompletion40 = true) {
               var i = _step40.value;
-              formData.append('ORNAMENT_OCCASION', i);
-            } // formData.append('ORNAMENT_OCCASION', asian);
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
 
           } catch (err) {
             _didIteratorError40 = true;
@@ -10287,10 +10232,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError41 = undefined;
 
           try {
-            for (var _iterator41 = asan[Symbol.iterator](), _step41; !(_iteratorNormalCompletion41 = (_step41 = _iterator41.next()).done); _iteratorNormalCompletion41 = true) {
+            for (var _iterator41 = themea[Symbol.iterator](), _step41; !(_iteratorNormalCompletion41 = (_step41 = _iterator41.next()).done); _iteratorNormalCompletion41 = true) {
               var i = _step41.value;
-              formData.append('ORNAMENT_GIFT', i);
-            } // formData.append('ORNAMENT_GIFT', asin);
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
 
           } catch (err) {
             _didIteratorError41 = true;
@@ -10312,10 +10257,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError42 = undefined;
 
           try {
-            for (var _iterator42 = themea[Symbol.iterator](), _step42; !(_iteratorNormalCompletion42 = (_step42 = _iterator42.next()).done); _iteratorNormalCompletion42 = true) {
+            for (var _iterator42 = curateda[Symbol.iterator](), _step42; !(_iteratorNormalCompletion42 = (_step42 = _iterator42.next()).done); _iteratorNormalCompletion42 = true) {
               var i = _step42.value;
-              formData.append('ORNAMENT_THEME', i);
-            } // formData.append('ORNAMENT_THEME', themeb);
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
 
           } catch (err) {
             _didIteratorError42 = true;
@@ -10337,10 +10282,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError43 = undefined;
 
           try {
-            for (var _iterator43 = curateda[Symbol.iterator](), _step43; !(_iteratorNormalCompletion43 = (_step43 = _iterator43.next()).done); _iteratorNormalCompletion43 = true) {
+            for (var _iterator43 = festia[Symbol.iterator](), _step43; !(_iteratorNormalCompletion43 = (_step43 = _iterator43.next()).done); _iteratorNormalCompletion43 = true) {
               var i = _step43.value;
-              formData.append('ORNAMENT_CURATED_BY', i);
-            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
 
           } catch (err) {
             _didIteratorError43 = true;
@@ -10357,15 +10302,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
           var _iteratorNormalCompletion44 = true;
           var _didIteratorError44 = false;
           var _iteratorError44 = undefined;
 
           try {
-            for (var _iterator44 = festia[Symbol.iterator](), _step44; !(_iteratorNormalCompletion44 = (_step44 = _iterator44.next()).done); _iteratorNormalCompletion44 = true) {
+            for (var _iterator44 = bsizea[Symbol.iterator](), _step44; !(_iteratorNormalCompletion44 = (_step44 = _iterator44.next()).done); _iteratorNormalCompletion44 = true) {
               var i = _step44.value;
-              formData.append('ORNAMENT_FESTIVAL', i);
-            } // formData.append('ORNAMENT_FESTIVAL', festib);
+              formData.append('ORNAMENT_CHAIN_LENGTH', i);
+            } // formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
 
           } catch (err) {
             _didIteratorError44 = true;
@@ -10382,7 +10328,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_NECKLACE_STYLE', ORNAMENT_NECKLACE_STYLE);
           formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
           formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
           formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -10394,8 +10339,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         } // tslint:disable-next-line: max-line-length
 
       }, {
-        key: "chaitpen",
-        value: function chaitpen(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, bsizea, bsizeb, ORNAMENT_CHAIN_STYLE, ORNAMENT_PENDANT_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+        key: "necklace",
+        value: function necklace(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_NECKLACE_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
           var formData = new FormData();
           formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
           formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -10527,16 +10472,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
+          formData.append('ORNAMENT_NECKLACE_STYLE', ORNAMENT_NECKLACE_STYLE);
+          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
+            headers: Headers
+          });
+        } // tslint:disable-next-line: max-line-length
+
+      }, {
+        key: "chaitpen",
+        value: function chaitpen(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, bsizea, bsizeb, ORNAMENT_CHAIN_STYLE, ORNAMENT_PENDANT_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+          var formData = new FormData();
+          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+          formData.append('WEIGHT', WEIGHT);
+          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion50 = true;
           var _didIteratorError50 = false;
           var _iteratorError50 = undefined;
 
           try {
-            for (var _iterator50 = bsizea[Symbol.iterator](), _step50; !(_iteratorNormalCompletion50 = (_step50 = _iterator50.next()).done); _iteratorNormalCompletion50 = true) {
+            for (var _iterator50 = asion[Symbol.iterator](), _step50; !(_iteratorNormalCompletion50 = (_step50 = _iterator50.next()).done); _iteratorNormalCompletion50 = true) {
               var i = _step50.value;
-              formData.append('ORNAMENT_CHAIN_LENGTH', i);
-            } //formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
 
           } catch (err) {
             _didIteratorError50 = true;
@@ -10549,6 +10513,132 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             } finally {
               if (_didIteratorError50) {
                 throw _iteratorError50;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion51 = true;
+          var _didIteratorError51 = false;
+          var _iteratorError51 = undefined;
+
+          try {
+            for (var _iterator51 = asan[Symbol.iterator](), _step51; !(_iteratorNormalCompletion51 = (_step51 = _iterator51.next()).done); _iteratorNormalCompletion51 = true) {
+              var i = _step51.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError51 = true;
+            _iteratorError51 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion51 && _iterator51.return != null) {
+                _iterator51.return();
+              }
+            } finally {
+              if (_didIteratorError51) {
+                throw _iteratorError51;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion52 = true;
+          var _didIteratorError52 = false;
+          var _iteratorError52 = undefined;
+
+          try {
+            for (var _iterator52 = themea[Symbol.iterator](), _step52; !(_iteratorNormalCompletion52 = (_step52 = _iterator52.next()).done); _iteratorNormalCompletion52 = true) {
+              var i = _step52.value;
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
+
+          } catch (err) {
+            _didIteratorError52 = true;
+            _iteratorError52 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion52 && _iterator52.return != null) {
+                _iterator52.return();
+              }
+            } finally {
+              if (_didIteratorError52) {
+                throw _iteratorError52;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion53 = true;
+          var _didIteratorError53 = false;
+          var _iteratorError53 = undefined;
+
+          try {
+            for (var _iterator53 = curateda[Symbol.iterator](), _step53; !(_iteratorNormalCompletion53 = (_step53 = _iterator53.next()).done); _iteratorNormalCompletion53 = true) {
+              var i = _step53.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+
+          } catch (err) {
+            _didIteratorError53 = true;
+            _iteratorError53 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion53 && _iterator53.return != null) {
+                _iterator53.return();
+              }
+            } finally {
+              if (_didIteratorError53) {
+                throw _iteratorError53;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion54 = true;
+          var _didIteratorError54 = false;
+          var _iteratorError54 = undefined;
+
+          try {
+            for (var _iterator54 = festia[Symbol.iterator](), _step54; !(_iteratorNormalCompletion54 = (_step54 = _iterator54.next()).done); _iteratorNormalCompletion54 = true) {
+              var i = _step54.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
+
+          } catch (err) {
+            _didIteratorError54 = true;
+            _iteratorError54 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion54 && _iterator54.return != null) {
+                _iterator54.return();
+              }
+            } finally {
+              if (_didIteratorError54) {
+                throw _iteratorError54;
+              }
+            }
+          }
+
+          formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
+          var _iteratorNormalCompletion55 = true;
+          var _didIteratorError55 = false;
+          var _iteratorError55 = undefined;
+
+          try {
+            for (var _iterator55 = bsizea[Symbol.iterator](), _step55; !(_iteratorNormalCompletion55 = (_step55 = _iterator55.next()).done); _iteratorNormalCompletion55 = true) {
+              var i = _step55.value;
+              formData.append('ORNAMENT_CHAIN_LENGTH', i);
+            } //formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
+
+          } catch (err) {
+            _didIteratorError55 = true;
+            _iteratorError55 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion55 && _iterator55.return != null) {
+                _iterator55.return();
+              }
+            } finally {
+              if (_didIteratorError55) {
+                throw _iteratorError55;
               }
             }
           }
@@ -10572,16 +10662,131 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
           formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-          formData.append('ORNAMENT_OCCASION', asion);
-          formData.append('ORNAMENT_OCCASION', asian);
-          formData.append('ORNAMENT_GIFT', asan);
-          formData.append('ORNAMENT_GIFT', asin);
-          formData.append('ORNAMENT_THEME', themea);
-          formData.append('ORNAMENT_THEME', themeb);
-          formData.append('ORNAMENT_CURATED_BY', curateda);
-          formData.append('ORNAMENT_CURATED_BY', curatedb);
-          formData.append('ORNAMENT_FESTIVAL', festia);
-          formData.append('ORNAMENT_FESTIVAL', festib);
+          var _iteratorNormalCompletion56 = true;
+          var _didIteratorError56 = false;
+          var _iteratorError56 = undefined;
+
+          try {
+            for (var _iterator56 = asion[Symbol.iterator](), _step56; !(_iteratorNormalCompletion56 = (_step56 = _iterator56.next()).done); _iteratorNormalCompletion56 = true) {
+              var i = _step56.value;
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
+
+          } catch (err) {
+            _didIteratorError56 = true;
+            _iteratorError56 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion56 && _iterator56.return != null) {
+                _iterator56.return();
+              }
+            } finally {
+              if (_didIteratorError56) {
+                throw _iteratorError56;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion57 = true;
+          var _didIteratorError57 = false;
+          var _iteratorError57 = undefined;
+
+          try {
+            for (var _iterator57 = asan[Symbol.iterator](), _step57; !(_iteratorNormalCompletion57 = (_step57 = _iterator57.next()).done); _iteratorNormalCompletion57 = true) {
+              var i = _step57.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError57 = true;
+            _iteratorError57 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion57 && _iterator57.return != null) {
+                _iterator57.return();
+              }
+            } finally {
+              if (_didIteratorError57) {
+                throw _iteratorError57;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion58 = true;
+          var _didIteratorError58 = false;
+          var _iteratorError58 = undefined;
+
+          try {
+            for (var _iterator58 = themea[Symbol.iterator](), _step58; !(_iteratorNormalCompletion58 = (_step58 = _iterator58.next()).done); _iteratorNormalCompletion58 = true) {
+              var i = _step58.value;
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
+
+          } catch (err) {
+            _didIteratorError58 = true;
+            _iteratorError58 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion58 && _iterator58.return != null) {
+                _iterator58.return();
+              }
+            } finally {
+              if (_didIteratorError58) {
+                throw _iteratorError58;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion59 = true;
+          var _didIteratorError59 = false;
+          var _iteratorError59 = undefined;
+
+          try {
+            for (var _iterator59 = curateda[Symbol.iterator](), _step59; !(_iteratorNormalCompletion59 = (_step59 = _iterator59.next()).done); _iteratorNormalCompletion59 = true) {
+              var i = _step59.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+
+          } catch (err) {
+            _didIteratorError59 = true;
+            _iteratorError59 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion59 && _iterator59.return != null) {
+                _iterator59.return();
+              }
+            } finally {
+              if (_didIteratorError59) {
+                throw _iteratorError59;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion60 = true;
+          var _didIteratorError60 = false;
+          var _iteratorError60 = undefined;
+
+          try {
+            for (var _iterator60 = festia[Symbol.iterator](), _step60; !(_iteratorNormalCompletion60 = (_step60 = _iterator60.next()).done); _iteratorNormalCompletion60 = true) {
+              var i = _step60.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
+
+          } catch (err) {
+            _didIteratorError60 = true;
+            _iteratorError60 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion60 && _iterator60.return != null) {
+                _iterator60.return();
+              }
+            } finally {
+              if (_didIteratorError60) {
+                throw _iteratorError60;
+              }
+            }
+          }
+
           formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
           formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
           formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);

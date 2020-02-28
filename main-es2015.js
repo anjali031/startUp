@@ -2830,29 +2830,29 @@ let CufflinkComponent = class CufflinkComponent {
     }
     Answer(pk) {
         console.log(pk);
-        this.asion = pk;
+        this.asion.push(pk);
         console.log(this.asion);
     }
     Ornagift(k) {
         console.log(k);
-        this.asan = k;
+        this.asan.push(k);
         console.log(this.asan);
     }
     Ornatheme(k) {
         console.log(k);
-        this.themea = k;
+        this.themea.push(k);
         console.log(this.themea);
         console.log(this.themeb);
     }
     OrnaCurated(k) {
         console.log(k);
-        this.curateda = k;
+        this.curateda.push(k);
         console.log(this.curateda);
         console.log(this.curatedb);
     }
     Ornafesti(k) {
         console.log(k);
-        this.festia = k;
+        this.festia.push(k);
         console.log(this.festia);
         console.log(this.festib);
     }
@@ -2990,31 +2990,28 @@ let MangalsutraComponent = class MangalsutraComponent {
     }
     Answer(pk) {
         console.log(pk);
-        this.asion = pk;
+        this.asion.push(pk);
         console.log(this.asion);
     }
     Ornagift(k) {
         console.log(k);
-        this.asan = k;
+        this.asan.push(k);
         console.log(this.asan);
     }
     Ornatheme(k) {
         console.log(k);
-        this.themea = k;
+        this.themea.push(k);
         console.log(this.themea);
-        console.log(this.themeb);
     }
     OrnaCurated(k) {
         console.log(k);
-        this.curateda = k;
+        this.curateda.push(k);
         console.log(this.curateda);
-        console.log(this.curatedb);
     }
     Ornafesti(k) {
         console.log(k);
-        this.festia = k;
+        this.festia.push(k);
         console.log(this.festia);
-        console.log(this.festib);
     }
     handleFileInput(file) {
         this.fileToUpload = file.item(0);
@@ -3803,29 +3800,29 @@ let PendantComponent = class PendantComponent {
     }
     Answer(pk) {
         console.log(pk);
-        this.asion = pk;
+        this.asion.push(pk);
         console.log(this.asion);
     }
     Ornagift(k) {
         console.log(k);
-        this.asan = k;
+        this.asan.push(k);
         console.log(this.asan);
     }
     Ornatheme(k) {
         console.log(k);
-        this.themea = k;
+        this.themea.push(k);
         console.log(this.themea);
         console.log(this.themeb);
     }
     OrnaCurated(k) {
         console.log(k);
-        this.curateda = k;
+        this.curateda.push(k);
         console.log(this.curateda);
         console.log(this.curatedb);
     }
     Ornafesti(k) {
         console.log(k);
-        this.festia = k;
+        this.festia.push(k);
         console.log(this.festia);
         console.log(this.festib);
     }
@@ -4129,31 +4126,27 @@ let SetsComponent = class SetsComponent {
     }
     Answer(pk) {
         console.log(pk);
-        this.asion = pk;
+        this.asion.push(pk);
         console.log(this.asion);
     }
     Ornagift(k) {
         console.log(k);
-        this.asan = k;
-        console.log(this.asan);
+        this.asan.push(k);
     }
     Ornatheme(k) {
         console.log(k);
-        this.themea = k;
+        this.themea.push(k);
         console.log(this.themea);
-        console.log(this.themeb);
     }
     OrnaCurated(k) {
         console.log(k);
-        this.curateda = k;
+        this.curateda.push(k);
         console.log(this.curateda);
-        console.log(this.curatedb);
     }
     Ornafesti(k) {
         console.log(k);
-        this.festia = k;
+        this.festia.push(k);
         console.log(this.festia);
-        console.log(this.festib);
     }
     handleFileInput(file) {
         this.fileToUpload = file.item(0);
@@ -5426,16 +5419,6 @@ let UserService = class UserService {
             .set('Authorization', 'token ' + localStorage.getItem('token'));
         return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, { headers: Headers });
     }
-    postFiel(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT) {
-        const formData = new FormData();
-        formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-        formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-        formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-        formData.append('WEIGHT', WEIGHT);
-        const Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]()
-            .set('Authorization', 'token ' + localStorage.getItem('token'));
-        return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, { headers: Headers });
-    }
     postFeil(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
         const formData = new FormData();
         formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
@@ -5463,16 +5446,21 @@ let UserService = class UserService {
         formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
         formData.append('WEIGHT', WEIGHT);
         formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-        formData.append('ORNAMENT_OCCASION', asion);
-        formData.append('ORNAMENT_OCCASION', asian);
-        formData.append('ORNAMENT_GIFT', asan);
-        formData.append('ORNAMENT_GIFT', asin);
-        formData.append('ORNAMENT_THEME', themea);
-        formData.append('ORNAMENT_THEME', themeb);
-        formData.append('ORNAMENT_CURATED_BY', curateda);
-        formData.append('ORNAMENT_CURATED_BY', curatedb);
-        formData.append('ORNAMENT_FESTIVAL', festia);
-        formData.append('ORNAMENT_FESTIVAL', festib);
+        for (var i of asion) {
+            formData.append('ORNAMENT_OCCASION', i);
+        }
+        for (var i of asan) {
+            formData.append('ORNAMENT_GIFT', i);
+        }
+        for (var i of themea) {
+            formData.append('ORNAMENT_THEME', i);
+        }
+        for (var i of curateda) {
+            formData.append('ORNAMENT_CURATED_BY', i);
+        }
+        for (var i of festia) {
+            formData.append('ORNAMENT_FESTIVAL', i);
+        }
         formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
         formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
         formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -5869,16 +5857,26 @@ let UserService = class UserService {
         formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
         formData.append('WEIGHT', WEIGHT);
         formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-        formData.append('ORNAMENT_OCCASION', asion);
-        formData.append('ORNAMENT_OCCASION', asian);
-        formData.append('ORNAMENT_GIFT', asan);
-        formData.append('ORNAMENT_GIFT', asin);
-        formData.append('ORNAMENT_THEME', themea);
-        formData.append('ORNAMENT_THEME', themeb);
-        formData.append('ORNAMENT_CURATED_BY', curateda);
-        formData.append('ORNAMENT_CURATED_BY', curatedb);
-        formData.append('ORNAMENT_FESTIVAL', festia);
-        formData.append('ORNAMENT_FESTIVAL', festib);
+        for (var i of asion) {
+            formData.append('ORNAMENT_OCCASION', i);
+        }
+        // formData.append('ORNAMENT_OCCASION', asian);
+        for (var i of asan) {
+            formData.append('ORNAMENT_GIFT', i);
+        }
+        // formData.append('ORNAMENT_GIFT', asin);
+        for (var i of themea) {
+            formData.append('ORNAMENT_THEME', i);
+        }
+        // formData.append('ORNAMENT_THEME', themeb);
+        for (var i of curateda) {
+            formData.append('ORNAMENT_CURATED_BY', i);
+        }
+        // formData.append('ORNAMENT_CURATED_BY', curatedb);
+        for (var i of festia) {
+            formData.append('ORNAMENT_FESTIVAL', i);
+        }
+        // formData.append('ORNAMENT_FESTIVAL', festib);
         formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
         formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
         formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
