@@ -35,13 +35,8 @@
               </select>
             </div>
             <div class="input-field col s6">
-              <select class="browser-default" #WEIGHT ngModel name="WEIGHT" id="WEIGHT" required>
-                <option value="" disabled selected>Choose your Ornament Weight</option>
-                <option value="1"> 1</option>
-                <option value="2" >2</option>
-                <option value="3" >3</option>
-                <option value="4" >4</option>
-              </select>
+              <input id="weight" class="validate" type="text" #WEIGHT ngModel name="WEIGHT" required>
+              <label for="weight">Weight</label>
             </div>
           </div>
           <div class="row">

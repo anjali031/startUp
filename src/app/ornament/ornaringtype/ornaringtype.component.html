@@ -31,13 +31,8 @@
               </select>
             </div>
             <div class="input-field col s6">
-              <select class="browser-default" #WEIGHT ngModel name="WEIGHT" id="WEIGHT" required>
-                <option value="" disabled selected>Choose your Ornament Weight</option>
-                <option value="1"> 1</option>
-                <option value="2" >2</option>
-                <option value="3" >3</option>
-                <option value="4" >4</option>
-              </select>
+              <input id="weight" class="validate" type="text" #WEIGHT ngModel name="WEIGHT" required>
+              <label for="weight">Weight</label>
             </div>
             <div class="input-field col s6">
               <select class="browser-default" #ORNAMENT_METAL ngModel name="ORNAMENT_METAL" required>
@@ -148,11 +143,10 @@
             <div class="input-field col s4">
               <ul class="collection answer">
                 <p> Select your Ring Size</p>
-
                 <ng-container *ngFor ="let answer of Ringsize.ORNAMENT_RING_SIZE; let i = index"  >
                  <li>
                   <label>
-                    <input type="checkbox" class="filled-in" value ="1" (change)="Size(answer.pk)" #ORNAMENT_RING_SIZE ngModel name="ORNAMENT_RING_SIZE"  required/>
+                    <input type="checkbox" class="filled-in" value ="1" (click)="Size(answer.pk)" #ORNAMENT_RING_SIZE ngModel name="ORNAMENT_RING_SIZE"  required/>
                     <span>{{answer.RING_SIZE}}</span>
                   </label>
                  </li> 

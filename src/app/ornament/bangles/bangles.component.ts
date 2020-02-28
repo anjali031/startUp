@@ -102,20 +102,20 @@ export class BanglesComponent implements OnInit {
 
   Answer(pk) {
     console.log(pk);
-    this.asion = pk;
+    this.asion.push(pk);
     console.log(this.asion);
 
   }
   Ornagift(k) {
     console.log(k);
-    this.asan = k;
+    this.asan.push(k);
     console.log(this.asan);
 
   }
 
   Ornatheme(k) {
     console.log(k);
-    this.themea = k;
+    this.themea.push(k);
     console.log(this.themea);
     console.log(this.themeb);
 
@@ -123,7 +123,7 @@ export class BanglesComponent implements OnInit {
 
   OrnaCurated(k) {
     console.log(k);
-    this.curateda = k;
+    this.curateda.push(k);
     console.log(this.curateda);
     console.log(this.curatedb);
 
@@ -131,7 +131,7 @@ export class BanglesComponent implements OnInit {
 
   Ornafesti(k) {
     console.log(k);
-    this.festia = k;
+    this.festia.push(k);
     console.log(this.festia);
     console.log(this.festib);
 
@@ -140,7 +140,7 @@ export class BanglesComponent implements OnInit {
 
   Size(k) {
     console.log(k);
-    this.bsizea = k;
+    this.bsizea.push(k);
     console.log(this.bsizea);
     console.log(this.bsizeb);
 
