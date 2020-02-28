@@ -291,7 +291,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Bangles</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_BANGLE_SIZE,ORNAMENT_BANGLE_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"5\" >Bangles</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #WEIGHT ngModel name=\"WEIGHT\" id=\"WEIGHT\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Weight</option>\n                <option value=\"1\"> 1</option>\n                <option value=\"2\" >2</option>\n                <option value=\"3\" >3</option>\n                <option value=\"4\" >4</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_BANGLE_STYLE ngModel name=\"ORNAMENT_BANGLE_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Broad Bangles</option>\n                    <option value=\"2\" >Oval</option>\n                    <option value=\"3\" >Single Line</option>\n                    <option value=\"4\" >Thin Bangles</option>\n                    <option value=\"5\" >Stackable</option>\n                    <option value=\"6\" >Mens Kada</option>\n                    <option value=\"7\" >Flexible</option>\n                </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>select Your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>Select Your Gift</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>Select your  Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>Select your Currated by</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4 \">\n              <ul class=\"collection answer\">\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                  <p>Select Your Bangle Size</p>\n                  <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_BANGLE_SIZE; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_BANGLE_SIZE ngModel name=\"ORNAMENT_BANGLE_SIZE\"  required/>\n                      <span>{{answer.BANGLE_SIZE}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n              </div>\n          </div>\n          \n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\" >\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Bangles Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Bangles</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_BANGLE_SIZE,ORNAMENT_BANGLE_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"5\" >Bangles</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_BANGLE_STYLE ngModel name=\"ORNAMENT_BANGLE_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Broad Bangles</option>\n                    <option value=\"2\" >Oval</option>\n                    <option value=\"3\" >Single Line</option>\n                    <option value=\"4\" >Thin Bangles</option>\n                    <option value=\"5\" >Stackable</option>\n                    <option value=\"6\" >Mens Kada</option>\n                    <option value=\"7\" >Flexible</option>\n                </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>select Your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>Select Your Gift</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>Select your  Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>Select your Currated by</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4 \">\n              <ul class=\"collection answer\">\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                  <p>Select Your Bangle Size</p>\n                  <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_BANGLE_SIZE; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_BANGLE_SIZE ngModel name=\"ORNAMENT_BANGLE_SIZE\"  required/>\n                      <span>{{answer.BANGLE_SIZE}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n              </div>\n          </div>\n          \n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\" >\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Bangles Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -311,7 +311,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Bracelet</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_BRACELET_SIZE,ORNAMENT_BRACELET_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"4\" >Bracelet</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #WEIGHT ngModel name=\"WEIGHT\" id=\"WEIGHT\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Weight</option>\n                <option value=\"1\"> 1</option>\n                <option value=\"2\" >2</option>\n                <option value=\"3\" >3</option>\n                <option value=\"4\" >4</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_BRACELET_STYLE ngModel name=\"ORNAMENT_BRACELET_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Tennis</option>\n                    <option value=\"2\" >Flexible</option>\n                    <option value=\"3\" >Oval</option>\n                    <option value=\"4\" >Mangalsutra Bracelets</option>\n                    <option value=\"5\" >Chain Bracelets</option>\n                    <option value=\"6\" >Kids Bracelets</option>\n                </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p> Select your Occasion</p>\n\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Curate By</p>\n\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4 \">\n              <ul class=\"collection answer\">\n                <p> Select your Festival</p>\n\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                  <p> Select your Bracelet Size</p>\n\n                  <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_BRACELET_SIZE; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_BRACELET_SIZE ngModel name=\"ORNAMENT_BRACELET_SIZE\"  required/>\n                      <span>{{answer.BRACELET_SIZE}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n            </div>\n          </div>\n\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new  Bracelet Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Bracelet</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_BRACELET_SIZE,ORNAMENT_BRACELET_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"4\" >Bracelet</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_BRACELET_STYLE ngModel name=\"ORNAMENT_BRACELET_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Tennis</option>\n                    <option value=\"2\" >Flexible</option>\n                    <option value=\"3\" >Oval</option>\n                    <option value=\"4\" >Mangalsutra Bracelets</option>\n                    <option value=\"5\" >Chain Bracelets</option>\n                    <option value=\"6\" >Kids Bracelets</option>\n                </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p> Select your Occasion</p>\n\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Curate By</p>\n\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4 \">\n              <ul class=\"collection answer\">\n                <p> Select your Festival</p>\n\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                  <p> Select your Bracelet Size</p>\n\n                  <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_BRACELET_SIZE; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_BRACELET_SIZE ngModel name=\"ORNAMENT_BRACELET_SIZE\"  required/>\n                      <span>{{answer.BRACELET_SIZE}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n            </div>\n          </div>\n\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new  Bracelet Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -331,7 +331,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Chain</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_CHAIN_LENGTH,ORNAMENT_CHAIN_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"6\" >Chain</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #WEIGHT ngModel name=\"WEIGHT\" id=\"WEIGHT\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Weight</option>\n                <option value=\"1\"> 1</option>\n                <option value=\"2\" >2</option>\n                <option value=\"3\" >3</option>\n                <option value=\"4\" >4</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_CHAIN_STYLE ngModel name=\"ORNAMENT_CHAIN_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose Chain Style</option>\n                    <option value=\"1\"> Flat Gold Chain</option>\n                    <option value=\"2\" >Gold Chain for Men\"</option>\n                    <option value=\"3\" >\"Gold Curb Chain</option>\n                    <option value=\"4\" >Gold Link Chain</option>\n                    <option value=\"5\" >Gold Figaro Chain</option>\n                    <option value=\"6\" >Gold Rope Chain</option>\n                    <option value=\"7\" >Flexible</option>\n                </select>\n            </div>\n            \n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p> Select your Occasion</p>\n\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p> Select your Curated by</p>\n\n                  <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                      <span>{{answer.CURATED_BY}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n            </div>         \n            <div class=\"input-field col s4 \">\n              <ul class=\"collection answer\">\n\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>Select Your Chain Length</p>\n                <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_CHAIN_LENGTH; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_CHAIN_LENGTH ngModel name=\"ORNAMENT_CHAIN_LENGTH\"  required/>\n                    <span>{{answer.CHAIN_LENGTH}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            \n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Chain Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Chain</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_CHAIN_LENGTH,ORNAMENT_CHAIN_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"6\" >Chain</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_CHAIN_STYLE ngModel name=\"ORNAMENT_CHAIN_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose Chain Style</option>\n                    <option value=\"1\"> Flat Gold Chain</option>\n                    <option value=\"2\" >Gold Chain for Men\"</option>\n                    <option value=\"3\" >\"Gold Curb Chain</option>\n                    <option value=\"4\" >Gold Link Chain</option>\n                    <option value=\"5\" >Gold Figaro Chain</option>\n                    <option value=\"6\" >Gold Rope Chain</option>\n                    <option value=\"7\" >Flexible</option>\n                </select>\n            </div>\n            \n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p> Select your Occasion</p>\n\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p> Select your Curated by</p>\n\n                  <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                      <span>{{answer.CURATED_BY}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n            </div>         \n            <div class=\"input-field col s4 \">\n              <ul class=\"collection answer\">\n\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>Select Your Chain Length</p>\n                <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_CHAIN_LENGTH; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_CHAIN_LENGTH ngModel name=\"ORNAMENT_CHAIN_LENGTH\"  required/>\n                    <span>{{answer.CHAIN_LENGTH}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            \n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Chain Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -351,7 +351,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Chain with Pendant</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_CHAIN_LENGTH,ORNAMENT_CHAIN_STYLE,ORNAMENT_PENDANT_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"7\" >Chain with Pendant</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #WEIGHT ngModel name=\"WEIGHT\" id=\"WEIGHT\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Weight</option>\n                <option value=\"1\"> 1</option>\n                <option value=\"2\" >2</option>\n                <option value=\"3\" >3</option>\n                <option value=\"4\" >4</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4 \">\n                <select class=\"browser-default\" #ORNAMENT_CHAIN_STYLE ngModel name=\"ORNAMENT_CHAIN_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose Chain Style</option>\n                    <option value=\"1\"> Flat Gold Chain</option>\n                    <option value=\"2\" >Gold Chain for Men\"</option>\n                    <option value=\"3\" >\"Gold Curb Chain</option>\n                    <option value=\"4\" >Gold Link Chain</option>\n                    <option value=\"5\" >Gold Figaro Chain</option>\n                    <option value=\"6\" >Gold Rope Chain</option>\n                    <option value=\"7\" >Flexible</option>\n                </select>\n            </div>          \n            <div class=\"input-field col s4 \">\n                <select class=\"browser-default\" #ORNAMENT_PENDANT_STYLE ngModel name=\"ORNAMENT_PENDANT_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose Chain Style</option>\n                    <option value=\"1\">Casual </option>\n                    <option value=\"2\" >Initials</option>\n                    <option value=\"3\" >Mother-Daughter</option>\n                    <option value=\"4\" >Personalised</option>\n                </select>\n            </div>\n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select Your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>Select your Gift</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n\n                <p>Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n\n                <p>Select your Curated by</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4 \">\n              <ul class=\"collection answer\">\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                  <p>Select Your Chain Length</p>\n                  <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_CHAIN_LENGTH; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_CHAIN_LENGTH ngModel name=\"ORNAMENT_CHAIN_LENGTH\"  required/>\n                      <span>{{answer.CHAIN_LENGTH}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n            </div>\n          </div>\n          \n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your Chain With Pendant Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Chain with Pendant</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_CHAIN_LENGTH,ORNAMENT_CHAIN_STYLE,ORNAMENT_PENDANT_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"7\" >Chain with Pendant</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4 \">\n                <select class=\"browser-default\" #ORNAMENT_CHAIN_STYLE ngModel name=\"ORNAMENT_CHAIN_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose Chain Style</option>\n                    <option value=\"1\"> Flat Gold Chain</option>\n                    <option value=\"2\" >Gold Chain for Men\"</option>\n                    <option value=\"3\" >\"Gold Curb Chain</option>\n                    <option value=\"4\" >Gold Link Chain</option>\n                    <option value=\"5\" >Gold Figaro Chain</option>\n                    <option value=\"6\" >Gold Rope Chain</option>\n                    <option value=\"7\" >Flexible</option>\n                </select>\n            </div>          \n            <div class=\"input-field col s4 \">\n                <select class=\"browser-default\" #ORNAMENT_PENDANT_STYLE ngModel name=\"ORNAMENT_PENDANT_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose Chain Style</option>\n                    <option value=\"1\">Casual </option>\n                    <option value=\"2\" >Initials</option>\n                    <option value=\"3\" >Mother-Daughter</option>\n                    <option value=\"4\" >Personalised</option>\n                </select>\n            </div>\n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select Your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>Select your Gift</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n\n                <p>Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n\n                <p>Select your Curated by</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4 \">\n              <ul class=\"collection answer\">\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                  <p>Select Your Chain Length</p>\n                  <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_CHAIN_LENGTH; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_CHAIN_LENGTH ngModel name=\"ORNAMENT_CHAIN_LENGTH\"  required/>\n                      <span>{{answer.CHAIN_LENGTH}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n            </div>\n          </div>\n          \n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your Chain With Pendant Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -391,7 +391,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Cuff Link</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"13\" >cuff links</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\" #WEIGHT ngModel name=\"WEIGHT\" id=\"WEIGHT\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Weight</option>\n                <option value=\"1\"> 1</option>\n                <option value=\"2\" >2</option>\n                <option value=\"3\" >3</option>\n                <option value=\"4\" >4</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n                <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                  <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                  <option value=\"1\"> Diamond Studded</option>\n                  <option value=\"2\" >Gemstone Studded</option>\n                  <option value=\"3\" >Diamond with Gemstone</option>\n                  <option value=\"4\" >Simple Plain</option>\n                  <option value=\"5\">Casting Plain</option>\n                </select>\n              </div>\n          </div>\n          <div class=\"row\">\n            \n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select Your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>Select Your Gift</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>Select Your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                <p>Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Cuff Link Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Cuff Link</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"13\" >cuff links</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n            <div class=\"input-field col s4\">\n                <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                  <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                  <option value=\"1\"> Diamond Studded</option>\n                  <option value=\"2\" >Gemstone Studded</option>\n                  <option value=\"3\" >Diamond with Gemstone</option>\n                  <option value=\"4\" >Simple Plain</option>\n                  <option value=\"5\">Casting Plain</option>\n                </select>\n              </div>\n          </div>\n          <div class=\"row\">\n            \n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select Your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>Select Your Gift</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>Select Your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                <p>Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Cuff Link Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -411,7 +411,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Mangalsutra</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"9\" >Mangalsutra</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\" #WEIGHT ngModel name=\"WEIGHT\" id=\"WEIGHT\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Weight</option>\n                <option value=\"1\"> 1</option>\n                <option value=\"2\" >2</option>\n                <option value=\"3\" >3</option>\n                <option value=\"4\" >4</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                  <p>Select your Gift type</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n  \n              <ul class=\"collection answer\">\n                  <p>SSelect Your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                  <p>Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          \n          <input type=\"file\" #CAD_FILE accept=\"\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Mangalsutra Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Mangalsutra</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"9\" >Mangalsutra</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                  <p>Select your Gift type</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n  \n              <ul class=\"collection answer\">\n                  <p>SSelect Your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                  <p>Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          \n          <input type=\"file\" #CAD_FILE accept=\"\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Mangalsutra Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -431,7 +431,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Necklace</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_NECKLACE_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"8\" >Necklace</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #WEIGHT ngModel name=\"WEIGHT\" id=\"WEIGHT\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Weight</option>\n                <option value=\"1\"> 1</option>\n                <option value=\"2\" >2</option>\n                <option value=\"3\" >3</option>\n                <option value=\"4\" >4</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_NECKLACE_STYLE ngModel name=\"ORNAMENT_NECKLACE_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Bar Necklace</option>\n                    <option value=\"2\" >Lariat</option>\n                    <option value=\"3\" >Y Necklace</option>\n                    <option value=\"4\" >Mala</option>\n                    <option value=\"5\" >Charms</option>\n                    <option value=\"6\" >Long Necklace</option>\n                    <option value=\"7\" >Religious</option>\n                    <option value=\"8\" >Multi-Layered</option>\n                    <option value=\"9\" >Casual Necklace</option>\n                    <option value=\"10\" >Everyday Wears</option>\n                    <option value=\"11\" >Personalised</option>\n                </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n \n\n            \n              <ul class=\"collection answer\">\n\n                <p>Select your Gift type</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n\n                <p>Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n\n                <p>Select  your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            \n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new  Necklace Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Necklace</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_NECKLACE_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"8\" >Necklace</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_NECKLACE_STYLE ngModel name=\"ORNAMENT_NECKLACE_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Bar Necklace</option>\n                    <option value=\"2\" >Lariat</option>\n                    <option value=\"3\" >Y Necklace</option>\n                    <option value=\"4\" >Mala</option>\n                    <option value=\"5\" >Charms</option>\n                    <option value=\"6\" >Long Necklace</option>\n                    <option value=\"7\" >Religious</option>\n                    <option value=\"8\" >Multi-Layered</option>\n                    <option value=\"9\" >Casual Necklace</option>\n                    <option value=\"10\" >Everyday Wears</option>\n                    <option value=\"11\" >Personalised</option>\n                </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n \n\n            \n              <ul class=\"collection answer\">\n\n                <p>Select your Gift type</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n\n                <p>Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n\n                <p>Select  your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            \n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new  Necklace Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -451,7 +451,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Ear Ring</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_EARRING_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"2\" >Ear Ring</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #WEIGHT ngModel name=\"WEIGHT\" id=\"WEIGHT\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Weight</option>\n                <option value=\"1\"> 1</option>\n                <option value=\"2\" >2</option>\n                <option value=\"3\" >3</option>\n                <option value=\"4\" >4</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n              <select class=\"browser-default\" #ORNAMENT_EARRING_STYLE ngModel name=\"ORNAMENT_EARRING_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                  <option value=\"1\"> Drops and Dangler</option>\n                  <option value=\"2\" >Studs and Tops</option>\n                  <option value=\"3\" >Hoops and Huggies</option>\n                  <option value=\"4\" >Jhumkas</option>\n                  <option value=\"5\" >Sui Dhaga</option>\n                  <option value=\"6\" >Ear Cuffs and Hugs</option>\n                  <option value=\"7\" >Chandeliers</option>\n                  <option value=\"8\" >Chand Bali</option>\n                  <option value=\"9\" >Mismatched</option>\n                  <option value=\"10\" >Multi Pierced</option>\n                  <option value=\"11\" >Ear Jackets</option>\n                  <option value=\"12\" >Stud with Chain Clips</option>\n              </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Occasion</p>\n\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                <p> Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n                <p> Select your Festival</p>\n\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Ear Ring Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Ear Ring</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_EARRING_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"2\" >Ear Ring</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n              <label for=\"weight\">Weight</label>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n              <select class=\"browser-default\" #ORNAMENT_EARRING_STYLE ngModel name=\"ORNAMENT_EARRING_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                  <option value=\"1\"> Drops and Dangler</option>\n                  <option value=\"2\" >Studs and Tops</option>\n                  <option value=\"3\" >Hoops and Huggies</option>\n                  <option value=\"4\" >Jhumkas</option>\n                  <option value=\"5\" >Sui Dhaga</option>\n                  <option value=\"6\" >Ear Cuffs and Hugs</option>\n                  <option value=\"7\" >Chandeliers</option>\n                  <option value=\"8\" >Chand Bali</option>\n                  <option value=\"9\" >Mismatched</option>\n                  <option value=\"10\" >Multi Pierced</option>\n                  <option value=\"11\" >Ear Jackets</option>\n                  <option value=\"12\" >Stud with Chain Clips</option>\n              </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Occasion</p>\n\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                <p> Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n                <p> Select your Festival</p>\n\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Ear Ring Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -471,7 +471,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Nosepin</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_NOSEPIN_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"3\" >Nosepin</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #WEIGHT ngModel name=\"WEIGHT\" id=\"WEIGHT\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Weight</option>\n                <option value=\"1\"> 1</option>\n                <option value=\"2\" >2</option>\n                <option value=\"3\" >3</option>\n                <option value=\"4\" >4</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n              <select class=\"browser-default\" #ORNAMENT_NOSEPIN_STYLE ngModel name=\"ORNAMENT_NOSEPIN_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament nosepin STYLE</option>\n                  <option value=\"1\"> Wire</option>\n                  <option value=\"2\" >Ring</option>\n                  <option value=\"3\" >Screw</option>\n              </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                  <p> Select your Occasion</p>\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Gift Type</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                <p> Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">                <p> Select your Occasion</p>\n              <ul class=\"collection answer\">\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Nosepin Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Nosepin</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_NOSEPIN_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"3\" >Nosepin</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n              <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n              <select class=\"browser-default\" #ORNAMENT_NOSEPIN_STYLE ngModel name=\"ORNAMENT_NOSEPIN_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament nosepin STYLE</option>\n                  <option value=\"1\"> Wire</option>\n                  <option value=\"2\" >Ring</option>\n                  <option value=\"3\" >Screw</option>\n              </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                  <p> Select your Occasion</p>\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Gift Type</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                <p> Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">                <p> Select your Occasion</p>\n              <ul class=\"collection answer\">\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Nosepin Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -491,7 +491,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Ring</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_RING_SIZE,ORNAMENT_RING_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"1\"> Ring</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #WEIGHT ngModel name=\"WEIGHT\" id=\"WEIGHT\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Weight</option>\n                <option value=\"1\"> 1</option>\n                <option value=\"2\" >2</option>\n                <option value=\"3\" >3</option>\n                <option value=\"4\" >4</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n              <select class=\"browser-default\" #ORNAMENT_RING_STYLE ngModel name=\"ORNAMENT_RING_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                  <option value=\"1\"> Bands</option>\n                  <option value=\"2\" >Casual Rings</option>\n                  <option value=\"3\" >Cocktail</option>\n                  <option value=\"4\" >Cluster</option>\n                  <option value=\"5\" >Bridal Set</option>\n                  <option value=\"6\" >Chain Rings</option>\n                  <option value=\"7\" >Midi Rings</option>\n                  <option value=\"8\" >Holo</option>\n                  <option value=\"9\" >Mangalsutra Rings</option>\n                  <option value=\"10\" >Flexi Rings</option>\n                  <option value=\"11\" >Half Eternity</option>\n                  <option value=\"12\" >Stackable</option>\n                  <option value=\"13\" >Twin Rings</option>\n                  <option value=\"14\" >Fashion</option>\n                  <option value=\"15\" >Religious</option>\n                  <option value=\"16\" >Wide Rings</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Occasion</p>\n\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(change)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Curated by</p>\n\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Festival</p>\n\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Ring Size</p>\n\n                <ng-container *ngFor =\"let answer of Ringsize.ORNAMENT_RING_SIZE; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"Size(answer.pk)\" #ORNAMENT_RING_SIZE ngModel name=\"ORNAMENT_RING_SIZE\"  required/>\n                    <span>{{answer.RING_SIZE}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Ring Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Ring</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_RING_SIZE,ORNAMENT_RING_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"1\"> Ring</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n              <label for=\"weight\">Weight</label>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n              <select class=\"browser-default\" #ORNAMENT_RING_STYLE ngModel name=\"ORNAMENT_RING_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                  <option value=\"1\"> Bands</option>\n                  <option value=\"2\" >Casual Rings</option>\n                  <option value=\"3\" >Cocktail</option>\n                  <option value=\"4\" >Cluster</option>\n                  <option value=\"5\" >Bridal Set</option>\n                  <option value=\"6\" >Chain Rings</option>\n                  <option value=\"7\" >Midi Rings</option>\n                  <option value=\"8\" >Holo</option>\n                  <option value=\"9\" >Mangalsutra Rings</option>\n                  <option value=\"10\" >Flexi Rings</option>\n                  <option value=\"11\" >Half Eternity</option>\n                  <option value=\"12\" >Stackable</option>\n                  <option value=\"13\" >Twin Rings</option>\n                  <option value=\"14\" >Fashion</option>\n                  <option value=\"15\" >Religious</option>\n                  <option value=\"16\" >Wide Rings</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Occasion</p>\n\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(change)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Curated by</p>\n\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Festival</p>\n\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Ring Size</p>\n                <ng-container *ngFor =\"let answer of Ringsize.ORNAMENT_RING_SIZE; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_RING_SIZE ngModel name=\"ORNAMENT_RING_SIZE\"  required/>\n                    <span>{{answer.RING_SIZE}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Ring Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -511,7 +511,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Pendant</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_PENDANT_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"11\" >Pendant</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #WEIGHT ngModel name=\"WEIGHT\" id=\"WEIGHT\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Weight</option>\n                <option value=\"1\"> 1</option>\n                <option value=\"2\" >2</option>\n                <option value=\"3\" >3</option>\n                <option value=\"4\" >4</option>\n              </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                  <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                  <option value=\"1\"> Diamond Studded</option>\n                  <option value=\"2\" >Gemstone Studded</option>\n                  <option value=\"3\" >Diamond with Gemstone</option>\n                  <option value=\"4\" >Simple Plain</option>\n                  <option value=\"5\">Casting Plain</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_PENDANT_STYLE ngModel name=\"ORNAMENT_PENDANT_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Casual</option>\n                    <option value=\"2\" >Initials</option>\n                    <option value=\"3\" >Mother-Daughter</option>\n                    <option value=\"4\" >Personalised</option>\n                </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            \n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n\n                <p>Select your Gift Type</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n\n                <p>Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n\n                <p>Select Your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            \n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Pendant Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Pendant</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_PENDANT_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"11\" >Pendant</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                  <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                  <option value=\"1\"> Diamond Studded</option>\n                  <option value=\"2\" >Gemstone Studded</option>\n                  <option value=\"3\" >Diamond with Gemstone</option>\n                  <option value=\"4\" >Simple Plain</option>\n                  <option value=\"5\">Casting Plain</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_PENDANT_STYLE ngModel name=\"ORNAMENT_PENDANT_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Casual</option>\n                    <option value=\"2\" >Initials</option>\n                    <option value=\"3\" >Mother-Daughter</option>\n                    <option value=\"4\" >Personalised</option>\n                </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            \n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n\n                <p>Select your Gift Type</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n\n                <p>Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n\n                <p>Select Your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            \n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Pendant Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -531,7 +531,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Pendant with Ear ring</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_EARRING_STYLE,ORNAMENT_PENDANT_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"12\" >Pendant with Earring</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #WEIGHT ngModel name=\"WEIGHT\" id=\"WEIGHT\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Weight</option>\n                <option value=\"1\"> 1</option>\n                <option value=\"2\" >2</option>\n                <option value=\"3\" >3</option>\n                <option value=\"4\" >4</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4 \">\n              <select class=\"browser-default\" #ORNAMENT_EARRING_STYLE ngModel name=\"ORNAMENT_EARRING_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                  <option value=\"1\"> Drops and Dangler</option>\n                  <option value=\"2\" >Studs and Tops</option>\n                  <option value=\"3\" >Hoops and Huggies</option>\n                  <option value=\"4\" >Jhumkas</option>\n                  <option value=\"5\" >Sui Dhaga</option>\n                  <option value=\"6\" >Ear Cuffs and Hugs</option>\n                  <option value=\"7\" >Chandeliers</option>\n                  <option value=\"8\" >Chand Bali</option>\n                  <option value=\"9\" >Mismatched</option>\n                  <option value=\"10\" >Multi Pierced</option>\n                  <option value=\"11\" >Ear Jackets</option>\n                  <option value=\"12\" >Stud with Chain Clips</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4 \">\n              <select class=\"browser-default\" #ORNAMENT_PENDANT_STYLE ngModel name=\"ORNAMENT_PENDANT_STYLE\"  required>\n                <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                <option value=\"1\"> Casual</option>\n                <option value=\"2\" >Initials</option>\n                <option value=\"3\" >Mother-Daughter</option>\n                <option value=\"4\" >Personalised</option>\n              </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>select your Occasion/p>\n\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                <p>select your Curated By</p>\n\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n                <p>select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Pendant with Ear ring Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Pendant with Ear ring</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_EARRING_STYLE,ORNAMENT_PENDANT_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"12\" >Pendant with Earring</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n              <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4 \">\n              <select class=\"browser-default\" #ORNAMENT_EARRING_STYLE ngModel name=\"ORNAMENT_EARRING_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                  <option value=\"1\"> Drops and Dangler</option>\n                  <option value=\"2\" >Studs and Tops</option>\n                  <option value=\"3\" >Hoops and Huggies</option>\n                  <option value=\"4\" >Jhumkas</option>\n                  <option value=\"5\" >Sui Dhaga</option>\n                  <option value=\"6\" >Ear Cuffs and Hugs</option>\n                  <option value=\"7\" >Chandeliers</option>\n                  <option value=\"8\" >Chand Bali</option>\n                  <option value=\"9\" >Mismatched</option>\n                  <option value=\"10\" >Multi Pierced</option>\n                  <option value=\"11\" >Ear Jackets</option>\n                  <option value=\"12\" >Stud with Chain Clips</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4 \">\n              <select class=\"browser-default\" #ORNAMENT_PENDANT_STYLE ngModel name=\"ORNAMENT_PENDANT_STYLE\"  required>\n                <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                <option value=\"1\"> Casual</option>\n                <option value=\"2\" >Initials</option>\n                <option value=\"3\" >Mother-Daughter</option>\n                <option value=\"4\" >Personalised</option>\n              </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>select your Occasion/p>\n\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                <p>select your Curated By</p>\n\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n                <p>select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Pendant with Ear ring Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -3779,21 +3779,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion = pk;
+          this.asion.push(pk);
           console.log(this.asion);
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan = k;
+          this.asan.push(k);
           console.log(this.asan);
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea = k;
+          this.themea.push(k);
           console.log(this.themea);
           console.log(this.themeb);
         }
@@ -3801,7 +3801,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda = k;
+          this.curateda.push(k);
           console.log(this.curateda);
           console.log(this.curatedb);
         }
@@ -3809,7 +3809,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia = k;
+          this.festia.push(k);
           console.log(this.festia);
           console.log(this.festib);
         }
@@ -3817,7 +3817,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Size",
         value: function Size(k) {
           console.log(k);
-          this.bsizea = k;
+          this.bsizea.push(k);
           console.log(this.bsizea);
           console.log(this.bsizeb);
         }
@@ -4046,21 +4046,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion = pk;
+          this.asion.push(pk);
           console.log(this.asion);
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan = k;
+          this.asan.push(k);
           console.log(this.asan);
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea = k;
+          this.themea.push(k);
           console.log(this.themea);
           console.log(this.themeb);
         }
@@ -4068,7 +4068,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda = k;
+          this.curateda.push(k);
           console.log(this.curateda);
           console.log(this.curatedb);
         }
@@ -4076,7 +4076,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia = k;
+          this.festia.push(k);
           console.log(this.festia);
           console.log(this.festib);
         }
@@ -4084,7 +4084,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Size",
         value: function Size(k) {
           console.log(k);
-          this.bsizea = k;
+          this.bsizea.push(k);
           console.log(this.bsizea);
           console.log(this.bsizeb);
         }
@@ -4313,21 +4313,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion = pk;
+          this.asion.push(pk);
           console.log(this.asion);
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan = k;
+          this.asan.push(k);
           console.log(this.asan);
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea = k;
+          this.themea.push(k);
           console.log(this.themea);
           console.log(this.themeb);
         }
@@ -4335,7 +4335,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda = k;
+          this.curateda.push(k);
           console.log(this.curateda);
           console.log(this.curatedb);
         }
@@ -4343,7 +4343,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia = k;
+          this.festia.push(k);
           console.log(this.festia);
           console.log(this.festib);
         }
@@ -4351,7 +4351,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Size",
         value: function Size(k) {
           console.log(k);
-          this.bsizea = k;
+          this.bsizea.push(k);
           console.log(this.bsizea);
           console.log(this.bsizeb);
         }
@@ -4580,21 +4580,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion = pk;
+          this.asion.push(pk);
           console.log(this.asion);
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan = k;
+          this.asan.push(k);
           console.log(this.asan);
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea = k;
+          this.themea.push(k);
           console.log(this.themea);
           console.log(this.themeb);
         }
@@ -4602,7 +4602,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda = k;
+          this.curateda.push(k);
           console.log(this.curateda);
           console.log(this.curatedb);
         }
@@ -4610,7 +4610,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia = k;
+          this.festia.push(k);
           console.log(this.festia);
           console.log(this.festib);
         }
@@ -4618,7 +4618,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Size",
         value: function Size(k) {
           console.log(k);
-          this.bsizea = k;
+          this.bsizea.push(k);
           console.log(this.bsizea);
           console.log(this.bsizeb);
         }
@@ -5402,21 +5402,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion = pk;
+          this.asion.push(pk);
           console.log(this.asion);
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan = k;
+          this.asan.push(k);
           console.log(this.asan);
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea = k;
+          this.themea.push(k);
           console.log(this.themea);
           console.log(this.themeb);
         }
@@ -5424,7 +5424,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda = k;
+          this.curateda.push(k);
           console.log(this.curateda);
           console.log(this.curatedb);
         }
@@ -5432,7 +5432,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia = k;
+          this.festia.push(k);
           console.log(this.festia);
           console.log(this.festib);
         }
@@ -5647,39 +5647,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion = pk;
+          this.asion.push(pk);
           console.log(this.asion);
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan = k;
+          this.asan.push(k);
           console.log(this.asan);
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea = k;
+          this.themea.push(k);
           console.log(this.themea);
-          console.log(this.themeb);
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda = k;
+          this.curateda.push(k);
           console.log(this.curateda);
-          console.log(this.curatedb);
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia = k;
+          this.festia.push(k);
           console.log(this.festia);
-          console.log(this.festib);
         }
       }, {
         key: "handleFileInput",
@@ -5892,21 +5889,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion = pk;
+          this.asion.push(pk);
           console.log(this.asion);
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan = k;
+          this.asan.push(k);
           console.log(this.asan);
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea = k;
+          this.themea.push(k);
           console.log(this.themea);
           console.log(this.themeb);
         }
@@ -5914,7 +5911,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda = k;
+          this.curateda.push(k);
           console.log(this.curateda);
           console.log(this.curatedb);
         }
@@ -5922,7 +5919,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia = k;
+          this.festia.push(k);
           console.log(this.festia);
           console.log(this.festib);
         }
@@ -6055,30 +6052,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.Curated = {};
         this.Festival = {};
         this.Ringsize = {};
-        this.ORNAMENT_OCCASION = '';
-        this.arr = [1, 2, 3, 4];
         this.asion = [];
-        this.asian = [];
+        this.asian = [5];
         this.asan = [];
-        this.asin = [];
+        this.asin = [3];
         this.themea = [];
-        this.themeb = [];
+        this.themeb = [7];
         this.curateda = [];
-        this.curatedb = [];
+        this.curatedb = [6];
         this.festia = [];
-        this.festib = [];
+        this.festib = [8];
         this.rsizea = [];
-        this.rsizeb = [];
-        this.letsee = [3, 5, 7];
-        this.leA = [];
-        this.leB = [];
-        this.leC = [];
-        this.one = [];
-        this.two = [];
-        this.three = [];
-        this.four = [];
-        this.five = [];
-        this.six = [];
+        this.rsizeb = [8];
       }
 
       _createClass(OrnaringtypeComponent, [{
@@ -6091,44 +6076,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.curatedby();
           this.festival();
           this.ringsize();
-          this.see();
-        }
-      }, {
-        key: "main",
-        value: function main() {
-          var _iteratorNormalCompletion = true;
-          var _didIteratorError = false;
-          var _iteratorError = undefined;
-
-          try {
-            for (var _iterator = this.arr[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-              var i = _step.value;
-              console.log('Ornameny_type' + ':' + i);
-            }
-          } catch (err) {
-            _didIteratorError = true;
-            _iteratorError = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion && _iterator.return != null) {
-                _iterator.return();
-              }
-            } finally {
-              if (_didIteratorError) {
-                throw _iteratorError;
-              }
-            }
-          }
-        }
-      }, {
-        key: "see",
-        value: function see() {
-          this.leA.push(this.letsee[0]);
-          this.leB.push(this.letsee[1]);
-          this.leC.push(this.letsee[2]);
-          console.log(this.leA);
-          console.log(this.leB);
-          console.log(this.leC);
         }
       }, {
         key: "read",
@@ -6200,85 +6147,48 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "Answer",
         value: function Answer(pk) {
-          // console.log(pk);
-          this.one.push(pk);
-          console.log('the list ', this.one);
-
-          if (this.one.length === 2) {
-            this.asion.push(this.one[0]);
-            this.asian.push(this.one[1]);
-            console.log('extrat', this.asion);
-            console.log('ertart', this.asian);
-          } // this.asion.push(this.one[0]);
-          // this.asian.push(this.one[1]);
-          // this.leC.push(this.letsee[2]);
-          // console.log(this.leC);
-
+          console.log(pk);
+          this.asion.push(pk);
+          console.log(this.asion);
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
-          this.two.push(k);
-          console.log('the list ', this.two);
-
-          if (this.two.length === 2) {
-            this.asan.push(this.two[0]);
-            this.asin.push(this.two[1]);
-            console.log('extrat', this.asan);
-            console.log('ertart', this.asin);
-          }
+          console.log(k);
+          this.asan.push(k);
+          console.log(this.asan);
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
-          this.three.push(k);
-          console.log('the list ', this.three);
-
-          if (this.three.length === 2) {
-            this.themea.push(this.three[0]);
-            this.themeb.push(this.three[1]);
-            console.log('extrat', this.themea);
-            console.log('ertart', this.themeb);
-          }
+          console.log(k);
+          this.themea.push(k);
+          console.log(this.themea);
+          console.log(this.themeb);
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
-          this.four.push(k);
-          console.log('the list ', this.four);
-
-          if (this.four.length === 2) {
-            this.curateda.push(this.four[0]);
-            this.curatedb.push(this.four[1]);
-            console.log('extrat', this.curateda);
-            console.log('ertart', this.curatedb);
-          }
+          console.log(k);
+          this.curateda.push(k);
+          console.log(this.curateda);
+          console.log(this.curatedb);
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
-          this.five.push(k);
-          console.log('the list ', this.five);
-
-          if (this.five.length === 2) {
-            this.festia.push(this.five[0]);
-            this.festib.push(this.five[1]);
-            console.log('extrat', this.festia);
-            console.log('ertart', this.festib);
-          }
+          console.log(k);
+          this.festia.push(k);
+          console.log(this.festia);
+          console.log(this.festib);
         }
       }, {
         key: "Size",
         value: function Size(k) {
-          this.six.push(k);
-          console.log('the list ', this.six);
-
-          if (this.six.length === 2) {
-            this.rsizea.push(this.six[0]);
-            this.rsizeb.push(this.six[1]);
-            console.log('extrat', this.rsizea);
-            console.log('ertart', this.rsizeb);
-          }
+          console.log(k);
+          this.rsizea.push(k);
+          console.log(this.rsizea);
+          console.log(this.rsizeb);
         }
       }, {
         key: "handleFileInput",
@@ -6299,13 +6209,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "handleFileInputthree",
         value: function handleFileInputthree(file) {
           this.fileToUploadthree = file.item(0);
-        } // tslint:disable-next-line: max-line-length
-
+        }
       }, {
         key: "OnSubmit",
-        value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_RING_STYLE) {
-          // tslint:disable-next-line: max-line-length
-          this.userService.muli(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.rsizea, this.rsizeb, ORNAMENT_RING_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+        value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_RING_SIZE, ORNAMENT_RING_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
+          this.userService.mli(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.rsizea, this.rsizeb, ORNAMENT_RING_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
             console.log('done', data);
           });
         }
@@ -6738,21 +6646,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion = pk;
+          this.asion.push(pk);
           console.log(this.asion);
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan = k;
+          this.asan.push(k);
           console.log(this.asan);
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea = k;
+          this.themea.push(k);
           console.log(this.themea);
           console.log(this.themeb);
         }
@@ -6760,7 +6668,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda = k;
+          this.curateda.push(k);
           console.log(this.curateda);
           console.log(this.curatedb);
         }
@@ -6768,7 +6676,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia = k;
+          this.festia.push(k);
           console.log(this.festia);
           console.log(this.festib);
         }
@@ -8809,33 +8717,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
-        key: "main",
-        value: function main() {
-          var _iteratorNormalCompletion2 = true;
-          var _didIteratorError2 = false;
-          var _iteratorError2 = undefined;
-
-          try {
-            for (var _iterator2 = this.arr[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-              var i = _step2.value;
-              console.log('Ornameny_type' + ':' + i);
-            }
-          } catch (err) {
-            _didIteratorError2 = true;
-            _iteratorError2 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
-                _iterator2.return();
-              }
-            } finally {
-              if (_didIteratorError2) {
-                throw _iteratorError2;
-              }
-            }
-          }
-        }
-      }, {
         key: "asCitizen",
         value: function asCitizen(user) {
           var body = {
@@ -9252,6 +9133,173 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
             headers: Headers
           });
+        }
+      }, {
+        key: "mli",
+        value: function mli(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, rsizea, rsizeb, ORNAMENT_RING_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+          var formData = new FormData();
+          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+          formData.append('WEIGHT', WEIGHT);
+          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+          var _iteratorNormalCompletion = true;
+          var _didIteratorError = false;
+          var _iteratorError = undefined;
+
+          try {
+            for (var _iterator = asion[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+              var i = _step.value;
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
+
+          } catch (err) {
+            _didIteratorError = true;
+            _iteratorError = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion && _iterator.return != null) {
+                _iterator.return();
+              }
+            } finally {
+              if (_didIteratorError) {
+                throw _iteratorError;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion2 = true;
+          var _didIteratorError2 = false;
+          var _iteratorError2 = undefined;
+
+          try {
+            for (var _iterator2 = asan[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+              var i = _step2.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError2 = true;
+            _iteratorError2 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
+                _iterator2.return();
+              }
+            } finally {
+              if (_didIteratorError2) {
+                throw _iteratorError2;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion3 = true;
+          var _didIteratorError3 = false;
+          var _iteratorError3 = undefined;
+
+          try {
+            for (var _iterator3 = themea[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+              var i = _step3.value;
+              formData.append('ORNAMENT_THEME', i);
+            }
+          } catch (err) {
+            _didIteratorError3 = true;
+            _iteratorError3 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
+                _iterator3.return();
+              }
+            } finally {
+              if (_didIteratorError3) {
+                throw _iteratorError3;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion4 = true;
+          var _didIteratorError4 = false;
+          var _iteratorError4 = undefined;
+
+          try {
+            for (var _iterator4 = curateda[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+              var i = _step4.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            }
+          } catch (err) {
+            _didIteratorError4 = true;
+            _iteratorError4 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
+                _iterator4.return();
+              }
+            } finally {
+              if (_didIteratorError4) {
+                throw _iteratorError4;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion5 = true;
+          var _didIteratorError5 = false;
+          var _iteratorError5 = undefined;
+
+          try {
+            for (var _iterator5 = festia[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+              var i = _step5.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            }
+          } catch (err) {
+            _didIteratorError5 = true;
+            _iteratorError5 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion5 && _iterator5.return != null) {
+                _iterator5.return();
+              }
+            } finally {
+              if (_didIteratorError5) {
+                throw _iteratorError5;
+              }
+            }
+          }
+
+          formData.append('ORNAMENT_RING_STYLE', ORNAMENT_RING_STYLE);
+          var _iteratorNormalCompletion6 = true;
+          var _didIteratorError6 = false;
+          var _iteratorError6 = undefined;
+
+          try {
+            for (var _iterator6 = rsizea[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+              var i = _step6.value;
+              formData.append('ORNAMENT_RING_SIZE', i);
+            } // formData.append('ORNAMENT_RING_SIZE', rsizea);
+            // formData.append('ORNAMENT_RING_SIZE', rsizeb);
+
+          } catch (err) {
+            _didIteratorError6 = true;
+            _iteratorError6 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion6 && _iterator6.return != null) {
+                _iterator6.return();
+              }
+            } finally {
+              if (_didIteratorError6) {
+                throw _iteratorError6;
+              }
+            }
+          }
+
+          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
+            headers: Headers
+          });
         } // tslint:disable-next-line: max-line-length
 
       }, {
@@ -9263,16 +9311,131 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
           formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-          formData.append('ORNAMENT_OCCASION', asion);
-          formData.append('ORNAMENT_OCCASION', asian);
-          formData.append('ORNAMENT_GIFT', asan);
-          formData.append('ORNAMENT_GIFT', asin);
-          formData.append('ORNAMENT_THEME', themea);
-          formData.append('ORNAMENT_THEME', themeb);
-          formData.append('ORNAMENT_CURATED_BY', curateda);
-          formData.append('ORNAMENT_CURATED_BY', curatedb);
-          formData.append('ORNAMENT_FESTIVAL', festia);
-          formData.append('ORNAMENT_FESTIVAL', festib);
+          var _iteratorNormalCompletion7 = true;
+          var _didIteratorError7 = false;
+          var _iteratorError7 = undefined;
+
+          try {
+            for (var _iterator7 = asion[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+              var i = _step7.value;
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
+
+          } catch (err) {
+            _didIteratorError7 = true;
+            _iteratorError7 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion7 && _iterator7.return != null) {
+                _iterator7.return();
+              }
+            } finally {
+              if (_didIteratorError7) {
+                throw _iteratorError7;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion8 = true;
+          var _didIteratorError8 = false;
+          var _iteratorError8 = undefined;
+
+          try {
+            for (var _iterator8 = asan[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+              var i = _step8.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError8 = true;
+            _iteratorError8 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion8 && _iterator8.return != null) {
+                _iterator8.return();
+              }
+            } finally {
+              if (_didIteratorError8) {
+                throw _iteratorError8;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion9 = true;
+          var _didIteratorError9 = false;
+          var _iteratorError9 = undefined;
+
+          try {
+            for (var _iterator9 = themea[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
+              var i = _step9.value;
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
+
+          } catch (err) {
+            _didIteratorError9 = true;
+            _iteratorError9 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion9 && _iterator9.return != null) {
+                _iterator9.return();
+              }
+            } finally {
+              if (_didIteratorError9) {
+                throw _iteratorError9;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion10 = true;
+          var _didIteratorError10 = false;
+          var _iteratorError10 = undefined;
+
+          try {
+            for (var _iterator10 = curateda[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
+              var i = _step10.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+
+          } catch (err) {
+            _didIteratorError10 = true;
+            _iteratorError10 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion10 && _iterator10.return != null) {
+                _iterator10.return();
+              }
+            } finally {
+              if (_didIteratorError10) {
+                throw _iteratorError10;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion11 = true;
+          var _didIteratorError11 = false;
+          var _iteratorError11 = undefined;
+
+          try {
+            for (var _iterator11 = festia[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
+              var i = _step11.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
+
+          } catch (err) {
+            _didIteratorError11 = true;
+            _iteratorError11 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion11 && _iterator11.return != null) {
+                _iterator11.return();
+              }
+            } finally {
+              if (_didIteratorError11) {
+                throw _iteratorError11;
+              }
+            }
+          }
+
           formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
           formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
           formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
@@ -9293,16 +9456,131 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
           formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-          formData.append('ORNAMENT_OCCASION', asion);
-          formData.append('ORNAMENT_OCCASION', asian);
-          formData.append('ORNAMENT_GIFT', asan);
-          formData.append('ORNAMENT_GIFT', asin);
-          formData.append('ORNAMENT_THEME', themea);
-          formData.append('ORNAMENT_THEME', themeb);
-          formData.append('ORNAMENT_CURATED_BY', curateda);
-          formData.append('ORNAMENT_CURATED_BY', curatedb);
-          formData.append('ORNAMENT_FESTIVAL', festia);
-          formData.append('ORNAMENT_FESTIVAL', festib);
+          var _iteratorNormalCompletion12 = true;
+          var _didIteratorError12 = false;
+          var _iteratorError12 = undefined;
+
+          try {
+            for (var _iterator12 = asion[Symbol.iterator](), _step12; !(_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done); _iteratorNormalCompletion12 = true) {
+              var i = _step12.value;
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
+
+          } catch (err) {
+            _didIteratorError12 = true;
+            _iteratorError12 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion12 && _iterator12.return != null) {
+                _iterator12.return();
+              }
+            } finally {
+              if (_didIteratorError12) {
+                throw _iteratorError12;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion13 = true;
+          var _didIteratorError13 = false;
+          var _iteratorError13 = undefined;
+
+          try {
+            for (var _iterator13 = asan[Symbol.iterator](), _step13; !(_iteratorNormalCompletion13 = (_step13 = _iterator13.next()).done); _iteratorNormalCompletion13 = true) {
+              var i = _step13.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError13 = true;
+            _iteratorError13 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion13 && _iterator13.return != null) {
+                _iterator13.return();
+              }
+            } finally {
+              if (_didIteratorError13) {
+                throw _iteratorError13;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion14 = true;
+          var _didIteratorError14 = false;
+          var _iteratorError14 = undefined;
+
+          try {
+            for (var _iterator14 = themea[Symbol.iterator](), _step14; !(_iteratorNormalCompletion14 = (_step14 = _iterator14.next()).done); _iteratorNormalCompletion14 = true) {
+              var i = _step14.value;
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
+
+          } catch (err) {
+            _didIteratorError14 = true;
+            _iteratorError14 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion14 && _iterator14.return != null) {
+                _iterator14.return();
+              }
+            } finally {
+              if (_didIteratorError14) {
+                throw _iteratorError14;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion15 = true;
+          var _didIteratorError15 = false;
+          var _iteratorError15 = undefined;
+
+          try {
+            for (var _iterator15 = curateda[Symbol.iterator](), _step15; !(_iteratorNormalCompletion15 = (_step15 = _iterator15.next()).done); _iteratorNormalCompletion15 = true) {
+              var i = _step15.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+
+          } catch (err) {
+            _didIteratorError15 = true;
+            _iteratorError15 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion15 && _iterator15.return != null) {
+                _iterator15.return();
+              }
+            } finally {
+              if (_didIteratorError15) {
+                throw _iteratorError15;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion16 = true;
+          var _didIteratorError16 = false;
+          var _iteratorError16 = undefined;
+
+          try {
+            for (var _iterator16 = festia[Symbol.iterator](), _step16; !(_iteratorNormalCompletion16 = (_step16 = _iterator16.next()).done); _iteratorNormalCompletion16 = true) {
+              var i = _step16.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
+
+          } catch (err) {
+            _didIteratorError16 = true;
+            _iteratorError16 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion16 && _iterator16.return != null) {
+                _iterator16.return();
+              }
+            } finally {
+              if (_didIteratorError16) {
+                throw _iteratorError16;
+              }
+            }
+          }
+
           formData.append('ORNAMENT_NOSEPIN_STYLE', ORNAMENT_NOSEPIN_STYLE);
           formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
           formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
@@ -9323,16 +9601,131 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
           formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-          formData.append('ORNAMENT_OCCASION', asion);
-          formData.append('ORNAMENT_OCCASION', asian);
-          formData.append('ORNAMENT_GIFT', asan);
-          formData.append('ORNAMENT_GIFT', asin);
-          formData.append('ORNAMENT_THEME', themea);
-          formData.append('ORNAMENT_THEME', themeb);
-          formData.append('ORNAMENT_CURATED_BY', curateda);
-          formData.append('ORNAMENT_CURATED_BY', curatedb);
-          formData.append('ORNAMENT_FESTIVAL', festia);
-          formData.append('ORNAMENT_FESTIVAL', festib);
+          var _iteratorNormalCompletion17 = true;
+          var _didIteratorError17 = false;
+          var _iteratorError17 = undefined;
+
+          try {
+            for (var _iterator17 = asion[Symbol.iterator](), _step17; !(_iteratorNormalCompletion17 = (_step17 = _iterator17.next()).done); _iteratorNormalCompletion17 = true) {
+              var i = _step17.value;
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
+
+          } catch (err) {
+            _didIteratorError17 = true;
+            _iteratorError17 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion17 && _iterator17.return != null) {
+                _iterator17.return();
+              }
+            } finally {
+              if (_didIteratorError17) {
+                throw _iteratorError17;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion18 = true;
+          var _didIteratorError18 = false;
+          var _iteratorError18 = undefined;
+
+          try {
+            for (var _iterator18 = asan[Symbol.iterator](), _step18; !(_iteratorNormalCompletion18 = (_step18 = _iterator18.next()).done); _iteratorNormalCompletion18 = true) {
+              var i = _step18.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError18 = true;
+            _iteratorError18 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion18 && _iterator18.return != null) {
+                _iterator18.return();
+              }
+            } finally {
+              if (_didIteratorError18) {
+                throw _iteratorError18;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion19 = true;
+          var _didIteratorError19 = false;
+          var _iteratorError19 = undefined;
+
+          try {
+            for (var _iterator19 = themea[Symbol.iterator](), _step19; !(_iteratorNormalCompletion19 = (_step19 = _iterator19.next()).done); _iteratorNormalCompletion19 = true) {
+              var i = _step19.value;
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
+
+          } catch (err) {
+            _didIteratorError19 = true;
+            _iteratorError19 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion19 && _iterator19.return != null) {
+                _iterator19.return();
+              }
+            } finally {
+              if (_didIteratorError19) {
+                throw _iteratorError19;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion20 = true;
+          var _didIteratorError20 = false;
+          var _iteratorError20 = undefined;
+
+          try {
+            for (var _iterator20 = curateda[Symbol.iterator](), _step20; !(_iteratorNormalCompletion20 = (_step20 = _iterator20.next()).done); _iteratorNormalCompletion20 = true) {
+              var i = _step20.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } //  formData.append('ORNAMENT_CURATED_BY', curatedb);
+
+          } catch (err) {
+            _didIteratorError20 = true;
+            _iteratorError20 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion20 && _iterator20.return != null) {
+                _iterator20.return();
+              }
+            } finally {
+              if (_didIteratorError20) {
+                throw _iteratorError20;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion21 = true;
+          var _didIteratorError21 = false;
+          var _iteratorError21 = undefined;
+
+          try {
+            for (var _iterator21 = festia[Symbol.iterator](), _step21; !(_iteratorNormalCompletion21 = (_step21 = _iterator21.next()).done); _iteratorNormalCompletion21 = true) {
+              var i = _step21.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
+
+          } catch (err) {
+            _didIteratorError21 = true;
+            _iteratorError21 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion21 && _iterator21.return != null) {
+                _iterator21.return();
+              }
+            } finally {
+              if (_didIteratorError21) {
+                throw _iteratorError21;
+              }
+            }
+          }
+
           formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
           formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
           formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
@@ -9354,19 +9747,157 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
           formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-          formData.append('ORNAMENT_OCCASION', asion);
-          formData.append('ORNAMENT_OCCASION', asian);
-          formData.append('ORNAMENT_GIFT', asan);
-          formData.append('ORNAMENT_GIFT', asin);
-          formData.append('ORNAMENT_THEME', themea);
-          formData.append('ORNAMENT_THEME', themeb);
-          formData.append('ORNAMENT_CURATED_BY', curateda);
-          formData.append('ORNAMENT_CURATED_BY', curatedb);
-          formData.append('ORNAMENT_FESTIVAL', festia);
-          formData.append('ORNAMENT_FESTIVAL', festib);
+          var _iteratorNormalCompletion22 = true;
+          var _didIteratorError22 = false;
+          var _iteratorError22 = undefined;
+
+          try {
+            for (var _iterator22 = asion[Symbol.iterator](), _step22; !(_iteratorNormalCompletion22 = (_step22 = _iterator22.next()).done); _iteratorNormalCompletion22 = true) {
+              var i = _step22.value;
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
+
+          } catch (err) {
+            _didIteratorError22 = true;
+            _iteratorError22 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion22 && _iterator22.return != null) {
+                _iterator22.return();
+              }
+            } finally {
+              if (_didIteratorError22) {
+                throw _iteratorError22;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion23 = true;
+          var _didIteratorError23 = false;
+          var _iteratorError23 = undefined;
+
+          try {
+            for (var _iterator23 = asan[Symbol.iterator](), _step23; !(_iteratorNormalCompletion23 = (_step23 = _iterator23.next()).done); _iteratorNormalCompletion23 = true) {
+              var i = _step23.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError23 = true;
+            _iteratorError23 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion23 && _iterator23.return != null) {
+                _iterator23.return();
+              }
+            } finally {
+              if (_didIteratorError23) {
+                throw _iteratorError23;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion24 = true;
+          var _didIteratorError24 = false;
+          var _iteratorError24 = undefined;
+
+          try {
+            for (var _iterator24 = themea[Symbol.iterator](), _step24; !(_iteratorNormalCompletion24 = (_step24 = _iterator24.next()).done); _iteratorNormalCompletion24 = true) {
+              var i = _step24.value;
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
+
+          } catch (err) {
+            _didIteratorError24 = true;
+            _iteratorError24 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion24 && _iterator24.return != null) {
+                _iterator24.return();
+              }
+            } finally {
+              if (_didIteratorError24) {
+                throw _iteratorError24;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion25 = true;
+          var _didIteratorError25 = false;
+          var _iteratorError25 = undefined;
+
+          try {
+            for (var _iterator25 = curateda[Symbol.iterator](), _step25; !(_iteratorNormalCompletion25 = (_step25 = _iterator25.next()).done); _iteratorNormalCompletion25 = true) {
+              var i = _step25.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+
+          } catch (err) {
+            _didIteratorError25 = true;
+            _iteratorError25 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion25 && _iterator25.return != null) {
+                _iterator25.return();
+              }
+            } finally {
+              if (_didIteratorError25) {
+                throw _iteratorError25;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion26 = true;
+          var _didIteratorError26 = false;
+          var _iteratorError26 = undefined;
+
+          try {
+            for (var _iterator26 = festia[Symbol.iterator](), _step26; !(_iteratorNormalCompletion26 = (_step26 = _iterator26.next()).done); _iteratorNormalCompletion26 = true) {
+              var i = _step26.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
+
+          } catch (err) {
+            _didIteratorError26 = true;
+            _iteratorError26 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion26 && _iterator26.return != null) {
+                _iterator26.return();
+              }
+            } finally {
+              if (_didIteratorError26) {
+                throw _iteratorError26;
+              }
+            }
+          }
+
           formData.append('ORNAMENT_BRACELET_STYLE', ORNAMENT_BRACELET_STYLE);
-          formData.append('ORNAMENT_BRACELET_SIZE', bsizea);
-          formData.append('ORNAMENT_BRACELET_SIZE', bsizeb);
+          var _iteratorNormalCompletion27 = true;
+          var _didIteratorError27 = false;
+          var _iteratorError27 = undefined;
+
+          try {
+            for (var _iterator27 = bsizea[Symbol.iterator](), _step27; !(_iteratorNormalCompletion27 = (_step27 = _iterator27.next()).done); _iteratorNormalCompletion27 = true) {
+              var i = _step27.value;
+              formData.append('ORNAMENT_BRACELET_SIZE', i);
+            } // formData.append('ORNAMENT_BRACELET_SIZE', bsizeb);
+
+          } catch (err) {
+            _didIteratorError27 = true;
+            _iteratorError27 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion27 && _iterator27.return != null) {
+                _iterator27.return();
+              }
+            } finally {
+              if (_didIteratorError27) {
+                throw _iteratorError27;
+              }
+            }
+          }
+
           formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
           formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
           formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -9386,19 +9917,157 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
           formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-          formData.append('ORNAMENT_OCCASION', asion);
-          formData.append('ORNAMENT_OCCASION', asian);
-          formData.append('ORNAMENT_GIFT', asan);
-          formData.append('ORNAMENT_GIFT', asin);
-          formData.append('ORNAMENT_THEME', themea);
-          formData.append('ORNAMENT_THEME', themeb);
-          formData.append('ORNAMENT_CURATED_BY', curateda);
-          formData.append('ORNAMENT_CURATED_BY', curatedb);
-          formData.append('ORNAMENT_FESTIVAL', festia);
-          formData.append('ORNAMENT_FESTIVAL', festib);
+          var _iteratorNormalCompletion28 = true;
+          var _didIteratorError28 = false;
+          var _iteratorError28 = undefined;
+
+          try {
+            for (var _iterator28 = asion[Symbol.iterator](), _step28; !(_iteratorNormalCompletion28 = (_step28 = _iterator28.next()).done); _iteratorNormalCompletion28 = true) {
+              var i = _step28.value;
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
+
+          } catch (err) {
+            _didIteratorError28 = true;
+            _iteratorError28 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion28 && _iterator28.return != null) {
+                _iterator28.return();
+              }
+            } finally {
+              if (_didIteratorError28) {
+                throw _iteratorError28;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion29 = true;
+          var _didIteratorError29 = false;
+          var _iteratorError29 = undefined;
+
+          try {
+            for (var _iterator29 = asan[Symbol.iterator](), _step29; !(_iteratorNormalCompletion29 = (_step29 = _iterator29.next()).done); _iteratorNormalCompletion29 = true) {
+              var i = _step29.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError29 = true;
+            _iteratorError29 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion29 && _iterator29.return != null) {
+                _iterator29.return();
+              }
+            } finally {
+              if (_didIteratorError29) {
+                throw _iteratorError29;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion30 = true;
+          var _didIteratorError30 = false;
+          var _iteratorError30 = undefined;
+
+          try {
+            for (var _iterator30 = themea[Symbol.iterator](), _step30; !(_iteratorNormalCompletion30 = (_step30 = _iterator30.next()).done); _iteratorNormalCompletion30 = true) {
+              var i = _step30.value;
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
+
+          } catch (err) {
+            _didIteratorError30 = true;
+            _iteratorError30 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion30 && _iterator30.return != null) {
+                _iterator30.return();
+              }
+            } finally {
+              if (_didIteratorError30) {
+                throw _iteratorError30;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion31 = true;
+          var _didIteratorError31 = false;
+          var _iteratorError31 = undefined;
+
+          try {
+            for (var _iterator31 = curateda[Symbol.iterator](), _step31; !(_iteratorNormalCompletion31 = (_step31 = _iterator31.next()).done); _iteratorNormalCompletion31 = true) {
+              var i = _step31.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+
+          } catch (err) {
+            _didIteratorError31 = true;
+            _iteratorError31 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion31 && _iterator31.return != null) {
+                _iterator31.return();
+              }
+            } finally {
+              if (_didIteratorError31) {
+                throw _iteratorError31;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion32 = true;
+          var _didIteratorError32 = false;
+          var _iteratorError32 = undefined;
+
+          try {
+            for (var _iterator32 = festia[Symbol.iterator](), _step32; !(_iteratorNormalCompletion32 = (_step32 = _iterator32.next()).done); _iteratorNormalCompletion32 = true) {
+              var i = _step32.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
+
+          } catch (err) {
+            _didIteratorError32 = true;
+            _iteratorError32 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion32 && _iterator32.return != null) {
+                _iterator32.return();
+              }
+            } finally {
+              if (_didIteratorError32) {
+                throw _iteratorError32;
+              }
+            }
+          }
+
           formData.append('ORNAMENT_BANGLE_STYLE', ORNAMENT_BANGLE_STYLE);
-          formData.append('ORNAMENT_BANGLE_SIZE', bsizea);
-          formData.append('ORNAMENT_BANGLE_SIZE', bsizeb);
+          var _iteratorNormalCompletion33 = true;
+          var _didIteratorError33 = false;
+          var _iteratorError33 = undefined;
+
+          try {
+            for (var _iterator33 = bsizea[Symbol.iterator](), _step33; !(_iteratorNormalCompletion33 = (_step33 = _iterator33.next()).done); _iteratorNormalCompletion33 = true) {
+              var i = _step33.value;
+              formData.append('ORNAMENT_BANGLE_SIZE', i);
+            } // formData.append('ORNAMENT_BANGLE_SIZE', bsizeb);
+
+          } catch (err) {
+            _didIteratorError33 = true;
+            _iteratorError33 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion33 && _iterator33.return != null) {
+                _iterator33.return();
+              }
+            } finally {
+              if (_didIteratorError33) {
+                throw _iteratorError33;
+              }
+            }
+          }
+
           formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
           formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
           formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -9418,19 +10087,157 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
           formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-          formData.append('ORNAMENT_OCCASION', asion);
-          formData.append('ORNAMENT_OCCASION', asian);
-          formData.append('ORNAMENT_GIFT', asan);
-          formData.append('ORNAMENT_GIFT', asin);
-          formData.append('ORNAMENT_THEME', themea);
-          formData.append('ORNAMENT_THEME', themeb);
-          formData.append('ORNAMENT_CURATED_BY', curateda);
-          formData.append('ORNAMENT_CURATED_BY', curatedb);
-          formData.append('ORNAMENT_FESTIVAL', festia);
-          formData.append('ORNAMENT_FESTIVAL', festib);
+          var _iteratorNormalCompletion34 = true;
+          var _didIteratorError34 = false;
+          var _iteratorError34 = undefined;
+
+          try {
+            for (var _iterator34 = asion[Symbol.iterator](), _step34; !(_iteratorNormalCompletion34 = (_step34 = _iterator34.next()).done); _iteratorNormalCompletion34 = true) {
+              var i = _step34.value;
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
+
+          } catch (err) {
+            _didIteratorError34 = true;
+            _iteratorError34 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion34 && _iterator34.return != null) {
+                _iterator34.return();
+              }
+            } finally {
+              if (_didIteratorError34) {
+                throw _iteratorError34;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion35 = true;
+          var _didIteratorError35 = false;
+          var _iteratorError35 = undefined;
+
+          try {
+            for (var _iterator35 = asan[Symbol.iterator](), _step35; !(_iteratorNormalCompletion35 = (_step35 = _iterator35.next()).done); _iteratorNormalCompletion35 = true) {
+              var i = _step35.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError35 = true;
+            _iteratorError35 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion35 && _iterator35.return != null) {
+                _iterator35.return();
+              }
+            } finally {
+              if (_didIteratorError35) {
+                throw _iteratorError35;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion36 = true;
+          var _didIteratorError36 = false;
+          var _iteratorError36 = undefined;
+
+          try {
+            for (var _iterator36 = themea[Symbol.iterator](), _step36; !(_iteratorNormalCompletion36 = (_step36 = _iterator36.next()).done); _iteratorNormalCompletion36 = true) {
+              var i = _step36.value;
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
+
+          } catch (err) {
+            _didIteratorError36 = true;
+            _iteratorError36 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion36 && _iterator36.return != null) {
+                _iterator36.return();
+              }
+            } finally {
+              if (_didIteratorError36) {
+                throw _iteratorError36;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion37 = true;
+          var _didIteratorError37 = false;
+          var _iteratorError37 = undefined;
+
+          try {
+            for (var _iterator37 = curateda[Symbol.iterator](), _step37; !(_iteratorNormalCompletion37 = (_step37 = _iterator37.next()).done); _iteratorNormalCompletion37 = true) {
+              var i = _step37.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+
+          } catch (err) {
+            _didIteratorError37 = true;
+            _iteratorError37 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion37 && _iterator37.return != null) {
+                _iterator37.return();
+              }
+            } finally {
+              if (_didIteratorError37) {
+                throw _iteratorError37;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion38 = true;
+          var _didIteratorError38 = false;
+          var _iteratorError38 = undefined;
+
+          try {
+            for (var _iterator38 = festia[Symbol.iterator](), _step38; !(_iteratorNormalCompletion38 = (_step38 = _iterator38.next()).done); _iteratorNormalCompletion38 = true) {
+              var i = _step38.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
+
+          } catch (err) {
+            _didIteratorError38 = true;
+            _iteratorError38 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion38 && _iterator38.return != null) {
+                _iterator38.return();
+              }
+            } finally {
+              if (_didIteratorError38) {
+                throw _iteratorError38;
+              }
+            }
+          }
+
           formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
-          formData.append('ORNAMENT_CHAIN_LENGTH', bsizea);
-          formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
+          var _iteratorNormalCompletion39 = true;
+          var _didIteratorError39 = false;
+          var _iteratorError39 = undefined;
+
+          try {
+            for (var _iterator39 = bsizea[Symbol.iterator](), _step39; !(_iteratorNormalCompletion39 = (_step39 = _iterator39.next()).done); _iteratorNormalCompletion39 = true) {
+              var i = _step39.value;
+              formData.append('ORNAMENT_CHAIN_LENGTH', i);
+            } // formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
+
+          } catch (err) {
+            _didIteratorError39 = true;
+            _iteratorError39 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion39 && _iterator39.return != null) {
+                _iterator39.return();
+              }
+            } finally {
+              if (_didIteratorError39) {
+                throw _iteratorError39;
+              }
+            }
+          }
+
           formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
           formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
           formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -9450,16 +10257,131 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
           formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-          formData.append('ORNAMENT_OCCASION', asion);
-          formData.append('ORNAMENT_OCCASION', asian);
-          formData.append('ORNAMENT_GIFT', asan);
-          formData.append('ORNAMENT_GIFT', asin);
-          formData.append('ORNAMENT_THEME', themea);
-          formData.append('ORNAMENT_THEME', themeb);
-          formData.append('ORNAMENT_CURATED_BY', curateda);
-          formData.append('ORNAMENT_CURATED_BY', curatedb);
-          formData.append('ORNAMENT_FESTIVAL', festia);
-          formData.append('ORNAMENT_FESTIVAL', festib);
+          var _iteratorNormalCompletion40 = true;
+          var _didIteratorError40 = false;
+          var _iteratorError40 = undefined;
+
+          try {
+            for (var _iterator40 = asion[Symbol.iterator](), _step40; !(_iteratorNormalCompletion40 = (_step40 = _iterator40.next()).done); _iteratorNormalCompletion40 = true) {
+              var i = _step40.value;
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
+
+          } catch (err) {
+            _didIteratorError40 = true;
+            _iteratorError40 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion40 && _iterator40.return != null) {
+                _iterator40.return();
+              }
+            } finally {
+              if (_didIteratorError40) {
+                throw _iteratorError40;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion41 = true;
+          var _didIteratorError41 = false;
+          var _iteratorError41 = undefined;
+
+          try {
+            for (var _iterator41 = asan[Symbol.iterator](), _step41; !(_iteratorNormalCompletion41 = (_step41 = _iterator41.next()).done); _iteratorNormalCompletion41 = true) {
+              var i = _step41.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError41 = true;
+            _iteratorError41 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion41 && _iterator41.return != null) {
+                _iterator41.return();
+              }
+            } finally {
+              if (_didIteratorError41) {
+                throw _iteratorError41;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion42 = true;
+          var _didIteratorError42 = false;
+          var _iteratorError42 = undefined;
+
+          try {
+            for (var _iterator42 = themea[Symbol.iterator](), _step42; !(_iteratorNormalCompletion42 = (_step42 = _iterator42.next()).done); _iteratorNormalCompletion42 = true) {
+              var i = _step42.value;
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
+
+          } catch (err) {
+            _didIteratorError42 = true;
+            _iteratorError42 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion42 && _iterator42.return != null) {
+                _iterator42.return();
+              }
+            } finally {
+              if (_didIteratorError42) {
+                throw _iteratorError42;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion43 = true;
+          var _didIteratorError43 = false;
+          var _iteratorError43 = undefined;
+
+          try {
+            for (var _iterator43 = curateda[Symbol.iterator](), _step43; !(_iteratorNormalCompletion43 = (_step43 = _iterator43.next()).done); _iteratorNormalCompletion43 = true) {
+              var i = _step43.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+
+          } catch (err) {
+            _didIteratorError43 = true;
+            _iteratorError43 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion43 && _iterator43.return != null) {
+                _iterator43.return();
+              }
+            } finally {
+              if (_didIteratorError43) {
+                throw _iteratorError43;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion44 = true;
+          var _didIteratorError44 = false;
+          var _iteratorError44 = undefined;
+
+          try {
+            for (var _iterator44 = festia[Symbol.iterator](), _step44; !(_iteratorNormalCompletion44 = (_step44 = _iterator44.next()).done); _iteratorNormalCompletion44 = true) {
+              var i = _step44.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
+
+          } catch (err) {
+            _didIteratorError44 = true;
+            _iteratorError44 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion44 && _iterator44.return != null) {
+                _iterator44.return();
+              }
+            } finally {
+              if (_didIteratorError44) {
+                throw _iteratorError44;
+              }
+            }
+          }
+
           formData.append('ORNAMENT_NECKLACE_STYLE', ORNAMENT_NECKLACE_STYLE);
           formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
           formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
@@ -9480,19 +10402,157 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
           formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-          formData.append('ORNAMENT_OCCASION', asion);
-          formData.append('ORNAMENT_OCCASION', asian);
-          formData.append('ORNAMENT_GIFT', asan);
-          formData.append('ORNAMENT_GIFT', asin);
-          formData.append('ORNAMENT_THEME', themea);
-          formData.append('ORNAMENT_THEME', themeb);
-          formData.append('ORNAMENT_CURATED_BY', curateda);
-          formData.append('ORNAMENT_CURATED_BY', curatedb);
-          formData.append('ORNAMENT_FESTIVAL', festia);
-          formData.append('ORNAMENT_FESTIVAL', festib);
+          var _iteratorNormalCompletion45 = true;
+          var _didIteratorError45 = false;
+          var _iteratorError45 = undefined;
+
+          try {
+            for (var _iterator45 = asion[Symbol.iterator](), _step45; !(_iteratorNormalCompletion45 = (_step45 = _iterator45.next()).done); _iteratorNormalCompletion45 = true) {
+              var i = _step45.value;
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
+
+          } catch (err) {
+            _didIteratorError45 = true;
+            _iteratorError45 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion45 && _iterator45.return != null) {
+                _iterator45.return();
+              }
+            } finally {
+              if (_didIteratorError45) {
+                throw _iteratorError45;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion46 = true;
+          var _didIteratorError46 = false;
+          var _iteratorError46 = undefined;
+
+          try {
+            for (var _iterator46 = asan[Symbol.iterator](), _step46; !(_iteratorNormalCompletion46 = (_step46 = _iterator46.next()).done); _iteratorNormalCompletion46 = true) {
+              var i = _step46.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError46 = true;
+            _iteratorError46 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion46 && _iterator46.return != null) {
+                _iterator46.return();
+              }
+            } finally {
+              if (_didIteratorError46) {
+                throw _iteratorError46;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion47 = true;
+          var _didIteratorError47 = false;
+          var _iteratorError47 = undefined;
+
+          try {
+            for (var _iterator47 = themea[Symbol.iterator](), _step47; !(_iteratorNormalCompletion47 = (_step47 = _iterator47.next()).done); _iteratorNormalCompletion47 = true) {
+              var i = _step47.value;
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
+
+          } catch (err) {
+            _didIteratorError47 = true;
+            _iteratorError47 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion47 && _iterator47.return != null) {
+                _iterator47.return();
+              }
+            } finally {
+              if (_didIteratorError47) {
+                throw _iteratorError47;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion48 = true;
+          var _didIteratorError48 = false;
+          var _iteratorError48 = undefined;
+
+          try {
+            for (var _iterator48 = curateda[Symbol.iterator](), _step48; !(_iteratorNormalCompletion48 = (_step48 = _iterator48.next()).done); _iteratorNormalCompletion48 = true) {
+              var i = _step48.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+
+          } catch (err) {
+            _didIteratorError48 = true;
+            _iteratorError48 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion48 && _iterator48.return != null) {
+                _iterator48.return();
+              }
+            } finally {
+              if (_didIteratorError48) {
+                throw _iteratorError48;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion49 = true;
+          var _didIteratorError49 = false;
+          var _iteratorError49 = undefined;
+
+          try {
+            for (var _iterator49 = festia[Symbol.iterator](), _step49; !(_iteratorNormalCompletion49 = (_step49 = _iterator49.next()).done); _iteratorNormalCompletion49 = true) {
+              var i = _step49.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
+
+          } catch (err) {
+            _didIteratorError49 = true;
+            _iteratorError49 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion49 && _iterator49.return != null) {
+                _iterator49.return();
+              }
+            } finally {
+              if (_didIteratorError49) {
+                throw _iteratorError49;
+              }
+            }
+          }
+
           formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
-          formData.append('ORNAMENT_CHAIN_LENGTH', bsizea);
-          formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
+          var _iteratorNormalCompletion50 = true;
+          var _didIteratorError50 = false;
+          var _iteratorError50 = undefined;
+
+          try {
+            for (var _iterator50 = bsizea[Symbol.iterator](), _step50; !(_iteratorNormalCompletion50 = (_step50 = _iterator50.next()).done); _iteratorNormalCompletion50 = true) {
+              var i = _step50.value;
+              formData.append('ORNAMENT_CHAIN_LENGTH', i);
+            } //formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
+
+          } catch (err) {
+            _didIteratorError50 = true;
+            _iteratorError50 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion50 && _iterator50.return != null) {
+                _iterator50.return();
+              }
+            } finally {
+              if (_didIteratorError50) {
+                throw _iteratorError50;
+              }
+            }
+          }
+
           formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
           formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
           formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
@@ -9502,8 +10562,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
             headers: Headers
           });
-        } // tslint:disable-next-line: max-line-length
-
+        }
       }, {
         key: "pendant",
         value: function pendant(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_PENDANT_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
@@ -9532,8 +10591,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
             headers: Headers
           });
-        } // tslint:disable-next-line: max-line-length
-
+        }
       }, {
         key: "postupdate",
         value: function postupdate(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
