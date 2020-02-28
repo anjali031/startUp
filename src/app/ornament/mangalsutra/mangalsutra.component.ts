@@ -88,39 +88,32 @@ export class MangalsutraComponent implements OnInit {
 
   Answer(pk) {
     console.log(pk);
-    this.asion = pk;
+    this.asion.push(pk);
     console.log(this.asion);
 
   }
   Ornagift(k) {
     console.log(k);
-    this.asan = k;
+    this.asan.push(k);
     console.log(this.asan);
-
   }
 
   Ornatheme(k) {
     console.log(k);
-    this.themea = k;
+    this.themea.push(k);
     console.log(this.themea);
-    console.log(this.themeb);
-
   }
 
   OrnaCurated(k) {
     console.log(k);
-    this.curateda = k;
+    this.curateda.push(k);
     console.log(this.curateda);
-    console.log(this.curatedb);
-
   }
 
   Ornafesti(k) {
     console.log(k);
-    this.festia = k;
+    this.festia.push(k);
     console.log(this.festia);
-    console.log(this.festib);
-
   }
 
 
