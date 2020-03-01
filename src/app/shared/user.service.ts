@@ -151,6 +151,11 @@ export class UserService {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
     return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=14', {headers: Headers});
   }
+  
+  ornmetal() {
+    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/metal/', {headers: Headers});
+  }
 
   ornoccasion() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
@@ -276,13 +281,15 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  multi(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  multi(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
-    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+    for (var i of metala) {
+      formData.append('ORNAMENT_METAL', i);
+      }
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
@@ -339,13 +346,15 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  mli(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion: any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, rsizea: any, rsizeb: any, ORNAMENT_RING_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  mli(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, rsizea: any, rsizeb: any, ORNAMENT_RING_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
-    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
@@ -386,13 +395,15 @@ export class UserService {
 
 
   // tslint:disable-next-line: max-line-length
-  ear(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_EARRING_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  ear(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_EARRING_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
-    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
@@ -427,13 +438,15 @@ export class UserService {
 
 
   // tslint:disable-next-line: max-line-length
-  nosepin(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_NOSEPIN_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  nosepin(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_NOSEPIN_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
-    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
     for (var i of asion) {
 
     formData.append('ORNAMENT_OCCASION', i);
@@ -473,13 +486,15 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  pendantwithearing(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_EARRING_STYLE: string, ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  pendantwithearing(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_EARRING_STYLE: string, ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
-    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
@@ -514,13 +529,15 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  bracelet(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_BRACELET_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  bracelet(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_BRACELET_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
-    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
@@ -557,13 +574,15 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  bangles(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_BANGLE_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  bangles(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_BANGLE_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
-    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
@@ -600,13 +619,15 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  chain(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_CHAIN_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  chain(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_CHAIN_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
-    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
@@ -643,13 +664,15 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  necklace(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_NECKLACE_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  necklace(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_NECKLACE_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
-    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
@@ -685,13 +708,15 @@ export class UserService {
 
 
   // tslint:disable-next-line: max-line-length
-  chaitpen(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_CHAIN_STYLE: string, ORNAMENT_PENDANT_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  chaitpen(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_CHAIN_STYLE: string, ORNAMENT_PENDANT_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
-    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
@@ -729,13 +754,15 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  pendant(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  pendant(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
-    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }

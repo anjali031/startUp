@@ -1,31 +1,37 @@
 <div class="row">
-    <div class="col s8 offset-s2">
-        <div class="card blue-grey darken-1" *ngFor="let question of data.results">
-          <div class="card_content white_text">
-            <span class="card-title">#Q</span>
-            <p>{{question.ORNAMENT_ID}}</p>
-            <p>{{question.JEWELLER_ID}}</p>
-            <p>{{question.WEIGHT}}</p>
-            <p><strong>Your ornament : </strong> <img src="{{question.ornament_file_field.IMAGE_FILE_ONE}}" style="width: 100px;" ></p>          
-          </div>
-        </div>
+  <div class="col s12 ">
+    <div class="card" *ngFor="let question of data.results">
+      <div class="card-image">
+        <img src="{{question.ornament_file_field.IMAGE_FILE_ONE}}">
+        <span class="card-title">Card Title</span>
+      </div>
+      <div class="card-content">
+        <p>{{question.ORNAMENT_ID}}</p>
+        <p>{{question.JEWELLER_ID}}</p>
+        <p>{{question.WEIGHT}}</p>
+      </div>
+      <!--div class="card-action">
+        <a href="#">This is a link</a>
+      </div-->
     </div>
+  </div>
 </div>
+<ul class="pagination">
+  <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+  <li class="waves-effect"><a (click)="page1()">1</a></li>
+  <li class="waves-effect"><a (click)="page2()">2</a></li>
+  <li class="waves-effect"><a (click)="page3()">3</a></li>
+  <li class="waves-effect"><a (click)="page4()">4</a></li>
+  <li class="waves-effect"><a (click)="page5()">5</a></li>
+  <li class="waves-effect"><a (click)="page6()">6</a></li>
+  <li class="waves-effect"><a (click)="page7()">7</a></li>
+  <li class="waves-effect"><a (click)="page8()">8</a></li>
+  <li class="waves-effect"><a (click)="page9()">9</a></li>
+  <li class="waves-effect"><a (click)="page10()">10</a></li>
+  <li class="waves-effect"><a (click)="page11()">11</a></li>
+  <li class="waves-effect"><a (click)="page12()">12</a></li>
+  <li class="waves-effect"><a (click)="page13()">13</a></li>
+  <li class="waves-effect"><a (click)="page14()">14</a></li>
 
-
-<div class="container">
-  <button type="submit" class="btn-large btn-submit" (click)="page1()">1</button>
-  <button type="submit" class="btn-large btn-submit" (click)="page2()">2</button>
-  <button type="submit" class="btn-large btn-submit" (click)="page3()">3</button>
-  <button type="submit" class="btn-large btn-submit" (click)="page4()">4</button>
-  <button type="submit" class="btn-large btn-submit" (click)="page5()">5</button>
-  <button type="submit" class="btn-large btn-submit" (click)="page6()">6</button>
-  <button type="submit" class="btn-large btn-submit" (click)="page7()">7</button>
-  <button type="submit" class="btn-large btn-submit" (click)="page8()">8</button>
-  <button type="submit" class="btn-large btn-submit" (click)="page9()">9</button>
-  <button type="submit" class="btn-large btn-submit" (click)="page10()">10</button>
-  <button type="submit" class="btn-large btn-submit" (click)="page11()">11</button>
-  <button type="submit" class="btn-large btn-submit" (click)="page12()">12</button>
-  <button type="submit" class="btn-large btn-submit" (click)="page13()">13</button>
-  <button type="submit" class="btn-large btn-submit" (click)="page14()">14</button>
-</div>
+  <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+</ul>

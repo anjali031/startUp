@@ -27,30 +27,18 @@
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s4">
               <select class="browser-default"#ORNAMENT_SHOPFOR ngModel name="ORNAMENT_SHOPFOR" required>
                 <option value="" disabled selected>Choose Shopfor</option>
                 <option value="1"> Women</option>
                 <option value="2" >Men</option>
               </select>
             </div>
-            <div class="input-field col s6">
+            <div class="input-field col s4">
               <input id="weight" class="validate" type="text" #WEIGHT ngModel name="WEIGHT" required>
               <label for="weight">Weight</label>
             </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <select class="browser-default" #ORNAMENT_METAL ngModel name="ORNAMENT_METAL" required>
-                <option value="" disabled selected>Choose your Ornament Metal</option>
-                <option value="1"> Diamond Studded</option>
-                <option value="2" >Gemstone Studded</option>
-                <option value="3" >Diamond with Gemstone</option>
-                <option value="4" >Simple Plain</option>
-                <option value="5">Casting Plain</option>
-              </select>
-            </div>
-            <div class="input-field col s6 ">
+            <div class="input-field col s4 ">
               <select class="browser-default" #ORNAMENT_NOSEPIN_STYLE ngModel name="ORNAMENT_NOSEPIN_STYLE"  required>
                   <option value="" disabled selected>Choose ornament nosepin STYLE</option>
                   <option value="1"> Wire</option>
@@ -61,20 +49,53 @@
             
           </div>
           <div class="row">
-            <div class="input-field col s4">
+            <div class="input-field col s6">
+              <p>
+                <label>
+                  <input type="checkbox" id ="zero" class="filled-in" (change)="zero()"  required/>
+                  <span>check me when you are done selecting</span>
+                </label>
+              </p>
+                <ul class="collection answer">
+                    <p>select Your Metal</p>
+                    <ng-container *ngFor ="let answer of Metal.ORNAMENT_METAL; let i = index">
+                     <li>
+                      <label>
+                        <input type="checkbox" id="oo" class="filled-in" value ="1"(click)="Ornmetal(answer.pk)" #ORNAMENT_METAL ngModel name="ORNAMENT_METAL"  />
+                        <span>{{answer.METAL}}</span>
+                      </label>
+                     </li> 
+                    </ng-container>
+                </ul>
+            </div>
+            <div class="input-field col s6">
+              <p>
+                <label>
+                  <input type="checkbox" id ="1" class="filled-in" (change)="one()"  required/>
+                  <span>check me when you are done selecting</span>
+                </label>
+              </p>
               <ul class="collection answer">
                   <p> Select your Occasion</p>
                   <ng-container *ngFor ="let answer of Occasion.ORNAMENT_OCCASION; let i = index">
                    <li>
                     <label>
-                      <input type="checkbox" class="filled-in" value ="1"(click)="Answer(answer.pk)" #ORNAMENT_OCCASION ngModel name="ORNAMENT_OCCASION"  required/>
+                      <input type="checkbox" class="filled-in" value ="1"(click)="Answer(answer.pk)" #ORNAMENT_OCCASION ngModel name="ORNAMENT_OCCASION"  />
                       <span>{{answer.OCCASION}}</span>
                     </label>
                    </li> 
                   </ng-container>
               </ul>
             </div>
-            <div class="input-field col s4">
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <p>
+                <label>
+                  <input type="checkbox" id ="2" class="filled-in" (change)="two()"  required/>
+                  <span>check me when you are done selecting</span>
+                </label>
+              </p>
 
               <ul class="collection answer">
                 <p> Select your Gift Type</p>
@@ -82,20 +103,26 @@
                 <ng-container *ngFor ="let answer of Gift.ORNAMENT_GIFT; let i = index"  >
                  <li>
                   <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornagift(answer.pk)" #ORNAMENT_GIFT ngModel name="ORNAMENT_GIFT"  required/>
+                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornagift(answer.pk)" #ORNAMENT_GIFT ngModel name="ORNAMENT_GIFT"  />
                     <span>{{answer.GIFT}}</span>
                   </label>
                  </li> 
                 </ng-container>
               </ul>
             </div>
-            <div class="input-field col s4">
+            <div class="input-field col s6">
+              <p>
+                <label>
+                  <input type="checkbox" id ="3" class="filled-in" (change)="three()"  required/>
+                  <span>check me when you are done selecting</span>
+                </label>
+              </p>
               <ul class="collection answer">
                 <p> Select your Theme</p>
                 <ng-container *ngFor ="let answer of Theme.ORNAMENT_THEME; let i = index"  >
                  <li>
                   <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornatheme(answer.pk)" #ORNAMENT_THEME ngModel name="ORNAMENT_THEME"  required/>
+                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornatheme(answer.pk)" #ORNAMENT_THEME ngModel name="ORNAMENT_THEME"  />
                     <span>{{answer.THEME}}</span>
                   </label>
                  </li> 
@@ -105,25 +132,37 @@
           </div>
           <div class="row">
             <div class="input-field col s6">
+              <p>
+                <label>
+                  <input type="checkbox" id ="4" class="filled-in" (change)="four()"  required/>
+                  <span>check me when you are done selecting</span>
+                </label>
+              </p>
               <ul class="collection answer">
                 <p> Select your Curated By</p>
                 <ng-container *ngFor ="let answer of Curated.ORNAMENT_CURATED_BY; let i = index"  >
                  <li>
                   <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="OrnaCurated(answer.pk)" #ORNAMENT_CURATED_BY ngModel name="ORNAMENT_CURATED_BY"  required/>
+                    <input type="checkbox" class="filled-in" value ="1" (click)="OrnaCurated(answer.pk)" #ORNAMENT_CURATED_BY ngModel name="ORNAMENT_CURATED_BY"  />
                     <span>{{answer.CURATED_BY}}</span>
                   </label>
                  </li> 
                 </ng-container>
               </ul>
             </div>
-            <div class="input-field col s6 ">                <p> Select your Occasion</p>
+            <div class="input-field col s6 "> 
+              <p>
+                <label>
+                  <input type="checkbox" id ="5" class="filled-in" (change)="five()"  required/>
+                  <span>check me when you are done selecting</span>
+                </label>
+              </p>
               <ul class="collection answer">
                 <p>Select your Festival</p>
                 <ng-container *ngFor ="let answer of Festival.ORNAMENT_FESTIVAL; let i = index"  >
                  <li>
                   <label>
-                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornafesti(answer.pk)" #ORNAMENT_FESTIVAL ngModel name="ORNAMENT_FESTIVAL"  required/>
+                    <input type="checkbox" class="filled-in" value ="1" (click)="Ornafesti(answer.pk)" #ORNAMENT_FESTIVAL ngModel name="ORNAMENT_FESTIVAL"  />
                     <span>{{answer.FESTIVAL}}</span>
                   </label>
                  </li> 
