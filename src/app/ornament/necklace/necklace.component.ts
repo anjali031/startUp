@@ -439,7 +439,7 @@ export class NecklaceComponent implements OnInit {
       (data: any) => {
         console.log('done', data);
         if (data.status == 201) {
-         // this.router.navigate(['./ornamentread']);
+          this.router.navigate(['./ornamentread']);
         }
       }
     );
