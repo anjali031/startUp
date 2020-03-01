@@ -291,7 +291,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Bangles</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_BANGLE_SIZE,ORNAMENT_BANGLE_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"5\" >Bangles</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_BANGLE_STYLE ngModel name=\"ORNAMENT_BANGLE_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Broad Bangles</option>\n                    <option value=\"2\" >Oval</option>\n                    <option value=\"3\" >Single Line</option>\n                    <option value=\"4\" >Thin Bangles</option>\n                    <option value=\"5\" >Stackable</option>\n                    <option value=\"6\" >Mens Kada</option>\n                    <option value=\"7\" >Flexible</option>\n                </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>select Your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>Select Your Gift</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>Select your  Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>Select your Currated by</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4 \">\n              <ul class=\"collection answer\">\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                  <p>Select Your Bangle Size</p>\n                  <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_BANGLE_SIZE; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_BANGLE_SIZE ngModel name=\"ORNAMENT_BANGLE_SIZE\"  required/>\n                      <span>{{answer.BANGLE_SIZE}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n              </div>\n          </div>\n          \n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\" >\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Bangles Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Bangles</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_BANGLE_SIZE,ORNAMENT_BANGLE_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"5\" >Bangles</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n          \n            <div class=\"input-field col s4 \">\n                <select class=\"browser-default\" #ORNAMENT_BANGLE_STYLE ngModel name=\"ORNAMENT_BANGLE_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Broad Bangles</option>\n                    <option value=\"2\" >Oval</option>\n                    <option value=\"3\" >Single Line</option>\n                    <option value=\"4\" >Thin Bangles</option>\n                    <option value=\"5\" >Stackable</option>\n                    <option value=\"6\" >Mens Kada</option>\n                    <option value=\"7\" >Flexible</option>\n                </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"zero\" class=\"filled-in\" (change)=\"zero()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>select Your Metal</p>\n                    <ng-container *ngFor =\"let answer of Metal.ORNAMENT_METAL; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" id=\"oo\" class=\"filled-in\" value =\"1\"(click)=\"Ornmetal(answer.pk)\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\"  />\n                        <span>{{answer.METAL}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n\n            <div class=\"input-field col s4\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"1\" class=\"filled-in\" (change)=\"one()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>select Your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  />\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"2\" class=\"filled-in\" (change)=\"two()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n\n              <ul class=\"collection answer\">\n                <p>Select Your Gift</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  />\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"3\" class=\"filled-in\" (change)=\"three()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>Select your  Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  />\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"4\" class=\"filled-in\" (change)=\"four()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>Select your Currated by</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  />\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4 \">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"5\" class=\"filled-in\" (change)=\"five()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  />\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"6\" class=\"filled-in\" (change)=\"six()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                  <p>Select Your Bangle Size</p>\n                  <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_BANGLE_SIZE; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_BANGLE_SIZE ngModel name=\"ORNAMENT_BANGLE_SIZE\"  />\n                      <span>{{answer.BANGLE_SIZE}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n              </div>\n          </div>\n          \n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\" >\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Bangles Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -311,7 +311,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Bracelet</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_BRACELET_SIZE,ORNAMENT_BRACELET_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"4\" >Bracelet</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_BRACELET_STYLE ngModel name=\"ORNAMENT_BRACELET_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Tennis</option>\n                    <option value=\"2\" >Flexible</option>\n                    <option value=\"3\" >Oval</option>\n                    <option value=\"4\" >Mangalsutra Bracelets</option>\n                    <option value=\"5\" >Chain Bracelets</option>\n                    <option value=\"6\" >Kids Bracelets</option>\n                </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p> Select your Occasion</p>\n\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Curate By</p>\n\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4 \">\n              <ul class=\"collection answer\">\n                <p> Select your Festival</p>\n\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                  <p> Select your Bracelet Size</p>\n\n                  <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_BRACELET_SIZE; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_BRACELET_SIZE ngModel name=\"ORNAMENT_BRACELET_SIZE\"  required/>\n                      <span>{{answer.BRACELET_SIZE}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n            </div>\n          </div>\n\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new  Bracelet Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Bracelet</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_BRACELET_SIZE,ORNAMENT_BRACELET_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"4\" >Bracelet</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n            \n            <div class=\"input-field col s4 \">\n                <select class=\"browser-default\" #ORNAMENT_BRACELET_STYLE ngModel name=\"ORNAMENT_BRACELET_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Tennis</option>\n                    <option value=\"2\" >Flexible</option>\n                    <option value=\"3\" >Oval</option>\n                    <option value=\"4\" >Mangalsutra Bracelets</option>\n                    <option value=\"5\" >Chain Bracelets</option>\n                    <option value=\"6\" >Kids Bracelets</option>\n                </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"zero\" class=\"filled-in\" (change)=\"zero()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>select Your Metal</p>\n                    <ng-container *ngFor =\"let answer of Metal.ORNAMENT_METAL; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" id=\"oo\" class=\"filled-in\" value =\"1\"(click)=\"Ornmetal(answer.pk)\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\"  />\n                        <span>{{answer.METAL}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"1\" class=\"filled-in\" (change)=\"one()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p> Select your Occasion</p>\n\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  />\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"2\" class=\"filled-in\" (change)=\"two()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  />\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"3\" class=\"filled-in\" (change)=\"three()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  />\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"4\" class=\"filled-in\" (change)=\"four()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Curated By</p>\n\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  />\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4 \">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"5\" class=\"filled-in\" (change)=\"five()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Festival</p>\n\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  />\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n                <p>\n                  <label>\n                    <input type=\"checkbox\" id =\"6\" class=\"filled-in\" (change)=\"six()\"  required/>\n                    <span>check me when you are done selecting</span>\n                  </label>\n                </p>\n                <ul class=\"collection answer\">\n                  <p> Select your Bracelet Size</p>\n\n                  <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_BRACELET_SIZE; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_BRACELET_SIZE ngModel name=\"ORNAMENT_BRACELET_SIZE\"  />\n                      <span>{{answer.BRACELET_SIZE}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n            </div>\n          </div>\n\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new  Bracelet Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -331,7 +331,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Chain</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_CHAIN_LENGTH,ORNAMENT_CHAIN_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"6\" >Chain</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_CHAIN_STYLE ngModel name=\"ORNAMENT_CHAIN_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose Chain Style</option>\n                    <option value=\"1\"> Flat Gold Chain</option>\n                    <option value=\"2\" >Gold Chain for Men\"</option>\n                    <option value=\"3\" >\"Gold Curb Chain</option>\n                    <option value=\"4\" >Gold Link Chain</option>\n                    <option value=\"5\" >Gold Figaro Chain</option>\n                    <option value=\"6\" >Gold Rope Chain</option>\n                    <option value=\"7\" >Flexible</option>\n                </select>\n            </div>\n            \n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p> Select your Occasion</p>\n\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p> Select your Curated by</p>\n\n                  <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                      <span>{{answer.CURATED_BY}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n            </div>         \n            <div class=\"input-field col s4 \">\n              <ul class=\"collection answer\">\n\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>Select Your Chain Length</p>\n                <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_CHAIN_LENGTH; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_CHAIN_LENGTH ngModel name=\"ORNAMENT_CHAIN_LENGTH\"  required/>\n                    <span>{{answer.CHAIN_LENGTH}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            \n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Chain Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Chain</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_CHAIN_LENGTH,ORNAMENT_CHAIN_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"6\" >Chain</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n\n\n            <div class=\"input-field col s4 \">\n                <select class=\"browser-default\" #ORNAMENT_CHAIN_STYLE ngModel name=\"ORNAMENT_CHAIN_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose Chain Style</option>\n                    <option value=\"1\"> Flat Gold Chain</option>\n                    <option value=\"2\" >Gold Chain for Men\"</option>\n                    <option value=\"3\" >\"Gold Curb Chain</option>\n                    <option value=\"4\" >Gold Link Chain</option>\n                    <option value=\"5\" >Gold Figaro Chain</option>\n                    <option value=\"6\" >Gold Rope Chain</option>\n                    <option value=\"7\" >Flexible</option>\n                </select>\n            </div>\n            \n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"zero\" class=\"filled-in\" (change)=\"zero()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>select Your Metal</p>\n                    <ng-container *ngFor =\"let answer of Metal.ORNAMENT_METAL; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" id=\"oo\" class=\"filled-in\" value =\"1\"(click)=\"Ornmetal(answer.pk)\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\"  />\n                        <span>{{answer.METAL}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"1\" class=\"filled-in\" (change)=\"one()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p> Select your Occasion</p>\n\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  />\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"2\" class=\"filled-in\" (change)=\"two()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  />\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"3\" class=\"filled-in\" (change)=\"three()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  />\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"4\" class=\"filled-in\" (change)=\"four()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p> Select your Curated by</p>\n\n                  <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  />\n                      <span>{{answer.CURATED_BY}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n            </div>         \n            <div class=\"input-field col s4 \">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"5\" class=\"filled-in\" (change)=\"five()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  />\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"6\" class=\"filled-in\" (change)=\"six()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>Select Your Chain Length</p>\n                <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_CHAIN_LENGTH; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_CHAIN_LENGTH ngModel name=\"ORNAMENT_CHAIN_LENGTH\"  />\n                    <span>{{answer.CHAIN_LENGTH}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            \n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Chain Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -351,7 +351,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Chain with Pendant</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_CHAIN_LENGTH,ORNAMENT_CHAIN_STYLE,ORNAMENT_PENDANT_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"7\" >Chain with Pendant</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4 \">\n                <select class=\"browser-default\" #ORNAMENT_CHAIN_STYLE ngModel name=\"ORNAMENT_CHAIN_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose Chain Style</option>\n                    <option value=\"1\"> Flat Gold Chain</option>\n                    <option value=\"2\" >Gold Chain for Men\"</option>\n                    <option value=\"3\" >\"Gold Curb Chain</option>\n                    <option value=\"4\" >Gold Link Chain</option>\n                    <option value=\"5\" >Gold Figaro Chain</option>\n                    <option value=\"6\" >Gold Rope Chain</option>\n                    <option value=\"7\" >Flexible</option>\n                </select>\n            </div>          \n            <div class=\"input-field col s4 \">\n                <select class=\"browser-default\" #ORNAMENT_PENDANT_STYLE ngModel name=\"ORNAMENT_PENDANT_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose Chain Style</option>\n                    <option value=\"1\">Casual </option>\n                    <option value=\"2\" >Initials</option>\n                    <option value=\"3\" >Mother-Daughter</option>\n                    <option value=\"4\" >Personalised</option>\n                </select>\n            </div>\n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select Your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>Select your Gift</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n\n                <p>Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n\n                <p>Select your Curated by</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4 \">\n              <ul class=\"collection answer\">\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                  <p>Select Your Chain Length</p>\n                  <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_CHAIN_LENGTH; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_CHAIN_LENGTH ngModel name=\"ORNAMENT_CHAIN_LENGTH\"  required/>\n                      <span>{{answer.CHAIN_LENGTH}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n            </div>\n          </div>\n          \n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your Chain With Pendant Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Chain with Pendant</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_CHAIN_LENGTH,ORNAMENT_CHAIN_STYLE,ORNAMENT_PENDANT_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"7\" >Chain with Pendant</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_CHAIN_STYLE ngModel name=\"ORNAMENT_CHAIN_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose Chain Style</option>\n                    <option value=\"1\"> Flat Gold Chain</option>\n                    <option value=\"2\" >Gold Chain for Men\"</option>\n                    <option value=\"3\" >\"Gold Curb Chain</option>\n                    <option value=\"4\" >Gold Link Chain</option>\n                    <option value=\"5\" >Gold Figaro Chain</option>\n                    <option value=\"6\" >Gold Rope Chain</option>\n                    <option value=\"7\" >Flexible</option>\n                </select>\n            </div>          \n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_PENDANT_STYLE ngModel name=\"ORNAMENT_PENDANT_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose Pendant Style</option>\n                    <option value=\"1\">Casual </option>\n                    <option value=\"2\" >Initials</option>\n                    <option value=\"3\" >Mother-Daughter</option>\n                    <option value=\"4\" >Personalised</option>\n                </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            \n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"zero\" class=\"filled-in\" (change)=\"zero()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>select Your Metal</p>\n                    <ng-container *ngFor =\"let answer of Metal.ORNAMENT_METAL; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" id=\"oo\" class=\"filled-in\" value =\"1\"(click)=\"Ornmetal(answer.pk)\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\"  />\n                        <span>{{answer.METAL}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"1\" class=\"filled-in\" (change)=\"one()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>Select Your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  />\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            </div>\n            <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"2\" class=\"filled-in\" (change)=\"two()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>Select your Gift</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  />\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"3\" class=\"filled-in\" (change)=\"three()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n\n              <ul class=\"collection answer\">\n\n                <p>Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  />\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"4\" class=\"filled-in\" (change)=\"four()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n\n                <p>Select your Curated by</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  />\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4 \">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"5\" class=\"filled-in\" (change)=\"five()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  />\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n                <p>\n                  <label>\n                    <input type=\"checkbox\" id =\"6\" class=\"filled-in\" (change)=\"six()\"  required/>\n                    <span>check me when you are done selecting</span>\n                  </label>\n                </p>\n                <ul class=\"collection answer\">\n                  <p>Select Your Chain Length</p>\n                  <ng-container *ngFor =\"let answer of Bsize.ORNAMENT_CHAIN_LENGTH; let i = index\"  >\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_CHAIN_LENGTH ngModel name=\"ORNAMENT_CHAIN_LENGTH\"  />\n                      <span>{{answer.CHAIN_LENGTH}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n                </ul>\n            </div>\n          </div>\n          \n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your Chain With Pendant Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -391,7 +391,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Cuff Link</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"13\" >cuff links</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n            <div class=\"input-field col s4\">\n                <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                  <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                  <option value=\"1\"> Diamond Studded</option>\n                  <option value=\"2\" >Gemstone Studded</option>\n                  <option value=\"3\" >Diamond with Gemstone</option>\n                  <option value=\"4\" >Simple Plain</option>\n                  <option value=\"5\">Casting Plain</option>\n                </select>\n              </div>\n          </div>\n          <div class=\"row\">\n            \n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select Your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>Select Your Gift</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>Select Your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                <p>Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Cuff Link Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Cuff Link</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"13\" >cuff links</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            \n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"zero\" class=\"filled-in\" (change)=\"zero()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>select Your Metal</p>\n                    <ng-container *ngFor =\"let answer of Metal.ORNAMENT_METAL; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" id=\"oo\" class=\"filled-in\" value =\"1\"(click)=\"Ornmetal(answer.pk)\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\"  />\n                        <span>{{answer.METAL}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"1\" class=\"filled-in\" (change)=\"one()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>Select Your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  />\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            </div>\n            <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"2\" class=\"filled-in\" (change)=\"two()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n\n              <ul class=\"collection answer\">\n                <p>Select Your Gift</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  />\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"3\" class=\"filled-in\" (change)=\"three()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n\n              <ul class=\"collection answer\">\n                <p>Select Your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  />\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"4\" class=\"filled-in\" (change)=\"four()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  />\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"5\" class=\"filled-in\" (change)=\"five()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  />\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Cuff Link Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -411,7 +411,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Mangalsutra</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"9\" >Mangalsutra</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                  <p>Select your Gift type</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n  \n              <ul class=\"collection answer\">\n                  <p>SSelect Your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                  <p>Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          \n          <input type=\"file\" #CAD_FILE accept=\"\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Mangalsutra Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Mangalsutra</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"9\" >Mangalsutra</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"zero\" class=\"filled-in\" (change)=\"zero()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>select Your Metal</p>\n                    <ng-container *ngFor =\"let answer of Metal.ORNAMENT_METAL; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" id=\"oo\" class=\"filled-in\" value =\"1\"(click)=\"Ornmetal(answer.pk)\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\"  />\n                        <span>{{answer.METAL}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s6\">\n                <p>\n                  <label>\n                    <input type=\"checkbox\" id =\"1\" class=\"filled-in\" (change)=\"one()\"  required/>\n                    <span>check me when you are done selecting</span>\n                  </label>\n                </p>\n                <ul class=\"collection answer\">\n                    <p>Select your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  />\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            </div>\n            <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"2\" class=\"filled-in\" (change)=\"two()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n\n              <ul class=\"collection answer\">\n                  <p>Select your Gift type</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  />\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"3\" class=\"filled-in\" (change)=\"three()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                  <p>SSelect Your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  />\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"4\" class=\"filled-in\" (change)=\"four()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                  <p>Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  />\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"5\" class=\"filled-in\" (change)=\"five()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  />\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          \n          <input type=\"file\" #CAD_FILE accept=\"\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Mangalsutra Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -431,7 +431,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Necklace</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_NECKLACE_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"8\" >Necklace</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_NECKLACE_STYLE ngModel name=\"ORNAMENT_NECKLACE_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Bar Necklace</option>\n                    <option value=\"2\" >Lariat</option>\n                    <option value=\"3\" >Y Necklace</option>\n                    <option value=\"4\" >Mala</option>\n                    <option value=\"5\" >Charms</option>\n                    <option value=\"6\" >Long Necklace</option>\n                    <option value=\"7\" >Religious</option>\n                    <option value=\"8\" >Multi-Layered</option>\n                    <option value=\"9\" >Casual Necklace</option>\n                    <option value=\"10\" >Everyday Wears</option>\n                    <option value=\"11\" >Personalised</option>\n                </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n \n\n            \n              <ul class=\"collection answer\">\n\n                <p>Select your Gift type</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n\n                <p>Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n\n                <p>Select  your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            \n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new  Necklace Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Necklace</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_NECKLACE_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"8\" >Necklace</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n            <div class=\"input-field col s4 \">\n                <select class=\"browser-default\" #ORNAMENT_NECKLACE_STYLE ngModel name=\"ORNAMENT_NECKLACE_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Bar Necklace</option>\n                    <option value=\"2\" >Lariat</option>\n                    <option value=\"3\" >Y Necklace</option>\n                    <option value=\"4\" >Mala</option>\n                    <option value=\"5\" >Charms</option>\n                    <option value=\"6\" >Long Necklace</option>\n                    <option value=\"7\" >Religious</option>\n                    <option value=\"8\" >Multi-Layered</option>\n                    <option value=\"9\" >Casual Necklace</option>\n                    <option value=\"10\" >Everyday Wears</option>\n                    <option value=\"11\" >Personalised</option>\n                </select>\n              </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"zero\" class=\"filled-in\" (change)=\"zero()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>select Your Metal</p>\n                    <ng-container *ngFor =\"let answer of Metal.ORNAMENT_METAL; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" id=\"oo\" class=\"filled-in\" value =\"1\"(click)=\"Ornmetal(answer.pk)\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\"  />\n                        <span>{{answer.METAL}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"1\" class=\"filled-in\" (change)=\"one()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>Select your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  />\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            </div>\n            <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"2\" class=\"filled-in\" (change)=\"two()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>           \n              <ul class=\"collection answer\">\n\n                <p>Select your Gift type</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  />\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"3\" class=\"filled-in\" (change)=\"three()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n\n                <p>Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  />\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"4\" class=\"filled-in\" (change)=\"four()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n\n                <p>Select  your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  />\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"5\" class=\"filled-in\" (change)=\"five()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n\n                <p>Select Your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  />\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            \n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new  Necklace Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -451,7 +451,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Ear Ring</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_EARRING_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"2\" >Ear Ring</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n              <label for=\"weight\">Weight</label>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n              <select class=\"browser-default\" #ORNAMENT_EARRING_STYLE ngModel name=\"ORNAMENT_EARRING_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                  <option value=\"1\"> Drops and Dangler</option>\n                  <option value=\"2\" >Studs and Tops</option>\n                  <option value=\"3\" >Hoops and Huggies</option>\n                  <option value=\"4\" >Jhumkas</option>\n                  <option value=\"5\" >Sui Dhaga</option>\n                  <option value=\"6\" >Ear Cuffs and Hugs</option>\n                  <option value=\"7\" >Chandeliers</option>\n                  <option value=\"8\" >Chand Bali</option>\n                  <option value=\"9\" >Mismatched</option>\n                  <option value=\"10\" >Multi Pierced</option>\n                  <option value=\"11\" >Ear Jackets</option>\n                  <option value=\"12\" >Stud with Chain Clips</option>\n              </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Occasion</p>\n\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                <p> Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n                <p> Select your Festival</p>\n\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Ear Ring Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Ear Ring</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_EARRING_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"2\" >Ear Ring</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n              <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n              <label for=\"weight\">Weight</label>\n            </div>\n            <div class=\"input-field col s4 \">\n              <select class=\"browser-default\" #ORNAMENT_EARRING_STYLE ngModel name=\"ORNAMENT_EARRING_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                  <option value=\"1\"> Drops and Dangler</option>\n                  <option value=\"2\" >Studs and Tops</option>\n                  <option value=\"3\" >Hoops and Huggies</option>\n                  <option value=\"4\" >Jhumkas</option>\n                  <option value=\"5\" >Sui Dhaga</option>\n                  <option value=\"6\" >Ear Cuffs and Hugs</option>\n                  <option value=\"7\" >Chandeliers</option>\n                  <option value=\"8\" >Chand Bali</option>\n                  <option value=\"9\" >Mismatched</option>\n                  <option value=\"10\" >Multi Pierced</option>\n                  <option value=\"11\" >Ear Jackets</option>\n                  <option value=\"12\" >Stud with Chain Clips</option>\n              </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"zero\" class=\"filled-in\" (change)=\"zero()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>select Your Metal</p>\n                    <ng-container *ngFor =\"let answer of Metal.ORNAMENT_METAL; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" id=\"oo\" class=\"filled-in\" value =\"1\"(click)=\"Ornmetal(answer.pk)\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\"  />\n                        <span>{{answer.METAL}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"1\" class=\"filled-in\" (change)=\"one()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Occasion</p>\n\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  />\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"2\" class=\"filled-in\" (change)=\"two()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n\n              <ul class=\"collection answer\">\n                <p> Select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  />\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"3\" class=\"filled-in\" (change)=\"three()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  />\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"4\" class=\"filled-in\" (change)=\"four()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  />\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"5\" class=\"filled-in\" (change)=\"five()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Festival</p>\n\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  />\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Ear Ring Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -471,7 +471,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Nosepin</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_NOSEPIN_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"3\" >Nosepin</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n              <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n              <select class=\"browser-default\" #ORNAMENT_NOSEPIN_STYLE ngModel name=\"ORNAMENT_NOSEPIN_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament nosepin STYLE</option>\n                  <option value=\"1\"> Wire</option>\n                  <option value=\"2\" >Ring</option>\n                  <option value=\"3\" >Screw</option>\n              </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                  <p> Select your Occasion</p>\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your Gift Type</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                <p> Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">                <p> Select your Occasion</p>\n              <ul class=\"collection answer\">\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Nosepin Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Nosepin</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_NOSEPIN_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"3\" >Nosepin</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n              <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n              <label for=\"weight\">Weight</label>\n            </div>\n            <div class=\"input-field col s4 \">\n              <select class=\"browser-default\" #ORNAMENT_NOSEPIN_STYLE ngModel name=\"ORNAMENT_NOSEPIN_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament nosepin STYLE</option>\n                  <option value=\"1\"> Wire</option>\n                  <option value=\"2\" >Ring</option>\n                  <option value=\"3\" >Screw</option>\n              </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"zero\" class=\"filled-in\" (change)=\"zero()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>select Your Metal</p>\n                    <ng-container *ngFor =\"let answer of Metal.ORNAMENT_METAL; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" id=\"oo\" class=\"filled-in\" value =\"1\"(click)=\"Ornmetal(answer.pk)\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\"  />\n                        <span>{{answer.METAL}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"1\" class=\"filled-in\" (change)=\"one()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                  <p> Select your Occasion</p>\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  />\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"2\" class=\"filled-in\" (change)=\"two()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n\n              <ul class=\"collection answer\">\n                <p> Select your Gift Type</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  />\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"3\" class=\"filled-in\" (change)=\"three()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  />\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"4\" class=\"filled-in\" (change)=\"four()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  />\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \"> \n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"5\" class=\"filled-in\" (change)=\"five()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  />\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Nosepin Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -491,7 +491,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Ring</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_RING_SIZE,ORNAMENT_RING_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"1\"> Ring</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n              <label for=\"weight\">Weight</label>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n              <select class=\"browser-default\" #ORNAMENT_RING_STYLE ngModel name=\"ORNAMENT_RING_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                  <option value=\"1\"> Bands</option>\n                  <option value=\"2\" >Casual Rings</option>\n                  <option value=\"3\" >Cocktail</option>\n                  <option value=\"4\" >Cluster</option>\n                  <option value=\"5\" >Bridal Set</option>\n                  <option value=\"6\" >Chain Rings</option>\n                  <option value=\"7\" >Midi Rings</option>\n                  <option value=\"8\" >Holo</option>\n                  <option value=\"9\" >Mangalsutra Rings</option>\n                  <option value=\"10\" >Flexi Rings</option>\n                  <option value=\"11\" >Half Eternity</option>\n                  <option value=\"12\" >Stackable</option>\n                  <option value=\"13\" >Twin Rings</option>\n                  <option value=\"14\" >Fashion</option>\n                  <option value=\"15\" >Religious</option>\n                  <option value=\"16\" >Wide Rings</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Occasion</p>\n\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(change)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p> Select your gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Curated by</p>\n\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Festival</p>\n\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p> Select your Ring Size</p>\n                <ng-container *ngFor =\"let answer of Ringsize.ORNAMENT_RING_SIZE; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_RING_SIZE ngModel name=\"ORNAMENT_RING_SIZE\"  required/>\n                    <span>{{answer.RING_SIZE}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Ring Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Ring</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_RING_SIZE,ORNAMENT_RING_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"1\"> Ring</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n              <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n              <label for=\"weight\">Weight</label>\n            </div>\n            <div class=\"input-field col s4 \">\n              <select class=\"browser-default\" #ORNAMENT_RING_STYLE ngModel name=\"ORNAMENT_RING_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                  <option value=\"1\"> Bands</option>\n                  <option value=\"2\" >Casual Rings</option>\n                  <option value=\"3\" >Cocktail</option>\n                  <option value=\"4\" >Cluster</option>\n                  <option value=\"5\" >Bridal Set</option>\n                  <option value=\"6\" >Chain Rings</option>\n                  <option value=\"7\" >Midi Rings</option>\n                  <option value=\"8\" >Holo</option>\n                  <option value=\"9\" >Mangalsutra Rings</option>\n                  <option value=\"10\" >Flexi Rings</option>\n                  <option value=\"11\" >Half Eternity</option>\n                  <option value=\"12\" >Stackable</option>\n                  <option value=\"13\" >Twin Rings</option>\n                  <option value=\"14\" >Fashion</option>\n                  <option value=\"15\" >Religious</option>\n                  <option value=\"16\" >Wide Rings</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"zero\" class=\"filled-in\" (change)=\"zero()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>select Your Metal</p>\n                    <ng-container *ngFor =\"let answer of Metal.ORNAMENT_METAL; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" id=\"oo\" class=\"filled-in\" value =\"1\"(click)=\"Ornmetal(answer.pk)\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\"  />\n                        <span>{{answer.METAL}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"1\" class=\"filled-in\" (change)=\"one()\"  required/>\n                  <span>check me when you are done selectingme</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Occasion</p>\n\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(change)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  />\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"2\" class=\"filled-in\" (change)=\"two()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  />\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"3\" class=\"filled-in\" (change)=\"three()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  />\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"4\" class=\"filled-in\" (change)=\"four()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Curated by</p>\n\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  />\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"5\" class=\"filled-in\" (change)=\"five()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Festival</p>\n\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (change)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  />\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"6\" class=\"filled-in\" (change)=\"six()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p> Select your Ring Size</p>\n                <ng-container *ngFor =\"let answer of Ringsize.ORNAMENT_RING_SIZE; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Size(answer.pk)\" #ORNAMENT_RING_SIZE ngModel name=\"ORNAMENT_RING_SIZE\"  />\n                    <span>{{answer.RING_SIZE}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n\n          </div>\n          <p>CAD_FILE</p>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n          <p>IMAGE_FILE_ONE</p>\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n          <p>IMAGE_FILE_TWO</p>\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n          <p>IMAGE_FILE_THREE</p>\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Ring Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -511,7 +511,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Pendant</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_PENDANT_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"11\" >Pendant</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                  <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                  <option value=\"1\"> Diamond Studded</option>\n                  <option value=\"2\" >Gemstone Studded</option>\n                  <option value=\"3\" >Diamond with Gemstone</option>\n                  <option value=\"4\" >Simple Plain</option>\n                  <option value=\"5\">Casting Plain</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6 \">\n                <select class=\"browser-default\" #ORNAMENT_PENDANT_STYLE ngModel name=\"ORNAMENT_PENDANT_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Casual</option>\n                    <option value=\"2\" >Initials</option>\n                    <option value=\"3\" >Mother-Daughter</option>\n                    <option value=\"4\" >Personalised</option>\n                </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            \n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>Select your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n\n                <p>Select your Gift Type</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n\n                <p>Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n\n                <p>Select Your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            \n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Pendant Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Pendant</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_PENDANT_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"11\" >Pendant</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n                <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n                <label for=\"weight\">Weight</label>\n            </div>\n            \n            <div class=\"input-field col s4 \">\n                <select class=\"browser-default\" #ORNAMENT_PENDANT_STYLE ngModel name=\"ORNAMENT_PENDANT_STYLE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                    <option value=\"1\"> Casual</option>\n                    <option value=\"2\" >Initials</option>\n                    <option value=\"3\" >Mother-Daughter</option>\n                    <option value=\"4\" >Personalised</option>\n                </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"zero\" class=\"filled-in\" (change)=\"zero()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>select Your Metal</p>\n                    <ng-container *ngFor =\"let answer of Metal.ORNAMENT_METAL; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" id=\"oo\" class=\"filled-in\" value =\"1\"(click)=\"Ornmetal(answer.pk)\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\"  />\n                        <span>{{answer.METAL}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s6\">\n                <p>\n                  <label>\n                    <input type=\"checkbox\" id =\"1\" class=\"filled-in\" (change)=\"one()\"  required/>\n                    <span>check me when you are done selecting</span>\n                  </label>\n                </p>\n                <ul class=\"collection answer\">\n                    <p>Select your Occasion</p>\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  />\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            </div>\n            <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"2\" class=\"filled-in\" (change)=\"two()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n\n                <p>Select your Gift Type</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  />\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"3\" class=\"filled-in\" (change)=\"three()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n\n                <p>Select your Theme</p>\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  />\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"4\" class=\"filled-in\" (change)=\"four()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n\n                <p>Select Your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  />\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"5\" class=\"filled-in\" (change)=\"five()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>Select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  />\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            \n          </div>\n          <p>CAD_FILE</p><input type=\"file\" #CAD_FILE accept=\"\" (change)=\"handleFileInput($event.target.files)\">\n          <p>IMAGE_FILE_ONE</p>\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n          <p>IMAGE_FILE_TWO</p>\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n          <p>IMAGE_FILE_THREE</p>\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Pendant Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -531,7 +531,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Pendant with Ear ring</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_EARRING_STYLE,ORNAMENT_PENDANT_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"12\" >Pendant with Earring</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n              <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4 \">\n              <select class=\"browser-default\" #ORNAMENT_EARRING_STYLE ngModel name=\"ORNAMENT_EARRING_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                  <option value=\"1\"> Drops and Dangler</option>\n                  <option value=\"2\" >Studs and Tops</option>\n                  <option value=\"3\" >Hoops and Huggies</option>\n                  <option value=\"4\" >Jhumkas</option>\n                  <option value=\"5\" >Sui Dhaga</option>\n                  <option value=\"6\" >Ear Cuffs and Hugs</option>\n                  <option value=\"7\" >Chandeliers</option>\n                  <option value=\"8\" >Chand Bali</option>\n                  <option value=\"9\" >Mismatched</option>\n                  <option value=\"10\" >Multi Pierced</option>\n                  <option value=\"11\" >Ear Jackets</option>\n                  <option value=\"12\" >Stud with Chain Clips</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4 \">\n              <select class=\"browser-default\" #ORNAMENT_PENDANT_STYLE ngModel name=\"ORNAMENT_PENDANT_STYLE\"  required>\n                <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                <option value=\"1\"> Casual</option>\n                <option value=\"2\" >Initials</option>\n                <option value=\"3\" >Mother-Daughter</option>\n                <option value=\"4\" >Personalised</option>\n              </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>select your Occasion/p>\n\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n              <ul class=\"collection answer\">\n                <p>select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                <p>select your Curated By</p>\n\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n                <p>select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Pendant with Ear ring Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Pendant with Ear ring</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL,ORNAMENT_EARRING_STYLE,ORNAMENT_PENDANT_STYLE, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"12\" >Pendant with Earring</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n              <label for=\"weight\">Weight</label>\n            </div>\n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s6 \">\n              <select class=\"browser-default\" #ORNAMENT_EARRING_STYLE ngModel name=\"ORNAMENT_EARRING_STYLE\"  required>\n                  <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                  <option value=\"1\"> Drops and Dangler</option>\n                  <option value=\"2\" >Studs and Tops</option>\n                  <option value=\"3\" >Hoops and Huggies</option>\n                  <option value=\"4\" >Jhumkas</option>\n                  <option value=\"5\" >Sui Dhaga</option>\n                  <option value=\"6\" >Ear Cuffs and Hugs</option>\n                  <option value=\"7\" >Chandeliers</option>\n                  <option value=\"8\" >Chand Bali</option>\n                  <option value=\"9\" >Mismatched</option>\n                  <option value=\"10\" >Multi Pierced</option>\n                  <option value=\"11\" >Ear Jackets</option>\n                  <option value=\"12\" >Stud with Chain Clips</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6 \">\n              <select class=\"browser-default\" #ORNAMENT_PENDANT_STYLE ngModel name=\"ORNAMENT_PENDANT_STYLE\"  required>\n                <option value=\"\" disabled selected>Choose ornament STYLE</option>\n                <option value=\"1\"> Casual</option>\n                <option value=\"2\" >Initials</option>\n                <option value=\"3\" >Mother-Daughter</option>\n                <option value=\"4\" >Personalised</option>\n              </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"zero\" class=\"filled-in\" (change)=\"zero()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>select Your Metal</p>\n                    <ng-container *ngFor =\"let answer of Metal.ORNAMENT_METAL; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" id=\"oo\" class=\"filled-in\" value =\"1\"(click)=\"Ornmetal(answer.pk)\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\"  />\n                        <span>{{answer.METAL}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"1\" class=\"filled-in\" (change)=\"one()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>select your Occasion</p>\n\n                  <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                   <li>\n                    <label>\n                      <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  />\n                      <span>{{answer.OCCASION}}</span>\n                    </label>\n                   </li> \n                  </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"2\" class=\"filled-in\" (change)=\"two()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>select your Gift</p>\n\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  />\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"3\" class=\"filled-in\" (change)=\"three()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  />\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"4\" class=\"filled-in\" (change)=\"four()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>select your Curated By</p>\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  />\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"5\" class=\"filled-in\" (change)=\"five()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>select your Festival</p>\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  />\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new Pendant with Ear ring Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -551,7 +551,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Sets</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"10\" >Sets</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\" #WEIGHT ngModel name=\"WEIGHT\" id=\"WEIGHT\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Weight</option>\n                <option value=\"1\"> 1</option>\n                <option value=\"2\" >2</option>\n                <option value=\"3\" >3</option>\n                <option value=\"4\" >4</option>\n              </select>\n            </div>\n            <div class=\"input-field col s4\">\n              <select class=\"browser-default\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\" required>\n                <option value=\"\" disabled selected>Choose your Ornament Metal</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\">Casting Plain</option>\n              </select>\n            </div>\n            \n          </div>\n          <div class=\"row\">\n\n            <div class=\"input-field col s4\">\n                <ul class=\"collection answer\">\n                    <p>select your Occasion</p>\n\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  required/>\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>select your Gift</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  required/>\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s4\">\n\n              <ul class=\"collection answer\">\n                <p>select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  required/>\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <ul class=\"collection answer\">\n                <p>select your Curated By</p>\n\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  required/>\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <ul class=\"collection answer\">\n                <p>select your Festival</p>\n\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  required/>\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new  Sets Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col s10 offset-s1\">\n        <div class=\"card-panel teal lighten-2\">\n          <h4 class=\"center white-text\">Ornament Sets</h4>\n        </div>\n        <form #imageForm=ngForm (ngSubmit)=\"OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)\">\n          <p>It is mandatory that you fill all the fields </p>\n          <div class=\"row\">\n\n\n            <div class=\"input-field col s6\">\n                <select class=\"browser-default\" #ORNAMENT_TYPE ngModel name=\"ORNAMENT_TYPE\"  required>\n                    <option value=\"\" disabled selected>Choose ornament type</option>\n                    <option value=\"10\" >Sets</option>\n                </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_MATERIAL ngModel name=\"ORNAMENT_MATERIAL\"  required>\n                <option value=\"\" disabled selected>Choose your material</option>\n                <option value=\"1\"> Diamond Studded</option>\n                <option value=\"2\" >Gemstone Studded</option>\n                <option value=\"3\" >Diamond with Gemstone</option>\n                <option value=\"4\" >Simple Plain</option>\n                <option value=\"5\" >Casting Plain</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <select class=\"browser-default\"#ORNAMENT_SHOPFOR ngModel name=\"ORNAMENT_SHOPFOR\" required>\n                <option value=\"\" disabled selected>Choose Shopfor</option>\n                <option value=\"1\"> Women</option>\n                <option value=\"2\" >Men</option>\n              </select>\n            </div>\n            <div class=\"input-field col s6\">\n              <input id=\"weight\" class=\"validate\" type=\"text\" #WEIGHT ngModel name=\"WEIGHT\" required>\n              <label for=\"weight\">Weight</label>\n            </div>\n\n            \n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"zero\" class=\"filled-in\" (change)=\"zero()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n                <ul class=\"collection answer\">\n                    <p>select Your Metal</p>\n                    <ng-container *ngFor =\"let answer of Metal.ORNAMENT_METAL; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" id=\"oo\" class=\"filled-in\" value =\"1\"(click)=\"Ornmetal(answer.pk)\" #ORNAMENT_METAL ngModel name=\"ORNAMENT_METAL\"  />\n                        <span>{{answer.METAL}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n            </div>\n            <div class=\"input-field col s6\">\n                <p>\n                  <label>\n                    <input type=\"checkbox\" id =\"1\" class=\"filled-in\" (change)=\"one()\"  required/>\n                    <span>check me when you are done selecting</span>\n                  </label>\n                </p>\n                <ul class=\"collection answer\">\n                    <p>select your Occasion</p>\n\n                    <ng-container *ngFor =\"let answer of Occasion.ORNAMENT_OCCASION; let i = index\">\n                     <li>\n                      <label>\n                        <input type=\"checkbox\" class=\"filled-in\" value =\"1\"(click)=\"Answer(answer.pk)\" #ORNAMENT_OCCASION ngModel name=\"ORNAMENT_OCCASION\"  />\n                        <span>{{answer.OCCASION}}</span>\n                      </label>\n                     </li> \n                    </ng-container>\n                </ul>\n              </div>\n            </div>\n            <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"2\" class=\"filled-in\" (change)=\"two()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>select your Gift</p>\n                <ng-container *ngFor =\"let answer of Gift.ORNAMENT_GIFT; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornagift(answer.pk)\" #ORNAMENT_GIFT ngModel name=\"ORNAMENT_GIFT\"  />\n                    <span>{{answer.GIFT}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"3\" class=\"filled-in\" (change)=\"three()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n\n              <ul class=\"collection answer\">\n                <p>select your Theme</p>\n\n                <ng-container *ngFor =\"let answer of Theme.ORNAMENT_THEME; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornatheme(answer.pk)\" #ORNAMENT_THEME ngModel name=\"ORNAMENT_THEME\"  />\n                    <span>{{answer.THEME}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"input-field col s6\">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"4\" class=\"filled-in\" (change)=\"four()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>select your Curated By</p>\n\n                <ng-container *ngFor =\"let answer of Curated.ORNAMENT_CURATED_BY; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"OrnaCurated(answer.pk)\" #ORNAMENT_CURATED_BY ngModel name=\"ORNAMENT_CURATED_BY\"  />\n                    <span>{{answer.CURATED_BY}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n            <div class=\"input-field col s6 \">\n              <p>\n                <label>\n                  <input type=\"checkbox\" id =\"5\" class=\"filled-in\" (change)=\"five()\"  required/>\n                  <span>check me when you are done selecting</span>\n                </label>\n              </p>\n              <ul class=\"collection answer\">\n                <p>select your Festival</p>\n\n                <ng-container *ngFor =\"let answer of Festival.ORNAMENT_FESTIVAL; let i = index\"  >\n                 <li>\n                  <label>\n                    <input type=\"checkbox\" class=\"filled-in\" value =\"1\" (click)=\"Ornafesti(answer.pk)\" #ORNAMENT_FESTIVAL ngModel name=\"ORNAMENT_FESTIVAL\"  />\n                    <span>{{answer.FESTIVAL}}</span>\n                  </label>\n                 </li> \n                </ng-container>\n              </ul>\n            </div>\n          </div>\n          <input type=\"file\" #CAD_FILE accept=\"image/*\" (change)=\"handleFileInput($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_ONE accept=\"image/*\" (change)=\"handleFileInputone($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_TWO accept=\"image/*\" (change)=\"handleFileInputtwo($event.target.files)\">\n\n          <input type=\"file\" #IMAGE_FILE_THREE accept=\"image/*\" (change)=\"handleFileInputthree($event.target.files)\">\n\n          <button type=\"submit\" class=\"btn-large btn-submit\" [disabled]=\"CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid\">Create your new  Sets Ornament</button>\n        </form>\n      </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -631,7 +631,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"row\">\n    <div class=\"col s8 offset-s2\">\n        <div class=\"card blue-grey darken-1\" *ngFor=\"let question of data.results\">\n          <div class=\"card_content white_text\">\n            <span class=\"card-title\">#Q</span>\n            <p>{{question.ORNAMENT_ID}}</p>\n            <p>{{question.JEWELLER_ID}}</p>\n            <p>{{question.WEIGHT}}</p>\n            <p><strong>Your ornament : </strong> <img src=\"{{question.ornament_file_field.IMAGE_FILE_ONE}}\" style=\"width: 100px;\" ></p>          \n          </div>\n        </div>\n    </div>\n</div>\n\n\n<div class=\"container\">\n  <button type=\"submit\" class=\"btn-large btn-submit\" (click)=\"page1()\">1</button>\n  <button type=\"submit\" class=\"btn-large btn-submit\" (click)=\"page2()\">2</button>\n  <button type=\"submit\" class=\"btn-large btn-submit\" (click)=\"page3()\">3</button>\n  <button type=\"submit\" class=\"btn-large btn-submit\" (click)=\"page4()\">4</button>\n  <button type=\"submit\" class=\"btn-large btn-submit\" (click)=\"page5()\">5</button>\n  <button type=\"submit\" class=\"btn-large btn-submit\" (click)=\"page6()\">6</button>\n  <button type=\"submit\" class=\"btn-large btn-submit\" (click)=\"page7()\">7</button>\n  <button type=\"submit\" class=\"btn-large btn-submit\" (click)=\"page8()\">8</button>\n  <button type=\"submit\" class=\"btn-large btn-submit\" (click)=\"page9()\">9</button>\n  <button type=\"submit\" class=\"btn-large btn-submit\" (click)=\"page10()\">10</button>\n  <button type=\"submit\" class=\"btn-large btn-submit\" (click)=\"page11()\">11</button>\n  <button type=\"submit\" class=\"btn-large btn-submit\" (click)=\"page12()\">12</button>\n  <button type=\"submit\" class=\"btn-large btn-submit\" (click)=\"page13()\">13</button>\n  <button type=\"submit\" class=\"btn-large btn-submit\" (click)=\"page14()\">14</button>\n</div>";
+    __webpack_exports__["default"] = "<div class=\"row\">\n  <div class=\"col s12 \">\n    <div class=\"card\" *ngFor=\"let question of data.results\">\n      <div class=\"card-image\">\n        <img src=\"{{question.ornament_file_field.IMAGE_FILE_ONE}}\">\n        <span class=\"card-title\">Card Title</span>\n      </div>\n      <div class=\"card-content\">\n        <p>{{question.ORNAMENT_ID}}</p>\n        <p>{{question.JEWELLER_ID}}</p>\n        <p>{{question.WEIGHT}}</p>\n      </div>\n      <!--div class=\"card-action\">\n        <a href=\"#\">This is a link</a>\n      </div-->\n    </div>\n  </div>\n</div>\n<ul class=\"pagination\">\n  <li class=\"disabled\"><a href=\"#!\"><i class=\"material-icons\">chevron_left</i></a></li>\n  <li class=\"waves-effect\"><a (click)=\"page1()\">1</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page2()\">2</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page3()\">3</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page4()\">4</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page5()\">5</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page6()\">6</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page7()\">7</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page8()\">8</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page9()\">9</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page10()\">10</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page11()\">11</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page12()\">12</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page13()\">13</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page14()\">14</a></li>\n\n  <li class=\"waves-effect\"><a href=\"#!\"><i class=\"material-icons\">chevron_right</i></a></li>\n</ul>";
     /***/
   },
 
@@ -3661,14 +3661,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! src/app/shared/user.service */
     "./src/app/shared/user.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var BanglesComponent =
     /*#__PURE__*/
     function () {
-      function BanglesComponent(userService) {
+      function BanglesComponent(userService, router) {
         _classCallCheck(this, BanglesComponent);
 
         this.userService = userService;
+        this.router = router;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -3683,18 +3690,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.Curated = {};
         this.Festival = {};
         this.Bsize = {};
+        this.Metal = {};
         this.asion = [];
-        this.asian = [5];
+        this.asian = [];
         this.asan = [];
-        this.asin = [3];
+        this.asin = [];
         this.themea = [];
-        this.themeb = [7];
+        this.themeb = [];
         this.curateda = [];
-        this.curatedb = [6];
+        this.curatedb = [];
         this.festia = [];
-        this.festib = [8];
+        this.festib = [];
         this.bsizea = [];
-        this.bsizeb = [8];
+        this.bsizeb = [];
+        this.metala = [];
+        this.metalb = [];
       }
 
       _createClass(BanglesComponent, [{
@@ -3707,6 +3717,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.curatedby();
           this.festival();
           this.Banglesize();
+          this.metal();
         }
       }, {
         key: "read",
@@ -3716,110 +3727,501 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        key: "metal",
+        value: function metal() {
+          var _this9 = this;
+
+          this.userService.ornmetal().subscribe(function (data) {
+            console.log(data);
+            _this9.Metal = data;
+          });
+        }
+      }, {
         key: "occasion",
         value: function occasion() {
-          var _this9 = this;
+          var _this10 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this9.Occasion = data;
+            _this10.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this10 = this;
+          var _this11 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this10.Gift = data;
+            _this11.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this11 = this;
+          var _this12 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this11.Theme = data;
+            _this12.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this12 = this;
+          var _this13 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this12.Curated = data;
+            _this13.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this13 = this;
+          var _this14 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this13.Festival = data;
+            _this14.Festival = data;
           });
         }
       }, {
         key: "Banglesize",
         value: function Banglesize() {
-          var _this14 = this;
+          var _this15 = this;
 
           this.userService.ornBanglesize().subscribe(function (data) {
             console.log(data);
-            _this14.Bsize = data;
+            _this15.Bsize = data;
           });
+        }
+      }, {
+        key: "Ornmetal",
+        value: function Ornmetal(pk) {
+          console.log(pk);
+
+          if (document.getElementById('zero').checked) {
+            document.getElementById('zero').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.metalb.push(pk);
+            this.metala = [];
+            console.log(this.metala);
+            console.log(this.metalb);
+          } else {
+            this.metalb.push(pk);
+            console.log(this.metala);
+            console.log(this.metalb);
+          }
+        }
+      }, {
+        key: "zero",
+        value: function zero() {
+          if (document.getElementById('zero').checked) {
+            if (this.metalb.length == 0) {
+              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.metalb.sort();
+
+              for (var i = 0; i < this.metalb.length; i++) {
+                if (this.metalb[i] !== prev) {
+                  a.push(this.metalb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.metalb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.metala.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('metala', this.metala);
+            }
+          } else {
+            this.metala = [];
+            console.log('metala', this.metala);
+          }
         }
       }, {
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion.push(pk);
-          console.log(this.asion);
+
+          if (document.getElementById('1').checked) {
+            document.getElementById('1').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asian.push(pk);
+            this.asion = [];
+            console.log(this.asion);
+            console.log(this.asian);
+          } else {
+            this.asian.push(pk);
+            console.log(this.asion);
+            console.log(this.asian);
+          }
+        }
+      }, {
+        key: "one",
+        value: function one() {
+          if (document.getElementById('1').checked) {
+            if (this.asian.length == 0) {
+              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asian.sort();
+
+              for (var i = 0; i < this.asian.length; i++) {
+                if (this.asian[i] !== prev) {
+                  a.push(this.asian[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asian[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asion.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asion', this.asion);
+            }
+          } else {
+            this.asion = [];
+            console.log('asion', this.asion);
+          }
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan.push(k);
-          console.log(this.asan);
+
+          if (document.getElementById('2').checked) {
+            document.getElementById('2').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asin.push(k);
+            this.asan = [];
+            console.log(this.asan);
+            console.log(this.asin);
+          } else {
+            this.asin.push(k);
+            console.log(this.asan);
+            console.log(this.asin);
+          }
+        }
+      }, {
+        key: "two",
+        value: function two() {
+          if (document.getElementById('2').checked) {
+            if (this.asin.length == 0) {
+              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asin.sort();
+
+              for (var i = 0; i < this.asin.length; i++) {
+                if (this.asin[i] !== prev) {
+                  a.push(this.asin[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asin[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asan.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asan', this.asan);
+            }
+          } else {
+            this.asan = [];
+            console.log('asan', this.asan);
+          }
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea.push(k);
-          console.log(this.themea);
-          console.log(this.themeb);
+
+          if (document.getElementById('3').checked) {
+            document.getElementById('3').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.themeb.push(k);
+            this.themea = [];
+            console.log(this.themea);
+            console.log(this.themeb);
+          } else {
+            this.themeb.push(k);
+            console.log(this.themea);
+            console.log(this.themeb);
+          }
+        }
+      }, {
+        key: "three",
+        value: function three() {
+          if (document.getElementById('3').checked) {
+            if (this.themeb.length == 0) {
+              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.themeb.sort();
+
+              for (var i = 0; i < this.themeb.length; i++) {
+                if (this.themeb[i] !== prev) {
+                  a.push(this.themeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.themeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.themea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('themea', this.themea);
+            }
+          } else {
+            this.themea = [];
+            console.log('themea', this.themea);
+          }
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda.push(k);
-          console.log(this.curateda);
-          console.log(this.curatedb);
+
+          if (document.getElementById('4').checked) {
+            document.getElementById('4').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.curatedb.push(k);
+            this.curateda = [];
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          } else {
+            this.curatedb.push(k);
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          }
+        }
+      }, {
+        key: "four",
+        value: function four() {
+          if (document.getElementById('4').checked) {
+            if (this.curatedb.length == 0) {
+              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.curatedb.sort();
+
+              for (var i = 0; i < this.curatedb.length; i++) {
+                if (this.curatedb[i] !== prev) {
+                  a.push(this.curatedb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.curatedb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.curateda.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('curateda', this.curateda);
+            }
+          } else {
+            this.curateda = [];
+            console.log('curateda', this.curateda);
+          }
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia.push(k);
-          console.log(this.festia);
-          console.log(this.festib);
+
+          if (document.getElementById('5').checked) {
+            document.getElementById('5').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.festib.push(k);
+            this.festia = [];
+            console.log(this.festia);
+            console.log(this.festib);
+          } else {
+            this.festib.push(k);
+            console.log(this.festia);
+            console.log(this.festib);
+          }
+        }
+      }, {
+        key: "five",
+        value: function five() {
+          if (document.getElementById('5').checked) {
+            if (this.festib.length == 0) {
+              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.festib.sort();
+
+              for (var i = 0; i < this.festib.length; i++) {
+                if (this.festib[i] !== prev) {
+                  a.push(this.festib[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.festib[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.festia.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('festia', this.festia);
+            }
+          } else {
+            this.festia = [];
+            console.log('festia', this.festia);
+          }
         }
       }, {
         key: "Size",
         value: function Size(k) {
           console.log(k);
-          this.bsizea.push(k);
-          console.log(this.bsizea);
-          console.log(this.bsizeb);
+
+          if (document.getElementById('6').checked) {
+            document.getElementById('6').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.bsizeb.push(k);
+            this.bsizea = [];
+            console.log(this.bsizea);
+            console.log(this.bsizeb);
+          } else {
+            this.bsizeb.push(k);
+            console.log(this.bsizea);
+            console.log(this.bsizeb);
+          }
+        }
+      }, {
+        key: "six",
+        value: function six() {
+          if (document.getElementById('6').checked) {
+            if (this.bsizeb.length == 0) {
+              document.getElementById('6').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.bsizeb.sort();
+
+              for (var i = 0; i < this.bsizeb.length; i++) {
+                if (this.bsizeb[i] !== prev) {
+                  a.push(this.bsizeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.bsizeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.bsizea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('bsizea', this.bsizea);
+            }
+          } else {
+            this.bsizea = [];
+            console.log('bsizea', this.bsizea);
+          }
         }
       }, {
         key: "handleFileInput",
@@ -3844,9 +4246,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_BANGLE_SIZE, ORNAMENT_BANGLE_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
-          this.userService.bangles(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.bsizea, this.bsizeb, ORNAMENT_BANGLE_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
-            console.log('done', data);
-          });
+          var _this16 = this;
+
+          // tslint:disable-next-line: max-line-length
+          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
+            alert('check the confirmation checkboxex to proceed');
+          } else {
+            this.userService.bangles(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.bsizea, this.bsizeb, ORNAMENT_BANGLE_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+              console.log('done', data);
+
+              if (data.status == 201) {
+                _this16.router.navigate(['./ornamentread']);
+              }
+            });
+          }
         }
       }]);
 
@@ -3856,6 +4269,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     BanglesComponent.ctorParameters = function () {
       return [{
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }];
     };
 
@@ -3928,14 +4343,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! src/app/shared/user.service */
     "./src/app/shared/user.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var BraceletComponent =
     /*#__PURE__*/
     function () {
-      function BraceletComponent(userService) {
+      function BraceletComponent(userService, router) {
         _classCallCheck(this, BraceletComponent);
 
         this.userService = userService;
+        this.router = router;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -3950,18 +4372,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.Curated = {};
         this.Festival = {};
         this.Bsize = {};
+        this.Metal = {};
         this.asion = [];
-        this.asian = [5];
+        this.asian = [];
         this.asan = [];
-        this.asin = [3];
+        this.asin = [];
         this.themea = [];
-        this.themeb = [7];
+        this.themeb = [];
         this.curateda = [];
-        this.curatedb = [6];
+        this.curatedb = [];
         this.festia = [];
-        this.festib = [8];
+        this.festib = [];
         this.bsizea = [];
-        this.bsizeb = [8];
+        this.bsizeb = [];
+        this.metala = [];
+        this.metalb = [];
       }
 
       _createClass(BraceletComponent, [{
@@ -3974,6 +4399,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.curatedby();
           this.festival();
           this.ringsize();
+          this.metal();
         }
       }, {
         key: "read",
@@ -3983,110 +4409,501 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        key: "metal",
+        value: function metal() {
+          var _this17 = this;
+
+          this.userService.ornmetal().subscribe(function (data) {
+            console.log(data);
+            _this17.Metal = data;
+          });
+        }
+      }, {
         key: "occasion",
         value: function occasion() {
-          var _this15 = this;
+          var _this18 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this15.Occasion = data;
+            _this18.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this16 = this;
+          var _this19 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this16.Gift = data;
+            _this19.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this17 = this;
+          var _this20 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this17.Theme = data;
+            _this20.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this18 = this;
+          var _this21 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this18.Curated = data;
+            _this21.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this19 = this;
+          var _this22 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this19.Festival = data;
+            _this22.Festival = data;
           });
         }
       }, {
         key: "ringsize",
         value: function ringsize() {
-          var _this20 = this;
+          var _this23 = this;
 
           this.userService.ornBsize().subscribe(function (data) {
             console.log(data);
-            _this20.Bsize = data;
+            _this23.Bsize = data;
           });
+        }
+      }, {
+        key: "Ornmetal",
+        value: function Ornmetal(pk) {
+          console.log(pk);
+
+          if (document.getElementById('zero').checked) {
+            document.getElementById('zero').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.metalb.push(pk);
+            this.metala = [];
+            console.log(this.metala);
+            console.log(this.metalb);
+          } else {
+            this.metalb.push(pk);
+            console.log(this.metala);
+            console.log(this.metalb);
+          }
+        }
+      }, {
+        key: "zero",
+        value: function zero() {
+          if (document.getElementById('zero').checked) {
+            if (this.metalb.length == 0) {
+              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.metalb.sort();
+
+              for (var i = 0; i < this.metalb.length; i++) {
+                if (this.metalb[i] !== prev) {
+                  a.push(this.metalb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.metalb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.metala.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('metala', this.metala);
+            }
+          } else {
+            this.metala = [];
+            console.log('metala', this.metala);
+          }
         }
       }, {
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion.push(pk);
-          console.log(this.asion);
+
+          if (document.getElementById('1').checked) {
+            document.getElementById('1').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asian.push(pk);
+            this.asion = [];
+            console.log(this.asion);
+            console.log(this.asian);
+          } else {
+            this.asian.push(pk);
+            console.log(this.asion);
+            console.log(this.asian);
+          }
+        }
+      }, {
+        key: "one",
+        value: function one() {
+          if (document.getElementById('1').checked) {
+            if (this.asian.length == 0) {
+              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asian.sort();
+
+              for (var i = 0; i < this.asian.length; i++) {
+                if (this.asian[i] !== prev) {
+                  a.push(this.asian[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asian[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asion.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asion', this.asion);
+            }
+          } else {
+            this.asion = [];
+            console.log('asion', this.asion);
+          }
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan.push(k);
-          console.log(this.asan);
+
+          if (document.getElementById('2').checked) {
+            document.getElementById('2').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asin.push(k);
+            this.asan = [];
+            console.log(this.asan);
+            console.log(this.asin);
+          } else {
+            this.asin.push(k);
+            console.log(this.asan);
+            console.log(this.asin);
+          }
+        }
+      }, {
+        key: "two",
+        value: function two() {
+          if (document.getElementById('2').checked) {
+            if (this.asin.length == 0) {
+              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asin.sort();
+
+              for (var i = 0; i < this.asin.length; i++) {
+                if (this.asin[i] !== prev) {
+                  a.push(this.asin[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asin[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asan.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asan', this.asan);
+            }
+          } else {
+            this.asan = [];
+            console.log('asan', this.asan);
+          }
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea.push(k);
-          console.log(this.themea);
-          console.log(this.themeb);
+
+          if (document.getElementById('3').checked) {
+            document.getElementById('3').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.themeb.push(k);
+            this.themea = [];
+            console.log(this.themea);
+            console.log(this.themeb);
+          } else {
+            this.themeb.push(k);
+            console.log(this.themea);
+            console.log(this.themeb);
+          }
+        }
+      }, {
+        key: "three",
+        value: function three() {
+          if (document.getElementById('3').checked) {
+            if (this.themeb.length == 0) {
+              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.themeb.sort();
+
+              for (var i = 0; i < this.themeb.length; i++) {
+                if (this.themeb[i] !== prev) {
+                  a.push(this.themeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.themeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.themea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('themea', this.themea);
+            }
+          } else {
+            this.themea = [];
+            console.log('themea', this.themea);
+          }
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda.push(k);
-          console.log(this.curateda);
-          console.log(this.curatedb);
+
+          if (document.getElementById('4').checked) {
+            document.getElementById('4').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.curatedb.push(k);
+            this.curateda = [];
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          } else {
+            this.curatedb.push(k);
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          }
+        }
+      }, {
+        key: "four",
+        value: function four() {
+          if (document.getElementById('4').checked) {
+            if (this.curatedb.length == 0) {
+              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.curatedb.sort();
+
+              for (var i = 0; i < this.curatedb.length; i++) {
+                if (this.curatedb[i] !== prev) {
+                  a.push(this.curatedb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.curatedb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.curateda.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('curateda', this.curateda);
+            }
+          } else {
+            this.curateda = [];
+            console.log('curateda', this.curateda);
+          }
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia.push(k);
-          console.log(this.festia);
-          console.log(this.festib);
+
+          if (document.getElementById('5').checked) {
+            document.getElementById('5').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.festib.push(k);
+            this.festia = [];
+            console.log(this.festia);
+            console.log(this.festib);
+          } else {
+            this.festib.push(k);
+            console.log(this.festia);
+            console.log(this.festib);
+          }
+        }
+      }, {
+        key: "five",
+        value: function five() {
+          if (document.getElementById('5').checked) {
+            if (this.festib.length == 0) {
+              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.festib.sort();
+
+              for (var i = 0; i < this.festib.length; i++) {
+                if (this.festib[i] !== prev) {
+                  a.push(this.festib[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.festib[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.festia.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('festia', this.festia);
+            }
+          } else {
+            this.festia = [];
+            console.log('festia', this.festia);
+          }
         }
       }, {
         key: "Size",
         value: function Size(k) {
           console.log(k);
-          this.bsizea.push(k);
-          console.log(this.bsizea);
-          console.log(this.bsizeb);
+
+          if (document.getElementById('6').checked) {
+            document.getElementById('6').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.bsizeb.push(k);
+            this.bsizea = [];
+            console.log(this.bsizea);
+            console.log(this.bsizeb);
+          } else {
+            this.bsizeb.push(k);
+            console.log(this.bsizea);
+            console.log(this.bsizeb);
+          }
+        }
+      }, {
+        key: "six",
+        value: function six() {
+          if (document.getElementById('6').checked) {
+            if (this.bsizeb.length == 0) {
+              document.getElementById('6').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.bsizeb.sort();
+
+              for (var i = 0; i < this.bsizeb.length; i++) {
+                if (this.bsizeb[i] !== prev) {
+                  a.push(this.bsizeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.bsizeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.bsizea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('bsizea', this.bsizea);
+            }
+          } else {
+            this.bsizea = [];
+            console.log('bsizea', this.bsizea);
+          }
         }
       }, {
         key: "handleFileInput",
@@ -4111,9 +4928,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_BRACELET_SIZE, ORNAMENT_BRACELET_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
-          this.userService.bracelet(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.bsizea, this.bsizeb, ORNAMENT_BRACELET_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
-            console.log('done', data);
-          });
+          var _this24 = this;
+
+          // tslint:disable-next-line: max-line-length
+          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
+            alert('check the confirmation checkboxex to proceed');
+          } else {
+            this.userService.bracelet(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.bsizea, this.bsizeb, ORNAMENT_BRACELET_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+              console.log('done', data);
+
+              if (data.status == 201) {
+                _this24.router.navigate(['./ornamentread']);
+              }
+            });
+          }
         }
       }]);
 
@@ -4123,6 +4951,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     BraceletComponent.ctorParameters = function () {
       return [{
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }];
     };
 
@@ -4195,14 +5025,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! src/app/shared/user.service */
     "./src/app/shared/user.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var ChainComponent =
     /*#__PURE__*/
     function () {
-      function ChainComponent(userService) {
+      function ChainComponent(userService, router) {
         _classCallCheck(this, ChainComponent);
 
         this.userService = userService;
+        this.router = router;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -4217,18 +5054,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.Curated = {};
         this.Festival = {};
         this.Bsize = {};
+        this.Metal = {};
         this.asion = [];
-        this.asian = [5];
+        this.asian = [];
         this.asan = [];
-        this.asin = [3];
+        this.asin = [];
         this.themea = [];
-        this.themeb = [7];
+        this.themeb = [];
         this.curateda = [];
-        this.curatedb = [6];
+        this.curatedb = [];
         this.festia = [];
-        this.festib = [8];
+        this.festib = [];
         this.bsizea = [];
-        this.bsizeb = [5];
+        this.bsizeb = [];
+        this.metala = [];
+        this.metalb = [];
       }
 
       _createClass(ChainComponent, [{
@@ -4241,6 +5081,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.curatedby();
           this.festival();
           this.Banglesize();
+          this.metal();
         }
       }, {
         key: "read",
@@ -4250,110 +5091,501 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        key: "metal",
+        value: function metal() {
+          var _this25 = this;
+
+          this.userService.ornmetal().subscribe(function (data) {
+            console.log(data);
+            _this25.Metal = data;
+          });
+        }
+      }, {
         key: "occasion",
         value: function occasion() {
-          var _this21 = this;
+          var _this26 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this21.Occasion = data;
+            _this26.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this22 = this;
+          var _this27 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this22.Gift = data;
+            _this27.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this23 = this;
+          var _this28 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this23.Theme = data;
+            _this28.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this24 = this;
+          var _this29 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this24.Curated = data;
+            _this29.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this25 = this;
+          var _this30 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this25.Festival = data;
+            _this30.Festival = data;
           });
         }
       }, {
         key: "Banglesize",
         value: function Banglesize() {
-          var _this26 = this;
+          var _this31 = this;
 
           this.userService.ornChainlength().subscribe(function (data) {
             console.log(data);
-            _this26.Bsize = data;
+            _this31.Bsize = data;
           });
+        }
+      }, {
+        key: "Ornmetal",
+        value: function Ornmetal(pk) {
+          console.log(pk);
+
+          if (document.getElementById('zero').checked) {
+            document.getElementById('zero').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.metalb.push(pk);
+            this.metala = [];
+            console.log(this.metala);
+            console.log(this.metalb);
+          } else {
+            this.metalb.push(pk);
+            console.log(this.metala);
+            console.log(this.metalb);
+          }
+        }
+      }, {
+        key: "zero",
+        value: function zero() {
+          if (document.getElementById('zero').checked) {
+            if (this.metalb.length == 0) {
+              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.metalb.sort();
+
+              for (var i = 0; i < this.metalb.length; i++) {
+                if (this.metalb[i] !== prev) {
+                  a.push(this.metalb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.metalb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.metala.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('metala', this.metala);
+            }
+          } else {
+            this.metala = [];
+            console.log('metala', this.metala);
+          }
         }
       }, {
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion.push(pk);
-          console.log(this.asion);
+
+          if (document.getElementById('1').checked) {
+            document.getElementById('1').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asian.push(pk);
+            this.asion = [];
+            console.log(this.asion);
+            console.log(this.asian);
+          } else {
+            this.asian.push(pk);
+            console.log(this.asion);
+            console.log(this.asian);
+          }
+        }
+      }, {
+        key: "one",
+        value: function one() {
+          if (document.getElementById('1').checked) {
+            if (this.asian.length == 0) {
+              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asian.sort();
+
+              for (var i = 0; i < this.asian.length; i++) {
+                if (this.asian[i] !== prev) {
+                  a.push(this.asian[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asian[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asion.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asion', this.asion);
+            }
+          } else {
+            this.asion = [];
+            console.log('asion', this.asion);
+          }
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan.push(k);
-          console.log(this.asan);
+
+          if (document.getElementById('2').checked) {
+            document.getElementById('2').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asin.push(k);
+            this.asan = [];
+            console.log(this.asan);
+            console.log(this.asin);
+          } else {
+            this.asin.push(k);
+            console.log(this.asan);
+            console.log(this.asin);
+          }
+        }
+      }, {
+        key: "two",
+        value: function two() {
+          if (document.getElementById('2').checked) {
+            if (this.asin.length == 0) {
+              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asin.sort();
+
+              for (var i = 0; i < this.asin.length; i++) {
+                if (this.asin[i] !== prev) {
+                  a.push(this.asin[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asin[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asan.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asan', this.asan);
+            }
+          } else {
+            this.asan = [];
+            console.log('asan', this.asan);
+          }
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea.push(k);
-          console.log(this.themea);
-          console.log(this.themeb);
+
+          if (document.getElementById('3').checked) {
+            document.getElementById('3').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.themeb.push(k);
+            this.themea = [];
+            console.log(this.themea);
+            console.log(this.themeb);
+          } else {
+            this.themeb.push(k);
+            console.log(this.themea);
+            console.log(this.themeb);
+          }
+        }
+      }, {
+        key: "three",
+        value: function three() {
+          if (document.getElementById('3').checked) {
+            if (this.themeb.length == 0) {
+              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.themeb.sort();
+
+              for (var i = 0; i < this.themeb.length; i++) {
+                if (this.themeb[i] !== prev) {
+                  a.push(this.themeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.themeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.themea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('themea', this.themea);
+            }
+          } else {
+            this.themea = [];
+            console.log('themea', this.themea);
+          }
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda.push(k);
-          console.log(this.curateda);
-          console.log(this.curatedb);
+
+          if (document.getElementById('4').checked) {
+            document.getElementById('4').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.curatedb.push(k);
+            this.curateda = [];
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          } else {
+            this.curatedb.push(k);
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          }
+        }
+      }, {
+        key: "four",
+        value: function four() {
+          if (document.getElementById('4').checked) {
+            if (this.curatedb.length == 0) {
+              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.curatedb.sort();
+
+              for (var i = 0; i < this.curatedb.length; i++) {
+                if (this.curatedb[i] !== prev) {
+                  a.push(this.curatedb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.curatedb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.curateda.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('curateda', this.curateda);
+            }
+          } else {
+            this.curateda = [];
+            console.log('curateda', this.curateda);
+          }
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia.push(k);
-          console.log(this.festia);
-          console.log(this.festib);
+
+          if (document.getElementById('5').checked) {
+            document.getElementById('5').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.festib.push(k);
+            this.festia = [];
+            console.log(this.festia);
+            console.log(this.festib);
+          } else {
+            this.festib.push(k);
+            console.log(this.festia);
+            console.log(this.festib);
+          }
+        }
+      }, {
+        key: "five",
+        value: function five() {
+          if (document.getElementById('5').checked) {
+            if (this.festib.length == 0) {
+              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.festib.sort();
+
+              for (var i = 0; i < this.festib.length; i++) {
+                if (this.festib[i] !== prev) {
+                  a.push(this.festib[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.festib[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.festia.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('festia', this.festia);
+            }
+          } else {
+            this.festia = [];
+            console.log('festia', this.festia);
+          }
         }
       }, {
         key: "Size",
         value: function Size(k) {
           console.log(k);
-          this.bsizea.push(k);
-          console.log(this.bsizea);
-          console.log(this.bsizeb);
+
+          if (document.getElementById('6').checked) {
+            document.getElementById('6').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.bsizeb.push(k);
+            this.bsizea = [];
+            console.log(this.bsizea);
+            console.log(this.bsizeb);
+          } else {
+            this.bsizeb.push(k);
+            console.log(this.bsizea);
+            console.log(this.bsizeb);
+          }
+        }
+      }, {
+        key: "six",
+        value: function six() {
+          if (document.getElementById('6').checked) {
+            if (this.bsizeb.length == 0) {
+              document.getElementById('6').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.bsizeb.sort();
+
+              for (var i = 0; i < this.bsizeb.length; i++) {
+                if (this.bsizeb[i] !== prev) {
+                  a.push(this.bsizeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.bsizeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.bsizea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('bsizea', this.bsizea);
+            }
+          } else {
+            this.bsizea = [];
+            console.log('bsizea', this.bsizea);
+          }
         }
       }, {
         key: "handleFileInput",
@@ -4378,9 +5610,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_CHAIN_LENGTH, ORNAMENT_CHAIN_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
-          this.userService.chain(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.bsizea, this.bsizeb, ORNAMENT_CHAIN_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
-            console.log('done', data);
-          });
+          var _this32 = this;
+
+          // tslint:disable-next-line: max-line-length
+          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
+            alert('check the confirmation checkboxex to proceed');
+          } else {
+            this.userService.chain(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.bsizea, this.bsizeb, ORNAMENT_CHAIN_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+              console.log('done', data);
+
+              if (data.status == 201) {
+                _this32.router.navigate(['./ornamentread']);
+              }
+            });
+          }
         }
       }]);
 
@@ -4390,6 +5633,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     ChainComponent.ctorParameters = function () {
       return [{
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }];
     };
 
@@ -4462,14 +5707,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! src/app/shared/user.service */
     "./src/app/shared/user.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var ChainwithpendantComponent =
     /*#__PURE__*/
     function () {
-      function ChainwithpendantComponent(userService) {
+      function ChainwithpendantComponent(userService, router) {
         _classCallCheck(this, ChainwithpendantComponent);
 
         this.userService = userService;
+        this.router = router;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -4484,18 +5736,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.Curated = {};
         this.Festival = {};
         this.Bsize = {};
+        this.Metal = {};
         this.asion = [];
-        this.asian = [5];
+        this.asian = [];
         this.asan = [];
-        this.asin = [3];
+        this.asin = [];
         this.themea = [];
-        this.themeb = [7];
+        this.themeb = [];
         this.curateda = [];
-        this.curatedb = [6];
+        this.curatedb = [];
         this.festia = [];
-        this.festib = [8];
+        this.festib = [];
         this.bsizea = [];
-        this.bsizeb = [5];
+        this.bsizeb = [];
+        this.metala = [];
+        this.metalb = [];
       }
 
       _createClass(ChainwithpendantComponent, [{
@@ -4508,6 +5763,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.curatedby();
           this.festival();
           this.Banglesize();
+          this.metal();
         }
       }, {
         key: "read",
@@ -4517,110 +5773,501 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        key: "metal",
+        value: function metal() {
+          var _this33 = this;
+
+          this.userService.ornmetal().subscribe(function (data) {
+            console.log(data);
+            _this33.Metal = data;
+          });
+        }
+      }, {
         key: "occasion",
         value: function occasion() {
-          var _this27 = this;
+          var _this34 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this27.Occasion = data;
+            _this34.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this28 = this;
+          var _this35 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this28.Gift = data;
+            _this35.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this29 = this;
+          var _this36 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this29.Theme = data;
+            _this36.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this30 = this;
+          var _this37 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this30.Curated = data;
+            _this37.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this31 = this;
+          var _this38 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this31.Festival = data;
+            _this38.Festival = data;
           });
         }
       }, {
         key: "Banglesize",
         value: function Banglesize() {
-          var _this32 = this;
+          var _this39 = this;
 
           this.userService.ornChainlength().subscribe(function (data) {
             console.log(data);
-            _this32.Bsize = data;
+            _this39.Bsize = data;
           });
+        }
+      }, {
+        key: "Ornmetal",
+        value: function Ornmetal(pk) {
+          console.log(pk);
+
+          if (document.getElementById('zero').checked) {
+            document.getElementById('zero').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.metalb.push(pk);
+            this.metala = [];
+            console.log(this.metala);
+            console.log(this.metalb);
+          } else {
+            this.metalb.push(pk);
+            console.log(this.metala);
+            console.log(this.metalb);
+          }
+        }
+      }, {
+        key: "zero",
+        value: function zero() {
+          if (document.getElementById('zero').checked) {
+            if (this.metalb.length == 0) {
+              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.metalb.sort();
+
+              for (var i = 0; i < this.metalb.length; i++) {
+                if (this.metalb[i] !== prev) {
+                  a.push(this.metalb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.metalb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.metala.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('metala', this.metala);
+            }
+          } else {
+            this.metala = [];
+            console.log('metala', this.metala);
+          }
         }
       }, {
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion.push(pk);
-          console.log(this.asion);
+
+          if (document.getElementById('1').checked) {
+            document.getElementById('1').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asian.push(pk);
+            this.asion = [];
+            console.log(this.asion);
+            console.log(this.asian);
+          } else {
+            this.asian.push(pk);
+            console.log(this.asion);
+            console.log(this.asian);
+          }
+        }
+      }, {
+        key: "one",
+        value: function one() {
+          if (document.getElementById('1').checked) {
+            if (this.asian.length == 0) {
+              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asian.sort();
+
+              for (var i = 0; i < this.asian.length; i++) {
+                if (this.asian[i] !== prev) {
+                  a.push(this.asian[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asian[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asion.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asion', this.asion);
+            }
+          } else {
+            this.asion = [];
+            console.log('asion', this.asion);
+          }
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan.push(k);
-          console.log(this.asan);
+
+          if (document.getElementById('2').checked) {
+            document.getElementById('2').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asin.push(k);
+            this.asan = [];
+            console.log(this.asan);
+            console.log(this.asin);
+          } else {
+            this.asin.push(k);
+            console.log(this.asan);
+            console.log(this.asin);
+          }
+        }
+      }, {
+        key: "two",
+        value: function two() {
+          if (document.getElementById('2').checked) {
+            if (this.asin.length == 0) {
+              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asin.sort();
+
+              for (var i = 0; i < this.asin.length; i++) {
+                if (this.asin[i] !== prev) {
+                  a.push(this.asin[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asin[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asan.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asan', this.asan);
+            }
+          } else {
+            this.asan = [];
+            console.log('asan', this.asan);
+          }
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea.push(k);
-          console.log(this.themea);
-          console.log(this.themeb);
+
+          if (document.getElementById('3').checked) {
+            document.getElementById('3').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.themeb.push(k);
+            this.themea = [];
+            console.log(this.themea);
+            console.log(this.themeb);
+          } else {
+            this.themeb.push(k);
+            console.log(this.themea);
+            console.log(this.themeb);
+          }
+        }
+      }, {
+        key: "three",
+        value: function three() {
+          if (document.getElementById('3').checked) {
+            if (this.themeb.length == 0) {
+              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.themeb.sort();
+
+              for (var i = 0; i < this.themeb.length; i++) {
+                if (this.themeb[i] !== prev) {
+                  a.push(this.themeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.themeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.themea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('themea', this.themea);
+            }
+          } else {
+            this.themea = [];
+            console.log('themea', this.themea);
+          }
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda.push(k);
-          console.log(this.curateda);
-          console.log(this.curatedb);
+
+          if (document.getElementById('4').checked) {
+            document.getElementById('4').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.curatedb.push(k);
+            this.curateda = [];
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          } else {
+            this.curatedb.push(k);
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          }
+        }
+      }, {
+        key: "four",
+        value: function four() {
+          if (document.getElementById('4').checked) {
+            if (this.curatedb.length == 0) {
+              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.curatedb.sort();
+
+              for (var i = 0; i < this.curatedb.length; i++) {
+                if (this.curatedb[i] !== prev) {
+                  a.push(this.curatedb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.curatedb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.curateda.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('curateda', this.curateda);
+            }
+          } else {
+            this.curateda = [];
+            console.log('curateda', this.curateda);
+          }
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia.push(k);
-          console.log(this.festia);
-          console.log(this.festib);
+
+          if (document.getElementById('5').checked) {
+            document.getElementById('5').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.festib.push(k);
+            this.festia = [];
+            console.log(this.festia);
+            console.log(this.festib);
+          } else {
+            this.festib.push(k);
+            console.log(this.festia);
+            console.log(this.festib);
+          }
+        }
+      }, {
+        key: "five",
+        value: function five() {
+          if (document.getElementById('5').checked) {
+            if (this.festib.length == 0) {
+              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.festib.sort();
+
+              for (var i = 0; i < this.festib.length; i++) {
+                if (this.festib[i] !== prev) {
+                  a.push(this.festib[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.festib[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.festia.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('festia', this.festia);
+            }
+          } else {
+            this.festia = [];
+            console.log('festia', this.festia);
+          }
         }
       }, {
         key: "Size",
         value: function Size(k) {
           console.log(k);
-          this.bsizea.push(k);
-          console.log(this.bsizea);
-          console.log(this.bsizeb);
+
+          if (document.getElementById('6').checked) {
+            document.getElementById('6').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.bsizeb.push(k);
+            this.bsizea = [];
+            console.log(this.bsizea);
+            console.log(this.bsizeb);
+          } else {
+            this.bsizeb.push(k);
+            console.log(this.bsizea);
+            console.log(this.bsizeb);
+          }
+        }
+      }, {
+        key: "six",
+        value: function six() {
+          if (document.getElementById('6').checked) {
+            if (this.bsizeb.length == 0) {
+              document.getElementById('6').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.bsizeb.sort();
+
+              for (var i = 0; i < this.bsizeb.length; i++) {
+                if (this.bsizeb[i] !== prev) {
+                  a.push(this.bsizeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.bsizeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.bsizea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('bsizea', this.bsizea);
+            }
+          } else {
+            this.bsizea = [];
+            console.log('bsizea', this.bsizea);
+          }
         }
       }, {
         key: "handleFileInput",
@@ -4645,9 +6292,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_CHAIN_LENGTH, ORNAMENT_CHAIN_STYLE, ORNAMENT_PENDANT_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
-          this.userService.chaitpen(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.bsizea, this.bsizeb, ORNAMENT_CHAIN_STYLE.value, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
-            console.log('done', data);
-          });
+          var _this40 = this;
+
+          // tslint:disable-next-line: max-line-length
+          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
+            alert('check the confirmation checkboxex to proceed');
+          } else {
+            this.userService.chaitpen(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.bsizea, this.bsizeb, ORNAMENT_CHAIN_STYLE.value, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+              console.log('done', data);
+
+              if (data.status == 201) {
+                _this40.router.navigate(['./ornamentread']);
+              }
+            });
+          }
         }
       }]);
 
@@ -4657,6 +6315,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     ChainwithpendantComponent.ctorParameters = function () {
       return [{
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }];
     };
 
@@ -4808,14 +6468,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! src/app/shared/user.service */
     "./src/app/shared/user.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var CufflinkComponent =
     /*#__PURE__*/
     function () {
-      function CufflinkComponent(userService) {
+      function CufflinkComponent(userService, router) {
         _classCallCheck(this, CufflinkComponent);
 
         this.userService = userService;
+        this.router = router;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -4829,16 +6496,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.Theme = {};
         this.Curated = {};
         this.Festival = {};
+        this.Metal = {};
         this.asion = [];
-        this.asian = [5];
+        this.asian = [];
         this.asan = [];
-        this.asin = [3];
+        this.asin = [];
         this.themea = [];
-        this.themeb = [7];
+        this.themeb = [];
         this.curateda = [];
-        this.curatedb = [6];
+        this.curatedb = [];
         this.festia = [];
-        this.festib = [8];
+        this.festib = [];
+        this.metala = [];
+        this.metalb = [];
       }
 
       _createClass(CufflinkComponent, [{
@@ -4850,6 +6520,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.theme();
           this.curatedby();
           this.festival();
+          this.metal();
         }
       }, {
         key: "read",
@@ -4859,92 +6530,430 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        key: "metal",
+        value: function metal() {
+          var _this41 = this;
+
+          this.userService.ornmetal().subscribe(function (data) {
+            console.log(data);
+            _this41.Metal = data;
+          });
+        }
+      }, {
         key: "occasion",
         value: function occasion() {
-          var _this33 = this;
+          var _this42 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this33.Occasion = data;
+            _this42.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this34 = this;
+          var _this43 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this34.Gift = data;
+            _this43.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this35 = this;
+          var _this44 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this35.Theme = data;
+            _this44.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this36 = this;
+          var _this45 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this36.Curated = data;
+            _this45.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this37 = this;
+          var _this46 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this37.Festival = data;
+            _this46.Festival = data;
           });
+        }
+      }, {
+        key: "Ornmetal",
+        value: function Ornmetal(pk) {
+          console.log(pk);
+
+          if (document.getElementById('zero').checked) {
+            document.getElementById('zero').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.metalb.push(pk);
+            this.metala = [];
+            console.log(this.metala);
+            console.log(this.metalb);
+          } else {
+            this.metalb.push(pk);
+            console.log(this.metala);
+            console.log(this.metalb);
+          }
+        }
+      }, {
+        key: "zero",
+        value: function zero() {
+          if (document.getElementById('zero').checked) {
+            if (this.metalb.length == 0) {
+              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.metalb.sort();
+
+              for (var i = 0; i < this.metalb.length; i++) {
+                if (this.metalb[i] !== prev) {
+                  a.push(this.metalb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.metalb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.metala.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('metala', this.metala);
+            }
+          } else {
+            this.metala = [];
+            console.log('metala', this.metala);
+          }
         }
       }, {
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion.push(pk);
-          console.log(this.asion);
+
+          if (document.getElementById('1').checked) {
+            document.getElementById('1').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asian.push(pk);
+            this.asion = [];
+            console.log(this.asion);
+            console.log(this.asian);
+          } else {
+            this.asian.push(pk);
+            console.log(this.asion);
+            console.log(this.asian);
+          }
+        }
+      }, {
+        key: "one",
+        value: function one() {
+          if (document.getElementById('1').checked) {
+            if (this.asian.length == 0) {
+              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asian.sort();
+
+              for (var i = 0; i < this.asian.length; i++) {
+                if (this.asian[i] !== prev) {
+                  a.push(this.asian[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asian[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asion.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asion', this.asion);
+            }
+          } else {
+            this.asion = [];
+            console.log('asion', this.asion);
+          }
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan.push(k);
-          console.log(this.asan);
+
+          if (document.getElementById('2').checked) {
+            document.getElementById('2').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asin.push(k);
+            this.asan = [];
+            console.log(this.asan);
+            console.log(this.asin);
+          } else {
+            this.asin.push(k);
+            console.log(this.asan);
+            console.log(this.asin);
+          }
+        }
+      }, {
+        key: "two",
+        value: function two() {
+          if (document.getElementById('2').checked) {
+            if (this.asin.length == 0) {
+              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asin.sort();
+
+              for (var i = 0; i < this.asin.length; i++) {
+                if (this.asin[i] !== prev) {
+                  a.push(this.asin[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asin[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asan.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asan', this.asan);
+            }
+          } else {
+            this.asan = [];
+            console.log('asan', this.asan);
+          }
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea.push(k);
-          console.log(this.themea);
-          console.log(this.themeb);
+
+          if (document.getElementById('3').checked) {
+            document.getElementById('3').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.themeb.push(k);
+            this.themea = [];
+            console.log(this.themea);
+            console.log(this.themeb);
+          } else {
+            this.themeb.push(k);
+            console.log(this.themea);
+            console.log(this.themeb);
+          }
+        }
+      }, {
+        key: "three",
+        value: function three() {
+          if (document.getElementById('3').checked) {
+            if (this.themeb.length == 0) {
+              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.themeb.sort();
+
+              for (var i = 0; i < this.themeb.length; i++) {
+                if (this.themeb[i] !== prev) {
+                  a.push(this.themeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.themeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.themea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('themea', this.themea);
+            }
+          } else {
+            this.themea = [];
+            console.log('themea', this.themea);
+          }
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda.push(k);
-          console.log(this.curateda);
-          console.log(this.curatedb);
+
+          if (document.getElementById('4').checked) {
+            document.getElementById('4').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.curatedb.push(k);
+            this.curateda = [];
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          } else {
+            this.curatedb.push(k);
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          }
+        }
+      }, {
+        key: "four",
+        value: function four() {
+          if (document.getElementById('4').checked) {
+            if (this.curatedb.length == 0) {
+              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.curatedb.sort();
+
+              for (var i = 0; i < this.curatedb.length; i++) {
+                if (this.curatedb[i] !== prev) {
+                  a.push(this.curatedb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.curatedb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.curateda.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('curateda', this.curateda);
+            }
+          } else {
+            this.curateda = [];
+            console.log('curateda', this.curateda);
+          }
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia.push(k);
-          console.log(this.festia);
-          console.log(this.festib);
+
+          if (document.getElementById('5').checked) {
+            document.getElementById('5').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.festib.push(k);
+            this.festia = [];
+            console.log(this.festia);
+            console.log(this.festib);
+          } else {
+            this.festib.push(k);
+            console.log(this.festia);
+            console.log(this.festib);
+          }
+        }
+      }, {
+        key: "five",
+        value: function five() {
+          if (document.getElementById('5').checked) {
+            if (this.festib.length == 0) {
+              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.festib.sort();
+
+              for (var i = 0; i < this.festib.length; i++) {
+                if (this.festib[i] !== prev) {
+                  a.push(this.festib[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.festib[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.festia.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('festia', this.festia);
+            }
+          } else {
+            this.festia = [];
+            console.log('festia', this.festia);
+          }
         }
       }, {
         key: "handleFileInput",
@@ -4969,9 +6978,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
-          this.userService.multi(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
-            console.log('done', data);
-          });
+          var _this47 = this;
+
+          // tslint:disable-next-line: max-line-length
+          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
+            alert('check the confirmation checkboxex to proceed');
+          } else {
+            this.userService.multi(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+              console.log('done', data);
+
+              if (data.status == 201) {
+                _this47.router.navigate(['./ornamentread']);
+              }
+            });
+          }
         }
       }]);
 
@@ -4981,6 +7001,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     CufflinkComponent.ctorParameters = function () {
       return [{
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }];
     };
 
@@ -5053,14 +7075,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! src/app/shared/user.service */
     "./src/app/shared/user.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var MangalsutraComponent =
     /*#__PURE__*/
     function () {
-      function MangalsutraComponent(userService) {
+      function MangalsutraComponent(userService, router) {
         _classCallCheck(this, MangalsutraComponent);
 
         this.userService = userService;
+        this.router = router;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -5074,16 +7103,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.Theme = {};
         this.Curated = {};
         this.Festival = {};
+        this.Metal = {};
         this.asion = [];
-        this.asian = [5];
+        this.asian = [];
         this.asan = [];
-        this.asin = [3];
+        this.asin = [];
         this.themea = [];
-        this.themeb = [7];
+        this.themeb = [];
         this.curateda = [];
-        this.curatedb = [6];
+        this.curatedb = [];
         this.festia = [];
-        this.festib = [8];
+        this.festib = [];
+        this.metala = [];
+        this.metalb = [];
       }
 
       _createClass(MangalsutraComponent, [{
@@ -5095,6 +7127,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.theme();
           this.curatedby();
           this.festival();
+          this.metal();
         }
       }, {
         key: "read",
@@ -5104,89 +7137,430 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        key: "metal",
+        value: function metal() {
+          var _this48 = this;
+
+          this.userService.ornmetal().subscribe(function (data) {
+            console.log(data);
+            _this48.Metal = data;
+          });
+        }
+      }, {
         key: "occasion",
         value: function occasion() {
-          var _this38 = this;
+          var _this49 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this38.Occasion = data;
+            _this49.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this39 = this;
+          var _this50 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this39.Gift = data;
+            _this50.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this40 = this;
+          var _this51 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this40.Theme = data;
+            _this51.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this41 = this;
+          var _this52 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this41.Curated = data;
+            _this52.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this42 = this;
+          var _this53 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this42.Festival = data;
+            _this53.Festival = data;
           });
+        }
+      }, {
+        key: "Ornmetal",
+        value: function Ornmetal(pk) {
+          console.log(pk);
+
+          if (document.getElementById('zero').checked) {
+            document.getElementById('zero').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.metalb.push(pk);
+            this.metala = [];
+            console.log(this.metala);
+            console.log(this.metalb);
+          } else {
+            this.metalb.push(pk);
+            console.log(this.metala);
+            console.log(this.metalb);
+          }
+        }
+      }, {
+        key: "zero",
+        value: function zero() {
+          if (document.getElementById('zero').checked) {
+            if (this.metalb.length == 0) {
+              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.metalb.sort();
+
+              for (var i = 0; i < this.metalb.length; i++) {
+                if (this.metalb[i] !== prev) {
+                  a.push(this.metalb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.metalb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.metala.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('metala', this.metala);
+            }
+          } else {
+            this.metala = [];
+            console.log('metala', this.metala);
+          }
         }
       }, {
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion.push(pk);
-          console.log(this.asion);
+
+          if (document.getElementById('1').checked) {
+            document.getElementById('1').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asian.push(pk);
+            this.asion = [];
+            console.log(this.asion);
+            console.log(this.asian);
+          } else {
+            this.asian.push(pk);
+            console.log(this.asion);
+            console.log(this.asian);
+          }
+        }
+      }, {
+        key: "one",
+        value: function one() {
+          if (document.getElementById('1').checked) {
+            if (this.asian.length == 0) {
+              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asian.sort();
+
+              for (var i = 0; i < this.asian.length; i++) {
+                if (this.asian[i] !== prev) {
+                  a.push(this.asian[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asian[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asion.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asion', this.asion);
+            }
+          } else {
+            this.asion = [];
+            console.log('asion', this.asion);
+          }
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan.push(k);
-          console.log(this.asan);
+
+          if (document.getElementById('2').checked) {
+            document.getElementById('2').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asin.push(k);
+            this.asan = [];
+            console.log(this.asan);
+            console.log(this.asin);
+          } else {
+            this.asin.push(k);
+            console.log(this.asan);
+            console.log(this.asin);
+          }
+        }
+      }, {
+        key: "two",
+        value: function two() {
+          if (document.getElementById('2').checked) {
+            if (this.asin.length == 0) {
+              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asin.sort();
+
+              for (var i = 0; i < this.asin.length; i++) {
+                if (this.asin[i] !== prev) {
+                  a.push(this.asin[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asin[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asan.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asan', this.asan);
+            }
+          } else {
+            this.asan = [];
+            console.log('asan', this.asan);
+          }
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea.push(k);
-          console.log(this.themea);
+
+          if (document.getElementById('3').checked) {
+            document.getElementById('3').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.themeb.push(k);
+            this.themea = [];
+            console.log(this.themea);
+            console.log(this.themeb);
+          } else {
+            this.themeb.push(k);
+            console.log(this.themea);
+            console.log(this.themeb);
+          }
+        }
+      }, {
+        key: "three",
+        value: function three() {
+          if (document.getElementById('3').checked) {
+            if (this.themeb.length == 0) {
+              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.themeb.sort();
+
+              for (var i = 0; i < this.themeb.length; i++) {
+                if (this.themeb[i] !== prev) {
+                  a.push(this.themeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.themeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.themea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('themea', this.themea);
+            }
+          } else {
+            this.themea = [];
+            console.log('themea', this.themea);
+          }
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda.push(k);
-          console.log(this.curateda);
+
+          if (document.getElementById('4').checked) {
+            document.getElementById('4').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.curatedb.push(k);
+            this.curateda = [];
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          } else {
+            this.curatedb.push(k);
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          }
+        }
+      }, {
+        key: "four",
+        value: function four() {
+          if (document.getElementById('4').checked) {
+            if (this.curatedb.length == 0) {
+              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.curatedb.sort();
+
+              for (var i = 0; i < this.curatedb.length; i++) {
+                if (this.curatedb[i] !== prev) {
+                  a.push(this.curatedb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.curatedb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.curateda.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('curateda', this.curateda);
+            }
+          } else {
+            this.curateda = [];
+            console.log('curateda', this.curateda);
+          }
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia.push(k);
-          console.log(this.festia);
+
+          if (document.getElementById('5').checked) {
+            document.getElementById('5').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.festib.push(k);
+            this.festia = [];
+            console.log(this.festia);
+            console.log(this.festib);
+          } else {
+            this.festib.push(k);
+            console.log(this.festia);
+            console.log(this.festib);
+          }
+        }
+      }, {
+        key: "five",
+        value: function five() {
+          if (document.getElementById('5').checked) {
+            if (this.festib.length == 0) {
+              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.festib.sort();
+
+              for (var i = 0; i < this.festib.length; i++) {
+                if (this.festib[i] !== prev) {
+                  a.push(this.festib[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.festib[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.festia.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('festia', this.festia);
+            }
+          } else {
+            this.festia = [];
+            console.log('festia', this.festia);
+          }
         }
       }, {
         key: "handleFileInput",
@@ -5211,9 +7585,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
-          this.userService.multi(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
-            console.log('done', data);
-          });
+          // tslint:disable-next-line: max-line-length
+          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
+            alert('check the confirmation checkboxex to proceed');
+          } else {
+            this.userService.multi(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+              console.log('done', data);
+
+              if (data.status == 201) {// this.router.navigate(['./ornamentread']);
+              }
+            });
+          }
         }
       }]);
 
@@ -5223,6 +7605,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     MangalsutraComponent.ctorParameters = function () {
       return [{
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }];
     };
 
@@ -5295,14 +7679,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! src/app/shared/user.service */
     "./src/app/shared/user.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var NecklaceComponent =
     /*#__PURE__*/
     function () {
-      function NecklaceComponent(userService) {
+      function NecklaceComponent(userService, router) {
         _classCallCheck(this, NecklaceComponent);
 
         this.userService = userService;
+        this.router = router;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -5316,16 +7707,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.Theme = {};
         this.Curated = {};
         this.Festival = {};
+        this.Metal = {};
         this.asion = [];
-        this.asian = [5];
+        this.asian = [];
         this.asan = [];
-        this.asin = [3];
+        this.asin = [];
         this.themea = [];
-        this.themeb = [7];
+        this.themeb = [];
         this.curateda = [];
-        this.curatedb = [6];
+        this.curatedb = [];
         this.festia = [];
-        this.festib = [8];
+        this.festib = [];
+        this.metala = [];
+        this.metalb = [];
       }
 
       _createClass(NecklaceComponent, [{
@@ -5337,6 +7731,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.theme();
           this.curatedby();
           this.festival();
+          this.metal();
         }
       }, {
         key: "read",
@@ -5346,92 +7741,430 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        key: "metal",
+        value: function metal() {
+          var _this54 = this;
+
+          this.userService.ornmetal().subscribe(function (data) {
+            console.log(data);
+            _this54.Metal = data;
+          });
+        }
+      }, {
         key: "occasion",
         value: function occasion() {
-          var _this43 = this;
+          var _this55 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this43.Occasion = data;
+            _this55.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this44 = this;
+          var _this56 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this44.Gift = data;
+            _this56.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this45 = this;
+          var _this57 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this45.Theme = data;
+            _this57.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this46 = this;
+          var _this58 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this46.Curated = data;
+            _this58.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this47 = this;
+          var _this59 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this47.Festival = data;
+            _this59.Festival = data;
           });
+        }
+      }, {
+        key: "Ornmetal",
+        value: function Ornmetal(pk) {
+          console.log(pk);
+
+          if (document.getElementById('zero').checked) {
+            document.getElementById('zero').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.metalb.push(pk);
+            this.metala = [];
+            console.log(this.metala);
+            console.log(this.metalb);
+          } else {
+            this.metalb.push(pk);
+            console.log(this.metala);
+            console.log(this.metalb);
+          }
+        }
+      }, {
+        key: "zero",
+        value: function zero() {
+          if (document.getElementById('zero').checked) {
+            if (this.metalb.length == 0) {
+              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.metalb.sort();
+
+              for (var i = 0; i < this.metalb.length; i++) {
+                if (this.metalb[i] !== prev) {
+                  a.push(this.metalb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.metalb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.metala.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('metala', this.metala);
+            }
+          } else {
+            this.metala = [];
+            console.log('metala', this.metala);
+          }
         }
       }, {
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion.push(pk);
-          console.log(this.asion);
+
+          if (document.getElementById('1').checked) {
+            document.getElementById('1').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asian.push(pk);
+            this.asion = [];
+            console.log(this.asion);
+            console.log(this.asian);
+          } else {
+            this.asian.push(pk);
+            console.log(this.asion);
+            console.log(this.asian);
+          }
+        }
+      }, {
+        key: "one",
+        value: function one() {
+          if (document.getElementById('1').checked) {
+            if (this.asian.length == 0) {
+              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asian.sort();
+
+              for (var i = 0; i < this.asian.length; i++) {
+                if (this.asian[i] !== prev) {
+                  a.push(this.asian[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asian[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asion.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asion', this.asion);
+            }
+          } else {
+            this.asion = [];
+            console.log('asion', this.asion);
+          }
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan.push(k);
-          console.log(this.asan);
+
+          if (document.getElementById('2').checked) {
+            document.getElementById('2').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asin.push(k);
+            this.asan = [];
+            console.log(this.asan);
+            console.log(this.asin);
+          } else {
+            this.asin.push(k);
+            console.log(this.asan);
+            console.log(this.asin);
+          }
+        }
+      }, {
+        key: "two",
+        value: function two() {
+          if (document.getElementById('2').checked) {
+            if (this.asin.length == 0) {
+              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asin.sort();
+
+              for (var i = 0; i < this.asin.length; i++) {
+                if (this.asin[i] !== prev) {
+                  a.push(this.asin[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asin[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asan.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asan', this.asan);
+            }
+          } else {
+            this.asan = [];
+            console.log('asan', this.asan);
+          }
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea.push(k);
-          console.log(this.themea);
-          console.log(this.themeb);
+
+          if (document.getElementById('3').checked) {
+            document.getElementById('3').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.themeb.push(k);
+            this.themea = [];
+            console.log(this.themea);
+            console.log(this.themeb);
+          } else {
+            this.themeb.push(k);
+            console.log(this.themea);
+            console.log(this.themeb);
+          }
+        }
+      }, {
+        key: "three",
+        value: function three() {
+          if (document.getElementById('3').checked) {
+            if (this.themeb.length == 0) {
+              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.themeb.sort();
+
+              for (var i = 0; i < this.themeb.length; i++) {
+                if (this.themeb[i] !== prev) {
+                  a.push(this.themeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.themeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.themea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('themea', this.themea);
+            }
+          } else {
+            this.themea = [];
+            console.log('themea', this.themea);
+          }
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda.push(k);
-          console.log(this.curateda);
-          console.log(this.curatedb);
+
+          if (document.getElementById('4').checked) {
+            document.getElementById('4').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.curatedb.push(k);
+            this.curateda = [];
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          } else {
+            this.curatedb.push(k);
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          }
+        }
+      }, {
+        key: "four",
+        value: function four() {
+          if (document.getElementById('4').checked) {
+            if (this.curatedb.length == 0) {
+              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.curatedb.sort();
+
+              for (var i = 0; i < this.curatedb.length; i++) {
+                if (this.curatedb[i] !== prev) {
+                  a.push(this.curatedb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.curatedb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.curateda.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('curateda', this.curateda);
+            }
+          } else {
+            this.curateda = [];
+            console.log('curateda', this.curateda);
+          }
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia.push(k);
-          console.log(this.festia);
-          console.log(this.festib);
+
+          if (document.getElementById('5').checked) {
+            document.getElementById('5').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.festib.push(k);
+            this.festia = [];
+            console.log(this.festia);
+            console.log(this.festib);
+          } else {
+            this.festib.push(k);
+            console.log(this.festia);
+            console.log(this.festib);
+          }
+        }
+      }, {
+        key: "five",
+        value: function five() {
+          if (document.getElementById('5').checked) {
+            if (this.festib.length == 0) {
+              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.festib.sort();
+
+              for (var i = 0; i < this.festib.length; i++) {
+                if (this.festib[i] !== prev) {
+                  a.push(this.festib[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.festib[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.festia.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('festia', this.festia);
+            }
+          } else {
+            this.festia = [];
+            console.log('festia', this.festia);
+          }
         }
       }, {
         key: "handleFileInput",
@@ -5456,9 +8189,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_NECKLACE_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
-          this.userService.necklace(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_NECKLACE_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
-            console.log('done', data);
-          });
+          // tslint:disable-next-line: max-line-length
+          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
+            alert('check the confirmation checkboxex to proceed');
+          } else {
+            this.userService.necklace(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_NECKLACE_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+              console.log('done', data);
+
+              if (data.status == 201) {// this.router.navigate(['./ornamentread']);
+              }
+            });
+          }
         }
       }]);
 
@@ -5468,6 +8209,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     NecklaceComponent.ctorParameters = function () {
       return [{
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }];
     };
 
@@ -5540,14 +8283,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../../shared/user.service */
     "./src/app/shared/user.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var OrnaearringtypeComponent =
     /*#__PURE__*/
     function () {
-      function OrnaearringtypeComponent(userService) {
+      function OrnaearringtypeComponent(userService, router) {
         _classCallCheck(this, OrnaearringtypeComponent);
 
         this.userService = userService;
+        this.router = router;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -5561,16 +8311,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.Theme = {};
         this.Curated = {};
         this.Festival = {};
+        this.Metal = {};
         this.asion = [];
-        this.asian = [5];
+        this.asian = [];
         this.asan = [];
-        this.asin = [3];
+        this.asin = [];
         this.themea = [];
-        this.themeb = [7];
+        this.themeb = [];
         this.curateda = [];
-        this.curatedb = [6];
+        this.curatedb = [];
         this.festia = [];
-        this.festib = [8];
+        this.festib = [];
+        this.metala = [];
+        this.metalb = [];
       }
 
       _createClass(OrnaearringtypeComponent, [{
@@ -5582,6 +8335,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.theme();
           this.curatedby();
           this.festival();
+          this.metal();
         }
       }, {
         key: "read",
@@ -5591,89 +8345,430 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        key: "metal",
+        value: function metal() {
+          var _this60 = this;
+
+          this.userService.ornmetal().subscribe(function (data) {
+            console.log(data);
+            _this60.Metal = data;
+          });
+        }
+      }, {
         key: "occasion",
         value: function occasion() {
-          var _this48 = this;
+          var _this61 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this48.Occasion = data;
+            _this61.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this49 = this;
+          var _this62 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this49.Gift = data;
+            _this62.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this50 = this;
+          var _this63 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this50.Theme = data;
+            _this63.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this51 = this;
+          var _this64 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this51.Curated = data;
+            _this64.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this52 = this;
+          var _this65 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this52.Festival = data;
+            _this65.Festival = data;
           });
+        }
+      }, {
+        key: "Ornmetal",
+        value: function Ornmetal(pk) {
+          console.log(pk);
+
+          if (document.getElementById('zero').checked) {
+            document.getElementById('zero').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.metalb.push(pk);
+            this.metala = [];
+            console.log(this.metala);
+            console.log(this.metalb);
+          } else {
+            this.metalb.push(pk);
+            console.log(this.metala);
+            console.log(this.metalb);
+          }
+        }
+      }, {
+        key: "zero",
+        value: function zero() {
+          if (document.getElementById('zero').checked) {
+            if (this.metalb.length == 0) {
+              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.metalb.sort();
+
+              for (var i = 0; i < this.metalb.length; i++) {
+                if (this.metalb[i] !== prev) {
+                  a.push(this.metalb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.metalb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.metala.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('metala', this.metala);
+            }
+          } else {
+            this.metala = [];
+            console.log('metala', this.metala);
+          }
         }
       }, {
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion.push(pk);
-          console.log(this.asion);
+
+          if (document.getElementById('1').checked) {
+            document.getElementById('1').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asian.push(pk);
+            this.asion = [];
+            console.log(this.asion);
+            console.log(this.asian);
+          } else {
+            this.asian.push(pk);
+            console.log(this.asion);
+            console.log(this.asian);
+          }
+        }
+      }, {
+        key: "one",
+        value: function one() {
+          if (document.getElementById('1').checked) {
+            if (this.asian.length == 0) {
+              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asian.sort();
+
+              for (var i = 0; i < this.asian.length; i++) {
+                if (this.asian[i] !== prev) {
+                  a.push(this.asian[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asian[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asion.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asion', this.asion);
+            }
+          } else {
+            this.asion = [];
+            console.log('asion', this.asion);
+          }
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan.push(k);
-          console.log(this.asan);
+
+          if (document.getElementById('2').checked) {
+            document.getElementById('2').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asin.push(k);
+            this.asan = [];
+            console.log(this.asan);
+            console.log(this.asin);
+          } else {
+            this.asin.push(k);
+            console.log(this.asan);
+            console.log(this.asin);
+          }
+        }
+      }, {
+        key: "two",
+        value: function two() {
+          if (document.getElementById('2').checked) {
+            if (this.asin.length == 0) {
+              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asin.sort();
+
+              for (var i = 0; i < this.asin.length; i++) {
+                if (this.asin[i] !== prev) {
+                  a.push(this.asin[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asin[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asan.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asan', this.asan);
+            }
+          } else {
+            this.asan = [];
+            console.log('asan', this.asan);
+          }
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea.push(k);
-          console.log(this.themea);
+
+          if (document.getElementById('3').checked) {
+            document.getElementById('3').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.themeb.push(k);
+            this.themea = [];
+            console.log(this.themea);
+            console.log(this.themeb);
+          } else {
+            this.themeb.push(k);
+            console.log(this.themea);
+            console.log(this.themeb);
+          }
+        }
+      }, {
+        key: "three",
+        value: function three() {
+          if (document.getElementById('3').checked) {
+            if (this.themeb.length == 0) {
+              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.themeb.sort();
+
+              for (var i = 0; i < this.themeb.length; i++) {
+                if (this.themeb[i] !== prev) {
+                  a.push(this.themeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.themeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.themea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('themea', this.themea);
+            }
+          } else {
+            this.themea = [];
+            console.log('themea', this.themea);
+          }
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda.push(k);
-          console.log(this.curateda);
+
+          if (document.getElementById('4').checked) {
+            document.getElementById('4').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.curatedb.push(k);
+            this.curateda = [];
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          } else {
+            this.curatedb.push(k);
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          }
+        }
+      }, {
+        key: "four",
+        value: function four() {
+          if (document.getElementById('4').checked) {
+            if (this.curatedb.length == 0) {
+              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.curatedb.sort();
+
+              for (var i = 0; i < this.curatedb.length; i++) {
+                if (this.curatedb[i] !== prev) {
+                  a.push(this.curatedb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.curatedb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.curateda.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('curateda', this.curateda);
+            }
+          } else {
+            this.curateda = [];
+            console.log('curateda', this.curateda);
+          }
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia.push(k);
-          console.log(this.festia);
+
+          if (document.getElementById('5').checked) {
+            document.getElementById('5').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.festib.push(k);
+            this.festia = [];
+            console.log(this.festia);
+            console.log(this.festib);
+          } else {
+            this.festib.push(k);
+            console.log(this.festia);
+            console.log(this.festib);
+          }
+        }
+      }, {
+        key: "five",
+        value: function five() {
+          if (document.getElementById('5').checked) {
+            if (this.festib.length == 0) {
+              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.festib.sort();
+
+              for (var i = 0; i < this.festib.length; i++) {
+                if (this.festib[i] !== prev) {
+                  a.push(this.festib[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.festib[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.festia.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('festia', this.festia);
+            }
+          } else {
+            this.festia = [];
+            console.log('festia', this.festia);
+          }
         }
       }, {
         key: "handleFileInput",
@@ -5698,9 +8793,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_EARRING_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
-          this.userService.ear(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_EARRING_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
-            console.log('done', data);
-          });
+          // tslint:disable-next-line: max-line-length
+          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
+            alert('check the confirmation checkboxex to proceed');
+          } else {
+            this.userService.ear(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_EARRING_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+              console.log('done', data);
+
+              if (data.status == 201) {// this.router.navigate(['./ornamentread']);
+              }
+            });
+          }
         }
       }]);
 
@@ -5710,6 +8813,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     OrnaearringtypeComponent.ctorParameters = function () {
       return [{
         type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }];
     };
 
@@ -5782,14 +8887,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../../shared/user.service */
     "./src/app/shared/user.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var OrnamentnosepinComponent =
     /*#__PURE__*/
     function () {
-      function OrnamentnosepinComponent(userService) {
+      function OrnamentnosepinComponent(userService, router) {
         _classCallCheck(this, OrnamentnosepinComponent);
 
         this.userService = userService;
+        this.router = router;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -5803,16 +8915,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.Theme = {};
         this.Curated = {};
         this.Festival = {};
+        this.Metal = {};
         this.asion = [];
-        this.asian = [5];
+        this.asian = [];
         this.asan = [];
-        this.asin = [3];
+        this.asin = [];
         this.themea = [];
-        this.themeb = [7];
+        this.themeb = [];
         this.curateda = [];
-        this.curatedb = [6];
+        this.curatedb = [];
         this.festia = [];
-        this.festib = [8];
+        this.festib = [];
+        this.metala = [];
+        this.metalb = [];
       }
 
       _createClass(OrnamentnosepinComponent, [{
@@ -5824,6 +8939,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.theme();
           this.curatedby();
           this.festival();
+          this.metal();
         }
       }, {
         key: "read",
@@ -5833,92 +8949,430 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        key: "metal",
+        value: function metal() {
+          var _this66 = this;
+
+          this.userService.ornmetal().subscribe(function (data) {
+            console.log(data);
+            _this66.Metal = data;
+          });
+        }
+      }, {
         key: "occasion",
         value: function occasion() {
-          var _this53 = this;
+          var _this67 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this53.Occasion = data;
+            _this67.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this54 = this;
+          var _this68 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this54.Gift = data;
+            _this68.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this55 = this;
+          var _this69 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this55.Theme = data;
+            _this69.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this56 = this;
+          var _this70 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this56.Curated = data;
+            _this70.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this57 = this;
+          var _this71 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this57.Festival = data;
+            _this71.Festival = data;
           });
+        }
+      }, {
+        key: "Ornmetal",
+        value: function Ornmetal(pk) {
+          console.log(pk);
+
+          if (document.getElementById('zero').checked) {
+            document.getElementById('zero').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.metalb.push(pk);
+            this.metala = [];
+            console.log(this.metala);
+            console.log(this.metalb);
+          } else {
+            this.metalb.push(pk);
+            console.log(this.metala);
+            console.log(this.metalb);
+          }
+        }
+      }, {
+        key: "zero",
+        value: function zero() {
+          if (document.getElementById('zero').checked) {
+            if (this.metalb.length == 0) {
+              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.metalb.sort();
+
+              for (var i = 0; i < this.metalb.length; i++) {
+                if (this.metalb[i] !== prev) {
+                  a.push(this.metalb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.metalb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.metala.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('metala', this.metala);
+            }
+          } else {
+            this.metala = [];
+            console.log('metala', this.metala);
+          }
         }
       }, {
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion.push(pk);
-          console.log(this.asion);
+
+          if (document.getElementById('1').checked) {
+            document.getElementById('1').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asian.push(pk);
+            this.asion = [];
+            console.log(this.asion);
+            console.log(this.asian);
+          } else {
+            this.asian.push(pk);
+            console.log(this.asion);
+            console.log(this.asian);
+          }
+        }
+      }, {
+        key: "one",
+        value: function one() {
+          if (document.getElementById('1').checked) {
+            if (this.asian.length == 0) {
+              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asian.sort();
+
+              for (var i = 0; i < this.asian.length; i++) {
+                if (this.asian[i] !== prev) {
+                  a.push(this.asian[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asian[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asion.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asion', this.asion);
+            }
+          } else {
+            this.asion = [];
+            console.log('asion', this.asion);
+          }
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan.push(k);
-          console.log(this.asan);
+
+          if (document.getElementById('2').checked) {
+            document.getElementById('2').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asin.push(k);
+            this.asan = [];
+            console.log(this.asan);
+            console.log(this.asin);
+          } else {
+            this.asin.push(k);
+            console.log(this.asan);
+            console.log(this.asin);
+          }
+        }
+      }, {
+        key: "two",
+        value: function two() {
+          if (document.getElementById('2').checked) {
+            if (this.asin.length == 0) {
+              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asin.sort();
+
+              for (var i = 0; i < this.asin.length; i++) {
+                if (this.asin[i] !== prev) {
+                  a.push(this.asin[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asin[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asan.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asan', this.asan);
+            }
+          } else {
+            this.asan = [];
+            console.log('asan', this.asan);
+          }
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea.push(k);
-          console.log(this.themea);
-          console.log(this.themeb);
+
+          if (document.getElementById('3').checked) {
+            document.getElementById('3').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.themeb.push(k);
+            this.themea = [];
+            console.log(this.themea);
+            console.log(this.themeb);
+          } else {
+            this.themeb.push(k);
+            console.log(this.themea);
+            console.log(this.themeb);
+          }
+        }
+      }, {
+        key: "three",
+        value: function three() {
+          if (document.getElementById('3').checked) {
+            if (this.themeb.length == 0) {
+              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.themeb.sort();
+
+              for (var i = 0; i < this.themeb.length; i++) {
+                if (this.themeb[i] !== prev) {
+                  a.push(this.themeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.themeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.themea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('themea', this.themea);
+            }
+          } else {
+            this.themea = [];
+            console.log('themea', this.themea);
+          }
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda.push(k);
-          console.log(this.curateda);
-          console.log(this.curatedb);
+
+          if (document.getElementById('4').checked) {
+            document.getElementById('4').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.curatedb.push(k);
+            this.curateda = [];
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          } else {
+            this.curatedb.push(k);
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          }
+        }
+      }, {
+        key: "four",
+        value: function four() {
+          if (document.getElementById('4').checked) {
+            if (this.curatedb.length == 0) {
+              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.curatedb.sort();
+
+              for (var i = 0; i < this.curatedb.length; i++) {
+                if (this.curatedb[i] !== prev) {
+                  a.push(this.curatedb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.curatedb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.curateda.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('curateda', this.curateda);
+            }
+          } else {
+            this.curateda = [];
+            console.log('curateda', this.curateda);
+          }
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia.push(k);
-          console.log(this.festia);
-          console.log(this.festib);
+
+          if (document.getElementById('5').checked) {
+            document.getElementById('5').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.festib.push(k);
+            this.festia = [];
+            console.log(this.festia);
+            console.log(this.festib);
+          } else {
+            this.festib.push(k);
+            console.log(this.festia);
+            console.log(this.festib);
+          }
+        }
+      }, {
+        key: "five",
+        value: function five() {
+          if (document.getElementById('5').checked) {
+            if (this.festib.length == 0) {
+              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.festib.sort();
+
+              for (var i = 0; i < this.festib.length; i++) {
+                if (this.festib[i] !== prev) {
+                  a.push(this.festib[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.festib[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.festia.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('festia', this.festia);
+            }
+          } else {
+            this.festia = [];
+            console.log('festia', this.festia);
+          }
         }
       }, {
         key: "handleFileInput",
@@ -5943,9 +9397,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_NOSEPIN_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
-          this.userService.nosepin(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_NOSEPIN_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
-            console.log('done', data);
-          });
+          // tslint:disable-next-line: max-line-length
+          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
+            alert('check the confirmation checkboxex to proceed');
+          } else {
+            this.userService.nosepin(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_NOSEPIN_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+              console.log('done', data);
+
+              if (data.status === 201) {// this.router.navigate(['./ornamentread']);
+              }
+            });
+          }
         }
       }]);
 
@@ -5955,6 +9417,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     OrnamentnosepinComponent.ctorParameters = function () {
       return [{
         type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }];
     };
 
@@ -6027,14 +9491,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../../shared/user.service */
     "./src/app/shared/user.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var OrnaringtypeComponent =
     /*#__PURE__*/
     function () {
-      function OrnaringtypeComponent(userService) {
+      function OrnaringtypeComponent(userService, router) {
         _classCallCheck(this, OrnaringtypeComponent);
 
         this.userService = userService;
+        this.router = router;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -6049,18 +9520,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.Curated = {};
         this.Festival = {};
         this.Ringsize = {};
+        this.Metal = {};
         this.asion = [];
-        this.asian = [5];
+        this.asian = [];
         this.asan = [];
-        this.asin = [3];
+        this.asin = [];
         this.themea = [];
-        this.themeb = [7];
+        this.themeb = [];
         this.curateda = [];
-        this.curatedb = [6];
+        this.curatedb = [];
         this.festia = [];
-        this.festib = [8];
+        this.festib = [];
         this.rsizea = [];
-        this.rsizeb = [8];
+        this.rsizeb = [];
+        this.metala = [];
+        this.metalb = [];
       }
 
       _createClass(OrnaringtypeComponent, [{
@@ -6073,7 +9547,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.curatedby();
           this.festival();
           this.ringsize();
-        }
+          this.metal();
+        } // arr=[1,1,2,1,5,8,8,8,4,4,8,6,6,6,8,7]
+        // var a = [], b = [], prev,final=[];
+
       }, {
         key: "read",
         value: function read() {
@@ -6082,110 +9559,501 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        key: "metal",
+        value: function metal() {
+          var _this72 = this;
+
+          this.userService.ornmetal().subscribe(function (data) {
+            console.log(data);
+            _this72.Metal = data;
+          });
+        }
+      }, {
         key: "occasion",
         value: function occasion() {
-          var _this58 = this;
+          var _this73 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this58.Occasion = data;
+            _this73.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this59 = this;
+          var _this74 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this59.Gift = data;
+            _this74.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this60 = this;
+          var _this75 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this60.Theme = data;
+            _this75.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this61 = this;
+          var _this76 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this61.Curated = data;
+            _this76.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this62 = this;
+          var _this77 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this62.Festival = data;
+            _this77.Festival = data;
           });
         }
       }, {
         key: "ringsize",
         value: function ringsize() {
-          var _this63 = this;
+          var _this78 = this;
 
           this.userService.ornRsize().subscribe(function (data) {
             console.log(data);
-            _this63.Ringsize = data;
+            _this78.Ringsize = data;
           });
+        }
+      }, {
+        key: "Ornmetal",
+        value: function Ornmetal(pk) {
+          console.log(pk);
+
+          if (document.getElementById('zero').checked) {
+            document.getElementById('zero').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.metalb.push(pk);
+            this.metala = [];
+            console.log(this.metala);
+            console.log(this.metalb);
+          } else {
+            this.metalb.push(pk);
+            console.log(this.metala);
+            console.log(this.metalb);
+          }
+        }
+      }, {
+        key: "zero",
+        value: function zero() {
+          if (document.getElementById('zero').checked) {
+            if (this.metalb.length == 0) {
+              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.metalb.sort();
+
+              for (var i = 0; i < this.metalb.length; i++) {
+                if (this.metalb[i] !== prev) {
+                  a.push(this.metalb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.metalb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.metala.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('metala', this.metala);
+            }
+          } else {
+            this.metala = [];
+            console.log('metala', this.metala);
+          }
         }
       }, {
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion.push(pk);
-          console.log(this.asion);
+
+          if (document.getElementById('1').checked) {
+            document.getElementById('1').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asian.push(pk);
+            this.asion = [];
+            console.log(this.asion);
+            console.log(this.asian);
+          } else {
+            this.asian.push(pk);
+            console.log(this.asion);
+            console.log(this.asian);
+          }
+        }
+      }, {
+        key: "one",
+        value: function one() {
+          if (document.getElementById('1').checked) {
+            if (this.asian.length == 0) {
+              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asian.sort();
+
+              for (var i = 0; i < this.asian.length; i++) {
+                if (this.asian[i] !== prev) {
+                  a.push(this.asian[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asian[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asion.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asion', this.asion);
+            }
+          } else {
+            this.asion = [];
+            console.log('asion', this.asion);
+          }
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan.push(k);
-          console.log(this.asan);
+
+          if (document.getElementById('2').checked) {
+            document.getElementById('2').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asin.push(k);
+            this.asan = [];
+            console.log(this.asan);
+            console.log(this.asin);
+          } else {
+            this.asin.push(k);
+            console.log(this.asan);
+            console.log(this.asin);
+          }
+        }
+      }, {
+        key: "two",
+        value: function two() {
+          if (document.getElementById('2').checked) {
+            if (this.asin.length == 0) {
+              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asin.sort();
+
+              for (var i = 0; i < this.asin.length; i++) {
+                if (this.asin[i] !== prev) {
+                  a.push(this.asin[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asin[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asan.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asan', this.asan);
+            }
+          } else {
+            this.asan = [];
+            console.log('asan', this.asan);
+          }
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea.push(k);
-          console.log(this.themea);
-          console.log(this.themeb);
+
+          if (document.getElementById('3').checked) {
+            document.getElementById('3').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.themeb.push(k);
+            this.themea = [];
+            console.log(this.themea);
+            console.log(this.themeb);
+          } else {
+            this.themeb.push(k);
+            console.log(this.themea);
+            console.log(this.themeb);
+          }
+        }
+      }, {
+        key: "three",
+        value: function three() {
+          if (document.getElementById('3').checked) {
+            if (this.themeb.length == 0) {
+              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.themeb.sort();
+
+              for (var i = 0; i < this.themeb.length; i++) {
+                if (this.themeb[i] !== prev) {
+                  a.push(this.themeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.themeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.themea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('themea', this.themea);
+            }
+          } else {
+            this.themea = [];
+            console.log('themea', this.themea);
+          }
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda.push(k);
-          console.log(this.curateda);
-          console.log(this.curatedb);
+
+          if (document.getElementById('4').checked) {
+            document.getElementById('4').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.curatedb.push(k);
+            this.curateda = [];
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          } else {
+            this.curatedb.push(k);
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          }
+        }
+      }, {
+        key: "four",
+        value: function four() {
+          if (document.getElementById('4').checked) {
+            if (this.curatedb.length == 0) {
+              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.curatedb.sort();
+
+              for (var i = 0; i < this.curatedb.length; i++) {
+                if (this.curatedb[i] !== prev) {
+                  a.push(this.curatedb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.curatedb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.curateda.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('curateda', this.curateda);
+            }
+          } else {
+            this.curateda = [];
+            console.log('curateda', this.curateda);
+          }
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia.push(k);
-          console.log(this.festia);
-          console.log(this.festib);
+
+          if (document.getElementById('5').checked) {
+            document.getElementById('5').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.festib.push(k);
+            this.festia = [];
+            console.log(this.festia);
+            console.log(this.festib);
+          } else {
+            this.festib.push(k);
+            console.log(this.festia);
+            console.log(this.festib);
+          }
+        }
+      }, {
+        key: "five",
+        value: function five() {
+          if (document.getElementById('5').checked) {
+            if (this.festib.length == 0) {
+              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.festib.sort();
+
+              for (var i = 0; i < this.festib.length; i++) {
+                if (this.festib[i] !== prev) {
+                  a.push(this.festib[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.festib[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.festia.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('festia', this.festia);
+            }
+          } else {
+            this.festia = [];
+            console.log('festia', this.festia);
+          }
         }
       }, {
         key: "Size",
         value: function Size(k) {
           console.log(k);
-          this.rsizea.push(k);
-          console.log(this.rsizea);
-          console.log(this.rsizeb);
+
+          if (document.getElementById('6').checked) {
+            document.getElementById('6').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.rsizeb.push(k);
+            this.rsizea = [];
+            console.log(this.rsizea);
+            console.log(this.rsizeb);
+          } else {
+            this.rsizeb.push(k);
+            console.log(this.rsizea);
+            console.log(this.rsizeb);
+          }
+        }
+      }, {
+        key: "six",
+        value: function six() {
+          if (document.getElementById('6').checked) {
+            if (this.rsizeb.length == 0) {
+              document.getElementById('6').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.rsizeb.sort();
+
+              for (var i = 0; i < this.rsizeb.length; i++) {
+                if (this.rsizeb[i] !== prev) {
+                  a.push(this.rsizeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.rsizeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.rsizea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('bsizea', this.rsizea);
+            }
+          } else {
+            this.rsizea = [];
+            console.log('bsizea', this.rsizea);
+          }
         }
       }, {
         key: "handleFileInput",
@@ -6210,9 +10078,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_RING_SIZE, ORNAMENT_RING_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
-          this.userService.mli(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.rsizea, this.rsizeb, ORNAMENT_RING_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
-            console.log('done', data);
-          });
+          // tslint:disable-next-line: max-line-length
+          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
+            alert('check the confirmation checkboxex to proceed');
+          } else {
+            this.userService.mli(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.rsizea, this.rsizeb, ORNAMENT_RING_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+              console.log('done', data);
+
+              if (data.status === 201) {// this.router.navigate(['./ornamentread']);
+              }
+            });
+          }
         }
       }]);
 
@@ -6222,6 +10098,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     OrnaringtypeComponent.ctorParameters = function () {
       return [{
         type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }];
     };
 
@@ -6294,14 +10172,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! src/app/shared/user.service */
     "./src/app/shared/user.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var PendantComponent =
     /*#__PURE__*/
     function () {
-      function PendantComponent(userService) {
+      function PendantComponent(userService, router) {
         _classCallCheck(this, PendantComponent);
 
         this.userService = userService;
+        this.router = router;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -6315,16 +10200,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.Theme = {};
         this.Curated = {};
         this.Festival = {};
+        this.Metal = {};
         this.asion = [];
-        this.asian = [5];
+        this.asian = [];
         this.asan = [];
-        this.asin = [3];
+        this.asin = [];
         this.themea = [];
-        this.themeb = [7];
+        this.themeb = [];
         this.curateda = [];
-        this.curatedb = [6];
+        this.curatedb = [];
         this.festia = [];
-        this.festib = [8];
+        this.festib = [];
+        this.metala = [];
+        this.metalb = [];
       }
 
       _createClass(PendantComponent, [{
@@ -6336,6 +10224,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.theme();
           this.curatedby();
           this.festival();
+          this.metal();
         }
       }, {
         key: "read",
@@ -6345,92 +10234,430 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        key: "metal",
+        value: function metal() {
+          var _this79 = this;
+
+          this.userService.ornmetal().subscribe(function (data) {
+            console.log(data);
+            _this79.Metal = data;
+          });
+        }
+      }, {
         key: "occasion",
         value: function occasion() {
-          var _this64 = this;
+          var _this80 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this64.Occasion = data;
+            _this80.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this65 = this;
+          var _this81 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this65.Gift = data;
+            _this81.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this66 = this;
+          var _this82 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this66.Theme = data;
+            _this82.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this67 = this;
+          var _this83 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this67.Curated = data;
+            _this83.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this68 = this;
+          var _this84 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this68.Festival = data;
+            _this84.Festival = data;
           });
+        }
+      }, {
+        key: "Ornmetal",
+        value: function Ornmetal(pk) {
+          console.log(pk);
+
+          if (document.getElementById('zero').checked) {
+            document.getElementById('zero').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.metalb.push(pk);
+            this.metala = [];
+            console.log(this.metala);
+            console.log(this.metalb);
+          } else {
+            this.metalb.push(pk);
+            console.log(this.metala);
+            console.log(this.metalb);
+          }
+        }
+      }, {
+        key: "zero",
+        value: function zero() {
+          if (document.getElementById('zero').checked) {
+            if (this.metalb.length == 0) {
+              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.metalb.sort();
+
+              for (var i = 0; i < this.metalb.length; i++) {
+                if (this.metalb[i] !== prev) {
+                  a.push(this.metalb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.metalb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.metala.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('metala', this.metala);
+            }
+          } else {
+            this.metala = [];
+            console.log('metala', this.metala);
+          }
         }
       }, {
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion.push(pk);
-          console.log(this.asion);
+
+          if (document.getElementById('1').checked) {
+            document.getElementById('1').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asian.push(pk);
+            this.asion = [];
+            console.log(this.asion);
+            console.log(this.asian);
+          } else {
+            this.asian.push(pk);
+            console.log(this.asion);
+            console.log(this.asian);
+          }
+        }
+      }, {
+        key: "one",
+        value: function one() {
+          if (document.getElementById('1').checked) {
+            if (this.asian.length == 0) {
+              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asian.sort();
+
+              for (var i = 0; i < this.asian.length; i++) {
+                if (this.asian[i] !== prev) {
+                  a.push(this.asian[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asian[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asion.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asion', this.asion);
+            }
+          } else {
+            this.asion = [];
+            console.log('asion', this.asion);
+          }
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan.push(k);
-          console.log(this.asan);
+
+          if (document.getElementById('2').checked) {
+            document.getElementById('2').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asin.push(k);
+            this.asan = [];
+            console.log(this.asan);
+            console.log(this.asin);
+          } else {
+            this.asin.push(k);
+            console.log(this.asan);
+            console.log(this.asin);
+          }
+        }
+      }, {
+        key: "two",
+        value: function two() {
+          if (document.getElementById('2').checked) {
+            if (this.asin.length == 0) {
+              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asin.sort();
+
+              for (var i = 0; i < this.asin.length; i++) {
+                if (this.asin[i] !== prev) {
+                  a.push(this.asin[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asin[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asan.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asan', this.asan);
+            }
+          } else {
+            this.asan = [];
+            console.log('asan', this.asan);
+          }
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea.push(k);
-          console.log(this.themea);
-          console.log(this.themeb);
+
+          if (document.getElementById('3').checked) {
+            document.getElementById('3').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.themeb.push(k);
+            this.themea = [];
+            console.log(this.themea);
+            console.log(this.themeb);
+          } else {
+            this.themeb.push(k);
+            console.log(this.themea);
+            console.log(this.themeb);
+          }
+        }
+      }, {
+        key: "three",
+        value: function three() {
+          if (document.getElementById('3').checked) {
+            if (this.themeb.length == 0) {
+              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.themeb.sort();
+
+              for (var i = 0; i < this.themeb.length; i++) {
+                if (this.themeb[i] !== prev) {
+                  a.push(this.themeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.themeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.themea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('themea', this.themea);
+            }
+          } else {
+            this.themea = [];
+            console.log('themea', this.themea);
+          }
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda.push(k);
-          console.log(this.curateda);
-          console.log(this.curatedb);
+
+          if (document.getElementById('4').checked) {
+            document.getElementById('4').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.curatedb.push(k);
+            this.curateda = [];
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          } else {
+            this.curatedb.push(k);
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          }
+        }
+      }, {
+        key: "four",
+        value: function four() {
+          if (document.getElementById('4').checked) {
+            if (this.curatedb.length == 0) {
+              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.curatedb.sort();
+
+              for (var i = 0; i < this.curatedb.length; i++) {
+                if (this.curatedb[i] !== prev) {
+                  a.push(this.curatedb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.curatedb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.curateda.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('curateda', this.curateda);
+            }
+          } else {
+            this.curateda = [];
+            console.log('curateda', this.curateda);
+          }
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia.push(k);
-          console.log(this.festia);
-          console.log(this.festib);
+
+          if (document.getElementById('5').checked) {
+            document.getElementById('5').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.festib.push(k);
+            this.festia = [];
+            console.log(this.festia);
+            console.log(this.festib);
+          } else {
+            this.festib.push(k);
+            console.log(this.festia);
+            console.log(this.festib);
+          }
+        }
+      }, {
+        key: "five",
+        value: function five() {
+          if (document.getElementById('5').checked) {
+            if (this.festib.length == 0) {
+              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.festib.sort();
+
+              for (var i = 0; i < this.festib.length; i++) {
+                if (this.festib[i] !== prev) {
+                  a.push(this.festib[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.festib[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.festia.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('festia', this.festia);
+            }
+          } else {
+            this.festia = [];
+            console.log('festia', this.festia);
+          }
         }
       }, {
         key: "handleFileInput",
@@ -6455,9 +10682,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_PENDANT_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
-          this.userService.pendant(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
-            console.log('done', data);
-          });
+          // tslint:disable-next-line: max-line-length
+          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
+            alert('check the confirmation checkboxex to proceed');
+          } else {
+            this.userService.pendant(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+              console.log('done', data);
+
+              if (data.status === 201) {// this.router.navigate(['./ornamentread']);
+              }
+            });
+          }
         }
       }]);
 
@@ -6467,6 +10702,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     PendantComponent.ctorParameters = function () {
       return [{
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }];
     };
 
@@ -6539,14 +10776,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../../shared/user.service */
     "./src/app/shared/user.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var PendantearringtypeComponent =
     /*#__PURE__*/
     function () {
-      function PendantearringtypeComponent(userService) {
+      function PendantearringtypeComponent(userService, router) {
         _classCallCheck(this, PendantearringtypeComponent);
 
         this.userService = userService;
+        this.router = router;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -6560,16 +10804,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.Theme = {};
         this.Curated = {};
         this.Festival = {};
+        this.Metal = {};
         this.asion = [];
-        this.asian = [5];
+        this.asian = [];
         this.asan = [];
-        this.asin = [3];
+        this.asin = [];
         this.themea = [];
-        this.themeb = [7];
+        this.themeb = [];
         this.curateda = [];
-        this.curatedb = [6];
+        this.curatedb = [];
         this.festia = [];
-        this.festib = [8];
+        this.festib = [];
+        this.metala = [];
+        this.metalb = [];
       }
 
       _createClass(PendantearringtypeComponent, [{
@@ -6581,6 +10828,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.theme();
           this.curatedby();
           this.festival();
+          this.metal();
         }
       }, {
         key: "read",
@@ -6590,92 +10838,430 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        key: "metal",
+        value: function metal() {
+          var _this85 = this;
+
+          this.userService.ornmetal().subscribe(function (data) {
+            console.log(data);
+            _this85.Metal = data;
+          });
+        }
+      }, {
         key: "occasion",
         value: function occasion() {
-          var _this69 = this;
+          var _this86 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this69.Occasion = data;
+            _this86.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this70 = this;
+          var _this87 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this70.Gift = data;
+            _this87.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this71 = this;
+          var _this88 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this71.Theme = data;
+            _this88.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this72 = this;
+          var _this89 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this72.Curated = data;
+            _this89.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this73 = this;
+          var _this90 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this73.Festival = data;
+            _this90.Festival = data;
           });
+        }
+      }, {
+        key: "Ornmetal",
+        value: function Ornmetal(pk) {
+          console.log(pk);
+
+          if (document.getElementById('zero').checked) {
+            document.getElementById('zero').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.metalb.push(pk);
+            this.metala = [];
+            console.log(this.metala);
+            console.log(this.metalb);
+          } else {
+            this.metalb.push(pk);
+            console.log(this.metala);
+            console.log(this.metalb);
+          }
+        }
+      }, {
+        key: "zero",
+        value: function zero() {
+          if (document.getElementById('zero').checked) {
+            if (this.metalb.length == 0) {
+              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.metalb.sort();
+
+              for (var i = 0; i < this.metalb.length; i++) {
+                if (this.metalb[i] !== prev) {
+                  a.push(this.metalb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.metalb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.metala.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('metala', this.metala);
+            }
+          } else {
+            this.metala = [];
+            console.log('metala', this.metala);
+          }
         }
       }, {
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion.push(pk);
-          console.log(this.asion);
+
+          if (document.getElementById('1').checked) {
+            document.getElementById('1').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asian.push(pk);
+            this.asion = [];
+            console.log(this.asion);
+            console.log(this.asian);
+          } else {
+            this.asian.push(pk);
+            console.log(this.asion);
+            console.log(this.asian);
+          }
+        }
+      }, {
+        key: "one",
+        value: function one() {
+          if (document.getElementById('1').checked) {
+            if (this.asian.length == 0) {
+              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asian.sort();
+
+              for (var i = 0; i < this.asian.length; i++) {
+                if (this.asian[i] !== prev) {
+                  a.push(this.asian[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asian[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asion.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asion', this.asion);
+            }
+          } else {
+            this.asion = [];
+            console.log('asion', this.asion);
+          }
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan.push(k);
-          console.log(this.asan);
+
+          if (document.getElementById('2').checked) {
+            document.getElementById('2').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asin.push(k);
+            this.asan = [];
+            console.log(this.asan);
+            console.log(this.asin);
+          } else {
+            this.asin.push(k);
+            console.log(this.asan);
+            console.log(this.asin);
+          }
+        }
+      }, {
+        key: "two",
+        value: function two() {
+          if (document.getElementById('2').checked) {
+            if (this.asin.length == 0) {
+              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asin.sort();
+
+              for (var i = 0; i < this.asin.length; i++) {
+                if (this.asin[i] !== prev) {
+                  a.push(this.asin[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asin[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asan.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asan', this.asan);
+            }
+          } else {
+            this.asan = [];
+            console.log('asan', this.asan);
+          }
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea.push(k);
-          console.log(this.themea);
-          console.log(this.themeb);
+
+          if (document.getElementById('3').checked) {
+            document.getElementById('3').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.themeb.push(k);
+            this.themea = [];
+            console.log(this.themea);
+            console.log(this.themeb);
+          } else {
+            this.themeb.push(k);
+            console.log(this.themea);
+            console.log(this.themeb);
+          }
+        }
+      }, {
+        key: "three",
+        value: function three() {
+          if (document.getElementById('3').checked) {
+            if (this.themeb.length == 0) {
+              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.themeb.sort();
+
+              for (var i = 0; i < this.themeb.length; i++) {
+                if (this.themeb[i] !== prev) {
+                  a.push(this.themeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.themeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.themea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('themea', this.themea);
+            }
+          } else {
+            this.themea = [];
+            console.log('themea', this.themea);
+          }
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda.push(k);
-          console.log(this.curateda);
-          console.log(this.curatedb);
+
+          if (document.getElementById('4').checked) {
+            document.getElementById('4').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.curatedb.push(k);
+            this.curateda = [];
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          } else {
+            this.curatedb.push(k);
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          }
+        }
+      }, {
+        key: "four",
+        value: function four() {
+          if (document.getElementById('4').checked) {
+            if (this.curatedb.length == 0) {
+              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.curatedb.sort();
+
+              for (var i = 0; i < this.curatedb.length; i++) {
+                if (this.curatedb[i] !== prev) {
+                  a.push(this.curatedb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.curatedb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.curateda.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('curateda', this.curateda);
+            }
+          } else {
+            this.curateda = [];
+            console.log('curateda', this.curateda);
+          }
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia.push(k);
-          console.log(this.festia);
-          console.log(this.festib);
+
+          if (document.getElementById('5').checked) {
+            document.getElementById('5').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.festib.push(k);
+            this.festia = [];
+            console.log(this.festia);
+            console.log(this.festib);
+          } else {
+            this.festib.push(k);
+            console.log(this.festia);
+            console.log(this.festib);
+          }
+        }
+      }, {
+        key: "five",
+        value: function five() {
+          if (document.getElementById('5').checked) {
+            if (this.festib.length == 0) {
+              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.festib.sort();
+
+              for (var i = 0; i < this.festib.length; i++) {
+                if (this.festib[i] !== prev) {
+                  a.push(this.festib[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.festib[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.festia.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('festia', this.festia);
+            }
+          } else {
+            this.festia = [];
+            console.log('festia', this.festia);
+          }
         }
       }, {
         key: "handleFileInput",
@@ -6700,13 +11286,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_EARRING_STYLE, ORNAMENT_PENDANT_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
-          this.userService.pendantwithearing(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_EARRING_STYLE.value, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
-            console.log('done', data);
+          // tslint:disable-next-line: max-line-length
+          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
+            alert('check the confirmation checkboxex to proceed');
+          } else {
+            this.userService.pendantwithearing(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_EARRING_STYLE.value, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+              console.log('done', data);
 
-            if (data.status == 201) {
-              alert('Success');
-            }
-          });
+              if (data.status == 201) {// this.router.navigate(['./ornamentread']);
+              }
+            });
+          }
         }
       }]);
 
@@ -6716,6 +11306,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     PendantearringtypeComponent.ctorParameters = function () {
       return [{
         type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }];
     };
 
@@ -6794,15 +11386,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ngx-toastr */
     "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var SetsComponent =
     /*#__PURE__*/
     function () {
-      function SetsComponent(userService, toastr) {
+      function SetsComponent(userService, toastr, router) {
         _classCallCheck(this, SetsComponent);
 
         this.userService = userService;
         this.toastr = toastr;
+        this.router = router;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -6816,16 +11415,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.Theme = {};
         this.Curated = {};
         this.Festival = {};
+        this.Metal = {};
         this.asion = [];
-        this.asian = [5];
+        this.asian = [];
         this.asan = [];
-        this.asin = [3];
+        this.asin = [];
         this.themea = [];
-        this.themeb = [7];
+        this.themeb = [];
         this.curateda = [];
-        this.curatedb = [6];
+        this.curatedb = [];
         this.festia = [];
-        this.festib = [8];
+        this.festib = [];
+        this.metala = [];
+        this.metalb = [];
       }
 
       _createClass(SetsComponent, [{
@@ -6837,6 +11439,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.theme();
           this.curatedby();
           this.festival();
+          this.metal();
         }
       }, {
         key: "read",
@@ -6846,88 +11449,430 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        key: "metal",
+        value: function metal() {
+          var _this91 = this;
+
+          this.userService.ornmetal().subscribe(function (data) {
+            console.log(data);
+            _this91.Metal = data;
+          });
+        }
+      }, {
         key: "occasion",
         value: function occasion() {
-          var _this74 = this;
+          var _this92 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this74.Occasion = data;
+            _this92.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this75 = this;
+          var _this93 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this75.Gift = data;
+            _this93.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this76 = this;
+          var _this94 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this76.Theme = data;
+            _this94.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this77 = this;
+          var _this95 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this77.Curated = data;
+            _this95.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this78 = this;
+          var _this96 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this78.Festival = data;
+            _this96.Festival = data;
           });
+        }
+      }, {
+        key: "Ornmetal",
+        value: function Ornmetal(pk) {
+          console.log(pk);
+
+          if (document.getElementById('zero').checked) {
+            document.getElementById('zero').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.metalb.push(pk);
+            this.metala = [];
+            console.log(this.metala);
+            console.log(this.metalb);
+          } else {
+            this.metalb.push(pk);
+            console.log(this.metala);
+            console.log(this.metalb);
+          }
+        }
+      }, {
+        key: "zero",
+        value: function zero() {
+          if (document.getElementById('zero').checked) {
+            if (this.metalb.length == 0) {
+              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.metalb.sort();
+
+              for (var i = 0; i < this.metalb.length; i++) {
+                if (this.metalb[i] !== prev) {
+                  a.push(this.metalb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.metalb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.metala.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('metala', this.metala);
+            }
+          } else {
+            this.metala = [];
+            console.log('metala', this.metala);
+          }
         }
       }, {
         key: "Answer",
         value: function Answer(pk) {
           console.log(pk);
-          this.asion.push(pk);
-          console.log(this.asion);
+
+          if (document.getElementById('1').checked) {
+            document.getElementById('1').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asian.push(pk);
+            this.asion = [];
+            console.log(this.asion);
+            console.log(this.asian);
+          } else {
+            this.asian.push(pk);
+            console.log(this.asion);
+            console.log(this.asian);
+          }
+        }
+      }, {
+        key: "one",
+        value: function one() {
+          if (document.getElementById('1').checked) {
+            if (this.asian.length == 0) {
+              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asian.sort();
+
+              for (var i = 0; i < this.asian.length; i++) {
+                if (this.asian[i] !== prev) {
+                  a.push(this.asian[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asian[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asion.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asion', this.asion);
+            }
+          } else {
+            this.asion = [];
+            console.log('asion', this.asion);
+          }
         }
       }, {
         key: "Ornagift",
         value: function Ornagift(k) {
           console.log(k);
-          this.asan.push(k);
+
+          if (document.getElementById('2').checked) {
+            document.getElementById('2').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asin.push(k);
+            this.asan = [];
+            console.log(this.asan);
+            console.log(this.asin);
+          } else {
+            this.asin.push(k);
+            console.log(this.asan);
+            console.log(this.asin);
+          }
+        }
+      }, {
+        key: "two",
+        value: function two() {
+          if (document.getElementById('2').checked) {
+            if (this.asin.length == 0) {
+              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asin.sort();
+
+              for (var i = 0; i < this.asin.length; i++) {
+                if (this.asin[i] !== prev) {
+                  a.push(this.asin[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asin[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asan.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asan', this.asan);
+            }
+          } else {
+            this.asan = [];
+            console.log('asan', this.asan);
+          }
         }
       }, {
         key: "Ornatheme",
         value: function Ornatheme(k) {
           console.log(k);
-          this.themea.push(k);
-          console.log(this.themea);
+
+          if (document.getElementById('3').checked) {
+            document.getElementById('3').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.themeb.push(k);
+            this.themea = [];
+            console.log(this.themea);
+            console.log(this.themeb);
+          } else {
+            this.themeb.push(k);
+            console.log(this.themea);
+            console.log(this.themeb);
+          }
+        }
+      }, {
+        key: "three",
+        value: function three() {
+          if (document.getElementById('3').checked) {
+            if (this.themeb.length == 0) {
+              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.themeb.sort();
+
+              for (var i = 0; i < this.themeb.length; i++) {
+                if (this.themeb[i] !== prev) {
+                  a.push(this.themeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.themeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.themea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('themea', this.themea);
+            }
+          } else {
+            this.themea = [];
+            console.log('themea', this.themea);
+          }
         }
       }, {
         key: "OrnaCurated",
         value: function OrnaCurated(k) {
           console.log(k);
-          this.curateda.push(k);
-          console.log(this.curateda);
+
+          if (document.getElementById('4').checked) {
+            document.getElementById('4').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.curatedb.push(k);
+            this.curateda = [];
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          } else {
+            this.curatedb.push(k);
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          }
+        }
+      }, {
+        key: "four",
+        value: function four() {
+          if (document.getElementById('4').checked) {
+            if (this.curatedb.length == 0) {
+              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.curatedb.sort();
+
+              for (var i = 0; i < this.curatedb.length; i++) {
+                if (this.curatedb[i] !== prev) {
+                  a.push(this.curatedb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.curatedb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.curateda.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('curateda', this.curateda);
+            }
+          } else {
+            this.curateda = [];
+            console.log('curateda', this.curateda);
+          }
         }
       }, {
         key: "Ornafesti",
         value: function Ornafesti(k) {
           console.log(k);
-          this.festia.push(k);
-          console.log(this.festia);
+
+          if (document.getElementById('5').checked) {
+            document.getElementById('5').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.festib.push(k);
+            this.festia = [];
+            console.log(this.festia);
+            console.log(this.festib);
+          } else {
+            this.festib.push(k);
+            console.log(this.festia);
+            console.log(this.festib);
+          }
+        }
+      }, {
+        key: "five",
+        value: function five() {
+          if (document.getElementById('5').checked) {
+            if (this.festib.length == 0) {
+              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.festib.sort();
+
+              for (var i = 0; i < this.festib.length; i++) {
+                if (this.festib[i] !== prev) {
+                  a.push(this.festib[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.festib[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.festia.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('festia', this.festia);
+            }
+          } else {
+            this.festia = [];
+            console.log('festia', this.festia);
+          }
         }
       }, {
         key: "handleFileInput",
@@ -6952,9 +11897,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
-          this.userService.multi(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, ORNAMENT_METAL.value, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
-            console.log('done', data);
-          });
+          // tslint:disable-next-line: max-line-length
+          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
+            alert('check the confirmation checkboxex to proceed');
+          } else {
+            this.userService.multi(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+              console.log('done', data);
+
+              if (data.status == 201) {// this.router.navigate(['./ornamentread']);
+              }
+            });
+          }
         }
       }]);
 
@@ -6966,6 +11919,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
       }, {
         type: ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
       }];
     };
 
@@ -7076,11 +12031,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "occasion",
         value: function occasion() {
-          var _this79 = this;
+          var _this97 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this79.Occasion = data;
+            _this97.Occasion = data;
           });
         }
       }, {
@@ -7426,51 +12381,51 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "occasion",
         value: function occasion() {
-          var _this80 = this;
+          var _this98 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this80.Occasion = data;
+            _this98.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this81 = this;
+          var _this99 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this81.Gift = data;
+            _this99.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this82 = this;
+          var _this100 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this82.Theme = data;
+            _this100.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this83 = this;
+          var _this101 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this83.Curated = data;
+            _this101.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this84 = this;
+          var _this102 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this84.Festival = data;
+            _this102.Festival = data;
           });
         }
       }, {
@@ -7637,141 +12592,141 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "page1",
         value: function page1() {
-          var _this85 = this;
+          var _this103 = this;
 
           this.userService.readorn().subscribe(function (data) {
             console.log(data);
-            _this85.data = data;
+            _this103.data = data;
           });
         }
       }, {
         key: "page2",
         value: function page2() {
-          var _this86 = this;
+          var _this104 = this;
 
           this.userService.r2().subscribe(function (data) {
             console.log(data);
-            _this86.data = data;
+            _this104.data = data;
           });
         }
       }, {
         key: "page3",
         value: function page3() {
-          var _this87 = this;
+          var _this105 = this;
 
           this.userService.r3().subscribe(function (data) {
             console.log(data);
-            _this87.data = data;
+            _this105.data = data;
           });
         }
       }, {
         key: "page4",
         value: function page4() {
-          var _this88 = this;
+          var _this106 = this;
 
           this.userService.r4().subscribe(function (data) {
             console.log(data);
-            _this88.data = data;
+            _this106.data = data;
           });
         }
       }, {
         key: "page5",
         value: function page5() {
-          var _this89 = this;
+          var _this107 = this;
 
           this.userService.r5().subscribe(function (data) {
             console.log(data);
-            _this89.data = data;
+            _this107.data = data;
           });
         }
       }, {
         key: "page6",
         value: function page6() {
-          var _this90 = this;
+          var _this108 = this;
 
           this.userService.r6().subscribe(function (data) {
             console.log(data);
-            _this90.data = data;
+            _this108.data = data;
           });
         }
       }, {
         key: "page7",
         value: function page7() {
-          var _this91 = this;
+          var _this109 = this;
 
           this.userService.r7().subscribe(function (data) {
             console.log(data);
-            _this91.data = data;
+            _this109.data = data;
           });
         }
       }, {
         key: "page8",
         value: function page8() {
-          var _this92 = this;
+          var _this110 = this;
 
           this.userService.r8().subscribe(function (data) {
             console.log(data);
-            _this92.data = data;
+            _this110.data = data;
           });
         }
       }, {
         key: "page9",
         value: function page9() {
-          var _this93 = this;
+          var _this111 = this;
 
           this.userService.r9().subscribe(function (data) {
             console.log(data);
-            _this93.data = data;
+            _this111.data = data;
           });
         }
       }, {
         key: "page10",
         value: function page10() {
-          var _this94 = this;
+          var _this112 = this;
 
           this.userService.r10().subscribe(function (data) {
             console.log(data);
-            _this94.data = data;
+            _this112.data = data;
           });
         }
       }, {
         key: "page11",
         value: function page11() {
-          var _this95 = this;
+          var _this113 = this;
 
           this.userService.r11().subscribe(function (data) {
             console.log(data);
-            _this95.data = data;
+            _this113.data = data;
           });
         }
       }, {
         key: "page12",
         value: function page12() {
-          var _this96 = this;
+          var _this114 = this;
 
           this.userService.r12().subscribe(function (data) {
             console.log(data);
-            _this96.data = data;
+            _this114.data = data;
           });
         }
       }, {
         key: "page13",
         value: function page13() {
-          var _this97 = this;
+          var _this115 = this;
 
           this.userService.r13().subscribe(function (data) {
             console.log(data);
-            _this97.data = data;
+            _this115.data = data;
           });
         }
       }, {
         key: "page14",
         value: function page14() {
-          var _this98 = this;
+          var _this116 = this;
 
           this.userService.r14().subscribe(function (data) {
             console.log(data);
-            _this98.data = data;
+            _this116.data = data;
           });
         }
       }]);
@@ -8266,12 +13221,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(form) {
-          var _this99 = this;
+          var _this117 = this;
 
           this.userService.changePassword(form.value).subscribe(function (res) {
             console.log(res);
 
-            _this99.router.navigate(['/forms']);
+            _this117.router.navigate(['/forms']);
           }, function (err) {
             console.log(err.message);
           });
@@ -8442,12 +13397,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(form) {
-          var _this100 = this;
+          var _this118 = this;
 
           this.userService.createView(form.value).subscribe(function (res) {
             console.log(res);
 
-            _this100.router.navigate(['./read']);
+            _this118.router.navigate(['./read']);
           }, function (err) {
             console.log(err.message);
           });
@@ -8567,18 +13522,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "readuser",
         value: function readuser() {
-          var _this101 = this;
+          var _this119 = this;
 
           this.userService.readForm().subscribe(function (data) {
             console.log(data);
-            _this101.data = data;
+            _this119.data = data;
 
-            if (_this101.data.statuscode === 200) {
-              _this101.toastr.success('welcome back');
+            if (_this119.data.statuscode === 200) {
+              _this119.toastr.success('welcome back');
             } else {
-              _this101.toastr.success('As you are our New Customer we want you to fill this form to complete your profile');
+              _this119.toastr.success('As you are our New Customer we want you to fill this form to complete your profile');
 
-              _this101.router.navigate(['/radiofill']);
+              _this119.router.navigate(['/radiofill']);
             }
           });
         }
@@ -8894,6 +13849,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        key: "ornmetal",
+        value: function ornmetal() {
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/metal/', {
+            headers: Headers
+          });
+        }
+      }, {
         key: "ornoccasion",
         value: function ornoccasion() {
           var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
@@ -9056,21 +14019,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       }, {
         key: "multi",
-        value: function multi(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+        value: function multi(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, metala, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
           var formData = new FormData();
           formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
           formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion = true;
           var _didIteratorError = false;
           var _iteratorError = undefined;
 
           try {
-            for (var _iterator = asion[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            for (var _iterator = metala[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
               var i = _step.value;
-              formData.append('ORNAMENT_OCCASION', i);
+              formData.append('ORNAMENT_METAL', i);
             }
           } catch (err) {
             _didIteratorError = true;
@@ -9092,9 +14054,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError2 = undefined;
 
           try {
-            for (var _iterator2 = asan[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+            for (var _iterator2 = asion[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
               var i = _step2.value;
-              formData.append('ORNAMENT_GIFT', i);
+              formData.append('ORNAMENT_OCCASION', i);
             }
           } catch (err) {
             _didIteratorError2 = true;
@@ -9116,9 +14078,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError3 = undefined;
 
           try {
-            for (var _iterator3 = themea[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+            for (var _iterator3 = asan[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
               var i = _step3.value;
-              formData.append('ORNAMENT_THEME', i);
+              formData.append('ORNAMENT_GIFT', i);
             }
           } catch (err) {
             _didIteratorError3 = true;
@@ -9140,9 +14102,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError4 = undefined;
 
           try {
-            for (var _iterator4 = curateda[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+            for (var _iterator4 = themea[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
               var i = _step4.value;
-              formData.append('ORNAMENT_CURATED_BY', i);
+              formData.append('ORNAMENT_THEME', i);
             }
           } catch (err) {
             _didIteratorError4 = true;
@@ -9164,9 +14126,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError5 = undefined;
 
           try {
-            for (var _iterator5 = festia[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+            for (var _iterator5 = curateda[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
               var i = _step5.value;
-              formData.append('ORNAMENT_FESTIVAL', i);
+              formData.append('ORNAMENT_CURATED_BY', i);
             }
           } catch (err) {
             _didIteratorError5 = true;
@@ -9179,6 +14141,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             } finally {
               if (_didIteratorError5) {
                 throw _iteratorError5;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion6 = true;
+          var _didIteratorError6 = false;
+          var _iteratorError6 = undefined;
+
+          try {
+            for (var _iterator6 = festia[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+              var i = _step6.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            }
+          } catch (err) {
+            _didIteratorError6 = true;
+            _iteratorError6 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion6 && _iterator6.return != null) {
+                _iterator6.return();
+              }
+            } finally {
+              if (_didIteratorError6) {
+                throw _iteratorError6;
               }
             }
           }
@@ -9226,48 +14212,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       }, {
         key: "mli",
-        value: function mli(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, rsizea, rsizeb, ORNAMENT_RING_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+        value: function mli(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, metala, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, rsizea, rsizeb, ORNAMENT_RING_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
           var formData = new FormData();
           formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
           formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-          var _iteratorNormalCompletion6 = true;
-          var _didIteratorError6 = false;
-          var _iteratorError6 = undefined;
-
-          try {
-            for (var _iterator6 = asion[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-              var i = _step6.value;
-              formData.append('ORNAMENT_OCCASION', i);
-            } // formData.append('ORNAMENT_OCCASION', asian);
-
-          } catch (err) {
-            _didIteratorError6 = true;
-            _iteratorError6 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion6 && _iterator6.return != null) {
-                _iterator6.return();
-              }
-            } finally {
-              if (_didIteratorError6) {
-                throw _iteratorError6;
-              }
-            }
-          }
-
           var _iteratorNormalCompletion7 = true;
           var _didIteratorError7 = false;
           var _iteratorError7 = undefined;
 
           try {
-            for (var _iterator7 = asan[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+            for (var _iterator7 = metala[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
               var i = _step7.value;
-              formData.append('ORNAMENT_GIFT', i);
-            } // formData.append('ORNAMENT_GIFT', asin);
-
+              formData.append('ORNAMENT_METAL', i);
+            }
           } catch (err) {
             _didIteratorError7 = true;
             _iteratorError7 = err;
@@ -9288,10 +14247,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError8 = undefined;
 
           try {
-            for (var _iterator8 = themea[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+            for (var _iterator8 = asion[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
               var i = _step8.value;
-              formData.append('ORNAMENT_THEME', i);
-            }
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
+
           } catch (err) {
             _didIteratorError8 = true;
             _iteratorError8 = err;
@@ -9312,10 +14272,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError9 = undefined;
 
           try {
-            for (var _iterator9 = curateda[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
+            for (var _iterator9 = asan[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
               var i = _step9.value;
-              formData.append('ORNAMENT_CURATED_BY', i);
-            }
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
           } catch (err) {
             _didIteratorError9 = true;
             _iteratorError9 = err;
@@ -9336,9 +14297,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError10 = undefined;
 
           try {
-            for (var _iterator10 = festia[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
+            for (var _iterator10 = themea[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
               var i = _step10.value;
-              formData.append('ORNAMENT_FESTIVAL', i);
+              formData.append('ORNAMENT_THEME', i);
             }
           } catch (err) {
             _didIteratorError10 = true;
@@ -9355,18 +14316,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_RING_STYLE', ORNAMENT_RING_STYLE);
           var _iteratorNormalCompletion11 = true;
           var _didIteratorError11 = false;
           var _iteratorError11 = undefined;
 
           try {
-            for (var _iterator11 = rsizea[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
+            for (var _iterator11 = curateda[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
               var i = _step11.value;
-              formData.append('ORNAMENT_RING_SIZE', i);
-            } // formData.append('ORNAMENT_RING_SIZE', rsizea);
-            // formData.append('ORNAMENT_RING_SIZE', rsizeb);
-
+              formData.append('ORNAMENT_CURATED_BY', i);
+            }
           } catch (err) {
             _didIteratorError11 = true;
             _iteratorError11 = err;
@@ -9382,35 +14340,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
-          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
-            headers: Headers
-          });
-        } // tslint:disable-next-line: max-line-length
-
-      }, {
-        key: "ear",
-        value: function ear(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_EARRING_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
-          var formData = new FormData();
-          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-          formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion12 = true;
           var _didIteratorError12 = false;
           var _iteratorError12 = undefined;
 
           try {
-            for (var _iterator12 = asion[Symbol.iterator](), _step12; !(_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done); _iteratorNormalCompletion12 = true) {
+            for (var _iterator12 = festia[Symbol.iterator](), _step12; !(_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done); _iteratorNormalCompletion12 = true) {
               var i = _step12.value;
-              formData.append('ORNAMENT_OCCASION', i);
-            } // formData.append('ORNAMENT_OCCASION', asian);
-
+              formData.append('ORNAMENT_FESTIVAL', i);
+            }
           } catch (err) {
             _didIteratorError12 = true;
             _iteratorError12 = err;
@@ -9426,15 +14364,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          formData.append('ORNAMENT_RING_STYLE', ORNAMENT_RING_STYLE);
           var _iteratorNormalCompletion13 = true;
           var _didIteratorError13 = false;
           var _iteratorError13 = undefined;
 
           try {
-            for (var _iterator13 = asan[Symbol.iterator](), _step13; !(_iteratorNormalCompletion13 = (_step13 = _iterator13.next()).done); _iteratorNormalCompletion13 = true) {
+            for (var _iterator13 = rsizea[Symbol.iterator](), _step13; !(_iteratorNormalCompletion13 = (_step13 = _iterator13.next()).done); _iteratorNormalCompletion13 = true) {
               var i = _step13.value;
-              formData.append('ORNAMENT_GIFT', i);
-            } // formData.append('ORNAMENT_GIFT', asin);
+              formData.append('ORNAMENT_RING_SIZE', i);
+            } // formData.append('ORNAMENT_RING_SIZE', rsizea);
+            // formData.append('ORNAMENT_RING_SIZE', rsizeb);
 
           } catch (err) {
             _didIteratorError13 = true;
@@ -9451,16 +14391,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
+            headers: Headers
+          });
+        } // tslint:disable-next-line: max-line-length
+
+      }, {
+        key: "ear",
+        value: function ear(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, metala, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_EARRING_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+          var formData = new FormData();
+          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+          formData.append('WEIGHT', WEIGHT);
           var _iteratorNormalCompletion14 = true;
           var _didIteratorError14 = false;
           var _iteratorError14 = undefined;
 
           try {
-            for (var _iterator14 = themea[Symbol.iterator](), _step14; !(_iteratorNormalCompletion14 = (_step14 = _iterator14.next()).done); _iteratorNormalCompletion14 = true) {
+            for (var _iterator14 = metala[Symbol.iterator](), _step14; !(_iteratorNormalCompletion14 = (_step14 = _iterator14.next()).done); _iteratorNormalCompletion14 = true) {
               var i = _step14.value;
-              formData.append('ORNAMENT_THEME', i);
-            } // formData.append('ORNAMENT_THEME', themeb);
-
+              formData.append('ORNAMENT_METAL', i);
+            }
           } catch (err) {
             _didIteratorError14 = true;
             _iteratorError14 = err;
@@ -9481,10 +14438,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError15 = undefined;
 
           try {
-            for (var _iterator15 = curateda[Symbol.iterator](), _step15; !(_iteratorNormalCompletion15 = (_step15 = _iterator15.next()).done); _iteratorNormalCompletion15 = true) {
+            for (var _iterator15 = asion[Symbol.iterator](), _step15; !(_iteratorNormalCompletion15 = (_step15 = _iterator15.next()).done); _iteratorNormalCompletion15 = true) {
               var i = _step15.value;
-              formData.append('ORNAMENT_CURATED_BY', i);
-            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
 
           } catch (err) {
             _didIteratorError15 = true;
@@ -9506,10 +14463,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError16 = undefined;
 
           try {
-            for (var _iterator16 = festia[Symbol.iterator](), _step16; !(_iteratorNormalCompletion16 = (_step16 = _iterator16.next()).done); _iteratorNormalCompletion16 = true) {
+            for (var _iterator16 = asan[Symbol.iterator](), _step16; !(_iteratorNormalCompletion16 = (_step16 = _iterator16.next()).done); _iteratorNormalCompletion16 = true) {
               var i = _step16.value;
-              formData.append('ORNAMENT_FESTIVAL', i);
-            } // formData.append('ORNAMENT_FESTIVAL', festib);
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
 
           } catch (err) {
             _didIteratorError16 = true;
@@ -9526,35 +14483,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
-          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
-          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
-            headers: Headers
-          });
-        } // tslint:disable-next-line: max-line-length
-
-      }, {
-        key: "nosepin",
-        value: function nosepin(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_NOSEPIN_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
-          var formData = new FormData();
-          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-          formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion17 = true;
           var _didIteratorError17 = false;
           var _iteratorError17 = undefined;
 
           try {
-            for (var _iterator17 = asion[Symbol.iterator](), _step17; !(_iteratorNormalCompletion17 = (_step17 = _iterator17.next()).done); _iteratorNormalCompletion17 = true) {
+            for (var _iterator17 = themea[Symbol.iterator](), _step17; !(_iteratorNormalCompletion17 = (_step17 = _iterator17.next()).done); _iteratorNormalCompletion17 = true) {
               var i = _step17.value;
-              formData.append('ORNAMENT_OCCASION', i);
-            } // formData.append('ORNAMENT_OCCASION', asian);
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
 
           } catch (err) {
             _didIteratorError17 = true;
@@ -9576,10 +14513,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError18 = undefined;
 
           try {
-            for (var _iterator18 = asan[Symbol.iterator](), _step18; !(_iteratorNormalCompletion18 = (_step18 = _iterator18.next()).done); _iteratorNormalCompletion18 = true) {
+            for (var _iterator18 = curateda[Symbol.iterator](), _step18; !(_iteratorNormalCompletion18 = (_step18 = _iterator18.next()).done); _iteratorNormalCompletion18 = true) {
               var i = _step18.value;
-              formData.append('ORNAMENT_GIFT', i);
-            } // formData.append('ORNAMENT_GIFT', asin);
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
 
           } catch (err) {
             _didIteratorError18 = true;
@@ -9601,10 +14538,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError19 = undefined;
 
           try {
-            for (var _iterator19 = themea[Symbol.iterator](), _step19; !(_iteratorNormalCompletion19 = (_step19 = _iterator19.next()).done); _iteratorNormalCompletion19 = true) {
+            for (var _iterator19 = festia[Symbol.iterator](), _step19; !(_iteratorNormalCompletion19 = (_step19 = _iterator19.next()).done); _iteratorNormalCompletion19 = true) {
               var i = _step19.value;
-              formData.append('ORNAMENT_THEME', i);
-            } // formData.append('ORNAMENT_THEME', themeb);
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
 
           } catch (err) {
             _didIteratorError19 = true;
@@ -9621,16 +14558,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
+          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
+            headers: Headers
+          });
+        } // tslint:disable-next-line: max-line-length
+
+      }, {
+        key: "nosepin",
+        value: function nosepin(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, metala, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_NOSEPIN_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+          var formData = new FormData();
+          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+          formData.append('WEIGHT', WEIGHT);
           var _iteratorNormalCompletion20 = true;
           var _didIteratorError20 = false;
           var _iteratorError20 = undefined;
 
           try {
-            for (var _iterator20 = curateda[Symbol.iterator](), _step20; !(_iteratorNormalCompletion20 = (_step20 = _iterator20.next()).done); _iteratorNormalCompletion20 = true) {
+            for (var _iterator20 = metala[Symbol.iterator](), _step20; !(_iteratorNormalCompletion20 = (_step20 = _iterator20.next()).done); _iteratorNormalCompletion20 = true) {
               var i = _step20.value;
-              formData.append('ORNAMENT_CURATED_BY', i);
-            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
-
+              formData.append('ORNAMENT_METAL', i);
+            }
           } catch (err) {
             _didIteratorError20 = true;
             _iteratorError20 = err;
@@ -9651,10 +14606,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError21 = undefined;
 
           try {
-            for (var _iterator21 = festia[Symbol.iterator](), _step21; !(_iteratorNormalCompletion21 = (_step21 = _iterator21.next()).done); _iteratorNormalCompletion21 = true) {
+            for (var _iterator21 = asion[Symbol.iterator](), _step21; !(_iteratorNormalCompletion21 = (_step21 = _iterator21.next()).done); _iteratorNormalCompletion21 = true) {
               var i = _step21.value;
-              formData.append('ORNAMENT_FESTIVAL', i);
-            } // formData.append('ORNAMENT_FESTIVAL', festib);
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
 
           } catch (err) {
             _didIteratorError21 = true;
@@ -9671,35 +14626,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_NOSEPIN_STYLE', ORNAMENT_NOSEPIN_STYLE);
-          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
-          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
-            headers: Headers
-          });
-        } // tslint:disable-next-line: max-line-length
-
-      }, {
-        key: "pendantwithearing",
-        value: function pendantwithearing(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_EARRING_STYLE, ORNAMENT_PENDANT_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
-          var formData = new FormData();
-          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-          formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion22 = true;
           var _didIteratorError22 = false;
           var _iteratorError22 = undefined;
 
           try {
-            for (var _iterator22 = asion[Symbol.iterator](), _step22; !(_iteratorNormalCompletion22 = (_step22 = _iterator22.next()).done); _iteratorNormalCompletion22 = true) {
+            for (var _iterator22 = asan[Symbol.iterator](), _step22; !(_iteratorNormalCompletion22 = (_step22 = _iterator22.next()).done); _iteratorNormalCompletion22 = true) {
               var i = _step22.value;
-              formData.append('ORNAMENT_OCCASION', i);
-            } // formData.append('ORNAMENT_OCCASION', asian);
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
 
           } catch (err) {
             _didIteratorError22 = true;
@@ -9721,10 +14656,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError23 = undefined;
 
           try {
-            for (var _iterator23 = asan[Symbol.iterator](), _step23; !(_iteratorNormalCompletion23 = (_step23 = _iterator23.next()).done); _iteratorNormalCompletion23 = true) {
+            for (var _iterator23 = themea[Symbol.iterator](), _step23; !(_iteratorNormalCompletion23 = (_step23 = _iterator23.next()).done); _iteratorNormalCompletion23 = true) {
               var i = _step23.value;
-              formData.append('ORNAMENT_GIFT', i);
-            } // formData.append('ORNAMENT_GIFT', asin);
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
 
           } catch (err) {
             _didIteratorError23 = true;
@@ -9746,10 +14681,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError24 = undefined;
 
           try {
-            for (var _iterator24 = themea[Symbol.iterator](), _step24; !(_iteratorNormalCompletion24 = (_step24 = _iterator24.next()).done); _iteratorNormalCompletion24 = true) {
+            for (var _iterator24 = curateda[Symbol.iterator](), _step24; !(_iteratorNormalCompletion24 = (_step24 = _iterator24.next()).done); _iteratorNormalCompletion24 = true) {
               var i = _step24.value;
-              formData.append('ORNAMENT_THEME', i);
-            } // formData.append('ORNAMENT_THEME', themeb);
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
 
           } catch (err) {
             _didIteratorError24 = true;
@@ -9771,10 +14706,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError25 = undefined;
 
           try {
-            for (var _iterator25 = curateda[Symbol.iterator](), _step25; !(_iteratorNormalCompletion25 = (_step25 = _iterator25.next()).done); _iteratorNormalCompletion25 = true) {
+            for (var _iterator25 = festia[Symbol.iterator](), _step25; !(_iteratorNormalCompletion25 = (_step25 = _iterator25.next()).done); _iteratorNormalCompletion25 = true) {
               var i = _step25.value;
-              formData.append('ORNAMENT_CURATED_BY', i);
-            } //  formData.append('ORNAMENT_CURATED_BY', curatedb);
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
 
           } catch (err) {
             _didIteratorError25 = true;
@@ -9791,16 +14726,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          formData.append('ORNAMENT_NOSEPIN_STYLE', ORNAMENT_NOSEPIN_STYLE);
+          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
+            headers: Headers
+          });
+        } // tslint:disable-next-line: max-line-length
+
+      }, {
+        key: "pendantwithearing",
+        value: function pendantwithearing(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, metala, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_EARRING_STYLE, ORNAMENT_PENDANT_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+          var formData = new FormData();
+          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+          formData.append('WEIGHT', WEIGHT);
           var _iteratorNormalCompletion26 = true;
           var _didIteratorError26 = false;
           var _iteratorError26 = undefined;
 
           try {
-            for (var _iterator26 = festia[Symbol.iterator](), _step26; !(_iteratorNormalCompletion26 = (_step26 = _iterator26.next()).done); _iteratorNormalCompletion26 = true) {
+            for (var _iterator26 = metala[Symbol.iterator](), _step26; !(_iteratorNormalCompletion26 = (_step26 = _iterator26.next()).done); _iteratorNormalCompletion26 = true) {
               var i = _step26.value;
-              formData.append('ORNAMENT_FESTIVAL', i);
-            } // formData.append('ORNAMENT_FESTIVAL', festib);
-
+              formData.append('ORNAMENT_METAL', i);
+            }
           } catch (err) {
             _didIteratorError26 = true;
             _iteratorError26 = err;
@@ -9816,27 +14769,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
-          formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
-          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
-          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
-            headers: Headers
-          });
-        } // tslint:disable-next-line: max-line-length
-
-      }, {
-        key: "bracelet",
-        value: function bracelet(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, bsizea, bsizeb, ORNAMENT_BRACELET_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
-          var formData = new FormData();
-          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-          formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion27 = true;
           var _didIteratorError27 = false;
           var _iteratorError27 = undefined;
@@ -9920,7 +14852,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             for (var _iterator30 = curateda[Symbol.iterator](), _step30; !(_iteratorNormalCompletion30 = (_step30 = _iterator30.next()).done); _iteratorNormalCompletion30 = true) {
               var i = _step30.value;
               formData.append('ORNAMENT_CURATED_BY', i);
-            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+            } //  formData.append('ORNAMENT_CURATED_BY', curatedb);
 
           } catch (err) {
             _didIteratorError30 = true;
@@ -9962,17 +14894,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_BRACELET_STYLE', ORNAMENT_BRACELET_STYLE);
+          formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
+          formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
+          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
+            headers: Headers
+          });
+        } // tslint:disable-next-line: max-line-length
+
+      }, {
+        key: "bracelet",
+        value: function bracelet(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, metala, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, bsizea, bsizeb, ORNAMENT_BRACELET_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+          var formData = new FormData();
+          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+          formData.append('WEIGHT', WEIGHT);
           var _iteratorNormalCompletion32 = true;
           var _didIteratorError32 = false;
           var _iteratorError32 = undefined;
 
           try {
-            for (var _iterator32 = bsizea[Symbol.iterator](), _step32; !(_iteratorNormalCompletion32 = (_step32 = _iterator32.next()).done); _iteratorNormalCompletion32 = true) {
+            for (var _iterator32 = metala[Symbol.iterator](), _step32; !(_iteratorNormalCompletion32 = (_step32 = _iterator32.next()).done); _iteratorNormalCompletion32 = true) {
               var i = _step32.value;
-              formData.append('ORNAMENT_BRACELET_SIZE', i);
-            } // formData.append('ORNAMENT_BRACELET_SIZE', bsizeb);
-
+              formData.append('ORNAMENT_METAL', i);
+            }
           } catch (err) {
             _didIteratorError32 = true;
             _iteratorError32 = err;
@@ -9988,25 +14938,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
-          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
-            headers: Headers
-          });
-        } // tslint:disable-next-line: max-line-length
-
-      }, {
-        key: "bangles",
-        value: function bangles(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, bsizea, bsizeb, ORNAMENT_BANGLE_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
-          var formData = new FormData();
-          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-          formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion33 = true;
           var _didIteratorError33 = false;
           var _iteratorError33 = undefined;
@@ -10132,7 +15063,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_BANGLE_STYLE', ORNAMENT_BANGLE_STYLE);
+          formData.append('ORNAMENT_BRACELET_STYLE', ORNAMENT_BRACELET_STYLE);
           var _iteratorNormalCompletion38 = true;
           var _didIteratorError38 = false;
           var _iteratorError38 = undefined;
@@ -10140,8 +15071,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           try {
             for (var _iterator38 = bsizea[Symbol.iterator](), _step38; !(_iteratorNormalCompletion38 = (_step38 = _iterator38.next()).done); _iteratorNormalCompletion38 = true) {
               var i = _step38.value;
-              formData.append('ORNAMENT_BANGLE_SIZE', i);
-            } // formData.append('ORNAMENT_BANGLE_SIZE', bsizeb);
+              formData.append('ORNAMENT_BRACELET_SIZE', i);
+            } // formData.append('ORNAMENT_BRACELET_SIZE', bsizeb);
 
           } catch (err) {
             _didIteratorError38 = true;
@@ -10169,24 +15100,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         } // tslint:disable-next-line: max-line-length
 
       }, {
-        key: "chain",
-        value: function chain(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, bsizea, bsizeb, ORNAMENT_CHAIN_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+        key: "bangles",
+        value: function bangles(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, metala, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, bsizea, bsizeb, ORNAMENT_BANGLE_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
           var formData = new FormData();
           formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
           formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
           formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
           formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion39 = true;
           var _didIteratorError39 = false;
           var _iteratorError39 = undefined;
 
           try {
-            for (var _iterator39 = asion[Symbol.iterator](), _step39; !(_iteratorNormalCompletion39 = (_step39 = _iterator39.next()).done); _iteratorNormalCompletion39 = true) {
+            for (var _iterator39 = metala[Symbol.iterator](), _step39; !(_iteratorNormalCompletion39 = (_step39 = _iterator39.next()).done); _iteratorNormalCompletion39 = true) {
               var i = _step39.value;
-              formData.append('ORNAMENT_OCCASION', i);
-            } // formData.append('ORNAMENT_OCCASION', asian);
-
+              formData.append('ORNAMENT_METAL', i);
+            }
           } catch (err) {
             _didIteratorError39 = true;
             _iteratorError39 = err;
@@ -10207,10 +15136,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError40 = undefined;
 
           try {
-            for (var _iterator40 = asan[Symbol.iterator](), _step40; !(_iteratorNormalCompletion40 = (_step40 = _iterator40.next()).done); _iteratorNormalCompletion40 = true) {
+            for (var _iterator40 = asion[Symbol.iterator](), _step40; !(_iteratorNormalCompletion40 = (_step40 = _iterator40.next()).done); _iteratorNormalCompletion40 = true) {
               var i = _step40.value;
-              formData.append('ORNAMENT_GIFT', i);
-            } // formData.append('ORNAMENT_GIFT', asin);
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
 
           } catch (err) {
             _didIteratorError40 = true;
@@ -10232,10 +15161,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError41 = undefined;
 
           try {
-            for (var _iterator41 = themea[Symbol.iterator](), _step41; !(_iteratorNormalCompletion41 = (_step41 = _iterator41.next()).done); _iteratorNormalCompletion41 = true) {
+            for (var _iterator41 = asan[Symbol.iterator](), _step41; !(_iteratorNormalCompletion41 = (_step41 = _iterator41.next()).done); _iteratorNormalCompletion41 = true) {
               var i = _step41.value;
-              formData.append('ORNAMENT_THEME', i);
-            } // formData.append('ORNAMENT_THEME', themeb);
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
 
           } catch (err) {
             _didIteratorError41 = true;
@@ -10257,10 +15186,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError42 = undefined;
 
           try {
-            for (var _iterator42 = curateda[Symbol.iterator](), _step42; !(_iteratorNormalCompletion42 = (_step42 = _iterator42.next()).done); _iteratorNormalCompletion42 = true) {
+            for (var _iterator42 = themea[Symbol.iterator](), _step42; !(_iteratorNormalCompletion42 = (_step42 = _iterator42.next()).done); _iteratorNormalCompletion42 = true) {
               var i = _step42.value;
-              formData.append('ORNAMENT_CURATED_BY', i);
-            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
 
           } catch (err) {
             _didIteratorError42 = true;
@@ -10282,10 +15211,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError43 = undefined;
 
           try {
-            for (var _iterator43 = festia[Symbol.iterator](), _step43; !(_iteratorNormalCompletion43 = (_step43 = _iterator43.next()).done); _iteratorNormalCompletion43 = true) {
+            for (var _iterator43 = curateda[Symbol.iterator](), _step43; !(_iteratorNormalCompletion43 = (_step43 = _iterator43.next()).done); _iteratorNormalCompletion43 = true) {
               var i = _step43.value;
-              formData.append('ORNAMENT_FESTIVAL', i);
-            } // formData.append('ORNAMENT_FESTIVAL', festib);
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
 
           } catch (err) {
             _didIteratorError43 = true;
@@ -10302,16 +15231,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
           var _iteratorNormalCompletion44 = true;
           var _didIteratorError44 = false;
           var _iteratorError44 = undefined;
 
           try {
-            for (var _iterator44 = bsizea[Symbol.iterator](), _step44; !(_iteratorNormalCompletion44 = (_step44 = _iterator44.next()).done); _iteratorNormalCompletion44 = true) {
+            for (var _iterator44 = festia[Symbol.iterator](), _step44; !(_iteratorNormalCompletion44 = (_step44 = _iterator44.next()).done); _iteratorNormalCompletion44 = true) {
               var i = _step44.value;
-              formData.append('ORNAMENT_CHAIN_LENGTH', i);
-            } // formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
 
           } catch (err) {
             _didIteratorError44 = true;
@@ -10328,34 +15256,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
-          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
-            headers: Headers
-          });
-        } // tslint:disable-next-line: max-line-length
-
-      }, {
-        key: "necklace",
-        value: function necklace(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_NECKLACE_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
-          var formData = new FormData();
-          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-          formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+          formData.append('ORNAMENT_BANGLE_STYLE', ORNAMENT_BANGLE_STYLE);
           var _iteratorNormalCompletion45 = true;
           var _didIteratorError45 = false;
           var _iteratorError45 = undefined;
 
           try {
-            for (var _iterator45 = asion[Symbol.iterator](), _step45; !(_iteratorNormalCompletion45 = (_step45 = _iterator45.next()).done); _iteratorNormalCompletion45 = true) {
+            for (var _iterator45 = bsizea[Symbol.iterator](), _step45; !(_iteratorNormalCompletion45 = (_step45 = _iterator45.next()).done); _iteratorNormalCompletion45 = true) {
               var i = _step45.value;
-              formData.append('ORNAMENT_OCCASION', i);
-            } // formData.append('ORNAMENT_OCCASION', asian);
+              formData.append('ORNAMENT_BANGLE_SIZE', i);
+            } // formData.append('ORNAMENT_BANGLE_SIZE', bsizeb);
 
           } catch (err) {
             _didIteratorError45 = true;
@@ -10372,16 +15282,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
+            headers: Headers
+          });
+        } // tslint:disable-next-line: max-line-length
+
+      }, {
+        key: "chain",
+        value: function chain(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, metala, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, bsizea, bsizeb, ORNAMENT_CHAIN_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+          var formData = new FormData();
+          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+          formData.append('WEIGHT', WEIGHT);
           var _iteratorNormalCompletion46 = true;
           var _didIteratorError46 = false;
           var _iteratorError46 = undefined;
 
           try {
-            for (var _iterator46 = asan[Symbol.iterator](), _step46; !(_iteratorNormalCompletion46 = (_step46 = _iterator46.next()).done); _iteratorNormalCompletion46 = true) {
+            for (var _iterator46 = metala[Symbol.iterator](), _step46; !(_iteratorNormalCompletion46 = (_step46 = _iterator46.next()).done); _iteratorNormalCompletion46 = true) {
               var i = _step46.value;
-              formData.append('ORNAMENT_GIFT', i);
-            } // formData.append('ORNAMENT_GIFT', asin);
-
+              formData.append('ORNAMENT_METAL', i);
+            }
           } catch (err) {
             _didIteratorError46 = true;
             _iteratorError46 = err;
@@ -10402,10 +15329,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError47 = undefined;
 
           try {
-            for (var _iterator47 = themea[Symbol.iterator](), _step47; !(_iteratorNormalCompletion47 = (_step47 = _iterator47.next()).done); _iteratorNormalCompletion47 = true) {
+            for (var _iterator47 = asion[Symbol.iterator](), _step47; !(_iteratorNormalCompletion47 = (_step47 = _iterator47.next()).done); _iteratorNormalCompletion47 = true) {
               var i = _step47.value;
-              formData.append('ORNAMENT_THEME', i);
-            } // formData.append('ORNAMENT_THEME', themeb);
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
 
           } catch (err) {
             _didIteratorError47 = true;
@@ -10427,10 +15354,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError48 = undefined;
 
           try {
-            for (var _iterator48 = curateda[Symbol.iterator](), _step48; !(_iteratorNormalCompletion48 = (_step48 = _iterator48.next()).done); _iteratorNormalCompletion48 = true) {
+            for (var _iterator48 = asan[Symbol.iterator](), _step48; !(_iteratorNormalCompletion48 = (_step48 = _iterator48.next()).done); _iteratorNormalCompletion48 = true) {
               var i = _step48.value;
-              formData.append('ORNAMENT_CURATED_BY', i);
-            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
 
           } catch (err) {
             _didIteratorError48 = true;
@@ -10452,10 +15379,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError49 = undefined;
 
           try {
-            for (var _iterator49 = festia[Symbol.iterator](), _step49; !(_iteratorNormalCompletion49 = (_step49 = _iterator49.next()).done); _iteratorNormalCompletion49 = true) {
+            for (var _iterator49 = themea[Symbol.iterator](), _step49; !(_iteratorNormalCompletion49 = (_step49 = _iterator49.next()).done); _iteratorNormalCompletion49 = true) {
               var i = _step49.value;
-              formData.append('ORNAMENT_FESTIVAL', i);
-            } // formData.append('ORNAMENT_FESTIVAL', festib);
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
 
           } catch (err) {
             _didIteratorError49 = true;
@@ -10472,35 +15399,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_NECKLACE_STYLE', ORNAMENT_NECKLACE_STYLE);
-          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
-          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
-            headers: Headers
-          });
-        } // tslint:disable-next-line: max-line-length
-
-      }, {
-        key: "chaitpen",
-        value: function chaitpen(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, bsizea, bsizeb, ORNAMENT_CHAIN_STYLE, ORNAMENT_PENDANT_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
-          var formData = new FormData();
-          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-          formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion50 = true;
           var _didIteratorError50 = false;
           var _iteratorError50 = undefined;
 
           try {
-            for (var _iterator50 = asion[Symbol.iterator](), _step50; !(_iteratorNormalCompletion50 = (_step50 = _iterator50.next()).done); _iteratorNormalCompletion50 = true) {
+            for (var _iterator50 = curateda[Symbol.iterator](), _step50; !(_iteratorNormalCompletion50 = (_step50 = _iterator50.next()).done); _iteratorNormalCompletion50 = true) {
               var i = _step50.value;
-              formData.append('ORNAMENT_OCCASION', i);
-            } // formData.append('ORNAMENT_OCCASION', asian);
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
 
           } catch (err) {
             _didIteratorError50 = true;
@@ -10522,10 +15429,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError51 = undefined;
 
           try {
-            for (var _iterator51 = asan[Symbol.iterator](), _step51; !(_iteratorNormalCompletion51 = (_step51 = _iterator51.next()).done); _iteratorNormalCompletion51 = true) {
+            for (var _iterator51 = festia[Symbol.iterator](), _step51; !(_iteratorNormalCompletion51 = (_step51 = _iterator51.next()).done); _iteratorNormalCompletion51 = true) {
               var i = _step51.value;
-              formData.append('ORNAMENT_GIFT', i);
-            } // formData.append('ORNAMENT_GIFT', asin);
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
 
           } catch (err) {
             _didIteratorError51 = true;
@@ -10542,15 +15449,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
           var _iteratorNormalCompletion52 = true;
           var _didIteratorError52 = false;
           var _iteratorError52 = undefined;
 
           try {
-            for (var _iterator52 = themea[Symbol.iterator](), _step52; !(_iteratorNormalCompletion52 = (_step52 = _iterator52.next()).done); _iteratorNormalCompletion52 = true) {
+            for (var _iterator52 = bsizea[Symbol.iterator](), _step52; !(_iteratorNormalCompletion52 = (_step52 = _iterator52.next()).done); _iteratorNormalCompletion52 = true) {
               var i = _step52.value;
-              formData.append('ORNAMENT_THEME', i);
-            } // formData.append('ORNAMENT_THEME', themeb);
+              formData.append('ORNAMENT_CHAIN_LENGTH', i);
+            } // formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
 
           } catch (err) {
             _didIteratorError52 = true;
@@ -10567,16 +15475,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
+            headers: Headers
+          });
+        } // tslint:disable-next-line: max-line-length
+
+      }, {
+        key: "necklace",
+        value: function necklace(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, metala, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_NECKLACE_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+          var formData = new FormData();
+          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+          formData.append('WEIGHT', WEIGHT);
           var _iteratorNormalCompletion53 = true;
           var _didIteratorError53 = false;
           var _iteratorError53 = undefined;
 
           try {
-            for (var _iterator53 = curateda[Symbol.iterator](), _step53; !(_iteratorNormalCompletion53 = (_step53 = _iterator53.next()).done); _iteratorNormalCompletion53 = true) {
+            for (var _iterator53 = metala[Symbol.iterator](), _step53; !(_iteratorNormalCompletion53 = (_step53 = _iterator53.next()).done); _iteratorNormalCompletion53 = true) {
               var i = _step53.value;
-              formData.append('ORNAMENT_CURATED_BY', i);
-            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
-
+              formData.append('ORNAMENT_METAL', i);
+            }
           } catch (err) {
             _didIteratorError53 = true;
             _iteratorError53 = err;
@@ -10597,10 +15522,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError54 = undefined;
 
           try {
-            for (var _iterator54 = festia[Symbol.iterator](), _step54; !(_iteratorNormalCompletion54 = (_step54 = _iterator54.next()).done); _iteratorNormalCompletion54 = true) {
+            for (var _iterator54 = asion[Symbol.iterator](), _step54; !(_iteratorNormalCompletion54 = (_step54 = _iterator54.next()).done); _iteratorNormalCompletion54 = true) {
               var i = _step54.value;
-              formData.append('ORNAMENT_FESTIVAL', i);
-            } // formData.append('ORNAMENT_FESTIVAL', festib);
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
 
           } catch (err) {
             _didIteratorError54 = true;
@@ -10617,16 +15542,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
           var _iteratorNormalCompletion55 = true;
           var _didIteratorError55 = false;
           var _iteratorError55 = undefined;
 
           try {
-            for (var _iterator55 = bsizea[Symbol.iterator](), _step55; !(_iteratorNormalCompletion55 = (_step55 = _iterator55.next()).done); _iteratorNormalCompletion55 = true) {
+            for (var _iterator55 = asan[Symbol.iterator](), _step55; !(_iteratorNormalCompletion55 = (_step55 = _iterator55.next()).done); _iteratorNormalCompletion55 = true) {
               var i = _step55.value;
-              formData.append('ORNAMENT_CHAIN_LENGTH', i);
-            } //formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
 
           } catch (err) {
             _didIteratorError55 = true;
@@ -10643,34 +15567,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
-          formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
-          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
-          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
-            headers: Headers
-          });
-        }
-      }, {
-        key: "pendant",
-        value: function pendant(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_PENDANT_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
-          var formData = new FormData();
-          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-          formData.append('WEIGHT', WEIGHT);
-          formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
           var _iteratorNormalCompletion56 = true;
           var _didIteratorError56 = false;
           var _iteratorError56 = undefined;
 
           try {
-            for (var _iterator56 = asion[Symbol.iterator](), _step56; !(_iteratorNormalCompletion56 = (_step56 = _iterator56.next()).done); _iteratorNormalCompletion56 = true) {
+            for (var _iterator56 = themea[Symbol.iterator](), _step56; !(_iteratorNormalCompletion56 = (_step56 = _iterator56.next()).done); _iteratorNormalCompletion56 = true) {
               var i = _step56.value;
-              formData.append('ORNAMENT_OCCASION', i);
-            } // formData.append('ORNAMENT_OCCASION', asian);
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
 
           } catch (err) {
             _didIteratorError56 = true;
@@ -10692,10 +15597,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError57 = undefined;
 
           try {
-            for (var _iterator57 = asan[Symbol.iterator](), _step57; !(_iteratorNormalCompletion57 = (_step57 = _iterator57.next()).done); _iteratorNormalCompletion57 = true) {
+            for (var _iterator57 = curateda[Symbol.iterator](), _step57; !(_iteratorNormalCompletion57 = (_step57 = _iterator57.next()).done); _iteratorNormalCompletion57 = true) {
               var i = _step57.value;
-              formData.append('ORNAMENT_GIFT', i);
-            } // formData.append('ORNAMENT_GIFT', asin);
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
 
           } catch (err) {
             _didIteratorError57 = true;
@@ -10717,10 +15622,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError58 = undefined;
 
           try {
-            for (var _iterator58 = themea[Symbol.iterator](), _step58; !(_iteratorNormalCompletion58 = (_step58 = _iterator58.next()).done); _iteratorNormalCompletion58 = true) {
+            for (var _iterator58 = festia[Symbol.iterator](), _step58; !(_iteratorNormalCompletion58 = (_step58 = _iterator58.next()).done); _iteratorNormalCompletion58 = true) {
               var i = _step58.value;
-              formData.append('ORNAMENT_THEME', i);
-            } // formData.append('ORNAMENT_THEME', themeb);
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
 
           } catch (err) {
             _didIteratorError58 = true;
@@ -10737,16 +15642,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           }
 
+          formData.append('ORNAMENT_NECKLACE_STYLE', ORNAMENT_NECKLACE_STYLE);
+          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
+            headers: Headers
+          });
+        } // tslint:disable-next-line: max-line-length
+
+      }, {
+        key: "chaitpen",
+        value: function chaitpen(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, metala, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, bsizea, bsizeb, ORNAMENT_CHAIN_STYLE, ORNAMENT_PENDANT_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+          var formData = new FormData();
+          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+          formData.append('WEIGHT', WEIGHT);
           var _iteratorNormalCompletion59 = true;
           var _didIteratorError59 = false;
           var _iteratorError59 = undefined;
 
           try {
-            for (var _iterator59 = curateda[Symbol.iterator](), _step59; !(_iteratorNormalCompletion59 = (_step59 = _iterator59.next()).done); _iteratorNormalCompletion59 = true) {
+            for (var _iterator59 = metala[Symbol.iterator](), _step59; !(_iteratorNormalCompletion59 = (_step59 = _iterator59.next()).done); _iteratorNormalCompletion59 = true) {
               var i = _step59.value;
-              formData.append('ORNAMENT_CURATED_BY', i);
-            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
-
+              formData.append('ORNAMENT_METAL', i);
+            }
           } catch (err) {
             _didIteratorError59 = true;
             _iteratorError59 = err;
@@ -10767,10 +15690,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _iteratorError60 = undefined;
 
           try {
-            for (var _iterator60 = festia[Symbol.iterator](), _step60; !(_iteratorNormalCompletion60 = (_step60 = _iterator60.next()).done); _iteratorNormalCompletion60 = true) {
+            for (var _iterator60 = asion[Symbol.iterator](), _step60; !(_iteratorNormalCompletion60 = (_step60 = _iterator60.next()).done); _iteratorNormalCompletion60 = true) {
               var i = _step60.value;
-              formData.append('ORNAMENT_FESTIVAL', i);
-            } // formData.append('ORNAMENT_FESTIVAL', festib);
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
 
           } catch (err) {
             _didIteratorError60 = true;
@@ -10783,6 +15706,299 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             } finally {
               if (_didIteratorError60) {
                 throw _iteratorError60;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion61 = true;
+          var _didIteratorError61 = false;
+          var _iteratorError61 = undefined;
+
+          try {
+            for (var _iterator61 = asan[Symbol.iterator](), _step61; !(_iteratorNormalCompletion61 = (_step61 = _iterator61.next()).done); _iteratorNormalCompletion61 = true) {
+              var i = _step61.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError61 = true;
+            _iteratorError61 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion61 && _iterator61.return != null) {
+                _iterator61.return();
+              }
+            } finally {
+              if (_didIteratorError61) {
+                throw _iteratorError61;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion62 = true;
+          var _didIteratorError62 = false;
+          var _iteratorError62 = undefined;
+
+          try {
+            for (var _iterator62 = themea[Symbol.iterator](), _step62; !(_iteratorNormalCompletion62 = (_step62 = _iterator62.next()).done); _iteratorNormalCompletion62 = true) {
+              var i = _step62.value;
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
+
+          } catch (err) {
+            _didIteratorError62 = true;
+            _iteratorError62 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion62 && _iterator62.return != null) {
+                _iterator62.return();
+              }
+            } finally {
+              if (_didIteratorError62) {
+                throw _iteratorError62;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion63 = true;
+          var _didIteratorError63 = false;
+          var _iteratorError63 = undefined;
+
+          try {
+            for (var _iterator63 = curateda[Symbol.iterator](), _step63; !(_iteratorNormalCompletion63 = (_step63 = _iterator63.next()).done); _iteratorNormalCompletion63 = true) {
+              var i = _step63.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+
+          } catch (err) {
+            _didIteratorError63 = true;
+            _iteratorError63 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion63 && _iterator63.return != null) {
+                _iterator63.return();
+              }
+            } finally {
+              if (_didIteratorError63) {
+                throw _iteratorError63;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion64 = true;
+          var _didIteratorError64 = false;
+          var _iteratorError64 = undefined;
+
+          try {
+            for (var _iterator64 = festia[Symbol.iterator](), _step64; !(_iteratorNormalCompletion64 = (_step64 = _iterator64.next()).done); _iteratorNormalCompletion64 = true) {
+              var i = _step64.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
+
+          } catch (err) {
+            _didIteratorError64 = true;
+            _iteratorError64 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion64 && _iterator64.return != null) {
+                _iterator64.return();
+              }
+            } finally {
+              if (_didIteratorError64) {
+                throw _iteratorError64;
+              }
+            }
+          }
+
+          formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
+          var _iteratorNormalCompletion65 = true;
+          var _didIteratorError65 = false;
+          var _iteratorError65 = undefined;
+
+          try {
+            for (var _iterator65 = bsizea[Symbol.iterator](), _step65; !(_iteratorNormalCompletion65 = (_step65 = _iterator65.next()).done); _iteratorNormalCompletion65 = true) {
+              var i = _step65.value;
+              formData.append('ORNAMENT_CHAIN_LENGTH', i);
+            } //formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
+
+          } catch (err) {
+            _didIteratorError65 = true;
+            _iteratorError65 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion65 && _iterator65.return != null) {
+                _iterator65.return();
+              }
+            } finally {
+              if (_didIteratorError65) {
+                throw _iteratorError65;
+              }
+            }
+          }
+
+          formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
+          formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+          formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+          formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+          formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {
+            headers: Headers
+          });
+        }
+      }, {
+        key: "pendant",
+        value: function pendant(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, metala, asion, asian, asan, asin, themea, themeb, curateda, curatedb, festia, festib, ORNAMENT_PENDANT_STYLE, fileToUpload, fileToUploadone, fileToUploadtwo, fileToUploadthree) {
+          var formData = new FormData();
+          formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+          formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+          formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+          formData.append('WEIGHT', WEIGHT);
+          var _iteratorNormalCompletion66 = true;
+          var _didIteratorError66 = false;
+          var _iteratorError66 = undefined;
+
+          try {
+            for (var _iterator66 = metala[Symbol.iterator](), _step66; !(_iteratorNormalCompletion66 = (_step66 = _iterator66.next()).done); _iteratorNormalCompletion66 = true) {
+              var i = _step66.value;
+              formData.append('ORNAMENT_METAL', i);
+            }
+          } catch (err) {
+            _didIteratorError66 = true;
+            _iteratorError66 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion66 && _iterator66.return != null) {
+                _iterator66.return();
+              }
+            } finally {
+              if (_didIteratorError66) {
+                throw _iteratorError66;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion67 = true;
+          var _didIteratorError67 = false;
+          var _iteratorError67 = undefined;
+
+          try {
+            for (var _iterator67 = asion[Symbol.iterator](), _step67; !(_iteratorNormalCompletion67 = (_step67 = _iterator67.next()).done); _iteratorNormalCompletion67 = true) {
+              var i = _step67.value;
+              formData.append('ORNAMENT_OCCASION', i);
+            } // formData.append('ORNAMENT_OCCASION', asian);
+
+          } catch (err) {
+            _didIteratorError67 = true;
+            _iteratorError67 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion67 && _iterator67.return != null) {
+                _iterator67.return();
+              }
+            } finally {
+              if (_didIteratorError67) {
+                throw _iteratorError67;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion68 = true;
+          var _didIteratorError68 = false;
+          var _iteratorError68 = undefined;
+
+          try {
+            for (var _iterator68 = asan[Symbol.iterator](), _step68; !(_iteratorNormalCompletion68 = (_step68 = _iterator68.next()).done); _iteratorNormalCompletion68 = true) {
+              var i = _step68.value;
+              formData.append('ORNAMENT_GIFT', i);
+            } // formData.append('ORNAMENT_GIFT', asin);
+
+          } catch (err) {
+            _didIteratorError68 = true;
+            _iteratorError68 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion68 && _iterator68.return != null) {
+                _iterator68.return();
+              }
+            } finally {
+              if (_didIteratorError68) {
+                throw _iteratorError68;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion69 = true;
+          var _didIteratorError69 = false;
+          var _iteratorError69 = undefined;
+
+          try {
+            for (var _iterator69 = themea[Symbol.iterator](), _step69; !(_iteratorNormalCompletion69 = (_step69 = _iterator69.next()).done); _iteratorNormalCompletion69 = true) {
+              var i = _step69.value;
+              formData.append('ORNAMENT_THEME', i);
+            } // formData.append('ORNAMENT_THEME', themeb);
+
+          } catch (err) {
+            _didIteratorError69 = true;
+            _iteratorError69 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion69 && _iterator69.return != null) {
+                _iterator69.return();
+              }
+            } finally {
+              if (_didIteratorError69) {
+                throw _iteratorError69;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion70 = true;
+          var _didIteratorError70 = false;
+          var _iteratorError70 = undefined;
+
+          try {
+            for (var _iterator70 = curateda[Symbol.iterator](), _step70; !(_iteratorNormalCompletion70 = (_step70 = _iterator70.next()).done); _iteratorNormalCompletion70 = true) {
+              var i = _step70.value;
+              formData.append('ORNAMENT_CURATED_BY', i);
+            } // formData.append('ORNAMENT_CURATED_BY', curatedb);
+
+          } catch (err) {
+            _didIteratorError70 = true;
+            _iteratorError70 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion70 && _iterator70.return != null) {
+                _iterator70.return();
+              }
+            } finally {
+              if (_didIteratorError70) {
+                throw _iteratorError70;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion71 = true;
+          var _didIteratorError71 = false;
+          var _iteratorError71 = undefined;
+
+          try {
+            for (var _iterator71 = festia[Symbol.iterator](), _step71; !(_iteratorNormalCompletion71 = (_step71 = _iterator71.next()).done); _iteratorNormalCompletion71 = true) {
+              var i = _step71.value;
+              formData.append('ORNAMENT_FESTIVAL', i);
+            } // formData.append('ORNAMENT_FESTIVAL', festib);
+
+          } catch (err) {
+            _didIteratorError71 = true;
+            _iteratorError71 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion71 && _iterator71.return != null) {
+                _iterator71.return();
+              }
+            } finally {
+              if (_didIteratorError71) {
+                throw _iteratorError71;
               }
             }
           }
@@ -10942,11 +16158,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(form) {
-          var _this102 = this;
+          var _this120 = this;
 
           this.userService.update(form.value).subscribe(function (res) {
             // console.log(res);
-            _this102.router.navigate(['./read']);
+            _this120.router.navigate(['./read']);
           }, function (err) {
             console.log(err.message);
           });
