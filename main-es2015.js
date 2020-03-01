@@ -5133,7 +5133,7 @@ let MangalsutraComponent = class MangalsutraComponent {
             this.userService.multi(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
-                    // this.router.navigate(['./ornamentread']);
+                    this.router.navigate(['./ornamentread']);
                 }
             });
         }
@@ -5612,7 +5612,7 @@ let NecklaceComponent = class NecklaceComponent {
             this.userService.necklace(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_NECKLACE_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
-                    // this.router.navigate(['./ornamentread']);
+                    this.router.navigate(['./ornamentread']);
                 }
             });
         }
@@ -6091,7 +6091,7 @@ let OrnaearringtypeComponent = class OrnaearringtypeComponent {
             this.userService.ear(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_EARRING_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
-                    // this.router.navigate(['./ornamentread']);
+                    this.router.navigate(['./ornamentread']);
                 }
             });
         }
@@ -6570,7 +6570,7 @@ let OrnamentnosepinComponent = class OrnamentnosepinComponent {
             this.userService.nosepin(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_NOSEPIN_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status === 201) {
-                    // this.router.navigate(['./ornamentread']);
+                    this.router.navigate(['./ornamentread']);
                 }
             });
         }
@@ -7115,7 +7115,7 @@ let OrnaringtypeComponent = class OrnaringtypeComponent {
             this.userService.mli(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.rsizea, this.rsizeb, ORNAMENT_RING_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status === 201) {
-                    // this.router.navigate(['./ornamentread']);
+                    this.router.navigate(['./ornamentread']);
                 }
             });
         }
@@ -7594,7 +7594,7 @@ let PendantComponent = class PendantComponent {
             this.userService.pendant(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status === 201) {
-                    // this.router.navigate(['./ornamentread']);
+                    this.router.navigate(['./ornamentread']);
                 }
             });
         }
@@ -8073,7 +8073,7 @@ let PendantearringtypeComponent = class PendantearringtypeComponent {
             this.userService.pendantwithearing(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_EARRING_STYLE.value, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
-                    // this.router.navigate(['./ornamentread']);
+                    this.router.navigate(['./ornamentread']);
                 }
             });
         }
@@ -8555,7 +8555,7 @@ let SetsComponent = class SetsComponent {
             this.userService.multi(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
-                    // this.router.navigate(['./ornamentread']);
+                    this.router.navigate(['./ornamentread']);
                 }
             });
         }

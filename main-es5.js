@@ -7585,6 +7585,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
+          var _this54 = this;
+
           // tslint:disable-next-line: max-line-length
           if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
             alert('check the confirmation checkboxex to proceed');
@@ -7592,7 +7594,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.userService.multi(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
               console.log('done', data);
 
-              if (data.status == 201) {// this.router.navigate(['./ornamentread']);
+              if (data.status == 201) {
+                _this54.router.navigate(['./ornamentread']);
               }
             });
           }
@@ -7743,61 +7746,61 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "metal",
         value: function metal() {
-          var _this54 = this;
+          var _this55 = this;
 
           this.userService.ornmetal().subscribe(function (data) {
             console.log(data);
-            _this54.Metal = data;
+            _this55.Metal = data;
           });
         }
       }, {
         key: "occasion",
         value: function occasion() {
-          var _this55 = this;
+          var _this56 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this55.Occasion = data;
+            _this56.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this56 = this;
+          var _this57 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this56.Gift = data;
+            _this57.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this57 = this;
+          var _this58 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this57.Theme = data;
+            _this58.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this58 = this;
+          var _this59 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this58.Curated = data;
+            _this59.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this59 = this;
+          var _this60 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this59.Festival = data;
+            _this60.Festival = data;
           });
         }
       }, {
@@ -8189,6 +8192,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_NECKLACE_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
+          var _this61 = this;
+
           // tslint:disable-next-line: max-line-length
           if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
             alert('check the confirmation checkboxex to proceed');
@@ -8196,7 +8201,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.userService.necklace(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_NECKLACE_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
               console.log('done', data);
 
-              if (data.status == 201) {// this.router.navigate(['./ornamentread']);
+              if (data.status == 201) {
+                _this61.router.navigate(['./ornamentread']);
               }
             });
           }
@@ -8347,61 +8353,61 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "metal",
         value: function metal() {
-          var _this60 = this;
+          var _this62 = this;
 
           this.userService.ornmetal().subscribe(function (data) {
             console.log(data);
-            _this60.Metal = data;
+            _this62.Metal = data;
           });
         }
       }, {
         key: "occasion",
         value: function occasion() {
-          var _this61 = this;
+          var _this63 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this61.Occasion = data;
+            _this63.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this62 = this;
+          var _this64 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this62.Gift = data;
+            _this64.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this63 = this;
+          var _this65 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this63.Theme = data;
+            _this65.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this64 = this;
+          var _this66 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this64.Curated = data;
+            _this66.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this65 = this;
+          var _this67 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this65.Festival = data;
+            _this67.Festival = data;
           });
         }
       }, {
@@ -8793,6 +8799,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_EARRING_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
+          var _this68 = this;
+
           // tslint:disable-next-line: max-line-length
           if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
             alert('check the confirmation checkboxex to proceed');
@@ -8800,7 +8808,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.userService.ear(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_EARRING_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
               console.log('done', data);
 
-              if (data.status == 201) {// this.router.navigate(['./ornamentread']);
+              if (data.status == 201) {
+                _this68.router.navigate(['./ornamentread']);
               }
             });
           }
@@ -8951,61 +8960,61 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "metal",
         value: function metal() {
-          var _this66 = this;
+          var _this69 = this;
 
           this.userService.ornmetal().subscribe(function (data) {
             console.log(data);
-            _this66.Metal = data;
+            _this69.Metal = data;
           });
         }
       }, {
         key: "occasion",
         value: function occasion() {
-          var _this67 = this;
+          var _this70 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this67.Occasion = data;
+            _this70.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this68 = this;
+          var _this71 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this68.Gift = data;
+            _this71.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this69 = this;
+          var _this72 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this69.Theme = data;
+            _this72.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this70 = this;
+          var _this73 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this70.Curated = data;
+            _this73.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this71 = this;
+          var _this74 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this71.Festival = data;
+            _this74.Festival = data;
           });
         }
       }, {
@@ -9397,6 +9406,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_NOSEPIN_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
+          var _this75 = this;
+
           // tslint:disable-next-line: max-line-length
           if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
             alert('check the confirmation checkboxex to proceed');
@@ -9404,7 +9415,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.userService.nosepin(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_NOSEPIN_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
               console.log('done', data);
 
-              if (data.status === 201) {// this.router.navigate(['./ornamentread']);
+              if (data.status === 201) {
+                _this75.router.navigate(['./ornamentread']);
               }
             });
           }
@@ -9561,71 +9573,71 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "metal",
         value: function metal() {
-          var _this72 = this;
+          var _this76 = this;
 
           this.userService.ornmetal().subscribe(function (data) {
             console.log(data);
-            _this72.Metal = data;
+            _this76.Metal = data;
           });
         }
       }, {
         key: "occasion",
         value: function occasion() {
-          var _this73 = this;
+          var _this77 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this73.Occasion = data;
+            _this77.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this74 = this;
+          var _this78 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this74.Gift = data;
+            _this78.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this75 = this;
+          var _this79 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this75.Theme = data;
+            _this79.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this76 = this;
+          var _this80 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this76.Curated = data;
+            _this80.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this77 = this;
+          var _this81 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this77.Festival = data;
+            _this81.Festival = data;
           });
         }
       }, {
         key: "ringsize",
         value: function ringsize() {
-          var _this78 = this;
+          var _this82 = this;
 
           this.userService.ornRsize().subscribe(function (data) {
             console.log(data);
-            _this78.Ringsize = data;
+            _this82.Ringsize = data;
           });
         }
       }, {
@@ -10078,6 +10090,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_RING_SIZE, ORNAMENT_RING_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
+          var _this83 = this;
+
           // tslint:disable-next-line: max-line-length
           if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
             alert('check the confirmation checkboxex to proceed');
@@ -10085,7 +10099,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.userService.mli(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.rsizea, this.rsizeb, ORNAMENT_RING_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
               console.log('done', data);
 
-              if (data.status === 201) {// this.router.navigate(['./ornamentread']);
+              if (data.status === 201) {
+                _this83.router.navigate(['./ornamentread']);
               }
             });
           }
@@ -10236,61 +10251,61 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "metal",
         value: function metal() {
-          var _this79 = this;
+          var _this84 = this;
 
           this.userService.ornmetal().subscribe(function (data) {
             console.log(data);
-            _this79.Metal = data;
+            _this84.Metal = data;
           });
         }
       }, {
         key: "occasion",
         value: function occasion() {
-          var _this80 = this;
+          var _this85 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this80.Occasion = data;
+            _this85.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this81 = this;
+          var _this86 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this81.Gift = data;
+            _this86.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this82 = this;
+          var _this87 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this82.Theme = data;
+            _this87.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this83 = this;
+          var _this88 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this83.Curated = data;
+            _this88.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this84 = this;
+          var _this89 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this84.Festival = data;
+            _this89.Festival = data;
           });
         }
       }, {
@@ -10682,6 +10697,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_PENDANT_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
+          var _this90 = this;
+
           // tslint:disable-next-line: max-line-length
           if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
             alert('check the confirmation checkboxex to proceed');
@@ -10689,7 +10706,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.userService.pendant(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
               console.log('done', data);
 
-              if (data.status === 201) {// this.router.navigate(['./ornamentread']);
+              if (data.status === 201) {
+                _this90.router.navigate(['./ornamentread']);
               }
             });
           }
@@ -10820,617 +10838,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       _createClass(PendantearringtypeComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          this.read();
-          this.occasion();
-          this.gift();
-          this.theme();
-          this.curatedby();
-          this.festival();
-          this.metal();
-        }
-      }, {
-        key: "read",
-        value: function read() {
-          this.userService.readorn().subscribe(function (data) {
-            console.log(data);
-          });
-        }
-      }, {
-        key: "metal",
-        value: function metal() {
-          var _this85 = this;
-
-          this.userService.ornmetal().subscribe(function (data) {
-            console.log(data);
-            _this85.Metal = data;
-          });
-        }
-      }, {
-        key: "occasion",
-        value: function occasion() {
-          var _this86 = this;
-
-          this.userService.ornoccasion().subscribe(function (data) {
-            console.log(data);
-            _this86.Occasion = data;
-          });
-        }
-      }, {
-        key: "gift",
-        value: function gift() {
-          var _this87 = this;
-
-          this.userService.ornGift().subscribe(function (data) {
-            console.log(data);
-            _this87.Gift = data;
-          });
-        }
-      }, {
-        key: "theme",
-        value: function theme() {
-          var _this88 = this;
-
-          this.userService.ornTheme().subscribe(function (data) {
-            console.log(data);
-            _this88.Theme = data;
-          });
-        }
-      }, {
-        key: "curatedby",
-        value: function curatedby() {
-          var _this89 = this;
-
-          this.userService.ornCurated().subscribe(function (data) {
-            console.log(data);
-            _this89.Curated = data;
-          });
-        }
-      }, {
-        key: "festival",
-        value: function festival() {
-          var _this90 = this;
-
-          this.userService.ornFestival().subscribe(function (data) {
-            console.log(data);
-            _this90.Festival = data;
-          });
-        }
-      }, {
-        key: "Ornmetal",
-        value: function Ornmetal(pk) {
-          console.log(pk);
-
-          if (document.getElementById('zero').checked) {
-            document.getElementById('zero').checked = false;
-            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
-            this.metalb.push(pk);
-            this.metala = [];
-            console.log(this.metala);
-            console.log(this.metalb);
-          } else {
-            this.metalb.push(pk);
-            console.log(this.metala);
-            console.log(this.metalb);
-          }
-        }
-      }, {
-        key: "zero",
-        value: function zero() {
-          if (document.getElementById('zero').checked) {
-            if (this.metalb.length == 0) {
-              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
-
-              alert('you cannot confirm your option without selecting any, select your option and then confirm');
-            } else {
-              var a = [],
-                  b = [],
-                  prev;
-              this.metalb.sort();
-
-              for (var i = 0; i < this.metalb.length; i++) {
-                if (this.metalb[i] !== prev) {
-                  a.push(this.metalb[i]);
-                  b.push(1);
-                } else {
-                  b[b.length - 1]++;
-                }
-
-                prev = this.metalb[i];
-              } // return [a, b];
-
-
-              var i = 0;
-
-              for (var j = 0; j < b.length; j++) {
-                if (b[j] % 2 === 0) {} else {
-                  this.metala.push(a[i]);
-                }
-
-                i = i + 1;
-              }
-
-              console.log('metala', this.metala);
-            }
-          } else {
-            this.metala = [];
-            console.log('metala', this.metala);
-          }
-        }
-      }, {
-        key: "Answer",
-        value: function Answer(pk) {
-          console.log(pk);
-
-          if (document.getElementById('1').checked) {
-            document.getElementById('1').checked = false;
-            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
-            this.asian.push(pk);
-            this.asion = [];
-            console.log(this.asion);
-            console.log(this.asian);
-          } else {
-            this.asian.push(pk);
-            console.log(this.asion);
-            console.log(this.asian);
-          }
-        }
-      }, {
-        key: "one",
-        value: function one() {
-          if (document.getElementById('1').checked) {
-            if (this.asian.length == 0) {
-              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
-
-              alert('you cannot confirm your option without selecting any, select your option and then confirm');
-            } else {
-              var a = [],
-                  b = [],
-                  prev;
-              this.asian.sort();
-
-              for (var i = 0; i < this.asian.length; i++) {
-                if (this.asian[i] !== prev) {
-                  a.push(this.asian[i]);
-                  b.push(1);
-                } else {
-                  b[b.length - 1]++;
-                }
-
-                prev = this.asian[i];
-              } // return [a, b];
-
-
-              var i = 0;
-
-              for (var j = 0; j < b.length; j++) {
-                if (b[j] % 2 === 0) {} else {
-                  this.asion.push(a[i]);
-                }
-
-                i = i + 1;
-              }
-
-              console.log('asion', this.asion);
-            }
-          } else {
-            this.asion = [];
-            console.log('asion', this.asion);
-          }
-        }
-      }, {
-        key: "Ornagift",
-        value: function Ornagift(k) {
-          console.log(k);
-
-          if (document.getElementById('2').checked) {
-            document.getElementById('2').checked = false;
-            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
-            this.asin.push(k);
-            this.asan = [];
-            console.log(this.asan);
-            console.log(this.asin);
-          } else {
-            this.asin.push(k);
-            console.log(this.asan);
-            console.log(this.asin);
-          }
-        }
-      }, {
-        key: "two",
-        value: function two() {
-          if (document.getElementById('2').checked) {
-            if (this.asin.length == 0) {
-              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
-
-              alert('you cannot confirm your option without selecting any, select your option and then confirm');
-            } else {
-              var a = [],
-                  b = [],
-                  prev;
-              this.asin.sort();
-
-              for (var i = 0; i < this.asin.length; i++) {
-                if (this.asin[i] !== prev) {
-                  a.push(this.asin[i]);
-                  b.push(1);
-                } else {
-                  b[b.length - 1]++;
-                }
-
-                prev = this.asin[i];
-              } // return [a, b];
-
-
-              var i = 0;
-
-              for (var j = 0; j < b.length; j++) {
-                if (b[j] % 2 === 0) {} else {
-                  this.asan.push(a[i]);
-                }
-
-                i = i + 1;
-              }
-
-              console.log('asan', this.asan);
-            }
-          } else {
-            this.asan = [];
-            console.log('asan', this.asan);
-          }
-        }
-      }, {
-        key: "Ornatheme",
-        value: function Ornatheme(k) {
-          console.log(k);
-
-          if (document.getElementById('3').checked) {
-            document.getElementById('3').checked = false;
-            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
-            this.themeb.push(k);
-            this.themea = [];
-            console.log(this.themea);
-            console.log(this.themeb);
-          } else {
-            this.themeb.push(k);
-            console.log(this.themea);
-            console.log(this.themeb);
-          }
-        }
-      }, {
-        key: "three",
-        value: function three() {
-          if (document.getElementById('3').checked) {
-            if (this.themeb.length == 0) {
-              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
-
-              alert('you cannot confirm your option without selecting any, select your option and then confirm');
-            } else {
-              var a = [],
-                  b = [],
-                  prev;
-              this.themeb.sort();
-
-              for (var i = 0; i < this.themeb.length; i++) {
-                if (this.themeb[i] !== prev) {
-                  a.push(this.themeb[i]);
-                  b.push(1);
-                } else {
-                  b[b.length - 1]++;
-                }
-
-                prev = this.themeb[i];
-              } // return [a, b];
-
-
-              var i = 0;
-
-              for (var j = 0; j < b.length; j++) {
-                if (b[j] % 2 === 0) {} else {
-                  this.themea.push(a[i]);
-                }
-
-                i = i + 1;
-              }
-
-              console.log('themea', this.themea);
-            }
-          } else {
-            this.themea = [];
-            console.log('themea', this.themea);
-          }
-        }
-      }, {
-        key: "OrnaCurated",
-        value: function OrnaCurated(k) {
-          console.log(k);
-
-          if (document.getElementById('4').checked) {
-            document.getElementById('4').checked = false;
-            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
-            this.curatedb.push(k);
-            this.curateda = [];
-            console.log(this.curateda);
-            console.log(this.curatedb);
-          } else {
-            this.curatedb.push(k);
-            console.log(this.curateda);
-            console.log(this.curatedb);
-          }
-        }
-      }, {
-        key: "four",
-        value: function four() {
-          if (document.getElementById('4').checked) {
-            if (this.curatedb.length == 0) {
-              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
-
-              alert('you cannot confirm your option without selecting any, select your option and then confirm');
-            } else {
-              var a = [],
-                  b = [],
-                  prev;
-              this.curatedb.sort();
-
-              for (var i = 0; i < this.curatedb.length; i++) {
-                if (this.curatedb[i] !== prev) {
-                  a.push(this.curatedb[i]);
-                  b.push(1);
-                } else {
-                  b[b.length - 1]++;
-                }
-
-                prev = this.curatedb[i];
-              } // return [a, b];
-
-
-              var i = 0;
-
-              for (var j = 0; j < b.length; j++) {
-                if (b[j] % 2 === 0) {} else {
-                  this.curateda.push(a[i]);
-                }
-
-                i = i + 1;
-              }
-
-              console.log('curateda', this.curateda);
-            }
-          } else {
-            this.curateda = [];
-            console.log('curateda', this.curateda);
-          }
-        }
-      }, {
-        key: "Ornafesti",
-        value: function Ornafesti(k) {
-          console.log(k);
-
-          if (document.getElementById('5').checked) {
-            document.getElementById('5').checked = false;
-            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
-            this.festib.push(k);
-            this.festia = [];
-            console.log(this.festia);
-            console.log(this.festib);
-          } else {
-            this.festib.push(k);
-            console.log(this.festia);
-            console.log(this.festib);
-          }
-        }
-      }, {
-        key: "five",
-        value: function five() {
-          if (document.getElementById('5').checked) {
-            if (this.festib.length == 0) {
-              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
-
-              alert('you cannot confirm your option without selecting any, select your option and then confirm');
-            } else {
-              var a = [],
-                  b = [],
-                  prev;
-              this.festib.sort();
-
-              for (var i = 0; i < this.festib.length; i++) {
-                if (this.festib[i] !== prev) {
-                  a.push(this.festib[i]);
-                  b.push(1);
-                } else {
-                  b[b.length - 1]++;
-                }
-
-                prev = this.festib[i];
-              } // return [a, b];
-
-
-              var i = 0;
-
-              for (var j = 0; j < b.length; j++) {
-                if (b[j] % 2 === 0) {} else {
-                  this.festia.push(a[i]);
-                }
-
-                i = i + 1;
-              }
-
-              console.log('festia', this.festia);
-            }
-          } else {
-            this.festia = [];
-            console.log('festia', this.festia);
-          }
-        }
-      }, {
-        key: "handleFileInput",
-        value: function handleFileInput(file) {
-          this.fileToUpload = file.item(0);
-        }
-      }, {
-        key: "handleFileInputone",
-        value: function handleFileInputone(file) {
-          this.fileToUploadone = file.item(0);
-        }
-      }, {
-        key: "handleFileInputtwo",
-        value: function handleFileInputtwo(file) {
-          this.fileToUploadtwo = file.item(0);
-        }
-      }, {
-        key: "handleFileInputthree",
-        value: function handleFileInputthree(file) {
-          this.fileToUploadthree = file.item(0);
-        }
-      }, {
-        key: "OnSubmit",
-        value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_EARRING_STYLE, ORNAMENT_PENDANT_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
-          // tslint:disable-next-line: max-line-length
-          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
-            alert('check the confirmation checkboxex to proceed');
-          } else {
-            this.userService.pendantwithearing(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_EARRING_STYLE.value, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
-              console.log('done', data);
-
-              if (data.status == 201) {// this.router.navigate(['./ornamentread']);
-              }
-            });
-          }
-        }
-      }]);
-
-      return PendantearringtypeComponent;
-    }();
-
-    PendantearringtypeComponent.ctorParameters = function () {
-      return [{
-        type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
-      }, {
-        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
-      }];
-    };
-
-    PendantearringtypeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-pendantearringtype',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./pendantearringtype.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/ornament/pendantearringtype/pendantearringtype.component.html")).default,
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./pendantearringtype.component.css */
-      "./src/app/ornament/pendantearringtype/pendantearringtype.component.css")).default]
-    })], PendantearringtypeComponent);
-    /***/
-  },
-
-  /***/
-  "./src/app/ornament/sets/sets.component.css":
-  /*!**************************************************!*\
-    !*** ./src/app/ornament/sets/sets.component.css ***!
-    \**************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function srcAppOrnamentSetsSetsComponentCss(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL29ybmFtZW50L3NldHMvc2V0cy5jb21wb25lbnQuY3NzIn0= */";
-    /***/
-  },
-
-  /***/
-  "./src/app/ornament/sets/sets.component.ts":
-  /*!*************************************************!*\
-    !*** ./src/app/ornament/sets/sets.component.ts ***!
-    \*************************************************/
-
-  /*! exports provided: SetsComponent */
-
-  /***/
-  function srcAppOrnamentSetsSetsComponentTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "SetsComponent", function () {
-      return SetsComponent;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! src/app/shared/user.service */
-    "./src/app/shared/user.service.ts");
-    /* harmony import */
-
-
-    var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ngx-toastr */
-    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
-    /* harmony import */
-
-
-    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
-
-    var SetsComponent =
-    /*#__PURE__*/
-    function () {
-      function SetsComponent(userService, toastr, router) {
-        _classCallCheck(this, SetsComponent);
-
-        this.userService = userService;
-        this.toastr = toastr;
-        this.router = router;
-        this.fileToUpload = null;
-        this.fileToUploadone = null;
-        this.fileToUploadtwo = null;
-        this.fileToUploadthree = null;
-        this.anni = {};
-        this.annj = {};
-        this.annk = {};
-        this.data = {};
-        this.Occasion = {};
-        this.Gift = {};
-        this.Theme = {};
-        this.Curated = {};
-        this.Festival = {};
-        this.Metal = {};
-        this.asion = [];
-        this.asian = [];
-        this.asan = [];
-        this.asin = [];
-        this.themea = [];
-        this.themeb = [];
-        this.curateda = [];
-        this.curatedb = [];
-        this.festia = [];
-        this.festib = [];
-        this.metala = [];
-        this.metalb = [];
-      }
-
-      _createClass(SetsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
           this.read();
@@ -11896,7 +11303,623 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       }, {
         key: "OnSubmit",
+        value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_EARRING_STYLE, ORNAMENT_PENDANT_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
+          var _this97 = this;
+
+          // tslint:disable-next-line: max-line-length
+          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
+            alert('check the confirmation checkboxex to proceed');
+          } else {
+            this.userService.pendantwithearing(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_EARRING_STYLE.value, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
+              console.log('done', data);
+
+              if (data.status == 201) {
+                _this97.router.navigate(['./ornamentread']);
+              }
+            });
+          }
+        }
+      }]);
+
+      return PendantearringtypeComponent;
+    }();
+
+    PendantearringtypeComponent.ctorParameters = function () {
+      return [{
+        type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }];
+    };
+
+    PendantearringtypeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-pendantearringtype',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./pendantearringtype.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/ornament/pendantearringtype/pendantearringtype.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./pendantearringtype.component.css */
+      "./src/app/ornament/pendantearringtype/pendantearringtype.component.css")).default]
+    })], PendantearringtypeComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/ornament/sets/sets.component.css":
+  /*!**************************************************!*\
+    !*** ./src/app/ornament/sets/sets.component.css ***!
+    \**************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppOrnamentSetsSetsComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL29ybmFtZW50L3NldHMvc2V0cy5jb21wb25lbnQuY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/ornament/sets/sets.component.ts":
+  /*!*************************************************!*\
+    !*** ./src/app/ornament/sets/sets.component.ts ***!
+    \*************************************************/
+
+  /*! exports provided: SetsComponent */
+
+  /***/
+  function srcAppOrnamentSetsSetsComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "SetsComponent", function () {
+      return SetsComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/shared/user.service */
+    "./src/app/shared/user.service.ts");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+
+    var SetsComponent =
+    /*#__PURE__*/
+    function () {
+      function SetsComponent(userService, toastr, router) {
+        _classCallCheck(this, SetsComponent);
+
+        this.userService = userService;
+        this.toastr = toastr;
+        this.router = router;
+        this.fileToUpload = null;
+        this.fileToUploadone = null;
+        this.fileToUploadtwo = null;
+        this.fileToUploadthree = null;
+        this.anni = {};
+        this.annj = {};
+        this.annk = {};
+        this.data = {};
+        this.Occasion = {};
+        this.Gift = {};
+        this.Theme = {};
+        this.Curated = {};
+        this.Festival = {};
+        this.Metal = {};
+        this.asion = [];
+        this.asian = [];
+        this.asan = [];
+        this.asin = [];
+        this.themea = [];
+        this.themeb = [];
+        this.curateda = [];
+        this.curatedb = [];
+        this.festia = [];
+        this.festib = [];
+        this.metala = [];
+        this.metalb = [];
+      }
+
+      _createClass(SetsComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this.read();
+          this.occasion();
+          this.gift();
+          this.theme();
+          this.curatedby();
+          this.festival();
+          this.metal();
+        }
+      }, {
+        key: "read",
+        value: function read() {
+          this.userService.readorn().subscribe(function (data) {
+            console.log(data);
+          });
+        }
+      }, {
+        key: "metal",
+        value: function metal() {
+          var _this98 = this;
+
+          this.userService.ornmetal().subscribe(function (data) {
+            console.log(data);
+            _this98.Metal = data;
+          });
+        }
+      }, {
+        key: "occasion",
+        value: function occasion() {
+          var _this99 = this;
+
+          this.userService.ornoccasion().subscribe(function (data) {
+            console.log(data);
+            _this99.Occasion = data;
+          });
+        }
+      }, {
+        key: "gift",
+        value: function gift() {
+          var _this100 = this;
+
+          this.userService.ornGift().subscribe(function (data) {
+            console.log(data);
+            _this100.Gift = data;
+          });
+        }
+      }, {
+        key: "theme",
+        value: function theme() {
+          var _this101 = this;
+
+          this.userService.ornTheme().subscribe(function (data) {
+            console.log(data);
+            _this101.Theme = data;
+          });
+        }
+      }, {
+        key: "curatedby",
+        value: function curatedby() {
+          var _this102 = this;
+
+          this.userService.ornCurated().subscribe(function (data) {
+            console.log(data);
+            _this102.Curated = data;
+          });
+        }
+      }, {
+        key: "festival",
+        value: function festival() {
+          var _this103 = this;
+
+          this.userService.ornFestival().subscribe(function (data) {
+            console.log(data);
+            _this103.Festival = data;
+          });
+        }
+      }, {
+        key: "Ornmetal",
+        value: function Ornmetal(pk) {
+          console.log(pk);
+
+          if (document.getElementById('zero').checked) {
+            document.getElementById('zero').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.metalb.push(pk);
+            this.metala = [];
+            console.log(this.metala);
+            console.log(this.metalb);
+          } else {
+            this.metalb.push(pk);
+            console.log(this.metala);
+            console.log(this.metalb);
+          }
+        }
+      }, {
+        key: "zero",
+        value: function zero() {
+          if (document.getElementById('zero').checked) {
+            if (this.metalb.length == 0) {
+              document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.metalb.sort();
+
+              for (var i = 0; i < this.metalb.length; i++) {
+                if (this.metalb[i] !== prev) {
+                  a.push(this.metalb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.metalb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.metala.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('metala', this.metala);
+            }
+          } else {
+            this.metala = [];
+            console.log('metala', this.metala);
+          }
+        }
+      }, {
+        key: "Answer",
+        value: function Answer(pk) {
+          console.log(pk);
+
+          if (document.getElementById('1').checked) {
+            document.getElementById('1').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asian.push(pk);
+            this.asion = [];
+            console.log(this.asion);
+            console.log(this.asian);
+          } else {
+            this.asian.push(pk);
+            console.log(this.asion);
+            console.log(this.asian);
+          }
+        }
+      }, {
+        key: "one",
+        value: function one() {
+          if (document.getElementById('1').checked) {
+            if (this.asian.length == 0) {
+              document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asian.sort();
+
+              for (var i = 0; i < this.asian.length; i++) {
+                if (this.asian[i] !== prev) {
+                  a.push(this.asian[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asian[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asion.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asion', this.asion);
+            }
+          } else {
+            this.asion = [];
+            console.log('asion', this.asion);
+          }
+        }
+      }, {
+        key: "Ornagift",
+        value: function Ornagift(k) {
+          console.log(k);
+
+          if (document.getElementById('2').checked) {
+            document.getElementById('2').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.asin.push(k);
+            this.asan = [];
+            console.log(this.asan);
+            console.log(this.asin);
+          } else {
+            this.asin.push(k);
+            console.log(this.asan);
+            console.log(this.asin);
+          }
+        }
+      }, {
+        key: "two",
+        value: function two() {
+          if (document.getElementById('2').checked) {
+            if (this.asin.length == 0) {
+              document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.asin.sort();
+
+              for (var i = 0; i < this.asin.length; i++) {
+                if (this.asin[i] !== prev) {
+                  a.push(this.asin[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.asin[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.asan.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('asan', this.asan);
+            }
+          } else {
+            this.asan = [];
+            console.log('asan', this.asan);
+          }
+        }
+      }, {
+        key: "Ornatheme",
+        value: function Ornatheme(k) {
+          console.log(k);
+
+          if (document.getElementById('3').checked) {
+            document.getElementById('3').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.themeb.push(k);
+            this.themea = [];
+            console.log(this.themea);
+            console.log(this.themeb);
+          } else {
+            this.themeb.push(k);
+            console.log(this.themea);
+            console.log(this.themeb);
+          }
+        }
+      }, {
+        key: "three",
+        value: function three() {
+          if (document.getElementById('3').checked) {
+            if (this.themeb.length == 0) {
+              document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.themeb.sort();
+
+              for (var i = 0; i < this.themeb.length; i++) {
+                if (this.themeb[i] !== prev) {
+                  a.push(this.themeb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.themeb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.themea.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('themea', this.themea);
+            }
+          } else {
+            this.themea = [];
+            console.log('themea', this.themea);
+          }
+        }
+      }, {
+        key: "OrnaCurated",
+        value: function OrnaCurated(k) {
+          console.log(k);
+
+          if (document.getElementById('4').checked) {
+            document.getElementById('4').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.curatedb.push(k);
+            this.curateda = [];
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          } else {
+            this.curatedb.push(k);
+            console.log(this.curateda);
+            console.log(this.curatedb);
+          }
+        }
+      }, {
+        key: "four",
+        value: function four() {
+          if (document.getElementById('4').checked) {
+            if (this.curatedb.length == 0) {
+              document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.curatedb.sort();
+
+              for (var i = 0; i < this.curatedb.length; i++) {
+                if (this.curatedb[i] !== prev) {
+                  a.push(this.curatedb[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.curatedb[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.curateda.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('curateda', this.curateda);
+            }
+          } else {
+            this.curateda = [];
+            console.log('curateda', this.curateda);
+          }
+        }
+      }, {
+        key: "Ornafesti",
+        value: function Ornafesti(k) {
+          console.log(k);
+
+          if (document.getElementById('5').checked) {
+            document.getElementById('5').checked = false;
+            alert('you cannot confirm selected option if you are still selecting, select your desired option and then confirm the selected');
+            this.festib.push(k);
+            this.festia = [];
+            console.log(this.festia);
+            console.log(this.festib);
+          } else {
+            this.festib.push(k);
+            console.log(this.festia);
+            console.log(this.festib);
+          }
+        }
+      }, {
+        key: "five",
+        value: function five() {
+          if (document.getElementById('5').checked) {
+            if (this.festib.length == 0) {
+              document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
+
+              alert('you cannot confirm your option without selecting any, select your option and then confirm');
+            } else {
+              var a = [],
+                  b = [],
+                  prev;
+              this.festib.sort();
+
+              for (var i = 0; i < this.festib.length; i++) {
+                if (this.festib[i] !== prev) {
+                  a.push(this.festib[i]);
+                  b.push(1);
+                } else {
+                  b[b.length - 1]++;
+                }
+
+                prev = this.festib[i];
+              } // return [a, b];
+
+
+              var i = 0;
+
+              for (var j = 0; j < b.length; j++) {
+                if (b[j] % 2 === 0) {} else {
+                  this.festia.push(a[i]);
+                }
+
+                i = i + 1;
+              }
+
+              console.log('festia', this.festia);
+            }
+          } else {
+            this.festia = [];
+            console.log('festia', this.festia);
+          }
+        }
+      }, {
+        key: "handleFileInput",
+        value: function handleFileInput(file) {
+          this.fileToUpload = file.item(0);
+        }
+      }, {
+        key: "handleFileInputone",
+        value: function handleFileInputone(file) {
+          this.fileToUploadone = file.item(0);
+        }
+      }, {
+        key: "handleFileInputtwo",
+        value: function handleFileInputtwo(file) {
+          this.fileToUploadtwo = file.item(0);
+        }
+      }, {
+        key: "handleFileInputthree",
+        value: function handleFileInputthree(file) {
+          this.fileToUploadthree = file.item(0);
+        }
+      }, {
+        key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
+          var _this104 = this;
+
           // tslint:disable-next-line: max-line-length
           if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
             alert('check the confirmation checkboxex to proceed');
@@ -11904,7 +11927,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.userService.multi(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
               console.log('done', data);
 
-              if (data.status == 201) {// this.router.navigate(['./ornamentread']);
+              if (data.status == 201) {
+                _this104.router.navigate(['./ornamentread']);
               }
             });
           }
@@ -12031,11 +12055,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "occasion",
         value: function occasion() {
-          var _this97 = this;
+          var _this105 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this97.Occasion = data;
+            _this105.Occasion = data;
           });
         }
       }, {
@@ -12381,51 +12405,51 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "occasion",
         value: function occasion() {
-          var _this98 = this;
+          var _this106 = this;
 
           this.userService.ornoccasion().subscribe(function (data) {
             console.log(data);
-            _this98.Occasion = data;
+            _this106.Occasion = data;
           });
         }
       }, {
         key: "gift",
         value: function gift() {
-          var _this99 = this;
+          var _this107 = this;
 
           this.userService.ornGift().subscribe(function (data) {
             console.log(data);
-            _this99.Gift = data;
+            _this107.Gift = data;
           });
         }
       }, {
         key: "theme",
         value: function theme() {
-          var _this100 = this;
+          var _this108 = this;
 
           this.userService.ornTheme().subscribe(function (data) {
             console.log(data);
-            _this100.Theme = data;
+            _this108.Theme = data;
           });
         }
       }, {
         key: "curatedby",
         value: function curatedby() {
-          var _this101 = this;
+          var _this109 = this;
 
           this.userService.ornCurated().subscribe(function (data) {
             console.log(data);
-            _this101.Curated = data;
+            _this109.Curated = data;
           });
         }
       }, {
         key: "festival",
         value: function festival() {
-          var _this102 = this;
+          var _this110 = this;
 
           this.userService.ornFestival().subscribe(function (data) {
             console.log(data);
-            _this102.Festival = data;
+            _this110.Festival = data;
           });
         }
       }, {
@@ -12592,141 +12616,141 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "page1",
         value: function page1() {
-          var _this103 = this;
-
-          this.userService.readorn().subscribe(function (data) {
-            console.log(data);
-            _this103.data = data;
-          });
-        }
-      }, {
-        key: "page2",
-        value: function page2() {
-          var _this104 = this;
-
-          this.userService.r2().subscribe(function (data) {
-            console.log(data);
-            _this104.data = data;
-          });
-        }
-      }, {
-        key: "page3",
-        value: function page3() {
-          var _this105 = this;
-
-          this.userService.r3().subscribe(function (data) {
-            console.log(data);
-            _this105.data = data;
-          });
-        }
-      }, {
-        key: "page4",
-        value: function page4() {
-          var _this106 = this;
-
-          this.userService.r4().subscribe(function (data) {
-            console.log(data);
-            _this106.data = data;
-          });
-        }
-      }, {
-        key: "page5",
-        value: function page5() {
-          var _this107 = this;
-
-          this.userService.r5().subscribe(function (data) {
-            console.log(data);
-            _this107.data = data;
-          });
-        }
-      }, {
-        key: "page6",
-        value: function page6() {
-          var _this108 = this;
-
-          this.userService.r6().subscribe(function (data) {
-            console.log(data);
-            _this108.data = data;
-          });
-        }
-      }, {
-        key: "page7",
-        value: function page7() {
-          var _this109 = this;
-
-          this.userService.r7().subscribe(function (data) {
-            console.log(data);
-            _this109.data = data;
-          });
-        }
-      }, {
-        key: "page8",
-        value: function page8() {
-          var _this110 = this;
-
-          this.userService.r8().subscribe(function (data) {
-            console.log(data);
-            _this110.data = data;
-          });
-        }
-      }, {
-        key: "page9",
-        value: function page9() {
           var _this111 = this;
 
-          this.userService.r9().subscribe(function (data) {
+          this.userService.readorn().subscribe(function (data) {
             console.log(data);
             _this111.data = data;
           });
         }
       }, {
-        key: "page10",
-        value: function page10() {
+        key: "page2",
+        value: function page2() {
           var _this112 = this;
 
-          this.userService.r10().subscribe(function (data) {
+          this.userService.r2().subscribe(function (data) {
             console.log(data);
             _this112.data = data;
           });
         }
       }, {
-        key: "page11",
-        value: function page11() {
+        key: "page3",
+        value: function page3() {
           var _this113 = this;
 
-          this.userService.r11().subscribe(function (data) {
+          this.userService.r3().subscribe(function (data) {
             console.log(data);
             _this113.data = data;
           });
         }
       }, {
-        key: "page12",
-        value: function page12() {
+        key: "page4",
+        value: function page4() {
           var _this114 = this;
 
-          this.userService.r12().subscribe(function (data) {
+          this.userService.r4().subscribe(function (data) {
             console.log(data);
             _this114.data = data;
           });
         }
       }, {
-        key: "page13",
-        value: function page13() {
+        key: "page5",
+        value: function page5() {
           var _this115 = this;
 
-          this.userService.r13().subscribe(function (data) {
+          this.userService.r5().subscribe(function (data) {
             console.log(data);
             _this115.data = data;
           });
         }
       }, {
+        key: "page6",
+        value: function page6() {
+          var _this116 = this;
+
+          this.userService.r6().subscribe(function (data) {
+            console.log(data);
+            _this116.data = data;
+          });
+        }
+      }, {
+        key: "page7",
+        value: function page7() {
+          var _this117 = this;
+
+          this.userService.r7().subscribe(function (data) {
+            console.log(data);
+            _this117.data = data;
+          });
+        }
+      }, {
+        key: "page8",
+        value: function page8() {
+          var _this118 = this;
+
+          this.userService.r8().subscribe(function (data) {
+            console.log(data);
+            _this118.data = data;
+          });
+        }
+      }, {
+        key: "page9",
+        value: function page9() {
+          var _this119 = this;
+
+          this.userService.r9().subscribe(function (data) {
+            console.log(data);
+            _this119.data = data;
+          });
+        }
+      }, {
+        key: "page10",
+        value: function page10() {
+          var _this120 = this;
+
+          this.userService.r10().subscribe(function (data) {
+            console.log(data);
+            _this120.data = data;
+          });
+        }
+      }, {
+        key: "page11",
+        value: function page11() {
+          var _this121 = this;
+
+          this.userService.r11().subscribe(function (data) {
+            console.log(data);
+            _this121.data = data;
+          });
+        }
+      }, {
+        key: "page12",
+        value: function page12() {
+          var _this122 = this;
+
+          this.userService.r12().subscribe(function (data) {
+            console.log(data);
+            _this122.data = data;
+          });
+        }
+      }, {
+        key: "page13",
+        value: function page13() {
+          var _this123 = this;
+
+          this.userService.r13().subscribe(function (data) {
+            console.log(data);
+            _this123.data = data;
+          });
+        }
+      }, {
         key: "page14",
         value: function page14() {
-          var _this116 = this;
+          var _this124 = this;
 
           this.userService.r14().subscribe(function (data) {
             console.log(data);
-            _this116.data = data;
+            _this124.data = data;
           });
         }
       }]);
@@ -13221,12 +13245,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(form) {
-          var _this117 = this;
+          var _this125 = this;
 
           this.userService.changePassword(form.value).subscribe(function (res) {
             console.log(res);
 
-            _this117.router.navigate(['/forms']);
+            _this125.router.navigate(['/forms']);
           }, function (err) {
             console.log(err.message);
           });
@@ -13397,12 +13421,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(form) {
-          var _this118 = this;
+          var _this126 = this;
 
           this.userService.createView(form.value).subscribe(function (res) {
             console.log(res);
 
-            _this118.router.navigate(['./read']);
+            _this126.router.navigate(['./read']);
           }, function (err) {
             console.log(err.message);
           });
@@ -13522,18 +13546,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "readuser",
         value: function readuser() {
-          var _this119 = this;
+          var _this127 = this;
 
           this.userService.readForm().subscribe(function (data) {
             console.log(data);
-            _this119.data = data;
+            _this127.data = data;
 
-            if (_this119.data.statuscode === 200) {
-              _this119.toastr.success('welcome back');
+            if (_this127.data.statuscode === 200) {
+              _this127.toastr.success('welcome back');
             } else {
-              _this119.toastr.success('As you are our New Customer we want you to fill this form to complete your profile');
+              _this127.toastr.success('As you are our New Customer we want you to fill this form to complete your profile');
 
-              _this119.router.navigate(['/radiofill']);
+              _this127.router.navigate(['/radiofill']);
             }
           });
         }
@@ -16158,11 +16182,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "OnSubmit",
         value: function OnSubmit(form) {
-          var _this120 = this;
+          var _this128 = this;
 
           this.userService.update(form.value).subscribe(function (res) {
             // console.log(res);
-            _this120.router.navigate(['./read']);
+            _this128.router.navigate(['./read']);
           }, function (err) {
             console.log(err.message);
           });
