@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class UpdateComponent implements OnInit {
   jeweller: JewellerInfo;
-  emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$';
+  emailPattern = '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$';
   panpattern = '[0-9]{10}';
   gstpattern = '[0-9]{15}';
 
@@ -55,7 +55,7 @@ export class UpdateComponent implements OnInit {
     console.log((document.getElementById('owner_email')as HTMLInputElement).value );
     }
 
-    
+
   OnSubmit(form: NgForm) {
     this.userService.update(form.value)
     .subscribe(
