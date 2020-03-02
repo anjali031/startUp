@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../shared/user.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-ornaearringtype',
@@ -38,7 +39,7 @@ export class OrnaearringtypeComponent implements OnInit {
 
 
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit() {
     this.read();
@@ -441,6 +442,7 @@ export class OrnaearringtypeComponent implements OnInit {
       (data: any) => {
         console.log('done', data);
         if (data.status == 201) {
+          this.toastr.success('Ornament Succesfully Created');
           this.router.navigate(['./ornamentread']);
         }
       }
