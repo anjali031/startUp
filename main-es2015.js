@@ -2008,14 +2008,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/user.service */ "./src/app/shared/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+
 
 
 
 
 let BanglesComponent = class BanglesComponent {
-    constructor(userService, router) {
+    constructor(userService, router, toastr) {
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -2502,6 +2505,7 @@ let BanglesComponent = class BanglesComponent {
             this.userService.bangles(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.bsizea, this.bsizeb, ORNAMENT_BANGLE_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
+                    this.toastr.success('Ornament Succesfully Created');
                     this.router.navigate(['./ornamentread']);
                 }
             });
@@ -2510,7 +2514,8 @@ let BanglesComponent = class BanglesComponent {
 };
 BanglesComponent.ctorParameters = () => [
     { type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }
 ];
 BanglesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2551,14 +2556,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/user.service */ "./src/app/shared/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+
 
 
 
 
 let BraceletComponent = class BraceletComponent {
-    constructor(userService, router) {
+    constructor(userService, router, toastr) {
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -3045,6 +3053,7 @@ let BraceletComponent = class BraceletComponent {
             this.userService.bracelet(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.bsizea, this.bsizeb, ORNAMENT_BRACELET_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
+                    this.toastr.success('Ornament Succesfully Created');
                     this.router.navigate(['./ornamentread']);
                 }
             });
@@ -3053,7 +3062,8 @@ let BraceletComponent = class BraceletComponent {
 };
 BraceletComponent.ctorParameters = () => [
     { type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }
 ];
 BraceletComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -3094,14 +3104,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/user.service */ "./src/app/shared/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+
 
 
 
 
 let ChainComponent = class ChainComponent {
-    constructor(userService, router) {
+    constructor(userService, router, toastr) {
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -3588,6 +3601,7 @@ let ChainComponent = class ChainComponent {
             this.userService.chain(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.bsizea, this.bsizeb, ORNAMENT_CHAIN_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
+                    this.toastr.success('Ornament Succesfully Created');
                     this.router.navigate(['./ornamentread']);
                 }
             });
@@ -3596,7 +3610,8 @@ let ChainComponent = class ChainComponent {
 };
 ChainComponent.ctorParameters = () => [
     { type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }
 ];
 ChainComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -3637,14 +3652,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/user.service */ "./src/app/shared/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+
 
 
 
 
 let ChainwithpendantComponent = class ChainwithpendantComponent {
-    constructor(userService, router) {
+    constructor(userService, router, toastr) {
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -4131,6 +4149,7 @@ let ChainwithpendantComponent = class ChainwithpendantComponent {
             this.userService.chaitpen(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.bsizea, this.bsizeb, ORNAMENT_CHAIN_STYLE.value, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
+                    this.toastr.success('Ornament Succesfully Created');
                     this.router.navigate(['./ornamentread']);
                 }
             });
@@ -4139,7 +4158,8 @@ let ChainwithpendantComponent = class ChainwithpendantComponent {
 };
 ChainwithpendantComponent.ctorParameters = () => [
     { type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }
 ];
 ChainwithpendantComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -4224,14 +4244,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/user.service */ "./src/app/shared/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+
 
 
 
 
 let CufflinkComponent = class CufflinkComponent {
-    constructor(userService, router) {
+    constructor(userService, router, toastr) {
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -4654,6 +4677,7 @@ let CufflinkComponent = class CufflinkComponent {
             this.userService.multi(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
+                    this.toastr.success('Ornament Succesfully Created');
                     this.router.navigate(['./ornamentread']);
                 }
             });
@@ -4662,7 +4686,8 @@ let CufflinkComponent = class CufflinkComponent {
 };
 CufflinkComponent.ctorParameters = () => [
     { type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }
 ];
 CufflinkComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -4703,14 +4728,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/user.service */ "./src/app/shared/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+
 
 
 
 
 let MangalsutraComponent = class MangalsutraComponent {
-    constructor(userService, router) {
+    constructor(userService, router, toastr) {
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -5133,6 +5161,7 @@ let MangalsutraComponent = class MangalsutraComponent {
             this.userService.multi(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
+                    this.toastr.success('Ornament Succesfully Created');
                     this.router.navigate(['./ornamentread']);
                 }
             });
@@ -5141,7 +5170,8 @@ let MangalsutraComponent = class MangalsutraComponent {
 };
 MangalsutraComponent.ctorParameters = () => [
     { type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }
 ];
 MangalsutraComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -5182,14 +5212,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/user.service */ "./src/app/shared/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+
 
 
 
 
 let NecklaceComponent = class NecklaceComponent {
-    constructor(userService, router) {
+    constructor(userService, router, toastr) {
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -5612,6 +5645,7 @@ let NecklaceComponent = class NecklaceComponent {
             this.userService.necklace(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_NECKLACE_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
+                    this.toastr.success('Ornament Succesfully Created');
                     this.router.navigate(['./ornamentread']);
                 }
             });
@@ -5620,7 +5654,8 @@ let NecklaceComponent = class NecklaceComponent {
 };
 NecklaceComponent.ctorParameters = () => [
     { type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }
 ];
 NecklaceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -5661,14 +5696,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/user.service */ "./src/app/shared/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+
 
 
 
 
 let OrnaearringtypeComponent = class OrnaearringtypeComponent {
-    constructor(userService, router) {
+    constructor(userService, router, toastr) {
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -6091,6 +6129,7 @@ let OrnaearringtypeComponent = class OrnaearringtypeComponent {
             this.userService.ear(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_EARRING_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
+                    this.toastr.success('Ornament Succesfully Created');
                     this.router.navigate(['./ornamentread']);
                 }
             });
@@ -6099,7 +6138,8 @@ let OrnaearringtypeComponent = class OrnaearringtypeComponent {
 };
 OrnaearringtypeComponent.ctorParameters = () => [
     { type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }
 ];
 OrnaearringtypeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -6140,14 +6180,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/user.service */ "./src/app/shared/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+
 
 
 
 
 let OrnamentnosepinComponent = class OrnamentnosepinComponent {
-    constructor(userService, router) {
+    constructor(userService, router, toastr) {
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -6570,6 +6613,7 @@ let OrnamentnosepinComponent = class OrnamentnosepinComponent {
             this.userService.nosepin(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_NOSEPIN_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status === 201) {
+                    this.toastr.success('Ornament Succesfully Created');
                     this.router.navigate(['./ornamentread']);
                 }
             });
@@ -6578,7 +6622,8 @@ let OrnamentnosepinComponent = class OrnamentnosepinComponent {
 };
 OrnamentnosepinComponent.ctorParameters = () => [
     { type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }
 ];
 OrnamentnosepinComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -6619,14 +6664,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/user.service */ "./src/app/shared/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+
 
 
 
 
 let OrnaringtypeComponent = class OrnaringtypeComponent {
-    constructor(userService, router) {
+    constructor(userService, router, toastr) {
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -7115,6 +7163,7 @@ let OrnaringtypeComponent = class OrnaringtypeComponent {
             this.userService.mli(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.rsizea, this.rsizeb, ORNAMENT_RING_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status === 201) {
+                    this.toastr.success('Ornament Succesfully Created');
                     this.router.navigate(['./ornamentread']);
                 }
             });
@@ -7123,7 +7172,8 @@ let OrnaringtypeComponent = class OrnaringtypeComponent {
 };
 OrnaringtypeComponent.ctorParameters = () => [
     { type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }
 ];
 OrnaringtypeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -7164,14 +7214,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/user.service */ "./src/app/shared/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+
 
 
 
 
 let PendantComponent = class PendantComponent {
-    constructor(userService, router) {
+    constructor(userService, router, toastr) {
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -7594,6 +7647,7 @@ let PendantComponent = class PendantComponent {
             this.userService.pendant(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status === 201) {
+                    this.toastr.success('Ornament Succesfully Created');
                     this.router.navigate(['./ornamentread']);
                 }
             });
@@ -7602,7 +7656,8 @@ let PendantComponent = class PendantComponent {
 };
 PendantComponent.ctorParameters = () => [
     { type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }
 ];
 PendantComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -7643,14 +7698,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/user.service */ "./src/app/shared/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+
 
 
 
 
 let PendantearringtypeComponent = class PendantearringtypeComponent {
-    constructor(userService, router) {
+    constructor(userService, router, toastr) {
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -8073,6 +8131,7 @@ let PendantearringtypeComponent = class PendantearringtypeComponent {
             this.userService.pendantwithearing(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_EARRING_STYLE.value, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
+                    this.toastr.success('Ornament Succesfully Created');
                     this.router.navigate(['./ornamentread']);
                 }
             });
@@ -8081,7 +8140,8 @@ let PendantearringtypeComponent = class PendantearringtypeComponent {
 };
 PendantearringtypeComponent.ctorParameters = () => [
     { type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }
 ];
 PendantearringtypeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -8555,6 +8615,7 @@ let SetsComponent = class SetsComponent {
             this.userService.multi(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe((data) => {
                 console.log('done', data);
                 if (data.status == 201) {
+                    this.toastr.success('Ornament Succesfully Created');
                     this.router.navigate(['./ornamentread']);
                 }
             });

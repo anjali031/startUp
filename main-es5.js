@@ -3667,15 +3667,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
 
     var BanglesComponent =
     /*#__PURE__*/
     function () {
-      function BanglesComponent(userService, router) {
+      function BanglesComponent(userService, router, toastr) {
         _classCallCheck(this, BanglesComponent);
 
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -4256,6 +4263,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               console.log('done', data);
 
               if (data.status == 201) {
+                _this16.toastr.success('Ornament Succesfully Created');
+
                 _this16.router.navigate(['./ornamentread']);
               }
             });
@@ -4271,6 +4280,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
       }];
     };
 
@@ -4349,15 +4360,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
 
     var BraceletComponent =
     /*#__PURE__*/
     function () {
-      function BraceletComponent(userService, router) {
+      function BraceletComponent(userService, router, toastr) {
         _classCallCheck(this, BraceletComponent);
 
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -4938,6 +4956,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               console.log('done', data);
 
               if (data.status == 201) {
+                _this24.toastr.success('Ornament Succesfully Created');
+
                 _this24.router.navigate(['./ornamentread']);
               }
             });
@@ -4953,6 +4973,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
       }];
     };
 
@@ -5031,15 +5053,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
 
     var ChainComponent =
     /*#__PURE__*/
     function () {
-      function ChainComponent(userService, router) {
+      function ChainComponent(userService, router, toastr) {
         _classCallCheck(this, ChainComponent);
 
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -5620,6 +5649,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               console.log('done', data);
 
               if (data.status == 201) {
+                _this32.toastr.success('Ornament Succesfully Created');
+
                 _this32.router.navigate(['./ornamentread']);
               }
             });
@@ -5635,6 +5666,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
       }];
     };
 
@@ -5713,15 +5746,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
 
     var ChainwithpendantComponent =
     /*#__PURE__*/
     function () {
-      function ChainwithpendantComponent(userService, router) {
+      function ChainwithpendantComponent(userService, router, toastr) {
         _classCallCheck(this, ChainwithpendantComponent);
 
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -6302,6 +6342,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               console.log('done', data);
 
               if (data.status == 201) {
+                _this40.toastr.success('Ornament Succesfully Created');
+
                 _this40.router.navigate(['./ornamentread']);
               }
             });
@@ -6317,6 +6359,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
       }];
     };
 
@@ -6474,15 +6518,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
 
     var CufflinkComponent =
     /*#__PURE__*/
     function () {
-      function CufflinkComponent(userService, router) {
+      function CufflinkComponent(userService, router, toastr) {
         _classCallCheck(this, CufflinkComponent);
 
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -6988,6 +7039,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               console.log('done', data);
 
               if (data.status == 201) {
+                _this47.toastr.success('Ornament Succesfully Created');
+
                 _this47.router.navigate(['./ornamentread']);
               }
             });
@@ -7003,6 +7056,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
       }];
     };
 
@@ -7081,15 +7136,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
 
     var MangalsutraComponent =
     /*#__PURE__*/
     function () {
-      function MangalsutraComponent(userService, router) {
+      function MangalsutraComponent(userService, router, toastr) {
         _classCallCheck(this, MangalsutraComponent);
 
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -7595,6 +7657,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               console.log('done', data);
 
               if (data.status == 201) {
+                _this54.toastr.success('Ornament Succesfully Created');
+
                 _this54.router.navigate(['./ornamentread']);
               }
             });
@@ -7610,6 +7674,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
       }];
     };
 
@@ -7688,15 +7754,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
 
     var NecklaceComponent =
     /*#__PURE__*/
     function () {
-      function NecklaceComponent(userService, router) {
+      function NecklaceComponent(userService, router, toastr) {
         _classCallCheck(this, NecklaceComponent);
 
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -8202,6 +8275,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               console.log('done', data);
 
               if (data.status == 201) {
+                _this61.toastr.success('Ornament Succesfully Created');
+
                 _this61.router.navigate(['./ornamentread']);
               }
             });
@@ -8217,6 +8292,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
       }];
     };
 
@@ -8295,15 +8372,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
 
     var OrnaearringtypeComponent =
     /*#__PURE__*/
     function () {
-      function OrnaearringtypeComponent(userService, router) {
+      function OrnaearringtypeComponent(userService, router, toastr) {
         _classCallCheck(this, OrnaearringtypeComponent);
 
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -8809,6 +8893,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               console.log('done', data);
 
               if (data.status == 201) {
+                _this68.toastr.success('Ornament Succesfully Created');
+
                 _this68.router.navigate(['./ornamentread']);
               }
             });
@@ -8824,6 +8910,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
       }];
     };
 
@@ -8902,15 +8990,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
 
     var OrnamentnosepinComponent =
     /*#__PURE__*/
     function () {
-      function OrnamentnosepinComponent(userService, router) {
+      function OrnamentnosepinComponent(userService, router, toastr) {
         _classCallCheck(this, OrnamentnosepinComponent);
 
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -9416,6 +9511,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               console.log('done', data);
 
               if (data.status === 201) {
+                _this75.toastr.success('Ornament Succesfully Created');
+
                 _this75.router.navigate(['./ornamentread']);
               }
             });
@@ -9431,6 +9528,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
       }];
     };
 
@@ -9509,15 +9608,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
 
     var OrnaringtypeComponent =
     /*#__PURE__*/
     function () {
-      function OrnaringtypeComponent(userService, router) {
+      function OrnaringtypeComponent(userService, router, toastr) {
         _classCallCheck(this, OrnaringtypeComponent);
 
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -10100,6 +10206,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               console.log('done', data);
 
               if (data.status === 201) {
+                _this83.toastr.success('Ornament Succesfully Created');
+
                 _this83.router.navigate(['./ornamentread']);
               }
             });
@@ -10115,6 +10223,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
       }];
     };
 
@@ -10193,15 +10303,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
 
     var PendantComponent =
     /*#__PURE__*/
     function () {
-      function PendantComponent(userService, router) {
+      function PendantComponent(userService, router, toastr) {
         _classCallCheck(this, PendantComponent);
 
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -10707,6 +10824,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               console.log('done', data);
 
               if (data.status === 201) {
+                _this90.toastr.success('Ornament Succesfully Created');
+
                 _this90.router.navigate(['./ornamentread']);
               }
             });
@@ -10722,6 +10841,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
       }];
     };
 
@@ -10800,15 +10921,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
 
     var PendantearringtypeComponent =
     /*#__PURE__*/
     function () {
-      function PendantearringtypeComponent(userService, router) {
+      function PendantearringtypeComponent(userService, router, toastr) {
         _classCallCheck(this, PendantearringtypeComponent);
 
         this.userService = userService;
         this.router = router;
+        this.toastr = toastr;
         this.fileToUpload = null;
         this.fileToUploadone = null;
         this.fileToUploadtwo = null;
@@ -11314,6 +11442,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               console.log('done', data);
 
               if (data.status == 201) {
+                _this97.toastr.success('Ornament Succesfully Created');
+
                 _this97.router.navigate(['./ornamentread']);
               }
             });
@@ -11329,6 +11459,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
       }];
     };
 
@@ -11928,6 +12060,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               console.log('done', data);
 
               if (data.status == 201) {
+                _this104.toastr.success('Ornament Succesfully Created');
+
                 _this104.router.navigate(['./ornamentread']);
               }
             });
