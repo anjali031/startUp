@@ -631,7 +631,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"row\">\n  <div class=\"col s12 \">\n    <div class=\"card\" *ngFor=\"let question of data.results\">\n      <div class=\"card-image\">\n        <img src=\"{{question.ornament_file_field.IMAGE_FILE_ONE}}\">\n        <span class=\"card-title\">Card Title</span>\n      </div>\n      <div class=\"card-content\">\n        <p>{{question.ORNAMENT_ID}}</p>\n        <p>{{question.JEWELLER_ID}}</p>\n        <p>{{question.WEIGHT}}</p>\n      </div>\n      <!--div class=\"card-action\">\n        <a href=\"#\">This is a link</a>\n      </div-->\n    </div>\n  </div>\n</div>\n<ul class=\"pagination\">\n  <li class=\"disabled\"><a href=\"#!\"><i class=\"material-icons\">chevron_left</i></a></li>\n  <li class=\"waves-effect\"><a (click)=\"page1()\">1</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page2()\">2</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page3()\">3</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page4()\">4</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page5()\">5</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page6()\">6</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page7()\">7</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page8()\">8</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page9()\">9</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page10()\">10</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page11()\">11</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page12()\">12</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page13()\">13</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page14()\">14</a></li>\n\n  <li class=\"waves-effect\"><a href=\"#!\"><i class=\"material-icons\">chevron_right</i></a></li>\n</ul>";
+    __webpack_exports__["default"] = "<div class=\"row\">\n  <div class=\"col s12 \">\n    <div class=\"card\" *ngFor=\"let question of data.results\">\n      <div class=\"card-image\">\n        <img src=\"{{question.ornament_file_field.IMAGE_FILE_ONE}}\">\n        <span class=\"card-title\"></span>\n      </div>\n      <div class=\"card-content\">\n        <p>{{question.ORNAMENT_ID}}</p>\n        <p>{{question.JEWELLER_ID}}</p>\n        <p>{{question.WEIGHT}}</p>\n      </div>\n      <button class=\"btn-large btn-submit\" type=\"submit\" (click)=\"read(question.ORNAMENT_ID)\">More About this</button>\n\n      <!--div class=\"card-action\">\n        <a href=\"#\">This is a link</a>\n      </div-->\n    </div>\n  </div>\n</div>\n<ul class=\"pagination\">\n  <li class=\"disabled\"><a href=\"#!\"><i class=\"material-icons\">chevron_left</i></a></li>\n  <li class=\"waves-effect\"><a (click)=\"page1()\">1</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page2()\">2</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page3()\">3</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page4()\">4</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page5()\">5</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page6()\">6</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page7()\">7</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page8()\">8</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page9()\">9</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page10()\">10</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page11()\">11</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page12()\">12</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page13()\">13</a></li>\n  <li class=\"waves-effect\"><a (click)=\"page14()\">14</a></li>\n\n  <li class=\"waves-effect\"><a href=\"#!\"><i class=\"material-icons\">chevron_right</i></a></li>\n</ul>";
     /***/
   },
 
@@ -751,7 +751,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"row\">\n    <div class=\"col s8 offset-s2\">\n      <div class=\"card\">\n        <div class=\"sm-jumbotron center-align\">\n          <h2>create profile</h2>\n        </div>\n          <form class=\"col s12 white\" #createViewForm=\"ngForm\" (ngSubmit)=\"OnSubmit(createViewForm)\">\n            <div class=\"row\">\n              <div class=\"input-field col s6\"> \n                <input id=\"name_of_firm\" type=\"text\" class=\"validate\" name=\"NAME_OF_FIRM\" #NAME_OF_FIRM=\"ngModel\" [(ngModel)]=\"jeweller.NAME_OF_FIRM\"  required >\n                <label for=\"name_of_firm\">Name of Firm</label>\n                <span class=\"helper-text\" data-error=\"Required Field!\" data-success=\"right\"></span>\n              </div>\n              <div class=\"input-field col s6\">\n                  <input id=\"address_of_firm\" class=\"validate\" type=\"text\" name=\"ADDRESS_OF_FIRM\" #ADDRESS_OF_FIRM=\"ngModel\" [(ngModel)]=\"jeweller.ADDRESS_OF_FIRM\" required  >\n                  <label for=\"address_of_firm\">ADDRESS OF FIRM</label>\n                  <span class=\"helper-text\" data-error=\"required!field\" data-success=\"right\"></span>\n              </div>\n            </div>\n            <div class=\"row\">\n                <div class=\"row col s6\"> \n                  <select class=\"browser-default\" name=\"CITY\" #CITY=\"ngModel\" [(ngModel)]=\"jeweller.CITY\">\n                    <option value=\"\" disabled selected>Choose your City</option>\n                    <option  value=\"Pune\"> Pune</option>\n                    <option value=\"Mumbai\" >Mumbai</option>\n                    <option   value=\"Vadodra\" >Vadodra</option>\n                    <option   value=\"Ahmedabad\" >Ahmedabad</option>\n                  </select>\n                </div>\n                <div class=\"row col s6\">\n                  <select class=\"browser-default\" name=\"STATE\" #STATE=\"ngModel\" [(ngModel)]=\"jeweller.STATE\">\n                    <option value=\"\" disabled selected>Choose your City</option>\n                    <option value=\"Maharashtra\"> Maharashtra</option>\n                    <option value=\"Gujrat\" >Gujrat</option>\n                  </select>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"input-field col s6\"> \n                  <input id=\"contact_name\" type=\"text\" class=\"validate\" name=\"CONTACT_NAME\" #CONTACT_NAME=\"ngModel\" [(ngModel)]=\"jeweller.CONTACT_NAME\" required >\n                  <label for=\"contact_name\">CONTACT_NAME</label>\n                  <span class=\"helper-text\" data-error=\"Required Field!\" data-success=\"right\"></span>\n\n                </div>\n                <div class=\"input-field col s6\">\n                    <input id=\"contact_number\" class=\"validate\" type=\"text\" name=\"CONTACT_NUMBER\" #CONTACT_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.CONTACT_NUMBER\" value=\"\" required >\n                    <label for=\"contact_number\">CONTACT_NUMBER</label>\n                    <span class=\"helper-text\" data-error=\"Required Field!\" data-success=\"right\"></span>\n\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"input-field col s6\"> \n                  <input id=\"contact_mail_id\" type=\"text\" class=\"validate\" name=\"CONTACT_MAIL_ID\" #CONTACT_MAIL_ID=\"ngModel\" [(ngModel)]=\"jeweller.CONTACT_MAIL_ID\" value=\"\" [pattern]=\"emailPattern\" required >\n                  <label for=\"contact_mail_id\">CONTACT MAIL ID</label>\n                  <span class=\"helper-text\" data-error=\"Invalid Email!\" data-success=\"right\"></span>\n\n                </div>\n                <div class=\"input-field col s6\">\n                    <input id=\"gst_number\" class=\"validate\" type=\"text\" name=\"GST_NUMBER\" #GST_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.GST_NUMBER\" required  >\n                    <label for=\"gst_number\">GST NUMBER</label>\n                    <span class=\"helper-text\" data-error=\"GST Number should contain 15 characters\" data-success=\"right\"></span>\n\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"input-field col s6\"> \n                  <input id=\"pan_number\" type=\"text\" class=\"validate\" name=\"PAN_NUMBER\" #PAN_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.PAN_NUMBER\" required >\n                  <label for=\"pan_number\">PAN NUMBER</label>\n                  <span class=\"helper-text\" data-error=\"Required Field!\" data-success=\"right\"></span>\n\n                </div>\n                <div class=\"input-field col s6\">\n                    <input id=\"owner_name\" class=\"validate\" type=\"text\" name=\"OWNER_NAME\" #OWNER_NAME=\"ngModel\" [(ngModel)]=\"jeweller.OWNER_NAME\" required >\n                    <label for=\"owner_name\">OWNER_NAME</label>\n                    <span class=\"helper-text\" data-error=\"Required Field!\" data-success=\"right\"></span>\n\n                </div>\n              </div>\n              <p>\n                <label>\n                  <input type=\"checkbox\"  id=\"same\" name=\"same\" (change)= \"addres()\" />\n                  <span>Same As Above</span>\n                </label>\n              </p>\n              <p>edit one word of below field to make form validate</p>\n\n              \n              <div class=\"row\">\n                <div class=\"input-field col s6\">\n                    <input id=\"owner_number\" type=\"text\" class=\"validate\" name=\"OWNER_NUMBER\" #OWNER_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.OWNER_NUMBER\" value=\"\" required >\n                    <span class=\"helper-text\" data-error=\"Required Number!\" data-success=\"right\"></span>\n\n                </div>\n                <div class=\"input-field col s6\">\n                    <input id=\"owner_email\" type=\"text\" class=\"validate\" name=\"OWNER_EMAIL\" #OWNER_EMAIL=\"ngModel\" [(ngModel)]=\"jeweller.OWNER_EMAIL\"  [pattern]=\"emailPattern\" value =\"\" required >\n                    <span class=\"helper-text\" data-error=\"Invalid Email!\" data-success=\"right\"></span>\n\n                </div>\n            </div>\n            <div class=\"row\">\n                <div class=\"input-field col s12\">\n                  <button [disabled]=\"!createViewForm.valid\" class=\"btn-large btn-submit\" type=\"submit\">Create My Profile</button>\n                </div>\n            </div>\n          </form>\n      </div>\n    </div>\n  </div>\n\n \n   ";
+    __webpack_exports__["default"] = "<div class=\"row\">\n    <div class=\"col s8 offset-s2\">\n      <div class=\"card\">\n        <div class=\"sm-jumbotron center-align\">\n          <h2>create profile</h2>\n        </div>\n          <form class=\"col s12 white\" #createViewForm=\"ngForm\" (ngSubmit)=\"OnSubmit(createViewForm)\">\n            <div class=\"row\">\n              <div class=\"input-field col s6\"> \n                <input id=\"name_of_firm\" type=\"text\" class=\"validate\" name=\"NAME_OF_FIRM\" #NAME_OF_FIRM=\"ngModel\" [(ngModel)]=\"jeweller.NAME_OF_FIRM\"  required >\n                <label for=\"name_of_firm\">Name of Firm</label>\n                <span class=\"helper-text\" data-error=\"Required Field!\" data-success=\"right\"></span>\n              </div>\n              <div class=\"input-field col s6\">\n                  <input id=\"address_of_firm\" class=\"validate\" type=\"text\" name=\"ADDRESS_OF_FIRM\" #ADDRESS_OF_FIRM=\"ngModel\" [(ngModel)]=\"jeweller.ADDRESS_OF_FIRM\" required  >\n                  <label for=\"address_of_firm\">ADDRESS OF FIRM</label>\n                  <span class=\"helper-text\" data-error=\"required!field\" data-success=\"right\"></span>\n              </div>\n            </div>\n            <div class=\"row\">\n                <div class=\"row col s6\"> \n                  <select class=\"browser-default\" name=\"CITY\" #CITY=\"ngModel\" [(ngModel)]=\"jeweller.CITY\">\n                    <option value=\"\" disabled selected>Choose your City</option>\n                    <option  value=\"Pune\"> Pune</option>\n                    <option value=\"Mumbai\" >Mumbai</option>\n                    <option   value=\"Vadodra\" >Vadodra</option>\n                    <option   value=\"Ahmedabad\" >Ahmedabad</option>\n                  </select>\n                </div>\n                <div class=\"row col s6\">\n                  <select class=\"browser-default\" name=\"STATE\" #STATE=\"ngModel\" [(ngModel)]=\"jeweller.STATE\">\n                    <option value=\"\" disabled selected>Choose your City</option>\n                    <option value=\"Maharashtra\"> Maharashtra</option>\n                    <option value=\"Gujrat\" >Gujrat</option>\n                  </select>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"input-field col s6\"> \n                  <input id=\"contact_name\" type=\"text\" class=\"validate\" name=\"CONTACT_NAME\" #CONTACT_NAME=\"ngModel\" [(ngModel)]=\"jeweller.CONTACT_NAME\" required >\n                  <label for=\"contact_name\">CONTACT_NAME</label>\n                  <span class=\"helper-text\" data-error=\"Required Field!\" data-success=\"right\"></span>\n\n                </div>\n                <div class=\"input-field col s6\">\n                    <input id=\"contact_number\" class=\"validate\" type=\"text\" name=\"CONTACT_NUMBER\" #CONTACT_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.CONTACT_NUMBER\" value=\"\" [pattern]=\"panpattern\" required >\n                    <label for=\"contact_number\">CONTACT_NUMBER</label>\n                    <span class=\"helper-text\" data-error=\"Required 10 character!\" data-success=\"right\"></span>\n\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"input-field col s6\"> \n                  <input id=\"contact_mail_id\" type=\"text\" class=\"validate\" name=\"CONTACT_MAIL_ID\" #CONTACT_MAIL_ID=\"ngModel\" [(ngModel)]=\"jeweller.CONTACT_MAIL_ID\" value=\"\" [pattern]=\"emailPattern\" required >\n                  <label for=\"contact_mail_id\">CONTACT MAIL ID</label>\n                  <span class=\"helper-text\" data-error=\"Invalid Email!\" data-success=\"right\"></span>\n\n                </div>\n                <div class=\"input-field col s6\">\n                    <input id=\"gst_number\" class=\"validate\" type=\"text\" name=\"GST_NUMBER\" #GST_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.GST_NUMBER\" [pattern]=\"gstpattern\" required  >\n                    <label for=\"gst_number\">GST NUMBER</label>\n                    <span class=\"helper-text\" data-error=\"GST Number should contain 15 characters\" data-success=\"right\"></span>\n\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"input-field col s6\"> \n                  <input id=\"pan_number\" type=\"text\" class=\"validate\" name=\"PAN_NUMBER\" #PAN_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.PAN_NUMBER\" [pattern]=\"panpattern\" required >\n                  <label for=\"pan_number\">PAN NUMBER</label>\n                  <span class=\"helper-text\" data-error=\"Required 10 charaters!\" data-success=\"right\"></span>\n\n                </div>\n                <div class=\"input-field col s6\">\n                    <input id=\"owner_name\" class=\"validate\" type=\"text\" name=\"OWNER_NAME\" #OWNER_NAME=\"ngModel\" [(ngModel)]=\"jeweller.OWNER_NAME\" required >\n                    <label for=\"owner_name\">OWNER_NAME</label>\n                    <span class=\"helper-text\" data-error=\"Required Field!\" data-success=\"right\"></span>\n\n                </div>\n              </div>\n              <p>\n                <label>\n                  <input type=\"checkbox\"  id=\"same\" name=\"same\" (change)= \"addres()\" />\n                  <span>Same As Above</span>\n                </label>\n              </p>\n              <p>edit one word of below field to make form validate</p>\n\n              \n              <div class=\"row\">\n                <div class=\"input-field col s6\">\n                    <input id=\"owner_number\" type=\"text\" class=\"validate\" name=\"OWNER_NUMBER\" #OWNER_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.OWNER_NUMBER\" value=\"\" [pattern]=\"panpattern\" required placeholder=\"OWNER_NUMBER\">\n                    <span class=\"helper-text\" data-error=\"Required 10 digit Number!\" data-success=\"right\"></span>\n\n                </div>\n                <div class=\"input-field col s6\">\n                    <input id=\"owner_email\" type=\"text\" class=\"validate\" name=\"OWNER_EMAIL\" #OWNER_EMAIL=\"ngModel\" [(ngModel)]=\"jeweller.OWNER_EMAIL\"  [pattern]=\"emailPattern\" value =\"\" required placeholder=\"OWNER_EMAIL\">\n                    <span class=\"helper-text\" data-error=\"Invalid Email!\" data-success=\"right\"></span>\n\n                </div>\n            </div>\n            <div class=\"row\">\n                <div class=\"input-field col s12\">\n                  <button [disabled]=\"!createViewForm.valid\" class=\"btn-large btn-submit\" type=\"submit\">Create My Profile</button>\n                </div>\n            </div>\n          </form>\n      </div>\n    </div>\n  </div>\n\n \n   ";
     /***/
   },
 
@@ -776,6 +776,106 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/readspecific/readspecific.component.html":
+  /*!************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/readspecific/readspecific.component.html ***!
+    \************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppReadspecificReadspecificComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"row\">\n    <div class=\"col s10 offset-s1\">\n      <div class=\"sm-jumbotron center-align\">\n        <h5>Your Product Description</h5>\n      </div>\n      <div class=\"card\" *ngIf=\"data.ornament_info\">\n        <div class=\"card-image\">\n          <img src=\"{{data.ornament_filefield.IMAGE_FILE_ONE}}\">\n          <span class=\"card-title\">Card Title</span>\n        </div>\n        <div class=\"card-content col s5 \">\n            <p><strong>ORNAMENT_TYPE : </strong>{{data.ornament_info.ORNAMENT_TYPE}}</p>\n            <p><strong>ORNAMENT_MATERIAL : </strong>{{data.ornament_info.ORNAMENT_MATERIAL}}</p>\n            <p><strong>ORNAMENT_SHOPFOR : </strong>{{data.ornament_info.ORNAMENT_SHOPFOR}}</p>\n            <p><strong>WEIGHT : </strong>{{data.ornament_info.WEIGHT}}</p>\n            <p><strong>ornament_id : </strong>{{data.ornament_info.ornament_id}}</p>\n        </div>\n        <div class=\"card-content col s5\" >\n            <p><strong>ORNAMENT_METAL : </strong>{{data.ornament_category.ORNAMENT_METAL}}</p>\n            <p><strong>ORNAMENT_OCCASION : </strong>{{data.ornament_category.ORNAMENT_OCCASION}}</p>\n            <p><strong>ORNAMENT_GIFT : </strong>{{data.ornament_category.ORNAMENT_GIFT}}</p>\n            <p><strong>ORNAMENT_THEME : </strong>{{data.ornament_category.ORNAMENT_THEME}}</p>\n            <p><strong>ORNAMENT_CURATED_BY : </strong>{{data.ornament_category.ORNAMENT_CURATED_BY}}</p>\n            <p><strong>ORNAMENT_FESTIVAL : </strong>{{data.ornament_category.ORNAMENT_FESTIVAL}}</p>\n          </div>\n  \n        <!--div class=\"card-action\">\n          <a href=\"#\">This is a link</a>\n        </div-->\n\n  \n        \n  \n        <!--div class=\"card-action\">\n          <a href=\"#\">This is a link</a>\n        </div-->\n      </div>\n      <button class=\"btn-large btn-submit\" type=\"submit\" (click)=\"update()\">Update this Ornament</button>\n\n      <button class=\"btn-large btn-submit\" type=\"submit\" (click)=\"delete()\">Delete This Ornament</button>\n\n    </div>\n  </div>\n\n\n  \n  ";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/update/chainpendat/chainpendat.component.html":
+  /*!*****************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/update/chainpendat/chainpendat.component.html ***!
+    \*****************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppUpdateChainpendatChainpendatComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<p>chainpendat works!</p>\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/update/earrings/earrings.component.html":
+  /*!***********************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/update/earrings/earrings.component.html ***!
+    \***********************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppUpdateEarringsEarringsComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<p>earrings works!</p>\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/update/nosepin/nosepin.component.html":
+  /*!*********************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/update/nosepin/nosepin.component.html ***!
+    \*********************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppUpdateNosepinNosepinComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<p>nosepin works!</p>\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/update/pendantearring/pendantearring.component.html":
+  /*!***********************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/update/pendantearring/pendantearring.component.html ***!
+    \***********************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppUpdatePendantearringPendantearringComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<p>pendantearring works!</p>\n";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/update/update.component.html":
   /*!************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/update/update.component.html ***!
@@ -791,7 +891,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"row\">\n    <div class=\"col s8 offset-s2\">\n      <div class=\"card\">\n        <div class=\"sm-jumbotron center-align\">\n          <h2>Update</h2>\n        </div>\n          <form class=\"col s12 white\" #updateForm=\"ngForm\" (ngSubmit)=\"OnSubmit(updateForm)\">\n            <div class=\"row\">\n              <div class=\"input-feild col s6\"> \n                <input type=\"text\" class=\"validate\" name=\"NAME_OF_FIRM\" #NAME_OF_FIRM=\"ngModel\" [(ngModel)]=\"jeweller.NAME_OF_FIRM\"  required placeholder=\"NAME OF FIRM\">\n              </div>\n              <div class=\"input-feild col s6\">\n                  <input class=\"validate\" type=\"text\" name=\"ADDRESS_OF_FIRM\" #ADDRESS_OF_FIRM=\"ngModel\" [(ngModel)]=\"jeweller.ADDRESS_OF_FIRM\" required  placeholder=\"ADDRESS OF FIRM\">\n              </div>\n            </div>\n            <div class=\"row\">\n                <div class=\"input-feild col s6\"> \n                  <input type=\"text\" class=\"validate\" name=\"CITY\" #CITY=\"ngModel\" [(ngModel)]=\"jeweller.CITY\"  required placeholder=\"CITY\">\n                </div>\n                <div class=\"input-feild col s6\">\n                    <input class=\"validate\" type=\"text\" name=\"STATE\" #STATE=\"ngModel\" [(ngModel)]=\"jeweller.STATE\" required  placeholder=\"STATE\">\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"input-feild col s6\"> \n                  <input type=\"text\" class=\"validate\" name=\"CONTACT_NAME\" #CONTACT_NAME=\"ngModel\" [(ngModel)]=\"jeweller.CONTACT_NAME\" required placeholder=\"CONTACT NAME\">\n                </div>\n                <div class=\"input-feild col s6\">\n                    <input class=\"validate\" type=\"text\" name=\"CONTACT_NUMBER\" #CONTACT_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.CONTACT_NUMBER\" required  placeholder=\"CONTACT NUMBER\">\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"input-feild col s6\"> \n                  <input type=\"text\" class=\"validate\" name=\"CONTACT_MAIL_ID\" #CONTACT_MAIL_ID=\"ngModel\" [(ngModel)]=\"jeweller.CONTACT_MAIL_ID\" [pattern]=\"emailPattern\" required placeholder=\"CONTACT MAIL ID\">\n                </div>\n                <div class=\"input-feild col s6\">\n                    <input class=\"validate\" type=\"text\" name=\"GST_NUMBER\" #GST_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.GST_NUMBER\" required  placeholder=\"GST NUMBER\">\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"input-feild col s6\"> \n                  <input type=\"text\" class=\"validate\" name=\"PAN_NUMBER\" #PAN_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.PAN_NUMBER\" required placeholder=\"PAN NUMBER\">\n                </div>\n                <div class=\"input-feild col s6\">\n                    <input class=\"validate\" type=\"text\" name=\"OWNER_NAME\" #OWNER_NAME=\"ngModel\" [(ngModel)]=\"jeweller.OWNER_NAME\" required  placeholder=\"OWNER NAME\">\n                </div>\n              </div>\n            <div class=\"row\">\n                <div class=\"input_feild col s6\">\n                    <input type=\"text\" class=\"validate\" name=\"OWNER_NUMBER\" #OWNER_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.OWNER_NUMBER\" required placeholder=\"OWNER NUMBER\">\n                </div>\n                <div class=\"input_feild col s6\">\n                    <input type=\"text\" class=\"validate\" name=\"OWNER_EMAIL\" #OWNER_EMAIL=\"ngModel\" [(ngModel)]=\"jeweller.OWNER_EMAIL\"  [pattern]=\"emailPattern\"  required placeholder=\"OWNER EMAIL\">\n                </div>\n            </div>\n            <div class=\"row\">\n                <div class=\"input-field col s12\">\n                  <button [disabled]=\"!updateForm.valid\" class=\"btn-large btn-submit\" type=\"submit\">Update My Profile</button>\n                </div>\n            </div>\n          </form>\n      </div>\n    </div>\n  </div>";
+    __webpack_exports__["default"] = "  <div class=\"row\">\n    <div class=\"col s8 offset-s2\">\n      <div class=\"card\">\n        <div class=\"sm-jumbotron center-align\">\n          <h2>Update</h2>\n        </div>\n        <form class=\"col s12 white\" #updateForm=\"ngForm\" (ngSubmit)=\"OnSubmit(updateForm)\">\n            <div class=\"row\">\n              <div class=\"input-field col s6\"> \n                <input id=\"name_of_firm\" type=\"text\" class=\"validate\" name=\"NAME_OF_FIRM\" #NAME_OF_FIRM=\"ngModel\" [(ngModel)]=\"jeweller.NAME_OF_FIRM\"  required >\n                <label for=\"name_of_firm\">Name of Firm</label>\n                <span class=\"helper-text\" data-error=\"Required Field!\" data-success=\"right\"></span>\n              </div>\n              <div class=\"input-field col s6\">\n                  <input id=\"address_of_firm\" class=\"validate\" type=\"text\" name=\"ADDRESS_OF_FIRM\" #ADDRESS_OF_FIRM=\"ngModel\" [(ngModel)]=\"jeweller.ADDRESS_OF_FIRM\" required  >\n                  <label for=\"address_of_firm\">ADDRESS OF FIRM</label>\n                  <span class=\"helper-text\" data-error=\"required!field\" data-success=\"right\"></span>\n              </div>\n            </div>\n            <div class=\"row\">\n                <div class=\"row col s6\"> \n                  <select class=\"browser-default\" name=\"CITY\" #CITY=\"ngModel\" [(ngModel)]=\"jeweller.CITY\">\n                    <option value=\"\" disabled selected>Choose your City</option>\n                    <option  value=\"Pune\"> Pune</option>\n                    <option value=\"Mumbai\" >Mumbai</option>\n                    <option   value=\"Vadodra\" >Vadodra</option>\n                    <option   value=\"Ahmedabad\" >Ahmedabad</option>\n                  </select>\n                </div>\n                <div class=\"row col s6\">\n                  <select class=\"browser-default\" name=\"STATE\" #STATE=\"ngModel\" [(ngModel)]=\"jeweller.STATE\">\n                    <option value=\"\" disabled selected>Choose your City</option>\n                    <option value=\"Maharashtra\"> Maharashtra</option>\n                    <option value=\"Gujrat\" >Gujrat</option>\n                  </select>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"input-field col s6\"> \n                  <input id=\"contact_name\" type=\"text\" class=\"validate\" name=\"CONTACT_NAME\" #CONTACT_NAME=\"ngModel\" [(ngModel)]=\"jeweller.CONTACT_NAME\" required >\n                  <label for=\"contact_name\">CONTACT_NAME</label>\n                  <span class=\"helper-text\" data-error=\"Required Field!\" data-success=\"right\"></span>\n\n                </div>\n                <div class=\"input-field col s6\">\n                    <input id=\"contact_number\" class=\"validate\" type=\"text\" name=\"CONTACT_NUMBER\" #CONTACT_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.CONTACT_NUMBER\" value=\"\" [pattern]=\"panpattern\" required >\n                    <label for=\"contact_number\">CONTACT_NUMBER</label>\n                    <span class=\"helper-text\" data-error=\"Required 10 character!\" data-success=\"right\"></span>\n\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"input-field col s6\"> \n                  <input id=\"contact_mail_id\" type=\"text\" class=\"validate\" name=\"CONTACT_MAIL_ID\" #CONTACT_MAIL_ID=\"ngModel\" [(ngModel)]=\"jeweller.CONTACT_MAIL_ID\" value=\"\" [pattern]=\"emailPattern\" required >\n                  <label for=\"contact_mail_id\">CONTACT MAIL ID</label>\n                  <span class=\"helper-text\" data-error=\"Invalid Email!\" data-success=\"right\"></span>\n\n                </div>\n                <div class=\"input-field col s6\">\n                    <input id=\"gst_number\" class=\"validate\" type=\"text\" name=\"GST_NUMBER\" #GST_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.GST_NUMBER\" [pattern]=\"gstpattern\" required  >\n                    <label for=\"gst_number\">GST NUMBER</label>\n                    <span class=\"helper-text\" data-error=\"GST Number should contain 15 characters\" data-success=\"right\"></span>\n\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"input-field col s6\"> \n                  <input id=\"pan_number\" type=\"text\" class=\"validate\" name=\"PAN_NUMBER\" #PAN_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.PAN_NUMBER\" [pattern]=\"panpattern\" required >\n                  <label for=\"pan_number\">PAN NUMBER</label>\n                  <span class=\"helper-text\" data-error=\"Required 10 charaters!\" data-success=\"right\"></span>\n\n                </div>\n                <div class=\"input-field col s6\">\n                    <input id=\"owner_name\" class=\"validate\" type=\"text\" name=\"OWNER_NAME\" #OWNER_NAME=\"ngModel\" [(ngModel)]=\"jeweller.OWNER_NAME\" required >\n                    <label for=\"owner_name\">OWNER_NAME</label>\n                    <span class=\"helper-text\" data-error=\"Required Field!\" data-success=\"right\"></span>\n\n                </div>\n              </div>\n              <p>\n                <label>\n                  <input type=\"checkbox\"  id=\"same\" name=\"same\" (change)= \"addres()\" />\n                  <span>Same As Above</span>\n                </label>\n              </p>\n              <p>edit one word of below field to make form validate</p>\n\n              \n              <div class=\"row\">\n                <div class=\"input-field col s6\">\n                    <input id=\"owner_number\" type=\"text\" class=\"validate\" name=\"OWNER_NUMBER\" #OWNER_NUMBER=\"ngModel\" [(ngModel)]=\"jeweller.OWNER_NUMBER\" value=\"\" [pattern]=\"panpattern\" required placeholder=\"OWNER_NUMBER\">\n                    <span class=\"helper-text\" data-error=\"Required 10 digit Number!\" data-success=\"right\"></span>\n\n                </div>\n                <div class=\"input-field col s6\">\n                    <input id=\"owner_email\" type=\"text\" class=\"validate\" name=\"OWNER_EMAIL\" #OWNER_EMAIL=\"ngModel\" [(ngModel)]=\"jeweller.OWNER_EMAIL\"  [pattern]=\"emailPattern\" value =\"\" required placeholder=\"OWNER_EMAIL\">\n                    <span class=\"helper-text\" data-error=\"Invalid Email!\" data-success=\"right\"></span>\n\n                </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"input-field col s12\">\n                <button [disabled]=\"!updateForm.valid\" class=\"btn-large btn-submit\" type=\"submit\">Update My Profile</button>\n              </div>\n          </div>\n        </form>\n    </div>\n  </div>\n</div>\n\n \n   ";
     /***/
   },
 
@@ -1620,6 +1720,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _ornamentcufflink_ornamentcufflink_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(
     /*! ./ornamentcufflink/ornamentcufflink.component */
     "./src/app/ornamentcufflink/ornamentcufflink.component.ts");
+    /* harmony import */
+
+
+    var _readspecific_readspecific_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(
+    /*! ./readspecific/readspecific.component */
+    "./src/app/readspecific/readspecific.component.ts");
 
     var routes = [{
       path: 'user',
@@ -1717,6 +1823,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'types',
       component: _ornamentcufflink_ornamentcufflink_component__WEBPACK_IMPORTED_MODULE_37__["OrnamentcufflinkComponent"]
+    }, {
+      path: 'readSpecific',
+      component: _readspecific_readspecific_component__WEBPACK_IMPORTED_MODULE_38__["ReadspecificComponent"]
     }, {
       path: 'rings',
       component: _ornaments_ornaments_component__WEBPACK_IMPORTED_MODULE_12__["OrnamentsComponent"],
@@ -2125,13 +2234,43 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _ornament_change_change_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(
     /*! ./ornament/change/change.component */
     "./src/app/ornament/change/change.component.ts");
+    /* harmony import */
+
+
+    var _readspecific_readspecific_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(
+    /*! ./readspecific/readspecific.component */
+    "./src/app/readspecific/readspecific.component.ts");
+    /* harmony import */
+
+
+    var _update_earrings_earrings_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(
+    /*! ./update/earrings/earrings.component */
+    "./src/app/update/earrings/earrings.component.ts");
+    /* harmony import */
+
+
+    var _update_nosepin_nosepin_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(
+    /*! ./update/nosepin/nosepin.component */
+    "./src/app/update/nosepin/nosepin.component.ts");
+    /* harmony import */
+
+
+    var _update_chainpendat_chainpendat_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(
+    /*! ./update/chainpendat/chainpendat.component */
+    "./src/app/update/chainpendat/chainpendat.component.ts");
+    /* harmony import */
+
+
+    var _update_pendantearring_pendantearring_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(
+    /*! ./update/pendantearring/pendantearring.component */
+    "./src/app/update/pendantearring/pendantearring.component.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__["NavbarComponent"], _user_user_component__WEBPACK_IMPORTED_MODULE_9__["UserComponent"], _as_jeweler_as_jeweler_component__WEBPACK_IMPORTED_MODULE_10__["AsJewelerComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"], _forms_forms_component__WEBPACK_IMPORTED_MODULE_12__["FormsComponent"], _password_change_password_change_component__WEBPACK_IMPORTED_MODULE_13__["PasswordChangeComponent"], _customer_customer_component__WEBPACK_IMPORTED_MODULE_14__["CustomerComponent"], _create_view_create_view_component__WEBPACK_IMPORTED_MODULE_15__["CreateViewComponent"], _read_read_component__WEBPACK_IMPORTED_MODULE_16__["ReadComponent"], _update_update_component__WEBPACK_IMPORTED_MODULE_17__["UpdateComponent"], _ornaments_ornaments_component__WEBPACK_IMPORTED_MODULE_20__["OrnamentsComponent"], _ornaments_rings_rings_component__WEBPACK_IMPORTED_MODULE_21__["RingsComponent"], _ornaments_neck_neck_component__WEBPACK_IMPORTED_MODULE_22__["NeckComponent"], _jewelornam_jewelornam_component__WEBPACK_IMPORTED_MODULE_23__["JewelornamComponent"], _createvie_createvie_component__WEBPACK_IMPORTED_MODULE_24__["CreatevieComponent"], _createviev_createviev_component__WEBPACK_IMPORTED_MODULE_25__["CreatevievComponent"], _multiselect_multiselect_component__WEBPACK_IMPORTED_MODULE_26__["MultiselectComponent"], _radiofill_radiofill_component__WEBPACK_IMPORTED_MODULE_27__["RadiofillComponent"], _createvieu_createvieu_component__WEBPACK_IMPORTED_MODULE_28__["CreatevieuComponent"], _ornamentread_ornamentread_component__WEBPACK_IMPORTED_MODULE_29__["OrnamentreadComponent"], _ornamentupdate_ornamentupdate_component__WEBPACK_IMPORTED_MODULE_30__["OrnamentupdateComponent"], _ornamentmultiselect_ornamentmultiselect_component__WEBPACK_IMPORTED_MODULE_31__["OrnamentmultiselectComponent"], _ornament1multiselect_ornament1multiselect_component__WEBPACK_IMPORTED_MODULE_32__["Ornament1multiselectComponent"], _ornament_ornaringtype_ornaringtype_component__WEBPACK_IMPORTED_MODULE_33__["OrnaringtypeComponent"], _ornament_ornaearringtype_ornaearringtype_component__WEBPACK_IMPORTED_MODULE_34__["OrnaearringtypeComponent"], _ornament_pendantearringtype_pendantearringtype_component__WEBPACK_IMPORTED_MODULE_35__["PendantearringtypeComponent"], _ornament_ornamentnosepin_ornamentnosepin_component__WEBPACK_IMPORTED_MODULE_36__["OrnamentnosepinComponent"], _ornament_bracelet_bracelet_component__WEBPACK_IMPORTED_MODULE_37__["BraceletComponent"], _ornament_bangles_bangles_component__WEBPACK_IMPORTED_MODULE_38__["BanglesComponent"], _ornament_chain_chain_component__WEBPACK_IMPORTED_MODULE_39__["ChainComponent"], _ornament_chainwithpendant_chainwithpendant_component__WEBPACK_IMPORTED_MODULE_40__["ChainwithpendantComponent"], _ornament_necklace_necklace_component__WEBPACK_IMPORTED_MODULE_41__["NecklaceComponent"], _ornament_mangalsutra_mangalsutra_component__WEBPACK_IMPORTED_MODULE_42__["MangalsutraComponent"], _ornament_sets_sets_component__WEBPACK_IMPORTED_MODULE_43__["SetsComponent"], _ornament_pendant_pendant_component__WEBPACK_IMPORTED_MODULE_44__["PendantComponent"], _ornamentcufflink_ornamentcufflink_component__WEBPACK_IMPORTED_MODULE_45__["OrnamentcufflinkComponent"], _ornament_cufflink_cufflink_component__WEBPACK_IMPORTED_MODULE_46__["CufflinkComponent"], _ornament_change_change_component__WEBPACK_IMPORTED_MODULE_47__["ChangeComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__["NavbarComponent"], _user_user_component__WEBPACK_IMPORTED_MODULE_9__["UserComponent"], _as_jeweler_as_jeweler_component__WEBPACK_IMPORTED_MODULE_10__["AsJewelerComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"], _forms_forms_component__WEBPACK_IMPORTED_MODULE_12__["FormsComponent"], _password_change_password_change_component__WEBPACK_IMPORTED_MODULE_13__["PasswordChangeComponent"], _customer_customer_component__WEBPACK_IMPORTED_MODULE_14__["CustomerComponent"], _create_view_create_view_component__WEBPACK_IMPORTED_MODULE_15__["CreateViewComponent"], _read_read_component__WEBPACK_IMPORTED_MODULE_16__["ReadComponent"], _update_update_component__WEBPACK_IMPORTED_MODULE_17__["UpdateComponent"], _ornaments_ornaments_component__WEBPACK_IMPORTED_MODULE_20__["OrnamentsComponent"], _ornaments_rings_rings_component__WEBPACK_IMPORTED_MODULE_21__["RingsComponent"], _ornaments_neck_neck_component__WEBPACK_IMPORTED_MODULE_22__["NeckComponent"], _jewelornam_jewelornam_component__WEBPACK_IMPORTED_MODULE_23__["JewelornamComponent"], _createvie_createvie_component__WEBPACK_IMPORTED_MODULE_24__["CreatevieComponent"], _createviev_createviev_component__WEBPACK_IMPORTED_MODULE_25__["CreatevievComponent"], _multiselect_multiselect_component__WEBPACK_IMPORTED_MODULE_26__["MultiselectComponent"], _radiofill_radiofill_component__WEBPACK_IMPORTED_MODULE_27__["RadiofillComponent"], _createvieu_createvieu_component__WEBPACK_IMPORTED_MODULE_28__["CreatevieuComponent"], _ornamentread_ornamentread_component__WEBPACK_IMPORTED_MODULE_29__["OrnamentreadComponent"], _ornamentupdate_ornamentupdate_component__WEBPACK_IMPORTED_MODULE_30__["OrnamentupdateComponent"], _ornamentmultiselect_ornamentmultiselect_component__WEBPACK_IMPORTED_MODULE_31__["OrnamentmultiselectComponent"], _ornament1multiselect_ornament1multiselect_component__WEBPACK_IMPORTED_MODULE_32__["Ornament1multiselectComponent"], _ornament_ornaringtype_ornaringtype_component__WEBPACK_IMPORTED_MODULE_33__["OrnaringtypeComponent"], _ornament_ornaearringtype_ornaearringtype_component__WEBPACK_IMPORTED_MODULE_34__["OrnaearringtypeComponent"], _ornament_pendantearringtype_pendantearringtype_component__WEBPACK_IMPORTED_MODULE_35__["PendantearringtypeComponent"], _ornament_ornamentnosepin_ornamentnosepin_component__WEBPACK_IMPORTED_MODULE_36__["OrnamentnosepinComponent"], _ornament_bracelet_bracelet_component__WEBPACK_IMPORTED_MODULE_37__["BraceletComponent"], _ornament_bangles_bangles_component__WEBPACK_IMPORTED_MODULE_38__["BanglesComponent"], _ornament_chain_chain_component__WEBPACK_IMPORTED_MODULE_39__["ChainComponent"], _ornament_chainwithpendant_chainwithpendant_component__WEBPACK_IMPORTED_MODULE_40__["ChainwithpendantComponent"], _ornament_necklace_necklace_component__WEBPACK_IMPORTED_MODULE_41__["NecklaceComponent"], _ornament_mangalsutra_mangalsutra_component__WEBPACK_IMPORTED_MODULE_42__["MangalsutraComponent"], _ornament_sets_sets_component__WEBPACK_IMPORTED_MODULE_43__["SetsComponent"], _ornament_pendant_pendant_component__WEBPACK_IMPORTED_MODULE_44__["PendantComponent"], _ornamentcufflink_ornamentcufflink_component__WEBPACK_IMPORTED_MODULE_45__["OrnamentcufflinkComponent"], _ornament_cufflink_cufflink_component__WEBPACK_IMPORTED_MODULE_46__["CufflinkComponent"], _ornament_change_change_component__WEBPACK_IMPORTED_MODULE_47__["ChangeComponent"], _readspecific_readspecific_component__WEBPACK_IMPORTED_MODULE_48__["ReadspecificComponent"], _update_earrings_earrings_component__WEBPACK_IMPORTED_MODULE_49__["EarringsComponent"], _update_nosepin_nosepin_component__WEBPACK_IMPORTED_MODULE_50__["NosepinComponent"], _update_chainpendat_chainpendat_component__WEBPACK_IMPORTED_MODULE_51__["ChainpendatComponent"], _update_pendantearring_pendantearring_component__WEBPACK_IMPORTED_MODULE_52__["PendantearringComponent"]],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_19__["BrowserAnimationsModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_18__["ToastrModule"].forRoot()],
       providers: [_shared_user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"]],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
@@ -11065,7 +11204,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "zero",
         value: function zero() {
           if (document.getElementById('zero').checked) {
-            if (this.metalb.length == 0) {
+            if (this.metalb.length === 0) {
               document.getElementById('zero').checked = false; // tslint:disable-next-line: max-line-length
 
               alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -11126,7 +11265,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "one",
         value: function one() {
           if (document.getElementById('1').checked) {
-            if (this.asian.length == 0) {
+            if (this.asian.length === 0) {
               document.getElementById('1').checked = false; // tslint:disable-next-line: max-line-length
 
               alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -11187,7 +11326,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "two",
         value: function two() {
           if (document.getElementById('2').checked) {
-            if (this.asin.length == 0) {
+            if (this.asin.length === 0) {
               document.getElementById('2').checked = false; // tslint:disable-next-line: max-line-length
 
               alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -11248,7 +11387,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "three",
         value: function three() {
           if (document.getElementById('3').checked) {
-            if (this.themeb.length == 0) {
+            if (this.themeb.length === 0) {
               document.getElementById('3').checked = false; // tslint:disable-next-line: max-line-length
 
               alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -11309,7 +11448,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "four",
         value: function four() {
           if (document.getElementById('4').checked) {
-            if (this.curatedb.length == 0) {
+            if (this.curatedb.length === 0) {
               document.getElementById('4').checked = false; // tslint:disable-next-line: max-line-length
 
               alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -11370,7 +11509,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "five",
         value: function five() {
           if (document.getElementById('5').checked) {
-            if (this.festib.length == 0) {
+            if (this.festib.length === 0) {
               document.getElementById('5').checked = false; // tslint:disable-next-line: max-line-length
 
               alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -11428,20 +11567,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "handleFileInputthree",
         value: function handleFileInputthree(file) {
           this.fileToUploadthree = file.item(0);
-        }
+        } // tslint:disable-next-line: max-line-length
+
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, ORNAMENT_EARRING_STYLE, ORNAMENT_PENDANT_STYLE, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
           var _this97 = this;
 
           // tslint:disable-next-line: max-line-length
-          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia.length == 0) {
+          if (this.asion.length === 0 || this.asan.length === 0 || this.themea.length === 0 || this.curateda.length === 0 || this.metala.length === 0 || this.festia.length === 0) {
             alert('check the confirmation checkboxex to proceed');
           } else {
+            // tslint:disable-next-line: max-line-length
             this.userService.pendantwithearing(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, ORNAMENT_EARRING_STYLE.value, ORNAMENT_PENDANT_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
               console.log('done', data);
 
-              if (data.status == 201) {
+              if (data.status === 201) {
                 _this97.toastr.success('Ornament Succesfully Created');
 
                 _this97.router.navigate(['./ornamentread']);
@@ -12046,20 +12187,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "handleFileInputthree",
         value: function handleFileInputthree(file) {
           this.fileToUploadthree = file.item(0);
-        }
+        } // tslint:disable-next-line: max-line-length
+
       }, {
         key: "OnSubmit",
         value: function OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_METAL, ORNAMENT_OCCASION, ORNAMENT_GIFT, ORNAMENT_THEME, ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE, IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
           var _this104 = this;
 
           // tslint:disable-next-line: max-line-length
-          if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia.length == 0) {
+          if (this.asion.length === 0 || this.asan.length === 0 || this.themea.length === 0 || this.curateda.length === 0 || this.metala.length === 0 || this.festia.length === 0) {
             alert('check the confirmation checkboxex to proceed');
           } else {
+            // tslint:disable-next-line: max-line-length
             this.userService.multi(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value, ORNAMENT_SHOPFOR.value, WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda, this.curatedb, this.festia, this.festib, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(function (data) {
               console.log('done', data);
 
-              if (data.status == 201) {
+              if (data.status === 201) {
                 _this104.toastr.success('Ornament Succesfully Created');
 
                 _this104.router.navigate(['./ornamentread']);
@@ -12731,14 +12874,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../shared/user.service */
     "./src/app/shared/user.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var OrnamentreadComponent =
     /*#__PURE__*/
     function () {
-      function OrnamentreadComponent(userService) {
+      function OrnamentreadComponent(userService, router) {
         _classCallCheck(this, OrnamentreadComponent);
 
         this.userService = userService;
+        this.router = router;
         this.data = {};
       }
 
@@ -12887,6 +13037,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this124.data = data;
           });
         }
+      }, {
+        key: "read",
+        value: function read(ORNAMENT_ID) {
+          localStorage.setItem('ORNAMENT_ID', ORNAMENT_ID);
+          this.router.navigate(['./readSpecific']); // this.userService.readid().subscribe((data: any) => {
+          // console.log(data);
+          // });
+        }
       }]);
 
       return OrnamentreadComponent;
@@ -12895,6 +13053,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     OrnamentreadComponent.ctorParameters = function () {
       return [{
         type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }];
     };
 
@@ -13487,6 +13647,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.userService = userService;
         this.router = router;
         this.emailPattern = '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$';
+        this.panpattern = '[0-9]{10}';
+        this.gstpattern = '[0-9]{15}';
       }
 
       _createClass(RadiofillComponent, [{
@@ -13557,10 +13719,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function OnSubmit(form) {
           var _this126 = this;
 
-          this.userService.createView(form.value).subscribe(function (res) {
-            console.log(res);
+          this.userService.createView(form.value).subscribe(function (data) {
+            console.log(data);
 
-            _this126.router.navigate(['./read']);
+            if (data.status === 201) {
+              _this126.router.navigate(['./read']);
+            } else {
+              alert('Try filling the form carefully with correct info');
+            }
           }, function (err) {
             console.log(err.message);
           });
@@ -13753,6 +13919,112 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     // this.toastr.error(data.message);
     // }
 
+    /***/
+  },
+
+  /***/
+  "./src/app/readspecific/readspecific.component.css":
+  /*!*********************************************************!*\
+    !*** ./src/app/readspecific/readspecific.component.css ***!
+    \*********************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppReadspecificReadspecificComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".slider-holder\r\n{\r\n    width: 800px;\r\n    height: 400px;\r\n    background-color: yellow;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    margin-top: 0px;\r\n    text-align: center;\r\n    overflow: hidden;\r\n}\r\n\r\n.image-holder\r\n{\r\n    width: 2400px;\r\n    background-color: red;\r\n    height: 400px;\r\n    clear: both;\r\n    position: relative;\r\n   \r\n    -webkit-transition: left 2s;\r\n    transition: left 2s;\r\n}\r\n\r\n.card-image\r\n{\r\n    float: left;\r\n    margin: 0px;\r\n    padding: 0px;\r\n    position: relative;\r\n}\r\n\r\n#slider-image-1:target ~ .image-holder\r\n{\r\n    left: 0px;\r\n}\r\n\r\n#slider-image-2:target ~ .image-holder\r\n{\r\n    left: -800px;\r\n}\r\n\r\n#slider-image-3:target ~ .image-holder\r\n{\r\n    left: -1600px;\r\n}\r\n\r\n.button-holder\r\n{\r\n    position: relative;\r\n    top: -20px;\r\n}\r\n\r\n.slider-change\r\n{\r\n    display: inline-block;\r\n    height: 10px;\r\n    width: 10px;\r\n    border-radius: 5px;\r\n    background-color: brown;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVhZHNwZWNpZmljL3JlYWRzcGVjaWZpYy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztJQUVJLFlBQVk7SUFDWixhQUFhO0lBQ2Isd0JBQXdCO0lBQ3hCLGlCQUFpQjtJQUNqQixrQkFBa0I7SUFDbEIsZUFBZTtJQUNmLGtCQUFrQjtJQUNsQixnQkFBZ0I7QUFDcEI7O0FBRUE7O0lBRUksYUFBYTtJQUNiLHFCQUFxQjtJQUNyQixhQUFhO0lBQ2IsV0FBVztJQUNYLGtCQUFrQjs7SUFFbEIsMkJBQTJCO0lBRzNCLG1CQUFtQjtBQUN2Qjs7QUFFQTs7SUFFSSxXQUFXO0lBQ1gsV0FBVztJQUNYLFlBQVk7SUFDWixrQkFBa0I7QUFDdEI7O0FBRUE7O0lBRUksU0FBUztBQUNiOztBQUVBOztJQUVJLFlBQVk7QUFDaEI7O0FBRUE7O0lBRUksYUFBYTtBQUNqQjs7QUFFQTs7SUFFSSxrQkFBa0I7SUFDbEIsVUFBVTtBQUNkOztBQUVBOztJQUVJLHFCQUFxQjtJQUNyQixZQUFZO0lBQ1osV0FBVztJQUNYLGtCQUFrQjtJQUNsQix1QkFBdUI7QUFDM0IiLCJmaWxlIjoic3JjL2FwcC9yZWFkc3BlY2lmaWMvcmVhZHNwZWNpZmljLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2xpZGVyLWhvbGRlclxyXG57XHJcbiAgICB3aWR0aDogODAwcHg7XHJcbiAgICBoZWlnaHQ6IDQwMHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogeWVsbG93O1xyXG4gICAgbWFyZ2luLWxlZnQ6IGF1dG87XHJcbiAgICBtYXJnaW4tcmlnaHQ6IGF1dG87XHJcbiAgICBtYXJnaW4tdG9wOiAwcHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG59XHJcblxyXG4uaW1hZ2UtaG9sZGVyXHJcbntcclxuICAgIHdpZHRoOiAyNDAwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZWQ7XHJcbiAgICBoZWlnaHQ6IDQwMHB4O1xyXG4gICAgY2xlYXI6IGJvdGg7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgIFxyXG4gICAgLXdlYmtpdC10cmFuc2l0aW9uOiBsZWZ0IDJzO1xyXG4gICAgLW1vei10cmFuc2l0aW9uOiBsZWZ0IDJzO1xyXG4gICAgLW8tdHJhbnNpdGlvbjogbGVmdCAycztcclxuICAgIHRyYW5zaXRpb246IGxlZnQgMnM7XHJcbn1cclxuXHJcbi5jYXJkLWltYWdlXHJcbntcclxuICAgIGZsb2F0OiBsZWZ0O1xyXG4gICAgbWFyZ2luOiAwcHg7XHJcbiAgICBwYWRkaW5nOiAwcHg7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuXHJcbiNzbGlkZXItaW1hZ2UtMTp0YXJnZXQgfiAuaW1hZ2UtaG9sZGVyXHJcbntcclxuICAgIGxlZnQ6IDBweDtcclxufVxyXG5cclxuI3NsaWRlci1pbWFnZS0yOnRhcmdldCB+IC5pbWFnZS1ob2xkZXJcclxue1xyXG4gICAgbGVmdDogLTgwMHB4O1xyXG59XHJcblxyXG4jc2xpZGVyLWltYWdlLTM6dGFyZ2V0IH4gLmltYWdlLWhvbGRlclxyXG57XHJcbiAgICBsZWZ0OiAtMTYwMHB4O1xyXG59XHJcblxyXG4uYnV0dG9uLWhvbGRlclxyXG57XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICB0b3A6IC0yMHB4O1xyXG59XHJcblxyXG4uc2xpZGVyLWNoYW5nZVxyXG57XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICBoZWlnaHQ6IDEwcHg7XHJcbiAgICB3aWR0aDogMTBweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJyb3duO1xyXG59Il19 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/readspecific/readspecific.component.ts":
+  /*!********************************************************!*\
+    !*** ./src/app/readspecific/readspecific.component.ts ***!
+    \********************************************************/
+
+  /*! exports provided: ReadspecificComponent */
+
+  /***/
+  function srcAppReadspecificReadspecificComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ReadspecificComponent", function () {
+      return ReadspecificComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _shared_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ../shared/user.service */
+    "./src/app/shared/user.service.ts");
+
+    var ReadspecificComponent =
+    /*#__PURE__*/
+    function () {
+      function ReadspecificComponent(userService) {
+        _classCallCheck(this, ReadspecificComponent);
+
+        this.userService = userService;
+        this.data = {};
+      }
+
+      _createClass(ReadspecificComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this.readspecific();
+        }
+      }, {
+        key: "readspecific",
+        value: function readspecific() {
+          var _this128 = this;
+
+          this.userService.readid().subscribe(function (data) {
+            console.log(data);
+            _this128.data = data.data;
+          });
+        }
+      }]);
+
+      return ReadspecificComponent;
+    }();
+
+    ReadspecificComponent.ctorParameters = function () {
+      return [{
+        type: _shared_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+      }];
+    };
+
+    ReadspecificComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-readspecific',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./readspecific.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/readspecific/readspecific.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./readspecific.component.css */
+      "./src/app/readspecific/readspecific.component.css")).default]
+    })], ReadspecificComponent);
     /***/
   },
 
@@ -14003,6 +14275,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function r14() {
           var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
           return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=14', {
+            headers: Headers
+          });
+        }
+      }, {
+        key: "readid",
+        value: function readid() {
+          var Headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'token ' + localStorage.getItem('token'));
+          return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/', {
             headers: Headers
           });
         }
@@ -16212,6 +16492,322 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/update/chainpendat/chainpendat.component.css":
+  /*!**************************************************************!*\
+    !*** ./src/app/update/chainpendat/chainpendat.component.css ***!
+    \**************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppUpdateChainpendatChainpendatComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3VwZGF0ZS9jaGFpbnBlbmRhdC9jaGFpbnBlbmRhdC5jb21wb25lbnQuY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/update/chainpendat/chainpendat.component.ts":
+  /*!*************************************************************!*\
+    !*** ./src/app/update/chainpendat/chainpendat.component.ts ***!
+    \*************************************************************/
+
+  /*! exports provided: ChainpendatComponent */
+
+  /***/
+  function srcAppUpdateChainpendatChainpendatComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ChainpendatComponent", function () {
+      return ChainpendatComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var ChainpendatComponent =
+    /*#__PURE__*/
+    function () {
+      function ChainpendatComponent() {
+        _classCallCheck(this, ChainpendatComponent);
+      }
+
+      _createClass(ChainpendatComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return ChainpendatComponent;
+    }();
+
+    ChainpendatComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-chainpendat',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./chainpendat.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/update/chainpendat/chainpendat.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./chainpendat.component.css */
+      "./src/app/update/chainpendat/chainpendat.component.css")).default]
+    })], ChainpendatComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/update/earrings/earrings.component.css":
+  /*!********************************************************!*\
+    !*** ./src/app/update/earrings/earrings.component.css ***!
+    \********************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppUpdateEarringsEarringsComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3VwZGF0ZS9lYXJyaW5ncy9lYXJyaW5ncy5jb21wb25lbnQuY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/update/earrings/earrings.component.ts":
+  /*!*******************************************************!*\
+    !*** ./src/app/update/earrings/earrings.component.ts ***!
+    \*******************************************************/
+
+  /*! exports provided: EarringsComponent */
+
+  /***/
+  function srcAppUpdateEarringsEarringsComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "EarringsComponent", function () {
+      return EarringsComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var EarringsComponent =
+    /*#__PURE__*/
+    function () {
+      function EarringsComponent() {
+        _classCallCheck(this, EarringsComponent);
+      }
+
+      _createClass(EarringsComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return EarringsComponent;
+    }();
+
+    EarringsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-earrings',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./earrings.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/update/earrings/earrings.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./earrings.component.css */
+      "./src/app/update/earrings/earrings.component.css")).default]
+    })], EarringsComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/update/nosepin/nosepin.component.css":
+  /*!******************************************************!*\
+    !*** ./src/app/update/nosepin/nosepin.component.css ***!
+    \******************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppUpdateNosepinNosepinComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3VwZGF0ZS9ub3NlcGluL25vc2VwaW4uY29tcG9uZW50LmNzcyJ9 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/update/nosepin/nosepin.component.ts":
+  /*!*****************************************************!*\
+    !*** ./src/app/update/nosepin/nosepin.component.ts ***!
+    \*****************************************************/
+
+  /*! exports provided: NosepinComponent */
+
+  /***/
+  function srcAppUpdateNosepinNosepinComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "NosepinComponent", function () {
+      return NosepinComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var NosepinComponent =
+    /*#__PURE__*/
+    function () {
+      function NosepinComponent() {
+        _classCallCheck(this, NosepinComponent);
+      }
+
+      _createClass(NosepinComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return NosepinComponent;
+    }();
+
+    NosepinComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-nosepin',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./nosepin.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/update/nosepin/nosepin.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./nosepin.component.css */
+      "./src/app/update/nosepin/nosepin.component.css")).default]
+    })], NosepinComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/update/pendantearring/pendantearring.component.css":
+  /*!********************************************************************!*\
+    !*** ./src/app/update/pendantearring/pendantearring.component.css ***!
+    \********************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppUpdatePendantearringPendantearringComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3VwZGF0ZS9wZW5kYW50ZWFycmluZy9wZW5kYW50ZWFycmluZy5jb21wb25lbnQuY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/update/pendantearring/pendantearring.component.ts":
+  /*!*******************************************************************!*\
+    !*** ./src/app/update/pendantearring/pendantearring.component.ts ***!
+    \*******************************************************************/
+
+  /*! exports provided: PendantearringComponent */
+
+  /***/
+  function srcAppUpdatePendantearringPendantearringComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "PendantearringComponent", function () {
+      return PendantearringComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var PendantearringComponent =
+    /*#__PURE__*/
+    function () {
+      function PendantearringComponent() {
+        _classCallCheck(this, PendantearringComponent);
+      }
+
+      _createClass(PendantearringComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return PendantearringComponent;
+    }();
+
+    PendantearringComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-pendantearring',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./pendantearring.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/update/pendantearring/pendantearring.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./pendantearring.component.css */
+      "./src/app/update/pendantearring/pendantearring.component.css")).default]
+    })], PendantearringComponent);
+    /***/
+  },
+
+  /***/
   "./src/app/update/update.component.css":
   /*!*********************************************!*\
     !*** ./src/app/update/update.component.css ***!
@@ -16284,6 +16880,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.userService = userService;
         this.router = router;
         this.emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$';
+        this.panpattern = '[0-9]{10}';
+        this.gstpattern = '[0-9]{15}';
       }
 
       _createClass(UpdateComponent, [{
@@ -16314,13 +16912,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           };
         }
       }, {
+        key: "addres",
+        value: function addres() {
+          if (document.getElementById('same').checked) {
+            console.log('checked');
+            document.getElementById('owner_number').value = document.getElementById('contact_number').value;
+            document.getElementById('owner_email').value = document.getElementById('contact_mail_id').value;
+          } else {
+            console.log('uncheked');
+            document.getElementById('owner_number').value = '';
+            document.getElementById('owner_email').value = '';
+          }
+
+          console.log(document.getElementById('owner_email').value);
+        }
+      }, {
         key: "OnSubmit",
         value: function OnSubmit(form) {
-          var _this128 = this;
+          var _this129 = this;
 
           this.userService.update(form.value).subscribe(function (res) {
             // console.log(res);
-            _this128.router.navigate(['./read']);
+            _this129.router.navigate(['./read']);
           }, function (err) {
             console.log(err.message);
           });
