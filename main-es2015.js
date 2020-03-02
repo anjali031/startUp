@@ -10782,7 +10782,7 @@ let UpdateComponent = class UpdateComponent {
     constructor(userService, router) {
         this.userService = userService;
         this.router = router;
-        this.emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$';
+        this.emailPattern = '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$';
         this.panpattern = '[0-9]{10}';
         this.gstpattern = '[0-9]{15}';
     }
