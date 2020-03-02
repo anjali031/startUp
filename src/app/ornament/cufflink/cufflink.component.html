@@ -167,11 +167,15 @@
               </ul>
             </div>
           </div>
-          <input type="file" #CAD_FILE accept="image/*" (change)="handleFileInput($event.target.files)">
+          <p>Upload your 3D Model</p>
+          <input type="file" #CAD_FILE accept="" (change)="handleFileInput($event.target.files)">
+          <p>Upload your Image One</p>
 
           <input type="file" #IMAGE_FILE_ONE accept="image/*" (change)="handleFileInputone($event.target.files)">
+          <p>Upload your Image Two</p>
 
           <input type="file" #IMAGE_FILE_TWO accept="image/*" (change)="handleFileInputtwo($event.target.files)">
+          <p>Upload your Image Three</p>
 
           <input type="file" #IMAGE_FILE_THREE accept="image/*" (change)="handleFileInputthree($event.target.files)">
 
