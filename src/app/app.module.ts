@@ -47,6 +47,11 @@ import { PendantComponent } from './ornament/pendant/pendant.component';
 import { OrnamentcufflinkComponent } from './ornamentcufflink/ornamentcufflink.component';
 import { CufflinkComponent } from './ornament/cufflink/cufflink.component';
 import { ChangeComponent } from './ornament/change/change.component';
+import { ReadspecificComponent } from './readspecific/readspecific.component';
+import { EarringsComponent } from './update/earrings/earrings.component';
+import { NosepinComponent } from './update/nosepin/nosepin.component';
+import { ChainpendatComponent } from './update/chainpendat/chainpendat.component';
+import { PendantearringComponent } from './update/pendantearring/pendantearring.component';
 
 
 @NgModule({
@@ -89,7 +94,12 @@ import { ChangeComponent } from './ornament/change/change.component';
     PendantComponent,
     OrnamentcufflinkComponent,
     CufflinkComponent,
-    ChangeComponent
+    ChangeComponent,
+    ReadspecificComponent,
+    EarringsComponent,
+    NosepinComponent,
+    ChainpendatComponent,
+    PendantearringComponent
   ],
   imports: [
     BrowserModule,

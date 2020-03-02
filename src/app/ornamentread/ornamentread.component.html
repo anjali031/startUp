@@ -3,13 +3,15 @@
     <div class="card" *ngFor="let question of data.results">
       <div class="card-image">
         <img src="{{question.ornament_file_field.IMAGE_FILE_ONE}}">
-        <span class="card-title">Card Title</span>
+        <span class="card-title"></span>
       </div>
       <div class="card-content">
         <p>{{question.ORNAMENT_ID}}</p>
         <p>{{question.JEWELLER_ID}}</p>
         <p>{{question.WEIGHT}}</p>
       </div>
+      <button class="btn-large btn-submit" type="submit" (click)="read(question.ORNAMENT_ID)">More About this</button>
+
       <!--div class="card-action">
         <a href="#">This is a link</a>
       </div-->

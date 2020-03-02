@@ -43,9 +43,9 @@
 
                 </div>
                 <div class="input-field col s6">
-                    <input id="contact_number" class="validate" type="text" name="CONTACT_NUMBER" #CONTACT_NUMBER="ngModel" [(ngModel)]="jeweller.CONTACT_NUMBER" value="" required >
+                    <input id="contact_number" class="validate" type="text" name="CONTACT_NUMBER" #CONTACT_NUMBER="ngModel" [(ngModel)]="jeweller.CONTACT_NUMBER" value="" [pattern]="panpattern" required >
                     <label for="contact_number">CONTACT_NUMBER</label>
-                    <span class="helper-text" data-error="Required Field!" data-success="right"></span>
+                    <span class="helper-text" data-error="Required 10 character!" data-success="right"></span>
 
                 </div>
               </div>
@@ -57,7 +57,7 @@
 
                 </div>
                 <div class="input-field col s6">
-                    <input id="gst_number" class="validate" type="text" name="GST_NUMBER" #GST_NUMBER="ngModel" [(ngModel)]="jeweller.GST_NUMBER" required  >
+                    <input id="gst_number" class="validate" type="text" name="GST_NUMBER" #GST_NUMBER="ngModel" [(ngModel)]="jeweller.GST_NUMBER" [pattern]="gstpattern" required  >
                     <label for="gst_number">GST NUMBER</label>
                     <span class="helper-text" data-error="GST Number should contain 15 characters" data-success="right"></span>
 
@@ -65,9 +65,9 @@
               </div>
               <div class="row">
                 <div class="input-field col s6"> 
-                  <input id="pan_number" type="text" class="validate" name="PAN_NUMBER" #PAN_NUMBER="ngModel" [(ngModel)]="jeweller.PAN_NUMBER" required >
+                  <input id="pan_number" type="text" class="validate" name="PAN_NUMBER" #PAN_NUMBER="ngModel" [(ngModel)]="jeweller.PAN_NUMBER" [pattern]="panpattern" required >
                   <label for="pan_number">PAN NUMBER</label>
-                  <span class="helper-text" data-error="Required Field!" data-success="right"></span>
+                  <span class="helper-text" data-error="Required 10 charaters!" data-success="right"></span>
 
                 </div>
                 <div class="input-field col s6">
@@ -88,12 +88,12 @@
               
               <div class="row">
                 <div class="input-field col s6">
-                    <input id="owner_number" type="text" class="validate" name="OWNER_NUMBER" #OWNER_NUMBER="ngModel" [(ngModel)]="jeweller.OWNER_NUMBER" value="" required >
-                    <span class="helper-text" data-error="Required Number!" data-success="right"></span>
+                    <input id="owner_number" type="text" class="validate" name="OWNER_NUMBER" #OWNER_NUMBER="ngModel" [(ngModel)]="jeweller.OWNER_NUMBER" value="" [pattern]="panpattern" required placeholder="OWNER_NUMBER">
+                    <span class="helper-text" data-error="Required 10 digit Number!" data-success="right"></span>
 
                 </div>
                 <div class="input-field col s6">
-                    <input id="owner_email" type="text" class="validate" name="OWNER_EMAIL" #OWNER_EMAIL="ngModel" [(ngModel)]="jeweller.OWNER_EMAIL"  [pattern]="emailPattern" value ="" required >
+                    <input id="owner_email" type="text" class="validate" name="OWNER_EMAIL" #OWNER_EMAIL="ngModel" [(ngModel)]="jeweller.OWNER_EMAIL"  [pattern]="emailPattern" value ="" required placeholder="OWNER_EMAIL">
                     <span class="helper-text" data-error="Invalid Email!" data-success="right"></span>
 
                 </div>

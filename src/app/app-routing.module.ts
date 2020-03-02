@@ -36,6 +36,7 @@ import { PendantComponent } from './ornament/pendant/pendant.component';
 import { SetsComponent } from './ornament/sets/sets.component';
 import { CufflinkComponent } from './ornament/cufflink/cufflink.component';
 import { OrnamentcufflinkComponent } from './ornamentcufflink/ornamentcufflink.component';
+import { ReadspecificComponent } from './readspecific/readspecific.component';
 
 
 
@@ -72,6 +73,7 @@ const routes: Routes = [
   { path: 'cufflink', component: CufflinkComponent},
   { path: 'nosepin', component: OrnamentnosepinComponent},
   { path: 'types', component: OrnamentcufflinkComponent},
+  { path: 'readSpecific', component: ReadspecificComponent},
 
 
 

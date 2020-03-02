@@ -9,6 +9,7 @@ import { JewellerInfo } from './jeweller-info.model';
 export class UserService {
   formData: JewellerInfo;
   occasion: number;
+  readID: number;
   arr: any = [1, 2, 5];
   constructor( public http: HttpClient ) { }
   readonly rootURL = 'https://harshil21.pythonanywhere.com';
@@ -151,7 +152,11 @@ export class UserService {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
     return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=14', {headers: Headers});
   }
-  
+  readid() {
+    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/', {headers: Headers});
+  }
+
   ornmetal() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
     return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/metal/', {headers: Headers});

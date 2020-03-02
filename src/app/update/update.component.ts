@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 export class UpdateComponent implements OnInit {
   jeweller: JewellerInfo;
   emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$';
+  panpattern = '[0-9]{10}';
+  gstpattern = '[0-9]{15}';
 
   constructor(private userService: UserService , private router: Router) { }
 
@@ -38,7 +40,22 @@ export class UpdateComponent implements OnInit {
     };
   }
 
+  addres() {
+    if ((document.getElementById('same')as HTMLInputElement).checked) {
+      console.log('checked');
+      (document.getElementById('owner_number')as HTMLInputElement).value = (document.
+        getElementById('contact_number')as HTMLInputElement).value;
+      (document.getElementById('owner_email')as HTMLInputElement).value = (document.
+        getElementById('contact_mail_id')as HTMLInputElement).value;
+    } else {
+      console.log('uncheked');
+      (document.getElementById('owner_number')as HTMLInputElement).value = '';
+      (document.getElementById('owner_email')as HTMLInputElement).value = '';
+    }
+    console.log((document.getElementById('owner_email')as HTMLInputElement).value );
+    }
 
+    
   OnSubmit(form: NgForm) {
     this.userService.update(form.value)
     .subscribe(

@@ -1,64 +1,112 @@
-<div class="row">
+  <div class="row">
     <div class="col s8 offset-s2">
       <div class="card">
         <div class="sm-jumbotron center-align">
           <h2>Update</h2>
         </div>
-          <form class="col s12 white" #updateForm="ngForm" (ngSubmit)="OnSubmit(updateForm)">
+        <form class="col s12 white" #updateForm="ngForm" (ngSubmit)="OnSubmit(updateForm)">
             <div class="row">
-              <div class="input-feild col s6"> 
-                <input type="text" class="validate" name="NAME_OF_FIRM" #NAME_OF_FIRM="ngModel" [(ngModel)]="jeweller.NAME_OF_FIRM"  required placeholder="NAME OF FIRM">
+              <div class="input-field col s6"> 
+                <input id="name_of_firm" type="text" class="validate" name="NAME_OF_FIRM" #NAME_OF_FIRM="ngModel" [(ngModel)]="jeweller.NAME_OF_FIRM"  required >
+                <label for="name_of_firm">Name of Firm</label>
+                <span class="helper-text" data-error="Required Field!" data-success="right"></span>
               </div>
-              <div class="input-feild col s6">
-                  <input class="validate" type="text" name="ADDRESS_OF_FIRM" #ADDRESS_OF_FIRM="ngModel" [(ngModel)]="jeweller.ADDRESS_OF_FIRM" required  placeholder="ADDRESS OF FIRM">
+              <div class="input-field col s6">
+                  <input id="address_of_firm" class="validate" type="text" name="ADDRESS_OF_FIRM" #ADDRESS_OF_FIRM="ngModel" [(ngModel)]="jeweller.ADDRESS_OF_FIRM" required  >
+                  <label for="address_of_firm">ADDRESS OF FIRM</label>
+                  <span class="helper-text" data-error="required!field" data-success="right"></span>
               </div>
             </div>
             <div class="row">
-                <div class="input-feild col s6"> 
-                  <input type="text" class="validate" name="CITY" #CITY="ngModel" [(ngModel)]="jeweller.CITY"  required placeholder="CITY">
+                <div class="row col s6"> 
+                  <select class="browser-default" name="CITY" #CITY="ngModel" [(ngModel)]="jeweller.CITY">
+                    <option value="" disabled selected>Choose your City</option>
+                    <option  value="Pune"> Pune</option>
+                    <option value="Mumbai" >Mumbai</option>
+                    <option   value="Vadodra" >Vadodra</option>
+                    <option   value="Ahmedabad" >Ahmedabad</option>
+                  </select>
                 </div>
-                <div class="input-feild col s6">
-                    <input class="validate" type="text" name="STATE" #STATE="ngModel" [(ngModel)]="jeweller.STATE" required  placeholder="STATE">
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-feild col s6"> 
-                  <input type="text" class="validate" name="CONTACT_NAME" #CONTACT_NAME="ngModel" [(ngModel)]="jeweller.CONTACT_NAME" required placeholder="CONTACT NAME">
-                </div>
-                <div class="input-feild col s6">
-                    <input class="validate" type="text" name="CONTACT_NUMBER" #CONTACT_NUMBER="ngModel" [(ngModel)]="jeweller.CONTACT_NUMBER" required  placeholder="CONTACT NUMBER">
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-feild col s6"> 
-                  <input type="text" class="validate" name="CONTACT_MAIL_ID" #CONTACT_MAIL_ID="ngModel" [(ngModel)]="jeweller.CONTACT_MAIL_ID" [pattern]="emailPattern" required placeholder="CONTACT MAIL ID">
-                </div>
-                <div class="input-feild col s6">
-                    <input class="validate" type="text" name="GST_NUMBER" #GST_NUMBER="ngModel" [(ngModel)]="jeweller.GST_NUMBER" required  placeholder="GST NUMBER">
+                <div class="row col s6">
+                  <select class="browser-default" name="STATE" #STATE="ngModel" [(ngModel)]="jeweller.STATE">
+                    <option value="" disabled selected>Choose your City</option>
+                    <option value="Maharashtra"> Maharashtra</option>
+                    <option value="Gujrat" >Gujrat</option>
+                  </select>
                 </div>
               </div>
               <div class="row">
-                <div class="input-feild col s6"> 
-                  <input type="text" class="validate" name="PAN_NUMBER" #PAN_NUMBER="ngModel" [(ngModel)]="jeweller.PAN_NUMBER" required placeholder="PAN NUMBER">
+                <div class="input-field col s6"> 
+                  <input id="contact_name" type="text" class="validate" name="CONTACT_NAME" #CONTACT_NAME="ngModel" [(ngModel)]="jeweller.CONTACT_NAME" required >
+                  <label for="contact_name">CONTACT_NAME</label>
+                  <span class="helper-text" data-error="Required Field!" data-success="right"></span>
+
                 </div>
-                <div class="input-feild col s6">
-                    <input class="validate" type="text" name="OWNER_NAME" #OWNER_NAME="ngModel" [(ngModel)]="jeweller.OWNER_NAME" required  placeholder="OWNER NAME">
+                <div class="input-field col s6">
+                    <input id="contact_number" class="validate" type="text" name="CONTACT_NUMBER" #CONTACT_NUMBER="ngModel" [(ngModel)]="jeweller.CONTACT_NUMBER" value="" [pattern]="panpattern" required >
+                    <label for="contact_number">CONTACT_NUMBER</label>
+                    <span class="helper-text" data-error="Required 10 character!" data-success="right"></span>
+
                 </div>
               </div>
-            <div class="row">
-                <div class="input_feild col s6">
-                    <input type="text" class="validate" name="OWNER_NUMBER" #OWNER_NUMBER="ngModel" [(ngModel)]="jeweller.OWNER_NUMBER" required placeholder="OWNER NUMBER">
+              <div class="row">
+                <div class="input-field col s6"> 
+                  <input id="contact_mail_id" type="text" class="validate" name="CONTACT_MAIL_ID" #CONTACT_MAIL_ID="ngModel" [(ngModel)]="jeweller.CONTACT_MAIL_ID" value="" [pattern]="emailPattern" required >
+                  <label for="contact_mail_id">CONTACT MAIL ID</label>
+                  <span class="helper-text" data-error="Invalid Email!" data-success="right"></span>
+
                 </div>
-                <div class="input_feild col s6">
-                    <input type="text" class="validate" name="OWNER_EMAIL" #OWNER_EMAIL="ngModel" [(ngModel)]="jeweller.OWNER_EMAIL"  [pattern]="emailPattern"  required placeholder="OWNER EMAIL">
+                <div class="input-field col s6">
+                    <input id="gst_number" class="validate" type="text" name="GST_NUMBER" #GST_NUMBER="ngModel" [(ngModel)]="jeweller.GST_NUMBER" [pattern]="gstpattern" required  >
+                    <label for="gst_number">GST NUMBER</label>
+                    <span class="helper-text" data-error="GST Number should contain 15 characters" data-success="right"></span>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6"> 
+                  <input id="pan_number" type="text" class="validate" name="PAN_NUMBER" #PAN_NUMBER="ngModel" [(ngModel)]="jeweller.PAN_NUMBER" [pattern]="panpattern" required >
+                  <label for="pan_number">PAN NUMBER</label>
+                  <span class="helper-text" data-error="Required 10 charaters!" data-success="right"></span>
+
+                </div>
+                <div class="input-field col s6">
+                    <input id="owner_name" class="validate" type="text" name="OWNER_NAME" #OWNER_NAME="ngModel" [(ngModel)]="jeweller.OWNER_NAME" required >
+                    <label for="owner_name">OWNER_NAME</label>
+                    <span class="helper-text" data-error="Required Field!" data-success="right"></span>
+
+                </div>
+              </div>
+              <p>
+                <label>
+                  <input type="checkbox"  id="same" name="same" (change)= "addres()" />
+                  <span>Same As Above</span>
+                </label>
+              </p>
+              <p>edit one word of below field to make form validate</p>
+
+              
+              <div class="row">
+                <div class="input-field col s6">
+                    <input id="owner_number" type="text" class="validate" name="OWNER_NUMBER" #OWNER_NUMBER="ngModel" [(ngModel)]="jeweller.OWNER_NUMBER" value="" [pattern]="panpattern" required placeholder="OWNER_NUMBER">
+                    <span class="helper-text" data-error="Required 10 digit Number!" data-success="right"></span>
+
+                </div>
+                <div class="input-field col s6">
+                    <input id="owner_email" type="text" class="validate" name="OWNER_EMAIL" #OWNER_EMAIL="ngModel" [(ngModel)]="jeweller.OWNER_EMAIL"  [pattern]="emailPattern" value ="" required placeholder="OWNER_EMAIL">
+                    <span class="helper-text" data-error="Invalid Email!" data-success="right"></span>
+
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s12">
-                  <button [disabled]="!updateForm.valid" class="btn-large btn-submit" type="submit">Update My Profile</button>
-                </div>
-            </div>
-          </form>
-      </div>
+              <div class="input-field col s12">
+                <button [disabled]="!updateForm.valid" class="btn-large btn-submit" type="submit">Update My Profile</button>
+              </div>
+          </div>
+        </form>
     </div>
   </div>
+</div>
+
+ 
+   

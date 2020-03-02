@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col s10 offset-s1">
+      <div class="sm-jumbotron center-align">
+        <h5>Your Product Description</h5>
+      </div>
+      <div class="card" *ngIf="data.ornament_info">
+        <div class="card-image">
+          <img src="{{data.ornament_filefield.IMAGE_FILE_ONE}}">
+          <span class="card-title">Card Title</span>
+        </div>
+        <div class="card-content col s5 ">
+            <p><strong>ORNAMENT_TYPE : </strong>{{data.ornament_info.ORNAMENT_TYPE}}</p>
+            <p><strong>ORNAMENT_MATERIAL : </strong>{{data.ornament_info.ORNAMENT_MATERIAL}}</p>
+            <p><strong>ORNAMENT_SHOPFOR : </strong>{{data.ornament_info.ORNAMENT_SHOPFOR}}</p>
+            <p><strong>WEIGHT : </strong>{{data.ornament_info.WEIGHT}}</p>
+            <p><strong>ornament_id : </strong>{{data.ornament_info.ornament_id}}</p>
+        </div>
+        <div class="card-content col s5" >
+            <p><strong>ORNAMENT_METAL : </strong>{{data.ornament_category.ORNAMENT_METAL}}</p>
+            <p><strong>ORNAMENT_OCCASION : </strong>{{data.ornament_category.ORNAMENT_OCCASION}}</p>
+            <p><strong>ORNAMENT_GIFT : </strong>{{data.ornament_category.ORNAMENT_GIFT}}</p>
+            <p><strong>ORNAMENT_THEME : </strong>{{data.ornament_category.ORNAMENT_THEME}}</p>
+            <p><strong>ORNAMENT_CURATED_BY : </strong>{{data.ornament_category.ORNAMENT_CURATED_BY}}</p>
+            <p><strong>ORNAMENT_FESTIVAL : </strong>{{data.ornament_category.ORNAMENT_FESTIVAL}}</p>
+          </div>
+  
+        <!--div class="card-action">
+          <a href="#">This is a link</a>
+        </div-->
+
+  
+        
+  
+        <!--div class="card-action">
+          <a href="#">This is a link</a>
+        </div-->
+      </div>
+      <button class="btn-large btn-submit" type="submit" (click)="update()">Update this Ornament</button>
+
+      <button class="btn-large btn-submit" type="submit" (click)="delete()">Delete This Ornament</button>
+
+    </div>
+  </div>
+
+
+  
+  

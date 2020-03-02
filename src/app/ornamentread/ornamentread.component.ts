@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../shared/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ornamentread',
@@ -8,7 +9,7 @@ import { UserService } from '../shared/user.service';
 })
 export class OrnamentreadComponent implements OnInit {
   data: any = {};
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
     this.page1();
@@ -111,5 +112,12 @@ export class OrnamentreadComponent implements OnInit {
       this.data = data;
 
     });
+  }
+  read(ORNAMENT_ID) {
+    localStorage.setItem('ORNAMENT_ID' , ORNAMENT_ID );
+    this.router.navigate(['./readSpecific']);
+    // this.userService.readid().subscribe((data: any) => {
+     // console.log(data);
+    // });
   }
 }

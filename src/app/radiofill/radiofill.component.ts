@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 export class RadiofillComponent implements OnInit {
   jeweller: JewellerInfo;
   emailPattern = '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$';
+  panpattern = '[0-9]{10}';
+  gstpattern = '[0-9]{15}';
 
   constructor(private userService: UserService , private router: Router) { }
 
@@ -82,10 +84,13 @@ export class RadiofillComponent implements OnInit {
 
   OnSubmit(form: NgForm) {
     this.userService.createView(form.value)
-    .subscribe(
-      res => {
-        console.log(res);
-        this.router.navigate(['./read']);
+    .subscribe((data: any) => {
+        console.log(data);
+        if (data.status === 201) {
+          this.router.navigate(['./read']);
+        } else {
+          alert ('Try filling the form carefully with correct info');
+        }
       },
       err => {
         console.log(err.message);
