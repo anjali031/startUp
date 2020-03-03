@@ -9,13 +9,15 @@
           <div class="row">
 
 
-            <div class="input-field col s6">
+            <div class="input-field col s8 offset-s2">
                 <select class="browser-default" #ORNAMENT_TYPE ngModel name="ORNAMENT_TYPE"  required>
                     <option value="" disabled selected>Choose ornament type</option>
                     <option value="4" >Bracelet</option>
                 </select>
             </div>
-            <div class="input-field col s6">
+          </div>
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
               <select class="browser-default"#ORNAMENT_MATERIAL ngModel name="ORNAMENT_MATERIAL"  required>
                 <option value="" disabled selected>Choose your material</option>
                 <option value="1"> Diamond Studded</option>
@@ -27,19 +29,23 @@
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s4">
+            <div class="input-field col s8 offset-s2">
               <select class="browser-default"#ORNAMENT_SHOPFOR ngModel name="ORNAMENT_SHOPFOR" required>
                 <option value="" disabled selected>Choose Shopfor</option>
                 <option value="1"> Women</option>
                 <option value="2" >Men</option>
               </select>
             </div>
-            <div class="input-field col s4">
+          </div>
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
                 <input id="weight" class="validate" type="text" #WEIGHT ngModel name="WEIGHT" required>
                 <label for="weight">Weight</label>
             </div>
+          </div>
+          <div class="row">
             
-            <div class="input-field col s4 ">
+            <div class="input-field col s8 offset-s2 ">
                 <select class="browser-default" #ORNAMENT_BRACELET_STYLE ngModel name="ORNAMENT_BRACELET_STYLE"  required>
                     <option value="" disabled selected>Choose ornament STYLE</option>
                     <option value="1"> Tennis</option>
@@ -53,7 +59,7 @@
             
           </div>
           <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s8 offset-s2">
               <p>
                 <label>
                   <input type="checkbox" id ="zero" class="filled-in" (change)="zero()"  required/>
@@ -72,7 +78,9 @@
                     </ng-container>
                 </ul>
             </div>
-            <div class="input-field col s6">
+          </div>
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
               <p>
                 <label>
                   <input type="checkbox" id ="1" class="filled-in" (change)="one()"  required/>
@@ -94,7 +102,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s8 offset-s2">
               <p>
                 <label>
                   <input type="checkbox" id ="2" class="filled-in" (change)="two()"  required/>
@@ -114,7 +122,9 @@
                 </ng-container>
               </ul>
             </div>
-            <div class="input-field col s6">
+          </div>
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
               <p>
                 <label>
                   <input type="checkbox" id ="3" class="filled-in" (change)="three()"  required/>
@@ -137,7 +147,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s4">
+            <div class="input-field col s8 offset-s2">
               <p>
                 <label>
                   <input type="checkbox" id ="4" class="filled-in" (change)="four()"  required/>
@@ -157,7 +167,9 @@
                 </ng-container>
               </ul>
             </div>
-            <div class="input-field col s4 ">
+          </div>
+          <div class="row">
+            <div class="input-field col s8 offset-s2 ">
               <p>
                 <label>
                   <input type="checkbox" id ="5" class="filled-in" (change)="five()"  required/>
@@ -177,7 +189,9 @@
                 </ng-container>
               </ul>
             </div>
-            <div class="input-field col s4">
+          </div>
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
                 <p>
                   <label>
                     <input type="checkbox" id ="6" class="filled-in" (change)="six()"  required/>
@@ -197,16 +211,20 @@
                   </ng-container>
                 </ul>
             </div>
+          
           </div>
-          <p>Upload your 3D Model</p>
-          <input type="file" #CAD_FILE accept="" (change)="handleFileInput($event.target.files)">
-          <p>Upload your Image One</p>
-          <input type="file" #IMAGE_FILE_ONE accept="image/*" (change)="handleFileInputone($event.target.files)">
-          <p>Upload your Image Two</p>
-          <input type="file" #IMAGE_FILE_TWO accept="image/*" (change)="handleFileInputtwo($event.target.files)">
-          <p>Upload your Image Three</p>
-          <input type="file" #IMAGE_FILE_THREE accept="image/*" (change)="handleFileInputthree($event.target.files)">
-
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <p>Upload your 3D Model</p>
+              <input type="file" #CAD_FILE accept="application/pdf" (change)="handleFileInput($event.target.files)">
+              <p>Upload your Image One</p>
+              <input type="file" #IMAGE_FILE_ONE accept="image/png || image/jpg" (change)="handleFileInputone($event.target.files)">
+              <p>Upload your Image Two</p>
+              <input type="file" #IMAGE_FILE_TWO accept="image/png || image/jpg" (change)="handleFileInputtwo($event.target.files)">
+              <p>Upload your Image Three</p>
+              <input type="file" #IMAGE_FILE_THREE accept="image/png || image/jpg" (change)="handleFileInputthree($event.target.files)">
+            </div>
+          </div>
           <button type="submit" class="btn-large btn-submit" [disabled]="CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid">Create your new  Bracelet Ornament</button>
         </form>
       </div>

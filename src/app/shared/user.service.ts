@@ -156,7 +156,10 @@ export class UserService {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
     return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/', {headers: Headers});
   }
-
+  deletebyid() {
+    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.delete(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/delete/', {headers: Headers});
+  }
   ornmetal() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
     return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/metal/', {headers: Headers});
@@ -819,6 +822,519 @@ export class UserService {
 
     const Headers = new HttpHeaders()
       .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/15/update/', formData,  {headers: Headers});
+    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+  }
+
+  multiupdate(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    const formData: FormData = new FormData();
+    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+    formData.append('WEIGHT', WEIGHT);
+    for (var i of metala) {
+      formData.append('ORNAMENT_METAL', i);
+      }
+    for (var i of asion) {
+    formData.append('ORNAMENT_OCCASION', i);
+    }
+    for (var i of asan) {
+    formData.append('ORNAMENT_GIFT', i);
+    }
+    for (var i of themea) {
+    formData.append('ORNAMENT_THEME', i);
+    }
+    for (var i of curateda) {
+    formData.append('ORNAMENT_CURATED_BY', i);
+    }
+    for (var i of festia) {
+    formData.append('ORNAMENT_FESTIVAL', i);
+    }
+    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+
+    const Headers = new HttpHeaders()
+      .set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+  }
+
+  // tslint:disable-next-line: max-line-length
+  muliupdate(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion: any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, rsizea: any, rsizeb: any, ORNAMENT_RING_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    const formData: FormData = new FormData();
+    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+    formData.append('WEIGHT', WEIGHT);
+    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
+    formData.append('ORNAMENT_OCCASION', asion);
+    formData.append('ORNAMENT_OCCASION', asian);
+    formData.append('ORNAMENT_GIFT', asan);
+    formData.append('ORNAMENT_GIFT', asin);
+    formData.append('ORNAMENT_THEME', themea);
+    formData.append('ORNAMENT_THEME', themeb);
+    formData.append('ORNAMENT_CURATED_BY', curateda);
+    formData.append('ORNAMENT_CURATED_BY', curatedb);
+    formData.append('ORNAMENT_FESTIVAL', festia);
+    formData.append('ORNAMENT_FESTIVAL', festib);
+    formData.append('ORNAMENT_RING_STYLE', ORNAMENT_RING_STYLE);
+    formData.append('ORNAMENT_RING_SIZE', rsizea);
+    formData.append('ORNAMENT_RING_SIZE', rsizeb);
+    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+
+    const Headers = new HttpHeaders()
+      .set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+  }
+
+  mliupdate(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, rsizea: any, rsizeb: any, ORNAMENT_RING_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    const formData: FormData = new FormData();
+    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+    formData.append('WEIGHT', WEIGHT);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
+    for (var i of asion) {
+    formData.append('ORNAMENT_OCCASION', i);
+    }
+    // formData.append('ORNAMENT_OCCASION', asian);
+    for (var i of asan) {
+
+    formData.append('ORNAMENT_GIFT', i);
+    }
+   // formData.append('ORNAMENT_GIFT', asin);
+    for (var i of themea) {
+
+    formData.append('ORNAMENT_THEME', i);
+    }
+    for (var i of curateda) {
+
+    formData.append('ORNAMENT_CURATED_BY', i);
+    }
+    for (var i of festia) {
+
+    formData.append('ORNAMENT_FESTIVAL', i);
+    }
+    formData.append('ORNAMENT_RING_STYLE', ORNAMENT_RING_STYLE);
+    for (var i of rsizea) {
+    formData.append('ORNAMENT_RING_SIZE', i);
+    }
+
+   // formData.append('ORNAMENT_RING_SIZE', rsizea);
+   // formData.append('ORNAMENT_RING_SIZE', rsizeb);
+    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+
+    const Headers = new HttpHeaders()
+      .set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+  }
+
+
+  // tslint:disable-next-line: max-line-length
+  earupdate(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_EARRING_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    const formData: FormData = new FormData();
+    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+    formData.append('WEIGHT', WEIGHT);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
+    for (var i of asion) {
+    formData.append('ORNAMENT_OCCASION', i);
+    }
+    // formData.append('ORNAMENT_OCCASION', asian);
+    for (var i of asan) {
+    formData.append('ORNAMENT_GIFT', i);
+    }
+    // formData.append('ORNAMENT_GIFT', asin);
+    for (var i of themea) {
+    formData.append('ORNAMENT_THEME', i);
+    }
+    // formData.append('ORNAMENT_THEME', themeb);
+    for (var i of curateda) {
+    formData.append('ORNAMENT_CURATED_BY', i);
+    }
+    // formData.append('ORNAMENT_CURATED_BY', curatedb);
+    for (var i of festia) {
+    formData.append('ORNAMENT_FESTIVAL', i);
+    }
+   // formData.append('ORNAMENT_FESTIVAL', festib);
+    formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
+
+    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+
+    const Headers = new HttpHeaders()
+      .set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+  }
+
+
+  // tslint:disable-next-line: max-line-length
+  nosepinupdate(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_NOSEPIN_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    const formData: FormData = new FormData();
+    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+    formData.append('WEIGHT', WEIGHT);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
+    for (var i of asion) {
+
+    formData.append('ORNAMENT_OCCASION', i);
+    }
+
+    // formData.append('ORNAMENT_OCCASION', asian);
+    for (var i of asan) {
+
+    formData.append('ORNAMENT_GIFT', i);
+    }
+    // formData.append('ORNAMENT_GIFT', asin);
+    for (var i of themea) {
+
+    formData.append('ORNAMENT_THEME', i);
+    }
+    // formData.append('ORNAMENT_THEME', themeb);
+    for (var i of curateda) {
+
+    formData.append('ORNAMENT_CURATED_BY', i);
+    }
+    // formData.append('ORNAMENT_CURATED_BY', curatedb);
+    for (var i of festia) {
+
+    formData.append('ORNAMENT_FESTIVAL', i);
+    }
+     // formData.append('ORNAMENT_FESTIVAL', festib);
+    formData.append('ORNAMENT_NOSEPIN_STYLE', ORNAMENT_NOSEPIN_STYLE);
+
+    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+
+    const Headers = new HttpHeaders()
+      .set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+  }
+
+  // tslint:disable-next-line: max-line-length
+  pendantwithearingupdate(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_EARRING_STYLE: string, ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    const formData: FormData = new FormData();
+    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+    formData.append('WEIGHT', WEIGHT);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
+    for (var i of asion) {
+    formData.append('ORNAMENT_OCCASION', i);
+    }
+   // formData.append('ORNAMENT_OCCASION', asian);
+    for (var i of asan) {
+    formData.append('ORNAMENT_GIFT', i);
+    }
+   // formData.append('ORNAMENT_GIFT', asin);
+    for (var i of themea) {
+    formData.append('ORNAMENT_THEME', i);
+    }
+    // formData.append('ORNAMENT_THEME', themeb);
+    for (var i of curateda) {
+    formData.append('ORNAMENT_CURATED_BY', i);
+    }
+    //  formData.append('ORNAMENT_CURATED_BY', curatedb);
+    for (var i of festia) {
+    formData.append('ORNAMENT_FESTIVAL', i);
+    }
+    // formData.append('ORNAMENT_FESTIVAL', festib);
+    formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
+    formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
+
+    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+
+    const Headers = new HttpHeaders()
+      .set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+  }
+
+  // tslint:disable-next-line: max-line-length
+  braceletupdate(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_BRACELET_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    const formData: FormData = new FormData();
+    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+    formData.append('WEIGHT', WEIGHT);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
+    for (var i of asion) {
+    formData.append('ORNAMENT_OCCASION', i);
+    }
+    // formData.append('ORNAMENT_OCCASION', asian);
+    for (var i of asan) {
+    formData.append('ORNAMENT_GIFT', i);
+    }
+    // formData.append('ORNAMENT_GIFT', asin);
+    for (var i of themea) {
+    formData.append('ORNAMENT_THEME', i);
+    }
+    // formData.append('ORNAMENT_THEME', themeb);
+    for (var i of curateda) {
+    formData.append('ORNAMENT_CURATED_BY', i);
+    }
+   // formData.append('ORNAMENT_CURATED_BY', curatedb);
+    for (var i of festia) {
+    formData.append('ORNAMENT_FESTIVAL', i);
+    }
+    // formData.append('ORNAMENT_FESTIVAL', festib);
+    formData.append('ORNAMENT_BRACELET_STYLE', ORNAMENT_BRACELET_STYLE);
+    for (var i of bsizea) {
+    formData.append('ORNAMENT_BRACELET_SIZE', i);
+    }
+    // formData.append('ORNAMENT_BRACELET_SIZE', bsizeb);
+    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+
+    const Headers = new HttpHeaders()
+      .set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+  }
+
+  // tslint:disable-next-line: max-line-length
+  banglesupdate(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_BANGLE_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    const formData: FormData = new FormData();
+    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+    formData.append('WEIGHT', WEIGHT);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
+    for (var i of asion) {
+    formData.append('ORNAMENT_OCCASION', i);
+    }
+   // formData.append('ORNAMENT_OCCASION', asian);
+    for (var i of asan) {
+    formData.append('ORNAMENT_GIFT', i);
+    }
+   // formData.append('ORNAMENT_GIFT', asin);
+    for (var i of themea) {
+    formData.append('ORNAMENT_THEME', i);
+    }
+   // formData.append('ORNAMENT_THEME', themeb);
+    for (var i of curateda) {
+    formData.append('ORNAMENT_CURATED_BY', i);
+    }
+   // formData.append('ORNAMENT_CURATED_BY', curatedb);
+    for (var i of festia) {
+    formData.append('ORNAMENT_FESTIVAL', i);
+    }
+    // formData.append('ORNAMENT_FESTIVAL', festib);
+    formData.append('ORNAMENT_BANGLE_STYLE', ORNAMENT_BANGLE_STYLE);
+    for (var i of bsizea) {
+    formData.append('ORNAMENT_BANGLE_SIZE', i);
+    }
+    // formData.append('ORNAMENT_BANGLE_SIZE', bsizeb);
+    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+
+    const Headers = new HttpHeaders()
+      .set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+  }
+
+  // tslint:disable-next-line: max-line-length
+  chainupdate(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_CHAIN_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    const formData: FormData = new FormData();
+    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+    formData.append('WEIGHT', WEIGHT);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
+    for (var i of asion) {
+    formData.append('ORNAMENT_OCCASION', i);
+    }
+   // formData.append('ORNAMENT_OCCASION', asian);
+    for (var i of asan) {
+    formData.append('ORNAMENT_GIFT', i);
+    }
+   // formData.append('ORNAMENT_GIFT', asin);
+    for (var i of themea) {
+    formData.append('ORNAMENT_THEME', i);
+    }
+   // formData.append('ORNAMENT_THEME', themeb);
+    for (var i of curateda) {
+    formData.append('ORNAMENT_CURATED_BY', i);
+    }
+   // formData.append('ORNAMENT_CURATED_BY', curatedb);
+    for (var i of festia) {
+    formData.append('ORNAMENT_FESTIVAL', i);
+    }
+   // formData.append('ORNAMENT_FESTIVAL', festib);
+    formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
+    for (var i of bsizea) {
+    formData.append('ORNAMENT_CHAIN_LENGTH', i);
+    }
+     // formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
+    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+
+    const Headers = new HttpHeaders()
+      .set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+  }
+
+  // tslint:disable-next-line: max-line-length
+  necklaceupdate(ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_NECKLACE_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    const formData: FormData = new FormData();
+    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+    formData.append('WEIGHT', WEIGHT);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
+    for (var i of asion) {
+    formData.append('ORNAMENT_OCCASION', i);
+    }
+   // formData.append('ORNAMENT_OCCASION', asian);
+    for (var i of asan) {
+    formData.append('ORNAMENT_GIFT', i);
+    }
+   // formData.append('ORNAMENT_GIFT', asin);
+    for (var i of themea) {
+    formData.append('ORNAMENT_THEME', i);
+    }
+   // formData.append('ORNAMENT_THEME', themeb);
+    for (var i of curateda) {
+    formData.append('ORNAMENT_CURATED_BY', i);
+    }
+   // formData.append('ORNAMENT_CURATED_BY', curatedb);
+    for (var i of festia) {
+    formData.append('ORNAMENT_FESTIVAL', i);
+    }
+   // formData.append('ORNAMENT_FESTIVAL', festib);
+    formData.append('ORNAMENT_NECKLACE_STYLE', ORNAMENT_NECKLACE_STYLE);
+
+    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+
+    const Headers = new HttpHeaders()
+      .set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+  }
+
+
+
+  // tslint:disable-next-line: max-line-length
+  chaitpenupdate(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, bsizea: any, bsizeb: any, ORNAMENT_CHAIN_STYLE: string, ORNAMENT_PENDANT_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    const formData: FormData = new FormData();
+    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+    formData.append('WEIGHT', WEIGHT);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
+    for (var i of asion) {
+    formData.append('ORNAMENT_OCCASION', i);
+    }
+   // formData.append('ORNAMENT_OCCASION', asian);
+    for (var i of asan) {
+    formData.append('ORNAMENT_GIFT', i);
+    }
+   // formData.append('ORNAMENT_GIFT', asin);
+    for (var i of themea) {
+    formData.append('ORNAMENT_THEME', i);
+    }
+   // formData.append('ORNAMENT_THEME', themeb);
+    for (var i of curateda) {
+    formData.append('ORNAMENT_CURATED_BY', i);
+    }
+   // formData.append('ORNAMENT_CURATED_BY', curatedb);
+    for (var i of festia) {
+    formData.append('ORNAMENT_FESTIVAL', i);
+    }
+   // formData.append('ORNAMENT_FESTIVAL', festib);
+    formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
+    for (var i of bsizea) {
+    formData.append('ORNAMENT_CHAIN_LENGTH', i);
+    }
+    //formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
+    formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
+
+    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+
+    const Headers = new HttpHeaders()
+      .set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+  }
+
+  pendantupdate(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    const formData: FormData = new FormData();
+    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
+    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
+    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
+    formData.append('WEIGHT', WEIGHT);
+    for (var i of metala) {
+    formData.append('ORNAMENT_METAL', i);
+    }
+    for (var i of asion) {
+    formData.append('ORNAMENT_OCCASION', i);
+    }
+   // formData.append('ORNAMENT_OCCASION', asian);
+    for (var i of asan) {
+    formData.append('ORNAMENT_GIFT', i);
+    }
+   // formData.append('ORNAMENT_GIFT', asin);
+    for (var i of themea) {
+    formData.append('ORNAMENT_THEME', i);
+    }
+   // formData.append('ORNAMENT_THEME', themeb);
+    for (var i of curateda) {
+    formData.append('ORNAMENT_CURATED_BY', i);
+    }
+   // formData.append('ORNAMENT_CURATED_BY', curatedb);
+    for (var i of festia) {
+    formData.append('ORNAMENT_FESTIVAL', i);
+    }
+   // formData.append('ORNAMENT_FESTIVAL', festib);
+    formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
+
+    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
+    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
+    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
+    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
+
+    const Headers = new HttpHeaders()
+      .set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
   }
 }

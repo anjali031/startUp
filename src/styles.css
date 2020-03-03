@@ -15,7 +15,7 @@ button.btn-submit{
     width: 100%;
 }
 button.btn-submit:focus,button.btn-submit:hover{
-    background-color: #38547b;
+    background-color: #3b6baf;
 }
 
 /* input.ng-invalid.ng-dirty{

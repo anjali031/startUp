@@ -52,6 +52,19 @@ import { EarringsComponent } from './update/earrings/earrings.component';
 import { NosepinComponent } from './update/nosepin/nosepin.component';
 import { ChainpendatComponent } from './update/chainpendat/chainpendat.component';
 import { PendantearringComponent } from './update/pendantearring/pendantearring.component';
+import { PendantearringupdateComponent } from './updates/pendantearringupdate/pendantearringupdate.component';
+import { CufflinkupdateComponent } from './updates/cufflinkupdate/cufflinkupdate.component';
+import { PendantupdateComponent } from './updates/pendantupdate/pendantupdate.component';
+import { SetsupdateComponent } from './updates/setsupdate/setsupdate.component';
+import { MangalsutraupdateComponent } from './updates/mangalsutraupdate/mangalsutraupdate.component';
+import { NecklaceupdateComponent } from './updates/necklaceupdate/necklaceupdate.component';
+import { ChainpendatupdateComponent } from './updates/chainpendatupdate/chainpendatupdate.component';
+import { ChainupdateComponent } from './updates/chainupdate/chainupdate.component';
+import { BanglesupdateComponent } from './updates/banglesupdate/banglesupdate.component';
+import { BraceletupdateComponent } from './updates/braceletupdate/braceletupdate.component';
+import { RingupdateComponent } from './updates/ringupdate/ringupdate.component';
+import { EarupdateComponent } from './updates/earupdate/earupdate.component';
+import { NosepinupdateComponent } from './updates/nosepinupdate/nosepinupdate.component';
 
 
 @NgModule({
@@ -99,7 +112,20 @@ import { PendantearringComponent } from './update/pendantearring/pendantearring.
     EarringsComponent,
     NosepinComponent,
     ChainpendatComponent,
-    PendantearringComponent
+    PendantearringComponent,
+    PendantearringupdateComponent,
+    CufflinkupdateComponent,
+    PendantupdateComponent,
+    SetsupdateComponent,
+    MangalsutraupdateComponent,
+    NecklaceupdateComponent,
+    ChainpendatupdateComponent,
+    ChainupdateComponent,
+    BanglesupdateComponent,
+    BraceletupdateComponent,
+    RingupdateComponent,
+    EarupdateComponent,
+    NosepinupdateComponent
   ],
   imports: [
     BrowserModule,

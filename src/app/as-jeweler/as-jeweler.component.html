@@ -21,12 +21,12 @@
               <div class="input-field col s6">
                   <input id="password" type="password" class="validate" name="password" #password="ngModel" [(ngModel)]="user.password" [pattern]="passwordPattern" required >
                   <label for="password">Password</label>
-                  <span class="helper-text" data-error="Password requires uppercase lowercase symbols and numbers!"></span>
+                  <span class="helper-text" data-error="Password requires 2 uppercase 2 lowercase (at begining and at the end)  a number a symbols "></span>
               </div>
               <div class="input-field col s6">
                   <input id="confirm_password" type="password" class="validate" name="confirm_password" #confirm_password="ngModel" [(ngModel)]="user.confirm_password" [pattern]="passwordPattern" required >
                   <label for="confirm_password">Confirm Password</label>
-                  <span class="helper-text" data-error="Password requires uppercase lowercase symbols and numbers!"></span>
+                  <span class="helper-text" data-error="Password requires 2 uppercase 2 lowercase (at begining and at the end)  a number a symbols"></span>
               </div>
           </div>
           <div class="row">

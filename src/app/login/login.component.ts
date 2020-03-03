@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   // tslint:disable-next-line: no-inferrable-types
   isLoginError: boolean = false;
   constructor(private userService: UserService, private router: Router, private toastr: ToastrService) { }
+  userpattern = '^[a-z0-9_-]{3,15}$';
 
   ngOnInit() {
   }

@@ -11,9 +11,8 @@
    <div class="row">
      <div class="input-field col s12">
        <i class="material-icons prefix">account_circle</i>
-       <input type="text" #username ngModel name="username" placeholder="username" required>
-       <span>use lowercases</span>
-
+       <input id="username" type="text" class="validate"  #username ngModel name="username" placeholder="username" [pattern]="userpattern"required >
+       <span class="helper-text" data-error="Use lowercases or use correct username!" style="color: rgb(20, 75, 57); text-shadow:blue;"></span>
      </div>
    </div>
    <div class="row">

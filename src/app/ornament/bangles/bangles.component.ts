@@ -40,6 +40,7 @@ export class BanglesComponent implements OnInit {
   metala: any = [];
   metalb: any = [];
 
+  imagePattern = '([^\s]+(\.(?i)(jpg|png))$)]';
 
   constructor(private userService: UserService, private router: Router, private toastr: ToastrService) { }
 

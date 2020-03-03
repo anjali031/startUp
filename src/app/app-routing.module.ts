@@ -37,6 +37,21 @@ import { SetsComponent } from './ornament/sets/sets.component';
 import { CufflinkComponent } from './ornament/cufflink/cufflink.component';
 import { OrnamentcufflinkComponent } from './ornamentcufflink/ornamentcufflink.component';
 import { ReadspecificComponent } from './readspecific/readspecific.component';
+import { BangleComponent } from './update/bangles/bangles.component';
+import { BraceletsComponent } from './update/bracelet/bracelet.component';
+import { ChainupdateComponent } from './updates/chainupdate/chainupdate.component';
+import { CufflinkupdateComponent } from './updates/cufflinkupdate/cufflinkupdate.component';
+import { NecklaceupdateComponent } from './updates/necklaceupdate/necklaceupdate.component';
+import { PendantearringupdateComponent } from './updates/pendantearringupdate/pendantearringupdate.component';
+import { PendantupdateComponent } from './updates/pendantupdate/pendantupdate.component';
+import { NosepinupdateComponent } from './updates/nosepinupdate/nosepinupdate.component';
+import { MangalsutraupdateComponent } from './updates/mangalsutraupdate/mangalsutraupdate.component';
+import { EarupdateComponent } from './updates/earupdate/earupdate.component';
+import { BanglesupdateComponent } from './updates/banglesupdate/banglesupdate.component';
+import { ChainpendatupdateComponent } from './updates/chainpendatupdate/chainpendatupdate.component';
+import { BraceletupdateComponent } from './updates/braceletupdate/braceletupdate.component';
+import { SetsupdateComponent } from './updates/setsupdate/setsupdate.component';
+import { RingupdateComponent } from './updates/ringupdate/ringupdate.component';
 
 
 
@@ -74,6 +89,19 @@ const routes: Routes = [
   { path: 'nosepin', component: OrnamentnosepinComponent},
   { path: 'types', component: OrnamentcufflinkComponent},
   { path: 'readSpecific', component: ReadspecificComponent},
+  { path: 'Banglesupdate', component: BanglesupdateComponent},
+  { path: 'Braceletupdate', component: BraceletupdateComponent},
+  { path: 'Chainpendatupdate', component: ChainpendatupdateComponent},
+  { path: 'Chainupdate', component: ChainupdateComponent},
+  { path: 'Cufflinkupdate', component: CufflinkupdateComponent},
+  { path: 'Earupdate', component: EarupdateComponent},
+  { path: 'Mangalsutraupdate', component: MangalsutraupdateComponent},
+  { path: 'Necklaceupdate', component: NecklaceupdateComponent},
+  { path: 'Nosepinupdate', component: NosepinupdateComponent},
+  { path: 'Pendantearring', component: PendantearringupdateComponent},
+  { path: 'Pendantupdate', component: PendantupdateComponent},
+  { path: 'Ringupdate', component: RingupdateComponent},
+  { path: 'Setsupdate', component: SetsupdateComponent},
 
 
 
