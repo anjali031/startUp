@@ -4,18 +4,9 @@
       <div class="card-panel teal lighten-2">
         <h4 class="center white-text">Ornament Cuff Link Update</h4>
       </div>
-      <form #imageForm=ngForm (ngSubmit)="OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)">
+      <form #imageForm=ngForm (ngSubmit)="OnSubmit(ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT,ORNAMENT_METAL,ORNAMENT_OCCASION,ORNAMENT_GIFT, ORNAMENT_THEME,ORNAMENT_CURATED_BY, ORNAMENT_FESTIVAL, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)">
         <p>It is mandatory that you fill all the fields </p>
-        <div class="row">
 
-
-          <div class="input-field col s8 offset-s2">
-              <select class="browser-default" #ORNAMENT_TYPE ngModel name="ORNAMENT_TYPE"  required>
-                  <option value="" disabled selected>Choose ornament type</option>
-                  <option value="13" >cuff links</option>
-              </select>
-          </div>
-        </div>
         <div class="row">
           <div class="input-field col s8 offset-s2">
             <select class="browser-default"#ORNAMENT_MATERIAL ngModel name="ORNAMENT_MATERIAL"  required>

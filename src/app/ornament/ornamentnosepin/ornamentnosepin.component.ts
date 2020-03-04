@@ -435,7 +435,7 @@ export class OrnamentnosepinComponent implements OnInit {
     if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia.length == 0) {
       alert('check the confirmation checkboxex to proceed');
     } else {
-    this.userService.nosepin(ORNAMENT_TYPE.value , ORNAMENT_MATERIAL.value , ORNAMENT_SHOPFOR.value , WEIGHT.value, this.metala, this.asion, this.asian, this.asan, this.asin, this.themea, this.themeb, this.curateda , this.curatedb, this.festia, this.festib, ORNAMENT_NOSEPIN_STYLE.value , this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
+    this.userService.nosepin(ORNAMENT_TYPE.value , ORNAMENT_MATERIAL.value , ORNAMENT_SHOPFOR.value , WEIGHT.value, this.metala, this.asion, this.asan, this.themea, this.curateda , this.festia, ORNAMENT_NOSEPIN_STYLE.value , this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
       (data: any) => {
         console.log('done', data);
         if (data.status === 201) {

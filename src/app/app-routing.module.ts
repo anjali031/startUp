@@ -3,25 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { AsJewelerComponent } from './as-jeweler/as-jeweler.component';
 import { LoginComponent } from './login/login.component';
-import { FormsComponent } from './forms/forms.component';
 import { PasswordChangeComponent } from './password-change/password-change.component';
 import { CustomerComponent } from './customer/customer.component';
 import { CreateViewComponent } from './create-view/create-view.component';
 import { ReadComponent } from './read/read.component';
-import { UpdateComponent } from './update/update.component';
 import { OrnamentsComponent } from './ornaments/ornaments.component';
 import { RingsComponent } from './ornaments/rings/rings.component';
 import { NeckComponent } from './ornaments/neck/neck.component';
-import { JewelornamComponent } from './jewelornam/jewelornam.component';
-import { CreatevieComponent } from './createvie/createvie.component';
 import { CreatevievComponent } from './createviev/createviev.component';
-import { MultiselectComponent } from './multiselect/multiselect.component';
 import { RadiofillComponent } from './radiofill/radiofill.component';
 import { CreatevieuComponent } from './createvieu/createvieu.component';
 import { OrnamentreadComponent } from './ornamentread/ornamentread.component';
-import { OrnamentupdateComponent } from './ornamentupdate/ornamentupdate.component';
-import { OrnamentmultiselectComponent } from './ornamentmultiselect/ornamentmultiselect.component';
-import { Ornament1multiselectComponent } from './ornament1multiselect/ornament1multiselect.component';
 import { OrnaringtypeComponent } from './ornament/ornaringtype/ornaringtype.component';
 import { OrnaearringtypeComponent } from './ornament/ornaearringtype/ornaearringtype.component';
 import { PendantearringtypeComponent } from './ornament/pendantearringtype/pendantearringtype.component';
@@ -37,8 +29,6 @@ import { SetsComponent } from './ornament/sets/sets.component';
 import { CufflinkComponent } from './ornament/cufflink/cufflink.component';
 import { OrnamentcufflinkComponent } from './ornamentcufflink/ornamentcufflink.component';
 import { ReadspecificComponent } from './readspecific/readspecific.component';
-import { BangleComponent } from './update/bangles/bangles.component';
-import { BraceletsComponent } from './update/bracelet/bracelet.component';
 import { ChainupdateComponent } from './updates/chainupdate/chainupdate.component';
 import { CufflinkupdateComponent } from './updates/cufflinkupdate/cufflinkupdate.component';
 import { NecklaceupdateComponent } from './updates/necklaceupdate/necklaceupdate.component';
@@ -62,18 +52,11 @@ const routes: Routes = [
   { path: 'changepassword', component: PasswordChangeComponent},
   { path: 'customer', component: CustomerComponent},
   { path: 'createview', component: CreateViewComponent},
-  { path: 'update', component: UpdateComponent},
   { path: 'read', component: ReadComponent},
-  { path: 'forms', component: FormsComponent},
-  { path: 'orna', component: CreatevieComponent},
   { path: 'ornviev', component: CreatevievComponent},
   { path: 'ornvieu', component: CreatevieuComponent},
-  { path: 'multisell', component: MultiselectComponent},
   { path: 'radiofill', component: RadiofillComponent},
   { path: 'ornamentread', component: OrnamentreadComponent},
-  { path: 'ornamentupdate', component: OrnamentupdateComponent},
-  { path: 'ornamentmultiselect', component: OrnamentmultiselectComponent},
-  { path: 'Ornament1multiselect', component: Ornament1multiselectComponent},
   { path: 'Ornaringtype', component: OrnaringtypeComponent},
   { path: 'Ornaearringtype', component: OrnaearringtypeComponent},
   { path: 'Pendantearringtype', component: PendantearringtypeComponent},

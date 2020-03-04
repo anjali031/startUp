@@ -1,3 +1,4 @@
+
 <div class="row">
   <div class="col s12 ">
     <div class="card" *ngFor="let question of data.results">
@@ -16,24 +17,17 @@
         <a href="#">This is a link</a>
       </div-->
     </div>
+    <div class="row">
+      <div class="col s8 offset s2" *ngIf="data.previous" >
+        <button class="btn waves-effect waves-light" type="submit" name="action" (click)= "prev(data.previous)" >Prev
+          <i class="material-icons left">send</i>
+        </button>
+      </div>
+      <div class="col s8 offset s2" *ngIf="data.next" >
+        <button class="btn waves-effect waves-light" type="submit" name="action" (click) = "next(data.next)">Next
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </div>  
   </div>
 </div>
-<ul class="pagination">
-  <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-  <li class="waves-effect"><a (click)="page1()">1</a></li>
-  <li class="waves-effect"><a (click)="page2()">2</a></li>
-  <li class="waves-effect"><a (click)="page3()">3</a></li>
-  <li class="waves-effect"><a (click)="page4()">4</a></li>
-  <li class="waves-effect"><a (click)="page5()">5</a></li>
-  <li class="waves-effect"><a (click)="page6()">6</a></li>
-  <li class="waves-effect"><a (click)="page7()">7</a></li>
-  <li class="waves-effect"><a (click)="page8()">8</a></li>
-  <li class="waves-effect"><a (click)="page9()">9</a></li>
-  <li class="waves-effect"><a (click)="page10()">10</a></li>
-  <li class="waves-effect"><a (click)="page11()">11</a></li>
-  <li class="waves-effect"><a (click)="page12()">12</a></li>
-  <li class="waves-effect"><a (click)="page13()">13</a></li>
-  <li class="waves-effect"><a (click)="page14()">14</a></li>
-
-  <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-</ul>

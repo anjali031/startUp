@@ -21,14 +21,14 @@ export class OrnamentreadComponent implements OnInit {
 
     });
   }
-  page2() {
+  next(next) {
     this.userService.r2().subscribe(data => {
       console.log(data);
       this.data = data;
 
     });
   }
-  page3() {
+  prev(previous) {
     this.userService.r3().subscribe(data => {
       console.log(data);
       this.data = data;
