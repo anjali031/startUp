@@ -510,13 +510,13 @@ export class BanglesComponent implements OnInit {
           this.router.navigate(['./ornamentread']);
 
         }
-        ORNAMENT_METAL.value = null;
-        ORNAMENT_OCCASION.value = null;
-        ORNAMENT_GIFT.value = null;
-        ORNAMENT_THEME.value = null;
-        ORNAMENT_FESTIVAL.value = null;
-        ORNAMENT_BANGLE_SIZE.value = null;
-        ORNAMENT_CURATED_BY.value = null;
+        ORNAMENT_METAL.value = '';
+        ORNAMENT_OCCASION.value = '';
+        ORNAMENT_GIFT.value = '';
+        ORNAMENT_THEME.value = '';
+        ORNAMENT_FESTIVAL.value = '';
+        ORNAMENT_BANGLE_SIZE.value = '';
+        ORNAMENT_CURATED_BY.value = '';
       }
     );
    }}
