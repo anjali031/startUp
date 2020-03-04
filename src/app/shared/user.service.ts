@@ -3,6 +3,7 @@ import { User} from './user.model';
 import { Password } from './password.model';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { JewellerInfo } from './jeweller-info.model';
+import { Url } from 'url';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +12,8 @@ export class UserService {
   occasion: number;
   readID: number;
   arr: any = [1, 2, 5];
+  prev: string ;
+  next: string;
   constructor( public http: HttpClient ) { }
   readonly rootURL = 'https://harshil21.pythonanywhere.com';
 
@@ -90,68 +93,14 @@ export class UserService {
 
   r2() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=2', {headers: Headers});
+    return this.http.get(this.next, {headers: Headers});
   }
 
   r3() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=3', {headers: Headers});
+    return this.http.get(this.prev, {headers: Headers});
   }
 
-  r4() {
-    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=4', {headers: Headers});
-  }
-
-  r5() {
-    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=5', {headers: Headers});
-  }
-
-  r6() {
-    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=6', {headers: Headers});
-  }
-
-  r7() {
-    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=7', {headers: Headers});
-  }
-
-  r8() {
-    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=8', {headers: Headers});
-  }
-
-  r9() {
-    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=9', {headers: Headers});
-  }
-
-  r10() {
-    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=10', {headers: Headers});
-  }
-
-  r11() {
-    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=11', {headers: Headers});
-  }
-
-  r12() {
-    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=12', {headers: Headers});
-  }
-
-  r13() {
-    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=13', {headers: Headers});
-  }
-
-  r14() {
-    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/ornament-list/?page=14', {headers: Headers});
-  }
   readid() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
     return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/', {headers: Headers});

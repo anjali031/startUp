@@ -429,7 +429,7 @@ export class PendantupdateComponent implements OnInit {
     this.fileToUploadthree = file.item(0);
   }
 
-  OnSubmit(ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT ,ORNAMENT_METAL,ORNAMENT_OCCASION, ORNAMENT_GIFT,ORNAMENT_THEME,ORNAMENT_CURATED_BY,ORNAMENT_FESTIVAL,ORNAMENT_PENDANT_STYLE, CAD_FILE , IMAGE_FILE_ONE, IMAGE_FILE_TWO,IMAGE_FILE_THREE){
+  OnSubmit(ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT , ORNAMENT_PENDANT_STYLE, CAD_FILE , IMAGE_FILE_ONE, IMAGE_FILE_TWO,IMAGE_FILE_THREE){
     // tslint:disable-next-line: max-line-length
     if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia == 0) {
       alert('check the confirmation checkboxex to proceed');
