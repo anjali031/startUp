@@ -508,14 +508,15 @@ export class BanglesComponent implements OnInit {
         if (data.status == 201) {
           this.toastr.success('Ornament Succesfully Created');
           this.router.navigate(['./ornamentread']);
-          ORNAMENT_METAL.value = null;
-          ORNAMENT_OCCASION.value = null;
-          ORNAMENT_GIFT.value = null;
-          ORNAMENT_THEME.value = null;
-          ORNAMENT_FESTIVAL.value = null;
-          ORNAMENT_BANGLE_SIZE.value = null;
-          ORNAMENT_CURATED_BY.value = null;
+
         }
+        ORNAMENT_METAL.value = null;
+        ORNAMENT_OCCASION.value = null;
+        ORNAMENT_GIFT.value = null;
+        ORNAMENT_THEME.value = null;
+        ORNAMENT_FESTIVAL.value = null;
+        ORNAMENT_BANGLE_SIZE.value = null;
+        ORNAMENT_CURATED_BY.value = null;
       }
     );
    }}
