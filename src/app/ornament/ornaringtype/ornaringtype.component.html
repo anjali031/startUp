@@ -205,6 +205,7 @@
             </div>
 
           </div>
+          <div class="row col s8 offset-s2">
           <p>Upload your 3D Model</p>
           <input type="file" #CAD_FILE accept="application/pdf" (change)="handleFileInput($event.target.files)">
           <p>Upload your Image One</p>
@@ -213,8 +214,9 @@
           <input type="file" #IMAGE_FILE_TWO accept=".png, .jpg" (change)="handleFileInputtwo($event.target.files)">
           <p>Upload your Image Three</p>
           <input type="file" #IMAGE_FILE_THREE accept=".png, .jpg" (change)="handleFileInputthree($event.target.files)">
-          <button type="submit" class="btn-large btn-submit" [disabled]="CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid">Create your new Ring Ornament</button>
+          </div>
 
+          <button type="submit" class="btn-large btn-submit" [disabled]="CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid">Create your new Ring Ornament</button>
         </form>
       </div>
     </div>
