@@ -2,7 +2,7 @@
 <div class="row">
   <div class="col s12 ">
     <div class="card" *ngFor="let question of data.results">
-      <div class="card-image">
+      <div class="card-image" *ngIf="question.ornament_file_field">
         <img src="{{question.ornament_file_field.IMAGE_FILE_ONE}}">
         <span class="card-title"></span>
       </div>
