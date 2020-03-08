@@ -36,8 +36,10 @@ export class AsJewelerComponent implements OnInit {
     this.router.navigate(['/login']);
   }
   check() {
-    if ((document.getElementById('password') as HTMLInputElement).value != (document.getElementById('confirm_password')as HTMLInputElement).value) {
-      alert ("password dont match")
+    // tslint:disable-next-line: triple-equals
+    // tslint:disable-next-line: max-line-length
+    if ((document.getElementById('password') as HTMLInputElement).value !== (document.getElementById('confirm_password')as HTMLInputElement).value) {
+      alert ('password dont match');
     }
   }
 

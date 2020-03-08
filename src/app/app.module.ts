@@ -15,9 +15,7 @@ import { ReadComponent } from './read/read.component';
 import { ToastrModule } from 'ngx-toastr';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { OrnamentsComponent } from './ornaments/ornaments.component';
-import { RingsComponent } from './ornaments/rings/rings.component';
-import { NeckComponent } from './ornaments/neck/neck.component';
+
 
 import { CreatevievComponent } from './createviev/createviev.component';
 import { RadiofillComponent } from './radiofill/radiofill.component';
@@ -65,9 +63,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     CustomerComponent,
     CreateViewComponent,
     ReadComponent,
-    OrnamentsComponent,
-    RingsComponent,
-    NeckComponent,
+
     CreatevievComponent,
     RadiofillComponent,
     CreatevieuComponent,

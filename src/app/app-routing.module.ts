@@ -7,9 +7,6 @@ import { PasswordChangeComponent } from './password-change/password-change.compo
 import { CustomerComponent } from './customer/customer.component';
 import { CreateViewComponent } from './create-view/create-view.component';
 import { ReadComponent } from './read/read.component';
-import { OrnamentsComponent } from './ornaments/ornaments.component';
-import { RingsComponent } from './ornaments/rings/rings.component';
-import { NeckComponent } from './ornaments/neck/neck.component';
 import { CreatevievComponent } from './createviev/createviev.component';
 import { RadiofillComponent } from './radiofill/radiofill.component';
 import { CreatevieuComponent } from './createvieu/createvieu.component';
@@ -85,16 +82,6 @@ const routes: Routes = [
   { path: 'Pendantupdate', component: PendantupdateComponent},
   { path: 'Ringupdate', component: RingupdateComponent},
   { path: 'Setsupdate', component: SetsupdateComponent},
-
-
-
-
-  { path: 'rings' , component: OrnamentsComponent,
-    children: [{ path : '' , component : RingsComponent }]
-  },
-  { path: 'neck' , component: OrnamentsComponent,
-    children: [{ path : '' , component : NeckComponent }]
-  },
   { path: '' , redirectTo: '/jeweler', pathMatch : 'full'}
 ];
 

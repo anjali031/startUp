@@ -14,33 +14,30 @@
             <p><strong>ORNAMENT_SHOPFOR : </strong>{{data.ornament_info.ORNAMENT_SHOPFOR}}</p>
             <p><strong>WEIGHT : </strong>{{data.ornament_info.WEIGHT}}</p>
         </div>
-        <div class="card-content col s5" >
+        <div class="card-content col s10" >
             <p><strong>ORNAMENT_METAL : </strong>{{data.ornament_category.ORNAMENT_METAL}}</p>
             <p><strong>ORNAMENT_OCCASION : </strong>{{data.ornament_category.ORNAMENT_OCCASION}}</p>
             <p><strong>ORNAMENT_GIFT : </strong>{{data.ornament_category.ORNAMENT_GIFT}}</p>
             <p><strong>ORNAMENT_THEME : </strong>{{data.ornament_category.ORNAMENT_THEME}}</p>
             <p><strong>ORNAMENT_CURATED_BY : </strong>{{data.ornament_category.ORNAMENT_CURATED_BY}}</p>
             <p><strong>ORNAMENT_FESTIVAL : </strong>{{data.ornament_category.ORNAMENT_FESTIVAL}}</p>
-          </div>
-  
-        <!--div class="card-action">
-          <a href="#">This is a link</a>
-        </div-->
+        </div>
+        <div class="card-content col s10" *ngIf="data.ornament_nosepin" >
+            <p><strong>ORNAMENT_NOSEPIN_STYLE : </strong>{{data.ornament_nosepin.ORNAMENT_NOSEPIN_STYLE}}</p>
+        </div>
+        <div class="card-content col s10" *ngIf="data.ornament_earring" >
+          <p><strong>ORNAMENT_EARRING_STYLE : </strong>{{data.ornament_earring.ORNAMENT_EARRING_STYLE}}</p>
+        </div>
+        <div class="card-content col s10" *ngIf="data.ornament_ring" >
+          <p><strong>ORNAMENT_RING_STYLE : </strong>{{data.ornament_ring.ORNAMENT_RING_STYLE}}</p>
+          <p><strong>ORNAMENT_RING_SIZE : </strong>{{data.ornament_ring.ORNAMENT_RING_SIZE}}</p>
 
-  
+        </div>        
         
-  
-        <!--div class="card-action">
-          <a href="#">This is a link</a>
-        </div-->
       </div>
-      <button class="btn-large btn-submit" type="submit" (click)="update()">Update this Ornament</button>
-
+      <button class="btn-large btn-submit" type="submit" (click)="update(data.ornament_info.ORNAMENT_TYPE,data.ornament_info.ORNAMENT_MATERIAL)">Update this Ornament</button>
+      <hr>
       <button class="btn-large btn-submit" type="submit" (click)="delete()">Delete This Ornament</button>
 
     </div>
   </div>
-
-
-  
-  
