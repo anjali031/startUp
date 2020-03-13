@@ -197,14 +197,14 @@
             <p>Upload your 3D Model</p>
             <input type="file" #CAD_FILE accept="application/pdf" (change)="handleFileInput($event.target.files)">
             <p>Upload your Image One</p>
-            <input type="file" #IMAGE_FILE_ONE accept="image/png || image/jpg" (change)="handleFileInputone($event.target.files)">
+            <input type="file" #IMAGE_FILE_ONE accept=".png, .jpg" (change)="handleFileInputone($event.target.files)">
             <p>Upload your Image Two</p>
-            <input type="file" #IMAGE_FILE_TWO accept="image/png || image/jpg" (change)="handleFileInputtwo($event.target.files)">
+            <input type="file" #IMAGE_FILE_TWO accept=".png, .jpg" (change)="handleFileInputtwo($event.target.files)">
             <p>Upload your Image Three</p>
-            <input type="file" #IMAGE_FILE_THREE accept="image/png || image/jpg" (change)="handleFileInputthree($event.target.files)">
+            <input type="file" #IMAGE_FILE_THREE accept=".png, .jpg" (change)="handleFileInputthree($event.target.files)">
           </div>
         </div>
-        <button type="submit" class="btn-large btn-submit" [disabled]="CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid">Create your new  Bracelet Ornament</button>
+        <button type="submit" class="btn-large btn-submit" [disabled]="CAD_FILE.value=='' || IMAGE_FILE_ONE.value=='' || IMAGE_FILE_TWO.value=='' || IMAGE_FILE_THREE.value=='' || !imageForm.valid">Update your Bracelet Ornament</button>
       </form>
     </div>
   </div>

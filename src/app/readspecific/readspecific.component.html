@@ -8,19 +8,29 @@
           <img src="{{data.ornament_filefield.IMAGE_FILE_ONE}}">
           <span class="card-title">Card Title</span>
         </div>
-        <div class="card-content col s5 ">
+        <div class="card-content col s10 ">
             <p><strong>ORNAMENT_TYPE : </strong>{{data.ornament_info.ORNAMENT_TYPE}}</p>
             <p><strong>ORNAMENT_MATERIAL : </strong>{{data.ornament_info.ORNAMENT_MATERIAL}}</p>
             <p><strong>ORNAMENT_SHOPFOR : </strong>{{data.ornament_info.ORNAMENT_SHOPFOR}}</p>
             <p><strong>WEIGHT : </strong>{{data.ornament_info.WEIGHT}}</p>
         </div>
-        <div class="card-content col s10" >
-            <p><strong>ORNAMENT_METAL : </strong>{{data.ornament_category.ORNAMENT_METAL}}</p>
-            <p><strong>ORNAMENT_OCCASION : </strong>{{data.ornament_category.ORNAMENT_OCCASION}}</p>
-            <p><strong>ORNAMENT_GIFT : </strong>{{data.ornament_category.ORNAMENT_GIFT}}</p>
-            <p><strong>ORNAMENT_THEME : </strong>{{data.ornament_category.ORNAMENT_THEME}}</p>
-            <p><strong>ORNAMENT_CURATED_BY : </strong>{{data.ornament_category.ORNAMENT_CURATED_BY}}</p>
-            <p><strong>ORNAMENT_FESTIVAL : </strong>{{data.ornament_category.ORNAMENT_FESTIVAL}}</p>
+        <div class="card-content col s10" *ngFor="let metal of  data.ornament_category.ORNAMENT_METAL" >
+          <p><strong>ORNAMENT_METAL : </strong>{{metal.METAL}}</p>
+        </div>
+        <div class="card-content col s10" *ngFor="let metal of  data.ornament_category.ORNAMENT_OCCASION" >
+          <p><strong>ORNAMENT_OCCASION : </strong>{{metal.OCCASION}}</p>
+        </div>
+        <div class="card-content col s10" *ngFor="let metal of  data.ornament_category.ORNAMENT_GIFT" >
+          <p><strong>ORNAMENT_GIFT : </strong>{{metal.GIFT}}</p>
+        </div>        
+        <div class="card-content col s10" *ngFor="let metal of  data.ornament_category.ORNAMENT_THEME" >
+          <p><strong>ORNAMENT_THEME : </strong>{{metal.THEME}}</p>
+        </div>        
+        <div class="card-content col s10" *ngFor="let metal of  data.ornament_category.ORNAMENT_CURATED_BY" >
+          <p><strong>ORNAMENT_CURATED_BY : </strong>{{metal.CURATED_BY}}</p>
+        </div>        
+        <div class="card-content col s10" *ngFor="let metal of  data.ornament_category.ORNAMENT_FESTIVAL" >
+          <p><strong>ORNAMENT_FESTIVAL : </strong>{{metal.FESTIVAL}}</p>
         </div>
         <div class="card-content col s10" *ngIf="data.ornament_nosepin" >
             <p><strong>ORNAMENT_NOSEPIN_STYLE : </strong>{{data.ornament_nosepin.ORNAMENT_NOSEPIN_STYLE}}</p>
@@ -32,8 +42,19 @@
           <p><strong>ORNAMENT_RING_STYLE : </strong>{{data.ornament_ring.ORNAMENT_RING_STYLE}}</p>
           <p><strong>ORNAMENT_RING_SIZE : </strong>{{data.ornament_ring.ORNAMENT_RING_SIZE}}</p>
 
-        </div>        
-        
+        </div>   
+        <div class="card-content col s10" *ngIf="data.ornament_bracelet" >
+          <p><strong>ORNAMENT_BRACELET_STYLE : </strong>{{data.ornament_bracelet.ORNAMENT_BRACELET_STYLE}}</p>
+          <p><strong>ORNAMENT_BRACELET_SIZE : </strong>{{data.ornament_bracelet.ORNAMENT_BRACELET_SIZE}}</p>
+        </div>
+        <div class="card-content col s10" *ngIf="data.ornament_chain" >
+          <p><strong>ORNAMENT_CHAIN_STYLE : </strong>{{data.ornament_chain.ORNAMENT_CHAIN_STYLE}}</p>
+          <p><strong>ORNAMENT_CHAIN_LENGTH : </strong>{{data.ornament_chain.ORNAMENT_CHAIN_LENGTH}}</p>
+
+        </div>   
+        <div class="card-content col s10" *ngIf="data.ornament_pendant" >
+          <p><strong>ORNAMENT_PENDANT_STYLE : </strong>{{data.ornament_pendant.ORNAMENT_PENDANT_STYLE}}</p>
+        </div>
       </div>
       <button class="btn-large btn-submit" type="submit" (click)="update(data.ornament_info.ORNAMENT_TYPE,data.ornament_info.ORNAMENT_MATERIAL)">Update this Ornament</button>
       <hr>

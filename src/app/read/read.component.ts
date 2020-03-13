@@ -35,6 +35,9 @@ export class ReadComponent implements OnInit {
   ornament() {
     this.router.navigate(['/types']);
   }
+  ornamentread() {
+    this.router.navigate(['/ornamentread']);
+  }
   changepassword() {
     this.router.navigate(['/changepassword']);
   }
