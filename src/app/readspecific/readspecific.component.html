@@ -8,53 +8,217 @@
           <img src="{{data.ornament_filefield.IMAGE_FILE_ONE}}">
           <span class="card-title">Card Title</span>
         </div>
+        <!--div class="card-content col s5 ">
+            <p><strong>ORNAMENT_TYPE : </strong></p>
+        </div>
+        <div class="card-content col s5 ">
+            <p>{{data.ornament_info.ORNAMENT_TYPE}}</p>
+        </div>
+        <div class="card-content col s5 ">
+            <p><strong>ORNAMENT_MATERIAL : </strong></p>
+        </div>
+        <div class="card-content col s5 ">
+            <p>{{data.ornament_info.ORNAMENT_MATERIAL}}</p>
+        </div>
+        <div class="card-content col s5 ">
+            <p><strong>ORNAMENT_SHOPFOR : </strong></p>
+        </div>
+        <div class="card-content col s5 ">
+            <p>{{data.ornament_info.ORNAMENT_SHOP_FOR}}</p>
+        </div>
+        <div class="card-content col s5 ">
+            <p><strong>WEIGHT : </strong></p>
+        </div>
         <div class="card-content col s10 ">
-            <p><strong>ORNAMENT_TYPE : </strong>{{data.ornament_info.ORNAMENT_TYPE}}</p>
-            <p><strong>ORNAMENT_MATERIAL : </strong>{{data.ornament_info.ORNAMENT_MATERIAL}}</p>
-            <p><strong>ORNAMENT_SHOPFOR : </strong>{{data.ornament_info.ORNAMENT_SHOPFOR}}</p>
-            <p><strong>WEIGHT : </strong>{{data.ornament_info.WEIGHT}}</p>
+            <p>{{data.ornament_info.WEIGHT}}</p>
         </div>
-        <div class="card-content col s10" *ngFor="let metal of  data.ornament_category.ORNAMENT_METAL" >
-          <p><strong>ORNAMENT_METAL : </strong>{{metal.METAL}}</p>
+        <div class="card-content col s5 ">
+          <p><strong>ORNAMENT_METAL : </strong></p>
         </div>
-        <div class="card-content col s10" *ngFor="let metal of  data.ornament_category.ORNAMENT_OCCASION" >
-          <p><strong>ORNAMENT_OCCASION : </strong>{{metal.OCCASION}}</p>
+        <div class="card-content col s5 " >
+          <li  *ngFor="let metal of  data.ornament_category.ORNAMENT_METAL" >{{metal.METAL}}</li>
         </div>
-        <div class="card-content col s10" *ngFor="let metal of  data.ornament_category.ORNAMENT_GIFT" >
-          <p><strong>ORNAMENT_GIFT : </strong>{{metal.GIFT}}</p>
-        </div>        
-        <div class="card-content col s10" *ngFor="let metal of  data.ornament_category.ORNAMENT_THEME" >
-          <p><strong>ORNAMENT_THEME : </strong>{{metal.THEME}}</p>
-        </div>        
-        <div class="card-content col s10" *ngFor="let metal of  data.ornament_category.ORNAMENT_CURATED_BY" >
-          <p><strong>ORNAMENT_CURATED_BY : </strong>{{metal.CURATED_BY}}</p>
-        </div>        
-        <div class="card-content col s10" *ngFor="let metal of  data.ornament_category.ORNAMENT_FESTIVAL" >
-          <p><strong>ORNAMENT_FESTIVAL : </strong>{{metal.FESTIVAL}}</p>
+        <div class="card-content col s5 ">
+          <p><strong>ORNAMENT_OCCASION : </strong></p>
         </div>
-        <div class="card-content col s10" *ngIf="data.ornament_nosepin" >
-            <p><strong>ORNAMENT_NOSEPIN_STYLE : </strong>{{data.ornament_nosepin.ORNAMENT_NOSEPIN_STYLE}}</p>
+        <div class="card-content col s5"  >
+          <li *ngFor="let metal of  data.ornament_category.ORNAMENT_OCCASION" >{{metal.OCCASION}}</li>
         </div>
-        <div class="card-content col s10" *ngIf="data.ornament_earring" >
-          <p><strong>ORNAMENT_EARRING_STYLE : </strong>{{data.ornament_earring.ORNAMENT_EARRING_STYLE}}</p>
+        <div class="card-content col s5 ">
+          <p><strong>ORNAMENT_GIFT : </strong></p>
         </div>
+        <div class="card-content col s5" >
+          <li  *ngFor="let metal of  data.ornament_category.ORNAMENT_GIFT">{{metal.GIFT}}</li>
+        </div>
+        <div class="card-content col s5 ">
+          <p><strong>ORNAMENT_THEME : </strong></p>
+        </div>    
+        <div class="card-content col s5"  >
+          <li *ngFor="let metal of  data.ornament_category.ORNAMENT_THEME">{{metal.THEME}}</li>
+        </div>
+        <div class="card-content col s5 ">
+          <p><strong>ORNAMENT_CURATED_BY : </strong></p>
+        </div>      
+        <div class="card-content col s5" >
+          <li *ngFor="let metal of  data.ornament_category.ORNAMENT_CURATED_BY" >{{metal.CURATED_BY}}</li>
+        </div>
+        <div class="card-content col s5 ">
+          <p><strong>ORNAMENT_FESTIVAL : </strong></p>
+        </div> 
+        <div class="card-content col s5">
+          <li  *ngFor="let metal of  data.ornament_category.ORNAMENT_FESTIVAL" >{{metal.FESTIVAL}}</li>
+        </div-->
+        <div class="card-content col s5 "  *ngIf="data.ornament_nosepin">
+          <p><strong>NOSEPIN_STYLE : </strong></p>
+        </div> 
+        <div class="card-content col s5" *ngIf="data.ornament_nosepin" >
+            <p>{{data.ornament_nosepin.ORNAMENT_NOSEPIN_STYLE}}</p>
+        </div>
+        <div class="card-content col s5 " *ngIf="data.ornament_earring">
+          <p><strong>EARRING_STYLE :</strong></p>
+        </div> 
+        <div class="card-content col s5" *ngIf="data.ornament_earring" >
+          <p>{{data.ornament_earring.ORNAMENT_EARRING_STYLE}}</p>
+        </div>
+        <div class="card-content col s5 " *ngIf="data.ornament_ring">
+          <p><strong>RING_STYLE : </strong></p>
+        </div> 
         <div class="card-content col s10" *ngIf="data.ornament_ring" >
-          <p><strong>ORNAMENT_RING_STYLE : </strong>{{data.ornament_ring.ORNAMENT_RING_STYLE}}</p>
-          <p><strong>ORNAMENT_RING_SIZE : </strong>{{data.ornament_ring.ORNAMENT_RING_SIZE}}</p>
+          <p>{{data.ornament_ring.ORNAMENT_RING_STYLE}}</p>
+        </div> 
+        <div class="card-content col s5 " *ngIf="data.ornament_ring">
+          <p><strong>RING_SIZE : </strong></p>
+        </div> 
+        <div class="card-content col s10" *ngIf="data.ornament_ring" >
+          <p>{{data.ornament_ring.ORNAMENT_RING_SIZE}}</p>
 
+        </div> 
+        
+        <div class="card-content col s5 "  *ngIf="data.ornament_bracelet" >
+          <p><strong>BRACELET_STYLE : </strong></p>
+        </div>  
+        <div class="card-content col s10" *ngIf="data.ornament_bracelet" >
+          <p>{{data.ornament_bracelet.ORNAMENT_BRACELET_STYLE}}</p>
+        </div> 
+        <div class="card-content col s5 "  *ngIf="data.ornament_bracelet">
+          <p><strong>BRACELET_SIZE : </strong></p>
         </div>   
         <div class="card-content col s10" *ngIf="data.ornament_bracelet" >
-          <p><strong>ORNAMENT_BRACELET_STYLE : </strong>{{data.ornament_bracelet.ORNAMENT_BRACELET_STYLE}}</p>
-          <p><strong>ORNAMENT_BRACELET_SIZE : </strong>{{data.ornament_bracelet.ORNAMENT_BRACELET_SIZE}}</p>
+          <p>{{data.ornament_bracelet.ORNAMENT_BRACELET_SIZE}}</p>
         </div>
+        <div class="card-content col s5 " *ngIf="data.ornament_chain">
+          <p><strong>CHAIN_STYLE : </strong></p>
+        </div> 
         <div class="card-content col s10" *ngIf="data.ornament_chain" >
-          <p><strong>ORNAMENT_CHAIN_STYLE : </strong>{{data.ornament_chain.ORNAMENT_CHAIN_STYLE}}</p>
-          <p><strong>ORNAMENT_CHAIN_LENGTH : </strong>{{data.ornament_chain.ORNAMENT_CHAIN_LENGTH}}</p>
-
-        </div>   
-        <div class="card-content col s10" *ngIf="data.ornament_pendant" >
-          <p><strong>ORNAMENT_PENDANT_STYLE : </strong>{{data.ornament_pendant.ORNAMENT_PENDANT_STYLE}}</p>
+          <p>{{data.ornament_chain.ORNAMENT_CHAIN_STYLE}}</p>
         </div>
+        <div class="card-content col s5 " *ngIf="data.ornament_chain">
+          <p><strong>CHAIN_LENGTH : </strong></p>
+        </div> 
+        <div class="card-content col s10" *ngIf="data.ornament_chain" >
+          <p>{{data.ornament_chain.ORNAMENT_CHAIN_LENGTH}}</p>
+        </div>  
+        <div class="card-content col s5 " *ngIf="data.ornament_pendant" >
+          <p><strong>PENDANT_STYLE : </strong></p>
+        </div>  
+        <div class="card-content col s10" *ngIf="data.ornament_pendant" >
+          <p>{{data.ornament_pendant.ORNAMENT_PENDANT_STYLE}}</p>
+        </div >
+
+        <table style="width:100%">
+          <h5>Description:</h5>
+          <tr>
+            <th>ORNAMENT_TYPE : </th>
+            <td>{{data.ornament_info.ORNAMENT_TYPE}}</td>
+          </tr>
+          <tr>
+            <th>ORNAMENT_MATERIAL : </th>
+            <td>{{data.ornament_info.ORNAMENT_MATERIAL}}</td>
+          </tr>
+          <tr>
+            <th>ORNAMENT_SHOPFOR : </th>
+            <td>{{data.ornament_info.ORNAMENT_SHOPFOR}}</td>
+          </tr>
+          <tr>
+            <th>WEIGHT : </th>
+            <td>{{data.ornament_info.WEIGHT}}</td>
+          </tr>
+          <tr>
+            <th *ngIf="data.ornament_category">ORNAMENT_METAL:</th>
+            <td ><li  *ngFor="let metal of  data.ornament_category.ORNAMENT_METAL" >{{metal}}</li></td>
+          </tr>
+          <tr>
+            <th *ngIf="data.ornament_category">ORNAMENT_OCCASION:</th>
+            <td><li *ngFor="let metal of  data.ornament_category.ORNAMENT_OCCASION" >{{metal}}</li></td>
+          </tr>
+          <tr>
+            <th *ngIf="data.ornament_category">ORNAMENT_GIFT:</th>
+            <td><li  *ngFor="let metal of  data.ornament_category.ORNAMENT_GIFT">{{metal}}</li></td>
+          </tr>
+          <tr>
+            <th *ngIf="data.ornament_category">ORNAMENT_THEME:</th>
+            <td><li *ngFor="let metal of  data.ornament_category.ORNAMENT_THEME">{{metal}}</li></td>
+          </tr>
+          <tr>
+            <th *ngIf="data.ornament_category">ORNAMENT_CURATED_BY:</th>
+            <td><li *ngFor="let metal of  data.ornament_category.ORNAMENT_CURATED_BY" >{{metal}}</li></td>
+          </tr>
+          <tr>
+            <th *ngIf="data.ornament_category">ORNAMENT_FESTIVAL:</th>
+            <td ><li  *ngFor="let metal of  data.ornament_category.ORNAMENT_FESTIVAL" >{{metal}}</li></td>
+          </tr>
+          <tr *ngIf="data.ornament_nosepin">
+            <th *ngIf="data.ornament_nosepin">ORNAMENT_NOSEPIN_STYLE:</th>
+            <td>{{data.ornament_nosepin.ORNAMENT_NOSEPIN_STYLE}}</td>
+          </tr>
+          <tr *ngIf="data.ornament_earring">
+            <th *ngIf="data.ornament_earring">ORNAMENT_EARRING_STYLE:</th>
+            <td>{{data.ornament_earring.ORNAMENT_EARRING_STYLE}}</td>
+          </tr>
+          <tr *ngIf="data.ornament_necklace">
+            <th *ngIf="data.ornament_necklace">ORNAMENT_NECKLACE_STYLE:</th>
+            <td>{{data.ornament_necklace.ORNAMENT_NECKLACE_STYLE}}</td>
+          </tr>
+          <tr *ngIf="data.ornament_ring">
+            <th *ngIf="data.ornament_ring">ORNAMENT_RING_STYLE:</th>
+            <td>{{data.ornament_ring.ORNAMENT_RING_STYLE}}</td>
+          </tr>
+          <tr *ngIf="data.ornament_ring">
+            <th *ngIf="data.ornament_ring">ORNAMENT_RING_SIZE:</th>
+            <td><li *ngFor="let metal of  data.ornament_ring.ORNAMENT_RING_SIZE" >{{metal}}</li></td>
+          </tr>
+          <tr *ngIf="data.ornament_bracelet">
+            <th *ngIf="data.ornament_bracelet">ORNAMENT_BRACELET_STYLE:</th>
+            <td>{{data.ornament_bracelet.ORNAMENT_BRACELET_STYLE}}</td>
+          </tr>
+          <tr *ngIf="data.ornament_bracelet">
+            <th *ngIf="data.ornament_bracelet">ORNAMENT_BRACELET_SIZE:</th>
+            <td><li *ngFor="let metal of  data.ornament_bracelet.ORNAMENT_BRACELET_SIZE" >{{metal}}</li></td>
+          </tr>
+          <tr *ngIf="data.ornament_pendant">
+            <th *ngIf="data.ornament_pendant">PENDANT_STYLE :</th>
+            <td>{{data.ornament_pendant.ORNAMENT_PENDANT_STYLE}}</td>
+          </tr>
+          <tr *ngIf="data.ornament_chain">
+            <th *ngIf="data.ornament_chain">ORNAMENT_CHAIN_STYLE:</th>
+            <td>{{data.ornament_chain.ORNAMENT_CHAIN_STYLE}}</td>
+          </tr>
+          <tr *ngIf="data.ornament_chain">
+            <th *ngIf="data.ornament_chain">ORNAMENT_CHAIN_LENGTH:</th>
+            <td><li *ngFor="let metal of  data.ornament_chain.ORNAMENT_CHAIN_LENGTH" >{{metal}}</li></td>
+          </tr>
+          <tr *ngIf="data.ornament_bangle">
+            <th *ngIf="data.ornament_bangle">ORNAMENT_BANGLE_STYLE:</th>
+            <td>{{data.ornament_bangle.ORNAMENT_BANGLE_STYLE}}</td>
+          </tr>
+          <tr *ngIf="data.ornament_bangle">
+            <th *ngIf="data.ornament_bangle">ORNAMENT_BANGLE_SIZE:</th>
+            <td><li *ngFor="let metal of  data.ornament_bangle.ORNAMENT_BANGLE_SIZE" >{{metal}}</li></td>
+          </tr>
+
+        </table>
+ 
+
       </div>
       <button class="btn-large btn-submit" type="submit" (click)="update(data.ornament_info.ORNAMENT_TYPE,data.ornament_info.ORNAMENT_MATERIAL)">Update this Ornament</button>
       <hr>

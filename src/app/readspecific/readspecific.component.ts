@@ -75,7 +75,7 @@ export class ReadspecificComponent implements OnInit  {
         this.router.navigate(['/ornamentread']);
 
       } else {
-        this.toastr.error(' Delete Operation Unsuccessful')
+        this.toastr.error(' Delete Operation Unsuccessful');
       }
     });
   }

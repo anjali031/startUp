@@ -17,6 +17,14 @@ button.btn-submit{
 button.btn-submit:focus,button.btn-submit:hover{
     background-color: #3b6baf;
 }
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+th, td {
+    padding: 5px;
+    text-align: left;    
+}
 
 /* input.ng-invalid.ng-dirty{
     border-bottom-color : #e91e63 !important;
