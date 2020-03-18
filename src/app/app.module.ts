@@ -51,6 +51,7 @@ import { RingupdateComponent } from './updates/ringupdate/ringupdate.component';
 import { EarupdateComponent } from './updates/earupdate/earupdate.component';
 import { NosepinupdateComponent } from './updates/nosepinupdate/nosepinupdate.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { UpdateComponent } from './update/update.component';
 
 
 @NgModule({
@@ -97,7 +98,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     BraceletupdateComponent,
     RingupdateComponent,
     EarupdateComponent,
-    NosepinupdateComponent
+    NosepinupdateComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

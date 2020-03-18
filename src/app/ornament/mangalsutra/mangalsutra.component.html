@@ -4,7 +4,7 @@
         <div class="card-panel teal lighten-2">
           <h4 class="center white-text">Ornament Mangalsutra</h4>
         </div>
-        <form #imageForm=ngForm (ngSubmit)="OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)">
+        <form #imageForm=ngForm (ngSubmit)="OnSubmit(ORNAMENT_TYPE,ORNAMENT_MATERIAL,ORNAMENT_SHOPFOR,WEIGHT, ORNAMENT_CENTER_STONE_WEIGHT,ORNAMENT_CENTER_STONE_SHAPE,ORNAMENT_GEMSTONE,ORNAMENT_GEMSTONE_COLOR, CAD_FILE ,IMAGE_FILE_ONE,IMAGE_FILE_TWO, IMAGE_FILE_THREE)">
           <p>It is mandatory that you fill all the fields </p>
           <div class="row">
 
@@ -43,6 +43,95 @@
                 <label for="weight">Weight</label>
             </div>
 
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8 offset-s2 ">
+                <select class="browser-default" #ORNAMENT_CENTER_STONE_WEIGHT ngModel name="ORNAMENT_CENTER_STONE_WEIGHT"  >
+                    <option value="" disabled selected>Choose CENTER STONE WEIGHT</option>
+                    <option value="1"> 0.20 - 0.29 Carat</option>
+                    <option value="2" >0.30 - 0.49 Carat</option>
+                    <option value="3" >0.50 - 0.69 Carat</option>
+                    <option value="4" >0.70 - 0.99 Carat</option>
+                    <option value="5" >1.00 - 1.49 Carat</option>
+                    <option value="6" >1.50 Carat and above</option>
+                </select>
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="input-field col s8 offset-s2 ">
+                <select class="browser-default" #ORNAMENT_CENTER_STONE_SHAPE ngModel name="ORNAMENT_CENTER_STONE_SHAPE"  >
+                    <option value="" disabled selected>Choose CENTER STONE SHAPE</option>
+                    <option value="1"> Princess Solitaire</option>
+                    <option value="2" >Round Solitaire</option>
+                    <option value="3" >Heart Solitaire</option>
+                    <option value="4" >Emerald Solitaire</option>
+                    <option value="5" >Cushion Solitaire</option>
+                </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s8 offset-s2 ">
+                <select class="browser-default" #ORNAMENT_GEMSTONE ngModel name="ORNAMENT_GEMSTONE">
+                    <option value="" disabled selected>Choose GEMSTONE</option>
+                    <option value="1"> Coral</option>
+                    <option value="2" >Rhodolite</option>
+                    <option value="3" >Citrine</option>
+                    <option value="4" >Tourmaline</option>
+                    <option value="5" >Tsavorite</option>
+                    <option value="6" >Synthetic Topaz</option>
+                    <option value="7"> Sapphire</option>
+                    <option value="8" >Onyx</option>
+                    <option value="9" >Peridot</option>
+                    <option value="10" >Fresh Water Pearl</option>
+                    <option value="11" >Ruby</option>
+                    <option value="12" >Synthetic Opal</option>
+                    <option value="13" >Pearl</option>
+                    <option value="14" >Emerald</option>
+                    <option value="15" >Evil Eye</option>
+                    <option value="16" >Synthetic Spinel</option>
+                    <option value="17"> Aquamarine</option>
+                    <option value="18" >Chalcedony</option>
+                    <option value="19" >Amethyst</option>
+                    <option value="20" >Garnet</option>
+                    <option value="21" >Synthetic Coral</option>
+                    <option value="22" >Opal</option>
+                    <option value="23" >Pearl</option>
+                    <option value="24" >Mother of Pearl</option>
+                    <option value="25" >Catseye</option>
+                    <option value="26" >Gomed-Hessonite</option>
+                    <option value="27"> Quartz</option>
+                    <option value="28" >Smoky</option>
+                    <option value="29" >Synthetic Amethyst</option>
+                    <option value="30" >Synthetic Emerald</option>
+                    <option value="31" >Synthetic Pink</option>
+                    <option value="32" >Synthetic Ruby</option>
+                    <option value="33" >Synthetic Sapphire</option>
+                    <option value="34" >Topaz</option>
+                    <option value="35" >Synthetic Onyx</option>
+                    <option value="36" >Synthetic Green</option>
+                    <option value="37"> Synthetic Tourmaline</option>
+                </select>
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="input-field col s8 offset-s2 ">
+                <select class="browser-default" #ORNAMENT_GEMSTONE_COLOR ngModel name="ORNAMENT_GEMSTONE_COLOR"  >
+                    <option value="" disabled selected>Choose GEMSTONE COLOR</option>
+                    <option value="1"> White</option>
+                    <option value="2" >Pink</option>
+                    <option value="3" >Yellow</option>
+                    <option value="4" >Purple</option>
+                    <option value="5" >Red</option>
+                    <option value="6" >Blue</option>
+                    <option value="7"> Green</option>
+                    <option value="8" >Orange</option>
+                    <option value="9" >Brown</option>
+                    <option value="10" >Black</option>
+                    <option value="11" >Rose</option>
+                    <option value="12" >Grey</option>
+                </select>
+            </div>
           </div>
           <div class="row">
             <div class="input-field col s8 offset-s2">

@@ -499,12 +499,12 @@ handleFileInputthree(file: FileList) {
     this.fileToUploadthree = file.item(0);
   }
 
-OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT , ORNAMENT_RING_STYLE, CAD_FILE , IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE){
+OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT , ORNAMENT_RING_STYLE, ORNAMENT_CENTER_STONE_WEIGHT, ORNAMENT_CENTER_STONE_SHAPE,ORNAMENT_GEMSTONE,ORNAMENT_GEMSTONE_COLOR, CAD_FILE , IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE){
     // tslint:disable-next-line: max-line-length
     if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia.length == 0 || this.rsizea.length == 0) {
       alert('check the confirmation checkboxex to proceed');
     } else {
-    this.userService.mli(ORNAMENT_TYPE.value , ORNAMENT_MATERIAL.value , ORNAMENT_SHOPFOR.value , WEIGHT.value, this.metala, this.asion, this.asan, this.themea, this.curateda , this.festia, this.rsizea, ORNAMENT_RING_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
+    this.userService.mli(ORNAMENT_TYPE.value , ORNAMENT_MATERIAL.value , ORNAMENT_SHOPFOR.value , WEIGHT.value, this.metala, this.asion, this.asan, this.themea, this.curateda , this.festia, this.rsizea, ORNAMENT_RING_STYLE.value, ORNAMENT_CENTER_STONE_WEIGHT.value, ORNAMENT_CENTER_STONE_SHAPE.value, ORNAMENT_GEMSTONE.value,ORNAMENT_GEMSTONE_COLOR.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
       (data: any) => {
         console.log('done', data);
         if (data.status === 201) {

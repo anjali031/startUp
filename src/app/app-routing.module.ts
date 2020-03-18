@@ -39,7 +39,7 @@ import { ChainpendatupdateComponent } from './updates/chainpendatupdate/chainpen
 import { BraceletupdateComponent } from './updates/braceletupdate/braceletupdate.component';
 import { SetsupdateComponent } from './updates/setsupdate/setsupdate.component';
 import { RingupdateComponent } from './updates/ringupdate/ringupdate.component';
-
+import { UpdateComponent } from './update/update.component';
 
 
 const routes: Routes = [
@@ -50,6 +50,8 @@ const routes: Routes = [
   { path: 'customer', component: CustomerComponent},
   { path: 'createview', component: CreateViewComponent},
   { path: 'read', component: ReadComponent},
+  { path: 'update', component: UpdateComponent},
+
   { path: 'ornviev', component: CreatevievComponent},
   { path: 'ornvieu', component: CreatevieuComponent},
   { path: 'radiofill', component: RadiofillComponent},

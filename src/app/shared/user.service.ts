@@ -162,6 +162,14 @@ export class UserService {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
     return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/chain-length/', {headers: Headers});
   }
+  ornCenterWeight() {
+    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/center-stone-weight/', {headers: Headers});
+  }
+  ornCenterShape() {
+    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/choice-field/center-stone-shape/', {headers: Headers});
+  }
 
   update(jeweller: JewellerInfo) {
     const info: JewellerInfo = {
@@ -238,7 +246,7 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  multi(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asan: any, themea: any, curateda: any, festia: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  multi(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asan: any, themea: any, curateda: any, festia: any, ORNAMENT_CENTER_STONE_WEIGHT: string, ORNAMENT_CENTER_STONE_SHAPE: string, ORNAMENT_GEMSTONE: string, ORNAMENT_GEMSTONE_COLOR: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -262,6 +270,10 @@ export class UserService {
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
+    formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -303,7 +315,7 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  mli(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any,  themea: any,  curateda: any, festia: any, rsizea: any, ORNAMENT_RING_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  mli(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any,  themea: any,  curateda: any, festia: any, rsizea: any, ORNAMENT_RING_STYLE: string, ORNAMENT_CENTER_STONE_WEIGHT: string, ORNAMENT_CENTER_STONE_SHAPE: string,  ORNAMENT_GEMSTONE: string, ORNAMENT_GEMSTONE_COLOR: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -337,7 +349,10 @@ export class UserService {
     for (var i of rsizea) {
     formData.append('ORNAMENT_RING_SIZE', i);
     }
-
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
+    formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
    // formData.append('ORNAMENT_RING_SIZE', rsizea);
    // formData.append('ORNAMENT_RING_SIZE', rsizeb);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
@@ -352,7 +367,7 @@ export class UserService {
 
 
   // tslint:disable-next-line: max-line-length
-  ear(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asan: any,  themea: any, curateda: any,  festia: any,  ORNAMENT_EARRING_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  ear(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asan: any,  themea: any, curateda: any,  festia: any,  ORNAMENT_EARRING_STYLE: string, ORNAMENT_CENTER_STONE_WEIGHT: string, ORNAMENT_CENTER_STONE_SHAPE: string,  ORNAMENT_GEMSTONE: string, ORNAMENT_GEMSTONE_COLOR: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -382,7 +397,10 @@ export class UserService {
     }
    // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
-
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
+    formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -395,7 +413,7 @@ export class UserService {
 
 
   // tslint:disable-next-line: max-line-length
-  nosepin(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any, festia: any, ORNAMENT_NOSEPIN_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  nosepin(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any, festia: any, ORNAMENT_NOSEPIN_STYLE: string, ORNAMENT_CENTER_STONE_WEIGHT: string, ORNAMENT_CENTER_STONE_SHAPE: string,  ORNAMENT_GEMSTONE: string, ORNAMENT_GEMSTONE_COLOR: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -431,7 +449,10 @@ export class UserService {
     }
      // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_NOSEPIN_STYLE', ORNAMENT_NOSEPIN_STYLE);
-
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
+    formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -443,7 +464,7 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  pendantwithearing(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asan: any, themea: any, curateda: any, festia: any,  ORNAMENT_EARRING_STYLE: string, ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  pendantwithearing(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asan: any, themea: any, curateda: any, festia: any,  ORNAMENT_EARRING_STYLE: string, ORNAMENT_PENDANT_STYLE: string, ORNAMENT_CENTER_STONE_WEIGHT: string, ORNAMENT_CENTER_STONE_SHAPE: string, ORNAMENT_GEMSTONE: string, ORNAMENT_GEMSTONE_COLOR: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -474,7 +495,10 @@ export class UserService {
     // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
     formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
-
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
+    formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -486,7 +510,7 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  bracelet(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any, festia: any,  bsizea: any, ORNAMENT_BRACELET_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  bracelet(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any, festia: any,  bsizea: any, ORNAMENT_BRACELET_STYLE: string,ORNAMENT_CENTER_STONE_WEIGHT: string, ORNAMENT_CENTER_STONE_SHAPE: string, ORNAMENT_GEMSTONE: string, ORNAMENT_GEMSTONE_COLOR: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -519,6 +543,10 @@ export class UserService {
     for (var i of bsizea) {
     formData.append('ORNAMENT_BRACELET_SIZE', i);
     }
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
+    formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
     // formData.append('ORNAMENT_BRACELET_SIZE', bsizeb);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
@@ -531,7 +559,7 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  bangles(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_BANGLE_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  bangles(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_BANGLE_STYLE: string,ORNAMENT_CENTER_STONE_WEIGHT: string, ORNAMENT_CENTER_STONE_SHAPE: string, ORNAMENT_GEMSTONE: string, ORNAMENT_GEMSTONE_COLOR: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -564,6 +592,10 @@ export class UserService {
     for (var i of bsizea) {
     formData.append('ORNAMENT_BANGLE_SIZE', i);
     }
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
+    formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
     // formData.append('ORNAMENT_BANGLE_SIZE', bsizeb);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
@@ -576,7 +608,7 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  chain(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_CHAIN_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  chain(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_CHAIN_STYLE: string, ORNAMENT_CENTER_STONE_WEIGHT: string, ORNAMENT_CENTER_STONE_SHAPE: string, ORNAMENT_GEMSTONE: string, ORNAMENT_GEMSTONE_COLOR: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -609,6 +641,10 @@ export class UserService {
     for (var i of bsizea) {
     formData.append('ORNAMENT_CHAIN_LENGTH', i);
     }
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
+    formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
      // formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
@@ -621,7 +657,7 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  necklace(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any,  festia: any, ORNAMENT_NECKLACE_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  necklace(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any,  festia: any, ORNAMENT_NECKLACE_STYLE: string, ORNAMENT_CENTER_STONE_WEIGHT: string, ORNAMENT_CENTER_STONE_SHAPE: string,  ORNAMENT_GEMSTONE: string, ORNAMENT_GEMSTONE_COLOR: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -651,7 +687,10 @@ export class UserService {
     }
    // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_NECKLACE_STYLE', ORNAMENT_NECKLACE_STYLE);
-
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
+    formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -665,7 +704,7 @@ export class UserService {
 
 
   // tslint:disable-next-line: max-line-length
-  chaitpen(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_CHAIN_STYLE: string, ORNAMENT_PENDANT_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  chaitpen(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_CHAIN_STYLE: string, ORNAMENT_PENDANT_STYLE: string, ORNAMENT_CENTER_STONE_WEIGHT: string, ORNAMENT_CENTER_STONE_SHAPE: string,  ORNAMENT_GEMSTONE: string, ORNAMENT_GEMSTONE_COLOR: string,fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -700,7 +739,10 @@ export class UserService {
     }
     //formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
     formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
-
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
+    formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -711,7 +753,7 @@ export class UserService {
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
 
-  pendant(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asan: any, themea: any, curateda: any, festia: any, ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  pendant(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asan: any, themea: any, curateda: any, festia: any, ORNAMENT_PENDANT_STYLE: string, ORNAMENT_CENTER_STONE_WEIGHT: string, ORNAMENT_CENTER_STONE_SHAPE: string,  ORNAMENT_GEMSTONE: string, ORNAMENT_GEMSTONE_COLOR: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -741,7 +783,10 @@ export class UserService {
     }
    // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
-
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
+    formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
