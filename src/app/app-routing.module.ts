@@ -5,11 +5,8 @@ import { AsJewelerComponent } from './as-jeweler/as-jeweler.component';
 import { LoginComponent } from './login/login.component';
 import { PasswordChangeComponent } from './password-change/password-change.component';
 import { CustomerComponent } from './customer/customer.component';
-import { CreateViewComponent } from './create-view/create-view.component';
 import { ReadComponent } from './read/read.component';
-import { CreatevievComponent } from './createviev/createviev.component';
 import { RadiofillComponent } from './radiofill/radiofill.component';
-import { CreatevieuComponent } from './createvieu/createvieu.component';
 import { OrnamentreadComponent } from './ornamentread/ornamentread.component';
 import { OrnaringtypeComponent } from './ornament/ornaringtype/ornaringtype.component';
 import { OrnaearringtypeComponent } from './ornament/ornaearringtype/ornaearringtype.component';
@@ -48,12 +45,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'changepassword', component: PasswordChangeComponent},
   { path: 'customer', component: CustomerComponent},
-  { path: 'createview', component: CreateViewComponent},
   { path: 'read', component: ReadComponent},
   { path: 'update', component: UpdateComponent},
 
-  { path: 'ornviev', component: CreatevievComponent},
-  { path: 'ornvieu', component: CreatevieuComponent},
   { path: 'radiofill', component: RadiofillComponent},
   { path: 'ornamentread', component: OrnamentreadComponent},
   { path: 'Ornaringtype', component: OrnaringtypeComponent},

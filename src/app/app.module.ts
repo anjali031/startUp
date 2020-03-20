@@ -10,16 +10,13 @@ import { AsJewelerComponent } from './as-jeweler/as-jeweler.component';
 import { LoginComponent } from './login/login.component';
 import { PasswordChangeComponent } from './password-change/password-change.component';
 import { CustomerComponent } from './customer/customer.component';
-import { CreateViewComponent } from './create-view/create-view.component';
 import { ReadComponent } from './read/read.component';
 import { ToastrModule } from 'ngx-toastr';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-import { CreatevievComponent } from './createviev/createviev.component';
 import { RadiofillComponent } from './radiofill/radiofill.component';
-import { CreatevieuComponent } from './createvieu/createvieu.component';
 import { OrnamentreadComponent } from './ornamentread/ornamentread.component';
 import { OrnaringtypeComponent } from './ornament/ornaringtype/ornaringtype.component';
 import { OrnaearringtypeComponent } from './ornament/ornaearringtype/ornaearringtype.component';
@@ -63,12 +60,9 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     PasswordChangeComponent,
     CustomerComponent,
-    CreateViewComponent,
     ReadComponent,
 
-    CreatevievComponent,
     RadiofillComponent,
-    CreatevieuComponent,
     OrnamentreadComponent,
     OrnaringtypeComponent,
     OrnaearringtypeComponent,
