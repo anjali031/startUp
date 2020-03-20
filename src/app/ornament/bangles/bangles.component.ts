@@ -40,7 +40,6 @@ export class BanglesComponent implements OnInit {
   metala: any = [];
   metalb: any = [];
 
-  imagePattern = '([^\s]+(\.(?i)(jpg|png))$)]';
 
   constructor(private userService: UserService, private router: Router, private toastr: ToastrService) { }
 
@@ -91,7 +90,7 @@ export class BanglesComponent implements OnInit {
   curatedby() {
     this.userService.ornCurated().subscribe(data=> {
       console.log(data);
-      this.Curated = data;
+      this.Curated =data;
     });
   }
 
@@ -109,7 +108,6 @@ export class BanglesComponent implements OnInit {
       this.Bsize = data;
     });
   }
-
 
   Ornmetal(pk) {
     console.log(pk);
@@ -480,7 +478,7 @@ export class BanglesComponent implements OnInit {
     }
   }
 
-
+  
 
   handleFileInput(file: FileList) {
     this.fileToUpload = file.item(0);
@@ -497,21 +495,21 @@ export class BanglesComponent implements OnInit {
   handleFileInputthree(file: FileList) {
     this.fileToUploadthree = file.item(0);
   }
-
-  OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT, ORNAMENT_BANGLE_STYLE,ORNAMENT_CENTER_STONE_WEIGHT,ORNAMENT_CENTER_STONE_SHAPE, ORNAMENT_GEMSTONE,ORNAMENT_GEMSTONE_COLOR, CAD_FILE , IMAGE_FILE_ONE, IMAGE_FILE_TWO,IMAGE_FILE_THREE){
     // tslint:disable-next-line: max-line-length
-    if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia.length == 0 || this.bsizea.length == 0 ) {
+  OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT , ORNAMENT_BANGLE_STYLE, ORNAMENT_CENTER_STONE_WEIGHT, ORNAMENT_CENTER_STONE_SHAPE, ORNAMENT_GEMSTONE, ORNAMENT_GEMSTONE_COLOR, CAD_FILE , IMAGE_FILE_ONE, IMAGE_FILE_TWO,IMAGE_FILE_THREE){
+    // tslint:disable-next-line: max-line-length
+    if (this.asion.length === 0 || this.asan.length === 0 || this.themea.length === 0 || this.curateda.length === 0 || this.metala.length === 0 || this.festia.length === 0 || this.bsizea.length === 0) {
       alert('check the confirmation checkboxex to proceed');
     } else {
-    this.userService.bangles(ORNAMENT_TYPE.value ,ORNAMENT_MATERIAL.value ,ORNAMENT_SHOPFOR.value ,WEIGHT.value,this.metala,this.asion, this.asan,this.themea, this.curateda , this.festia, this.bsizea,  ORNAMENT_BANGLE_STYLE.value, ORNAMENT_CENTER_STONE_WEIGHT.value, ORNAMENT_CENTER_STONE_SHAPE.value, ORNAMENT_GEMSTONE.value,ORNAMENT_GEMSTONE_COLOR.value,this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
+    this.userService.bangles(ORNAMENT_TYPE.value, ORNAMENT_MATERIAL.value,ORNAMENT_SHOPFOR.value ,WEIGHT.value,this.metala,this.asion, this.asan,this.themea, this.curateda , this.festia,this.bsizea, ORNAMENT_BANGLE_STYLE.value,ORNAMENT_CENTER_STONE_WEIGHT.value,ORNAMENT_CENTER_STONE_SHAPE.value, ORNAMENT_GEMSTONE.value,ORNAMENT_GEMSTONE_COLOR.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
       (data: any) => {
         console.log('done', data);
         if (data.status == 201) {
           this.toastr.success('Ornament Succesfully Created');
           this.router.navigate(['./ornamentread']);
-
         }
       }
     );
    }}
 }
+

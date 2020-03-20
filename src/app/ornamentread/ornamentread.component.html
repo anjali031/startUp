@@ -1,21 +1,19 @@
 
 <div class="row">
-  <div class="col s12 ">
+  <div class="col s8 offset-s2 ">
+    <div class="sm-jumbotron center-align">
+      <h5>Your Ornaments</h5>
+    </div>
     <div class="card" *ngFor="let question of data.results">
       <div class="card-image" *ngIf="question.ornament_file_field">
-        <img src="{{question.ornament_file_field.IMAGE_FILE_ONE}}">
+        <img src="{{question.ornament_file_field.IMAGE_FILE_ONE}}" >
         <span class="card-title"></span>
       </div>
       <div class="card-content">
         <p>{{question.ORNAMENT_ID}}</p>
-        <p>{{question.JEWELLER_ID}}</p>
         <p>{{question.WEIGHT}}</p>
       </div>
       <button class="btn-large btn-submit" type="submit" (click)="read(question.ORNAMENT_ID)">More About this</button>
-
-      <!--div class="card-action">
-        <a href="#">This is a link</a>
-      </div-->
     </div>
     <div class="row">
       <div class="col s8 offset s2" *ngIf="data.previous" >
