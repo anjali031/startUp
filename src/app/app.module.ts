@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserService } from './shared/user.service';
-import { UserComponent } from './user/user.component';
 import { AsJewelerComponent } from './as-jeweler/as-jeweler.component';
 import { LoginComponent } from './login/login.component';
 import { PasswordChangeComponent } from './password-change/password-change.component';
@@ -55,7 +54,6 @@ import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
     AsJewelerComponent,
     LoginComponent,
     PasswordChangeComponent,

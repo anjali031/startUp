@@ -30,17 +30,7 @@ export class UserService {
   }
 
 
-  asCitizen(user: User) {
-    const body: User = {
-      email: user.email,
-      username: user.username,
-      password: user.password,
-      confirm_password: user.confirm_password,
-      IS_JEWELLER: user.IS_JEWELLER
-    };
-    const reqheader = new HttpHeaders({'Content-Type': 'application/json'});
-    return this.http.post(this.rootURL + '/api/user/v1/register/', body, {headers : reqheader});
-  }
+
 
   loginUser(username, password) {
     const data = 'username=' + username + '&password=' + password + '&grant_type=password';
@@ -191,61 +181,6 @@ export class UserService {
     return this.http.put(this.rootURL + '/api/jeweller/v1/update/', info, {headers: Headers});
   }
 
-  postFile(ORNAMENT_TYPE: string, ORNAMENT_MATERIAL: string, ORNAMENT_SHOPFOR: string, WEIGHT: string, ORNAMENT_METAL: string, ORNAMENT_OCCASION: string, ORNAMENT_GIFT: string, ORNAMENT_THEME: string, ORNAMENT_CURATED_BY: string, ORNAMENT_FESTIVAL: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File, fileToUploadthree: File, ) {
-    const formData: FormData = new FormData();
-    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
-    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-    formData.append('ORNAMENT_OCCASION', ORNAMENT_OCCASION);
-    formData.append('ORNAMENT_GIFT', ORNAMENT_GIFT);
-    formData.append('ORNAMENT_THEME', ORNAMENT_THEME);
-    formData.append('ORNAMENT_CURATED_BY', ORNAMENT_CURATED_BY);
-    formData.append('ORNAMENT_FESTIVAL', ORNAMENT_FESTIVAL);
-    const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData, {headers: Headers});
-  }
-  postFill(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string) {
-    const formData: FormData = new FormData();
-    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
-
-    const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
-  }
-
-
-
-  postFeil(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, ORNAMENT_OCCASION: string, ORNAMENT_GIFT: string, ORNAMENT_THEME: string, ORNAMENT_CURATED_BY: string, ORNAMENT_FESTIVAL: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
-    const formData: FormData = new FormData();
-    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
-    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-    formData.append('ORNAMENT_OCCASION', ORNAMENT_OCCASION);
-    formData.append('ORNAMENT_GIFT', ORNAMENT_GIFT);
-    formData.append('ORNAMENT_THEME', ORNAMENT_THEME);
-    formData.append('ORNAMENT_CURATED_BY', ORNAMENT_CURATED_BY);
-    formData.append('ORNAMENT_FESTIVAL', ORNAMENT_FESTIVAL);
-    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-
-    const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
-  }
-
   multi(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asan: any, themea: any, curateda: any, festia: any, ORNAMENT_CENTER_STONE_WEIGHT: string, ORNAMENT_CENTER_STONE_SHAPE: string, ORNAMENT_GEMSTONE: string, ORNAMENT_GEMSTONE_COLOR: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
@@ -285,36 +220,6 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  muli(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, asion: any, asian: any, asan: any, asin: any, themea: any, themeb: any , curateda: any, curatedb: any, festia: any, festib: any, rsizea: any, rsizeb: any, ORNAMENT_RING_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
-    const formData: FormData = new FormData();
-    formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
-    formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
-    formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
-    formData.append('ORNAMENT_METAL', ORNAMENT_METAL);
-    formData.append('ORNAMENT_OCCASION', asion);
-    formData.append('ORNAMENT_OCCASION', asian);
-    formData.append('ORNAMENT_GIFT', asan);
-    formData.append('ORNAMENT_GIFT', asin);
-    formData.append('ORNAMENT_THEME', themea);
-    formData.append('ORNAMENT_THEME', themeb);
-    formData.append('ORNAMENT_CURATED_BY', curateda);
-    formData.append('ORNAMENT_CURATED_BY', curatedb);
-    formData.append('ORNAMENT_FESTIVAL', festia);
-    formData.append('ORNAMENT_FESTIVAL', festib);
-    formData.append('ORNAMENT_RING_STYLE', ORNAMENT_RING_STYLE);
-    formData.append('ORNAMENT_RING_SIZE', rsizea);
-    formData.append('ORNAMENT_RING_SIZE', rsizeb);
-    formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
-    formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
-    formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
-    formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
-
-    const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
-  }
-
   mli(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any,  themea: any,  curateda: any, festia: any, rsizea: any, ORNAMENT_RING_STYLE: string, ORNAMENT_CENTER_STONE_WEIGHT: string, ORNAMENT_CENTER_STONE_SHAPE: string,  ORNAMENT_GEMSTONE: string, ORNAMENT_GEMSTONE_COLOR: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
@@ -327,12 +232,10 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-    // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
 
     formData.append('ORNAMENT_GIFT', i);
     }
-   // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
 
     formData.append('ORNAMENT_THEME', i);
@@ -353,8 +256,6 @@ export class UserService {
     formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
     formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
     formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
-   // formData.append('ORNAMENT_RING_SIZE', rsizea);
-   // formData.append('ORNAMENT_RING_SIZE', rsizeb);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -379,23 +280,18 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-    // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-    // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-    // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-    // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-   // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
     formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
     formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
@@ -426,28 +322,22 @@ export class UserService {
 
     formData.append('ORNAMENT_OCCASION', i);
     }
-
-    // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
 
     formData.append('ORNAMENT_GIFT', i);
     }
-    // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
 
     formData.append('ORNAMENT_THEME', i);
     }
-    // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
 
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-    // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
 
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-     // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_NOSEPIN_STYLE', ORNAMENT_NOSEPIN_STYLE);
     formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
     formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
@@ -476,23 +366,18 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-   // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-   // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-    // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-    //  formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-    // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
     formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
     formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
@@ -522,23 +407,18 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-    // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-    // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-    // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-   // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-    // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_BRACELET_STYLE', ORNAMENT_BRACELET_STYLE);
     for (var i of bsizea) {
     formData.append('ORNAMENT_BRACELET_SIZE', i);
@@ -547,7 +427,6 @@ export class UserService {
     formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
     formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
     formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
-    // formData.append('ORNAMENT_BRACELET_SIZE', bsizeb);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -571,23 +450,18 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-   // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-   // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-   // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-   // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-    // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_BANGLE_STYLE', ORNAMENT_BANGLE_STYLE);
     for (var i of bsizea) {
     formData.append('ORNAMENT_BANGLE_SIZE', i);
@@ -596,7 +470,6 @@ export class UserService {
     formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
     formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
     formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
-    // formData.append('ORNAMENT_BANGLE_SIZE', bsizeb);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -620,23 +493,18 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-   // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-   // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-   // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-   // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-   // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
     for (var i of bsizea) {
     formData.append('ORNAMENT_CHAIN_LENGTH', i);
@@ -645,7 +513,6 @@ export class UserService {
     formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
     formData.append('ORNAMENT_GEMSTONE', ORNAMENT_GEMSTONE);
     formData.append('ORNAMENT_GEMSTONE_COLOR', ORNAMENT_GEMSTONE_COLOR);
-     // formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -669,23 +536,18 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-   // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-   // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-   // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-   // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-   // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_NECKLACE_STYLE', ORNAMENT_NECKLACE_STYLE);
     formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
     formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
@@ -716,28 +578,22 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-   // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-   // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-   // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-   // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-   // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
     for (var i of bsizea) {
     formData.append('ORNAMENT_CHAIN_LENGTH', i);
     }
-    //formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
     formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
     formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
     formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
@@ -765,23 +621,18 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-   // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-   // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-   // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-   // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-   // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
     formData.append('ORNAMENT_CENTER_STONE_WEIGHT', ORNAMENT_CENTER_STONE_WEIGHT);
     formData.append('ORNAMENT_CENTER_STONE_SHAPE', ORNAMENT_CENTER_STONE_SHAPE);
@@ -896,12 +747,10 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-    // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
 
     formData.append('ORNAMENT_GIFT', i);
     }
-   // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
 
     formData.append('ORNAMENT_THEME', i);
@@ -919,8 +768,6 @@ export class UserService {
     formData.append('ORNAMENT_RING_SIZE', i);
     }
 
-   // formData.append('ORNAMENT_RING_SIZE', rsizea);
-   // formData.append('ORNAMENT_RING_SIZE', rsizeb);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -945,23 +792,18 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-    // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-    // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-    // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-    // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-   // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
 
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
@@ -990,29 +832,23 @@ export class UserService {
     formData.append('ORNAMENT_OCCASION', i);
     }
 
-    // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
 
     formData.append('ORNAMENT_GIFT', i);
     }
-    // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
 
     formData.append('ORNAMENT_THEME', i);
     }
-    // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
 
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-    // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
 
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-     // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_NOSEPIN_STYLE', ORNAMENT_NOSEPIN_STYLE);
-
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -1036,23 +872,18 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-   // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-   // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-    // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-    //  formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-    // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
     formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
 
@@ -1079,28 +910,22 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-    // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-    // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-    // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-   // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-    // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_BRACELET_STYLE', ORNAMENT_BRACELET_STYLE);
     for (var i of bsizea) {
     formData.append('ORNAMENT_BRACELET_SIZE', i);
     }
-    // formData.append('ORNAMENT_BRACELET_SIZE', bsizeb);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -1124,28 +949,22 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-   // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-   // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-   // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-   // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-    // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_BANGLE_STYLE', ORNAMENT_BANGLE_STYLE);
     for (var i of bsizea) {
     formData.append('ORNAMENT_BANGLE_SIZE', i);
     }
-    // formData.append('ORNAMENT_BANGLE_SIZE', bsizeb);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -1169,28 +988,22 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-   // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-   // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-   // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-   // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-   // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
     for (var i of bsizea) {
     formData.append('ORNAMENT_CHAIN_LENGTH', i);
     }
-     // formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -1214,23 +1027,18 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-   // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-   // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-   // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-   // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-   // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_NECKLACE_STYLE', ORNAMENT_NECKLACE_STYLE);
 
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
@@ -1258,28 +1066,22 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-   // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-   // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-   // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-   // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-   // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
     for (var i of bsizea) {
     formData.append('ORNAMENT_CHAIN_LENGTH', i);
     }
-    //formData.append('ORNAMENT_CHAIN_LENGTH', bsizeb);
     formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
 
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
@@ -1304,23 +1106,18 @@ export class UserService {
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
     }
-   // formData.append('ORNAMENT_OCCASION', asian);
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
     }
-   // formData.append('ORNAMENT_GIFT', asin);
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
     }
-   // formData.append('ORNAMENT_THEME', themeb);
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
     }
-   // formData.append('ORNAMENT_CURATED_BY', curatedb);
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
-   // formData.append('ORNAMENT_FESTIVAL', festib);
     formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
 
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
