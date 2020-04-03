@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="row">
     <div class="col s10 offset-s1">
       <div class="sm-jumbotron center-align">
@@ -89,7 +90,7 @@
           </tr>
           <tr *ngIf="data.ornament_chain">
             <th *ngIf="data.ornament_chain">CHAIN LENGTH:</th>
-            <td><li *ngFor="let metal of  data.ornament_chain.ORNAMENT_CHAIN_LENGTH" >{{metal}}</li></td>
+            <td><li *ngFor="let metal of  data.ornament_chain.ORNAMENT_CHAIN_LENGTH" >{{metal.CHAIN_LENGTH}}</li></td>
           </tr>
           <tr *ngIf="data.ornament_bangle">
             <th *ngIf="data.ornament_bangle">BANGLE STYLE:</th>
@@ -97,7 +98,7 @@
           </tr>
           <tr *ngIf="data.ornament_bangle">
             <th *ngIf="data.ornament_bangle">BANGLE SIZE:</th>
-            <td><li *ngFor="let metal of  data.ornament_bangle.ORNAMENT_BANGLE_SIZE" >{{metal}}</li></td>
+            <td><li *ngFor="let metal of  data.ornament_bangle.ORNAMENT_BANGLE_SIZE" >{{metal.BANGLE_SIZE}}</li></td>
           </tr>
           <tr *ngIf="data.ornament_center_stone">
             <th *ngIf="data.ornament_center_stone">CENTER STONE WEIGHT:</th>

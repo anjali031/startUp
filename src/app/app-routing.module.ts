@@ -36,7 +36,7 @@ import { BraceletupdateComponent } from './updates/braceletupdate/braceletupdate
 import { SetsupdateComponent } from './updates/setsupdate/setsupdate.component';
 import { RingupdateComponent } from './updates/ringupdate/ringupdate.component';
 import { UpdateComponent } from './update/update.component';
-
+import { ChangeComponent } from './ornament/change/change.component';
 
 const routes: Routes = [
   { path: 'jeweler', component: AsJewelerComponent},
@@ -76,6 +76,9 @@ const routes: Routes = [
   { path: 'Pendantupdate', component: PendantupdateComponent},
   { path: 'Ringupdate', component: RingupdateComponent},
   { path: 'Setsupdate', component: SetsupdateComponent},
+  { path: 'change', component: ChangeComponent
+},
+
   { path: '' , redirectTo: '/jeweler', pathMatch : 'full'}
 ];
 

@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 
 <hr>
 <div class="row" >
@@ -6,29 +7,59 @@
           <h5>Your Profile</h5>
         </div>
         <div class="card blue-white darken-1" *ngIf ="data.data" >
-          <div class="card_content white_text" >
-            <p><strong>Name of Your Firm : </strong> {{data.data.NAME_OF_FIRM}}</p>
-            <p><strong>Address OF  Your Firm : </strong> {{data.data.ADDRESS_OF_FIRM}}</p>
-            <p><strong>City : </strong>{{data.data.CITY}}</p>
-            <p><strong>STATE : </strong> {{data.data.STATE}}</p>
-            <p><strong>Your Contact Name : </strong> {{data.data.CONTACT_NAME}}</p>
-            <p><strong> Your Contact Number : </strong> {{data.data.CONTACT_NUMBER}}</p>
-            <p><strong> Your Contact Mail ID : </strong>{{data.data.CONTACT_MAIL_ID}}</p>
-            <p><strong>GST Number : </strong>{{data.data.GST_NUMBER}}</p>
-            <p><strong>Pan Number: </strong>{{data.data.PAN_NUMBER}}</p>
-            <p><strong>Owner Name: </strong>{{data.data.OWNER_NAME}}</p>
-            <p><strong>Owner Number : </strong> {{data.data.OWNER_NUMBER}}</p>
-            <p><strong>Owner Email : </strong> {{data.data.OWNER_EMAIL}}</p>
-            <p><strong>Username : </strong>{{data.data.username}}</p> 
+          <div class="card-content white-text " >
+            <div class="row">
+              <p class= "col s5"><strong>Name of Your Firm : </strong></p>
+              <p class= "col s7"> {{data.data.NAME_OF_FIRM}}</p>
+              <br>
+              <p class= "col s5"><strong>Firm Address: </strong></p>
+              <p class= "col s7"> {{data.data.ADDRESS_OF_FIRM}}</p>
+              <br>
+              <p class= "col s5"><strong>STATE : </strong> </p>
+              <p class= "col s7">{{data.data.STATE}}</p>
+              <br>
+              <p class= "col s5"><strong>City : </strong></p>
+              <p class= "col s7">{{data.data.CITY}}</p>
+              <br>
+              <p class= "col s5"><strong>Contact Name : </strong> </p>
+              <p class= "col s7">{{data.data.CONTACT_NAME}}</p>
+              <br>
+              <p class= "col s5"><strong>Contact Number : </strong></p>
+              <p class= "col s7"> {{data.data.CONTACT_NUMBER}}</p>
+              <br>
+              <p class= "col s5"><strong>Contact Mail ID : </strong></p>
+              <p class= "col s7">{{data.data.CONTACT_MAIL_ID}}</p>
+              <br>
+              <p class= "col s5"><strong>GST Number : </strong></p>
+              <p class= "col s7">{{data.data.GST_NUMBER}}</p>
+              <br>
+              <p class= "col s5"><strong>Pan Number: </strong></p>
+              <p class= "col s7">{{data.data.PAN_NUMBER}}</p>
+              <br>
+              <p class= "col s5"><strong>Owner Name: </strong></p>
+              <p class= "col s7">{{data.data.OWNER_NAME}}</p>
+              <br>
+              <p class= "col s5"><strong>Owner Number : </strong></p>
+              <p class= "col s7">{{data.data.OWNER_NUMBER}}</p>
+              <br>
+              <p class= "col s5"><strong>Owner Email : </strong></p>
+              <p class= "col s7">{{data.data.OWNER_EMAIL}}</p>
+              <br>
+              <p class= "col s5"><strong>Username : </strong></p> 
+              <p class= "col s7">{{data.data.username}}</p> 
+              <br>
+            </div>
           </div>
         </div>
-        <div class="sm-jumbotron center-align">
-            <a class="waves-effect waves-light btn-large"  (click)=update()>Update</a>
-          </div>
-          <hr>
-          <button class="btn-large btn-submit" type="submit" (click)=ornament()>create Your New Ornament</button>
-          <button class="btn-large btn-submit" type="submit" (click)=ornamentread()>Your Ornaments</button>
+    </div>
+  </div>     
 
+  <div class="row" >
+    <div class="col s8 offset-s2">
+        <button class="btn-large btn-submit" type="submit" (click)= update()>Update</button>
+        <br>
+        <button class="btn-large btn-submit" type="submit" (click)=ornament()>create Your New Ornament</button>
+        <br> 
+        <button class="btn-large btn-submit" type="submit" (click)=ornamentread()>Your Ornaments</button>
     </div>
 </div>
-

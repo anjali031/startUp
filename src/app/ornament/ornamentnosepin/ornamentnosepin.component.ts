@@ -13,6 +13,11 @@ export class OrnamentnosepinComponent implements OnInit {
   fileToUploadone: File = null;
   fileToUploadtwo: File = null;
   fileToUploadthree: File = null;
+  date: string;
+  center: string;
+  stone: string;
+  gem: string;
+  color: string;
   anni: any = {};
   annj: any = {};
   annk: any = {};
@@ -48,6 +53,32 @@ export class OrnamentnosepinComponent implements OnInit {
     this.curatedby();
     this.festival();
     this.metal();
+  }
+  selectOption(value) {
+    console.log(value);
+    console.log('null', this.date);
+    this.date = value;
+    console.log(this.date);
+  }
+  centerOption(value) {
+    console.log(value);
+    this.center = value;
+    console.log(this.center);
+  }
+  stoneOption(value) {
+    console.log(value);
+    this.stone = value;
+    console.log(this.stone);
+  }
+  gemOption(value) {
+    console.log(value);
+    this.gem = value;
+    console.log(this.gem);
+  }
+  colorOption(value) {
+    console.log(value);
+    this.color = value;
+    console.log(this.color);
   }
 
   read() {
@@ -430,17 +461,17 @@ export class OrnamentnosepinComponent implements OnInit {
     this.fileToUploadthree = file.item(0);
   }
 
-  OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT , ORNAMENT_NOSEPIN_STYLE, ORNAMENT_CENTER_STONE_WEIGHT, ORNAMENT_CENTER_STONE_SHAPE, ORNAMENT_GEMSTONE,ORNAMENT_GEMSTONE_COLOR, CAD_FILE , IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE){
+  OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT , ORNAMENT_NOSEPIN_STYLE,  CAD_FILE , IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE){
     // tslint:disable-next-line: max-line-length
     if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia.length == 0) {
       alert('check the confirmation checkboxex to proceed');
     } else {
-    this.userService.nosepin(ORNAMENT_TYPE.value , ORNAMENT_MATERIAL.value , ORNAMENT_SHOPFOR.value , WEIGHT.value, this.metala, this.asion, this.asan, this.themea, this.curateda , this.festia, ORNAMENT_NOSEPIN_STYLE.value , ORNAMENT_CENTER_STONE_WEIGHT.value, ORNAMENT_CENTER_STONE_SHAPE.value, ORNAMENT_GEMSTONE.value,ORNAMENT_GEMSTONE_COLOR.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
+    this.userService.nosepin(ORNAMENT_TYPE.value , ORNAMENT_MATERIAL.value , ORNAMENT_SHOPFOR.value , WEIGHT.value, this.metala, this.asion, this.asan, this.themea, this.curateda , this.festia, ORNAMENT_NOSEPIN_STYLE.value , this.center, this.stone, this.gem, this.color, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
       (data: any) => {
         console.log('done', data);
         if (data.status === 201) {
           this.toastr.success('Ornament Succesfully Created');
-          this.router.navigate(['./ornamentread']);
+         // this.router.navigate(['./ornamentread']);
         }
       }
     );

@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
+  data: any = {};
   jeweller: JewellerInfo;
   emailPattern = '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$';
   panpattern = '[0-9]{10}';
@@ -17,13 +18,31 @@ export class UpdateComponent implements OnInit {
 
   constructor(private userService: UserService , private router: Router) { }
 
-
-
-
   ngOnInit() {
     this.resetForm();
+    this.readuser();
   }
+  readuser() {
+    this.userService.readForm().subscribe(data => {
+      console.log(data);
+      this.data = data;
+      this.print();
 
+    });
+  }
+  print() {
+    (document.getElementById('name_of_firm')as HTMLInputElement).value = this.data.data.NAME_OF_FIRM;
+    (document.getElementById('address_of_firm')as HTMLInputElement).value = this.data.data.ADDRESS_OF_FIRM;
+    (document.getElementById('contact_name')as HTMLInputElement).value = this.data.data.CONTACT_NAME;
+    (document.getElementById('contact_number')as HTMLInputElement).value = this.data.data.CONTACT_NUMBER;
+    (document.getElementById('contact_mail_id')as HTMLInputElement).value = this.data.data.CONTACT_MAIL_ID;
+    (document.getElementById('gst_number')as HTMLInputElement).value = this.data.data.GST_NUMBER;
+    (document.getElementById('pan_number')as HTMLInputElement).value = this.data.data.PAN_NUMBER;
+    (document.getElementById('owner_name')as HTMLInputElement).value = this.data.data.OWNER_NAME;
+    (document.getElementById('owner_number')as HTMLInputElement).value = this.data.data.OWNER_NUMBER;
+    (document.getElementById('owner_email')as HTMLInputElement).value = this.data.data.OWNER_EMAIL;
+
+  }
 
   resetForm(form?: NgForm) {
     if (form != null) {
