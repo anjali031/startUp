@@ -438,7 +438,7 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  bangles(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_BANGLE_STYLE: string, center: string, stone: string, gem: string, color: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  bangles(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_BANGLE_STYLE: string, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
