@@ -464,7 +464,7 @@ export class OrnaearringtypeComponent implements OnInit {
     this.fileToUploadthree = file.item(0);
   }
 
-  OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT ,ORNAMENT_EARRING_STYLE, ORNAMENT_CENTER_STONE_WEIGHT, ORNAMENT_CENTER_STONE_SHAPE, ORNAMENT_GEMSTONE,ORNAMENT_GEMSTONE_COLOR,CAD_FILE , IMAGE_FILE_ONE, IMAGE_FILE_TWO,IMAGE_FILE_THREE){
+  OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT ,ORNAMENT_EARRING_STYLE, CAD_FILE , IMAGE_FILE_ONE, IMAGE_FILE_TWO,IMAGE_FILE_THREE){
     // tslint:disable-next-line: max-line-length
     if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia.length == 0) {
       alert('check the confirmation checkboxex to proceed');
