@@ -3,6 +3,7 @@ import { UserService } from '../shared/user.service';
 import { NgForm } from '@angular/forms';
 import { Password } from '../shared/password.model';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-password-change',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class PasswordChangeComponent implements OnInit {
   password: Password;
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit() {
     this.resetForm();
@@ -37,5 +38,12 @@ export class PasswordChangeComponent implements OnInit {
           console.log(err.message);
         }
       );
+    }
+
+    Logout() {
+      localStorage.removeItem('token');
+      console.log('You Are Logged Out');
+      this.toastr.error('logged out');
+      this.router.navigate(['/login']);
     }
   }
