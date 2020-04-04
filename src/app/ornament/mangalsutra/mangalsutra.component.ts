@@ -13,11 +13,11 @@ export class MangalsutraComponent implements OnInit {
   fileToUploadone: File = null;
   fileToUploadtwo: File = null;
   fileToUploadthree: File = null;
-  date: string;
-  center: string;
-  stone: string;
-  gem: string;
-  color: string;
+  date: any;
+  center: any;
+  stone: any;
+  gem: any;
+  color: any;
   anni: any = {};
   annj: any = {};
   annk: any = {};
