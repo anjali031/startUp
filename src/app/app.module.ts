@@ -31,7 +31,6 @@ import { SetsComponent } from './ornament/sets/sets.component';
 import { PendantComponent } from './ornament/pendant/pendant.component';
 import { OrnamentcufflinkComponent } from './ornamentcufflink/ornamentcufflink.component';
 import { CufflinkComponent } from './ornament/cufflink/cufflink.component';
-import { ChangeComponent } from './ornament/change/change.component';
 import { ReadspecificComponent } from './readspecific/readspecific.component';
 import { PendantearringupdateComponent } from './updates/pendantearringupdate/pendantearringupdate.component';
 import { CufflinkupdateComponent } from './updates/cufflinkupdate/cufflinkupdate.component';
@@ -76,7 +75,6 @@ import { FooterComponent } from './footer/footer.component';
     PendantComponent,
     OrnamentcufflinkComponent,
     CufflinkComponent,
-    ChangeComponent,
     ReadspecificComponent,
     NavbarComponent,
     PendantearringupdateComponent,

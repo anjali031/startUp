@@ -475,7 +475,7 @@ export class SetsComponent implements OnInit {
         console.log('done', data);
         if (data.status === 201) {
           this.toastr.success('Ornament Succesfully Created');
-         // this.router.navigate(['./ornamentread']);
+          this.router.navigate(['./ornamentread']);
         }
       }
     );
