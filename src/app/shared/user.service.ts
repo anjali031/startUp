@@ -93,11 +93,12 @@ export class UserService {
 
   readid() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/', {headers: Headers});
+    return this.http.get(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/', {headers: Headers});
   }
   deletebyid() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.delete(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/delete/', {headers: Headers});
+    // tslint:disable-next-line: max-line-length
+    return this.http.delete(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/delete/', {headers: Headers});
   }
   ornmetal() {
     const Headers = new HttpHeaders().set('Authorization', 'token ' + localStorage.getItem('token'));
@@ -180,8 +181,8 @@ export class UserService {
       .set('Authorization', 'token ' + localStorage.getItem('token'));
     return this.http.put(this.rootURL + '/api/jeweller/v1/update/', info, {headers: Headers});
   }
-
-  multi(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asan: any, themea: any, curateda: any, festia: any, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    // tslint:disable-next-line: max-line-length
+  multi(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any, themea: any, curateda: any, festia: any, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -309,7 +310,7 @@ export class UserService {
 
 
   // tslint:disable-next-line: max-line-length
-  nosepin(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any, festia: any, ORNAMENT_NOSEPIN_STYLE: string, center: any, stone: any,  gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  nosepin(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any, festia: any, ORNAMENT_NOSEPIN_STYLE: string, center: any, stone: any,  gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -354,7 +355,7 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  pendantwithearing(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asan: any, themea: any, curateda: any, festia: any,  ORNAMENT_EARRING_STYLE: string, ORNAMENT_PENDANT_STYLE: string, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  pendantwithearing(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any, themea: any, curateda: any, festia: any,  ORNAMENT_EARRING_STYLE: string, ORNAMENT_PENDANT_STYLE: string, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -395,7 +396,7 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  bracelet(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any, festia: any,  bsizea: any, ORNAMENT_BRACELET_STYLE: string, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  bracelet(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any, festia: any,  bsizea: any, ORNAMENT_BRACELET_STYLE: string, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -481,7 +482,7 @@ export class UserService {
   }
 
     // tslint:disable-next-line: max-line-length
-  change(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_CHAIN_STYLE: string, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  change(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_CHAIN_STYLE: string, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -524,7 +525,7 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  chain(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_CHAIN_STYLE: string, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  chain(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_CHAIN_STYLE: string, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -567,7 +568,7 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  necklace(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any,  festia: any, ORNAMENT_NECKLACE_STYLE: string, center: any, stone: any,  gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  necklace(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any,  festia: any, ORNAMENT_NECKLACE_STYLE: string, center: any, stone: any,  gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -609,7 +610,7 @@ export class UserService {
 
 
   // tslint:disable-next-line: max-line-length
-  chaitpen(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_CHAIN_STYLE: string, ORNAMENT_PENDANT_STYLE: string, center: any, stone: any,  gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  chaitpen(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_CHAIN_STYLE: string, ORNAMENT_PENDANT_STYLE: string, center: any, stone: any,  gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -651,8 +652,8 @@ export class UserService {
       .set('Authorization', 'token ' + localStorage.getItem('token'));
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
-
-  pendant(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asan: any, themea: any, curateda: any, festia: any, ORNAMENT_PENDANT_STYLE: string, center: any, stone: any,  gem: any, color: any,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    // tslint:disable-next-line: max-line-length
+  pendant(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any, themea: any, curateda: any, festia: any, ORNAMENT_PENDANT_STYLE: string, center: any, stone: any,  gem: any, color: any,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
@@ -690,7 +691,7 @@ export class UserService {
       .set('Authorization', 'token ' + localStorage.getItem('token'));
     return this.http.post(this.rootURL + '/api/jeweller/v1/ornament/ornament-create/', formData,  {headers: Headers});
   }
-
+    // tslint:disable-next-line: max-line-length
   postupdate(ORNAMENT_TYPE: string , ORNAMENT_MATERIAL: string , ORNAMENT_SHOPFOR: string , WEIGHT: string, ORNAMENT_METAL: string, ORNAMENT_OCCASION: string, ORNAMENT_GIFT: string, ORNAMENT_THEME: string, ORNAMENT_CURATED_BY: string, ORNAMENT_FESTIVAL: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
@@ -709,11 +710,11 @@ export class UserService {
     formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
 
     const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+      .set('Authorization', 'token ' + localStorage.getItem('token'));    // tslint:disable-next-line: max-line-length
+    return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
-
-  multiupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asan: any, themea: any, curateda: any, festia: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+    // tslint:disable-next-line: max-line-length
+  multiupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any, themea: any, curateda: any, festia: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
     formData.append('ORNAMENT_MATERIAL', localStorage.getItem('ORNAMENT_MATERIAL'));
@@ -743,8 +744,8 @@ export class UserService {
     formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
 
     const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+      .set('Authorization', 'token ' + localStorage.getItem('token'));    // tslint:disable-next-line: max-line-length
+    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
 
   // tslint:disable-next-line: max-line-length
@@ -774,10 +775,10 @@ export class UserService {
     formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
 
     const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+      .set('Authorization', 'token ' + localStorage.getItem('token')); // tslint:disable-next-line: max-line-length
+    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
-
+// tslint:disable-next-line: max-line-length
   mliupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any,  festia: any,  rsizea: any,  ORNAMENT_RING_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
@@ -817,13 +818,13 @@ export class UserService {
     formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
 
     const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+      .set('Authorization', 'token ' + localStorage.getItem('token')); // tslint:disable-next-line: max-line-length
+    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
 
 
   // tslint:disable-next-line: max-line-length
-  earupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any, asan: any, themea: any, curateda: any, festia: any, ORNAMENT_EARRING_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  earupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any, themea: any, curateda: any, festia: any, ORNAMENT_EARRING_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
     formData.append('ORNAMENT_MATERIAL', localStorage.getItem('ORNAMENT_MATERIAL'));
@@ -855,8 +856,8 @@ export class UserService {
     formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
 
     const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+      .set('Authorization', 'token ' + localStorage.getItem('token')); // tslint:disable-next-line: max-line-length
+    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
 
 
@@ -898,8 +899,8 @@ export class UserService {
     formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
 
     const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+      .set('Authorization', 'token ' + localStorage.getItem('token')); // tslint:disable-next-line: max-line-length
+    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
 
   // tslint:disable-next-line: max-line-length
@@ -936,8 +937,8 @@ export class UserService {
     formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
 
     const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+      .set('Authorization', 'token ' + localStorage.getItem('token')); // tslint:disable-next-line: max-line-length
+    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
 
   // tslint:disable-next-line: max-line-length
@@ -975,8 +976,8 @@ export class UserService {
     formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
 
     const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+      .set('Authorization', 'token ' + localStorage.getItem('token')); // tslint:disable-next-line: max-line-length
+    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
 
   // tslint:disable-next-line: max-line-length
@@ -1014,8 +1015,8 @@ export class UserService {
     formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
 
     const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+      .set('Authorization', 'token ' + localStorage.getItem('token')); // tslint:disable-next-line: max-line-length
+    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
 
   // tslint:disable-next-line: max-line-length
@@ -1053,8 +1054,8 @@ export class UserService {
     formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
 
     const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+      .set('Authorization', 'token ' + localStorage.getItem('token')); // tslint:disable-next-line: max-line-length
+    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
 
   // tslint:disable-next-line: max-line-length
@@ -1090,8 +1091,8 @@ export class UserService {
     formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
 
     const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+      .set('Authorization', 'token ' + localStorage.getItem('token')); // tslint:disable-next-line: max-line-length
+    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
 
 
@@ -1133,11 +1134,11 @@ export class UserService {
     formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
 
     const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+      .set('Authorization', 'token ' + localStorage.getItem('token')); // tslint:disable-next-line: max-line-length
+    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
-
-  pendantupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion : any,  asan: any,  themea: any, curateda: any, festia: any,  ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+// tslint:disable-next-line: max-line-length
+  pendantupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any, curateda: any, festia: any,  ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
     formData.append('ORNAMENT_MATERIAL', localStorage.getItem('ORNAMENT_MATERIAL'));
@@ -1169,7 +1170,7 @@ export class UserService {
     formData.append('IMAGE_FILE_THREE', fileToUploadthree, fileToUploadthree.name);
 
     const Headers = new HttpHeaders()
-      .set('Authorization', 'token ' + localStorage.getItem('token'));
-    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/'+localStorage.getItem('ORNAMENT_ID')+'/update/', formData,  {headers: Headers});
+      .set('Authorization', 'token ' + localStorage.getItem('token')); // tslint:disable-next-line: max-line-length
+    return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
 }

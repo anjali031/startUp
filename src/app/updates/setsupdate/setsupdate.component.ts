@@ -117,7 +117,7 @@ export class SetsupdateComponent implements OnInit {
 
   zero() {
     if ((document.getElementById('zero')as HTMLInputElement).checked) {
-      if (this.metalb.length == 0 ) {
+      if (this.metalb.length === 0 ) {
         (document.getElementById('zero')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -169,7 +169,7 @@ export class SetsupdateComponent implements OnInit {
   }
   one() {
     if ((document.getElementById('1')as HTMLInputElement).checked) {
-      if (this.asian.length == 0 ) {
+      if (this.asian.length === 0 ) {
         (document.getElementById('1')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -220,7 +220,7 @@ export class SetsupdateComponent implements OnInit {
   }
   two() {
     if ((document.getElementById('2')as HTMLInputElement).checked) {
-      if (this.asin.length == 0 ) {
+      if (this.asin.length === 0 ) {
         (document.getElementById('2')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -238,6 +238,7 @@ export class SetsupdateComponent implements OnInit {
       }
       // return [a, b];
       var i = 0;
+      // tslint:disable-next-line: no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -272,7 +273,7 @@ export class SetsupdateComponent implements OnInit {
   }
   three() {
     if ((document.getElementById('3')as HTMLInputElement).checked) {
-      if (this.themeb.length == 0 ) {
+      if (this.themeb.length === 0 ) {
         (document.getElementById('3')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -325,7 +326,7 @@ export class SetsupdateComponent implements OnInit {
 
   four() {
     if ((document.getElementById('4')as HTMLInputElement).checked) {
-      if (this.curatedb.length == 0 ) {
+      if (this.curatedb.length === 0 ) {
         (document.getElementById('4')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -379,7 +380,7 @@ export class SetsupdateComponent implements OnInit {
 
   five() {
     if ((document.getElementById('5')as HTMLInputElement).checked) {
-      if (this.festib.length == 0 ) {
+      if (this.festib.length === 0 ) {
         (document.getElementById('5')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');

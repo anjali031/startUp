@@ -117,14 +117,14 @@ export class MangalsutraComponent implements OnInit {
   }
 
   curatedby() {
-    this.userService.ornCurated().subscribe(data=> {
+    this.userService.ornCurated().subscribe(data => {
       console.log(data);
-      this.Curated =data;
+      this.Curated = data;
     });
   }
 
   festival() {
-    this.userService.ornFestival().subscribe(data=> {
+    this.userService.ornFestival().subscribe(data => {
       console.log(data);
       this.Festival = data;
     });
@@ -150,7 +150,7 @@ export class MangalsutraComponent implements OnInit {
 
   zero() {
     if ((document.getElementById('zero')as HTMLInputElement).checked) {
-      if (this.metalb.length == 0 ) {
+      if (this.metalb.length === 0 ) {
         (document.getElementById('zero')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -202,7 +202,7 @@ export class MangalsutraComponent implements OnInit {
   }
   one() {
     if ((document.getElementById('1')as HTMLInputElement).checked) {
-      if (this.asian.length == 0 ) {
+      if (this.asian.length === 0 ) {
         (document.getElementById('1')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -253,7 +253,7 @@ export class MangalsutraComponent implements OnInit {
   }
   two() {
     if ((document.getElementById('2')as HTMLInputElement).checked) {
-      if (this.asin.length == 0 ) {
+      if (this.asin.length === 0 ) {
         (document.getElementById('2')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -305,7 +305,7 @@ export class MangalsutraComponent implements OnInit {
   }
   three() {
     if ((document.getElementById('3')as HTMLInputElement).checked) {
-      if (this.themeb.length == 0 ) {
+      if (this.themeb.length === 0 ) {
         (document.getElementById('3')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -358,7 +358,7 @@ export class MangalsutraComponent implements OnInit {
 
   four() {
     if ((document.getElementById('4')as HTMLInputElement).checked) {
-      if (this.curatedb.length == 0 ) {
+      if (this.curatedb.length === 0 ) {
         (document.getElementById('4')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -412,7 +412,7 @@ export class MangalsutraComponent implements OnInit {
 
   five() {
     if ((document.getElementById('5')as HTMLInputElement).checked) {
-      if (this.festib.length == 0 ) {
+      if (this.festib.length === 0 ) {
         (document.getElementById('5')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
@@ -462,15 +462,16 @@ export class MangalsutraComponent implements OnInit {
     this.fileToUploadthree = file.item(0);
   }
 
-  OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT ,  CAD_FILE , IMAGE_FILE_ONE, IMAGE_FILE_TWO,IMAGE_FILE_THREE){
+  OnSubmit(ORNAMENT_TYPE, ORNAMENT_MATERIAL, ORNAMENT_SHOPFOR, WEIGHT ,  CAD_FILE , IMAGE_FILE_ONE, IMAGE_FILE_TWO, IMAGE_FILE_THREE) {
     // tslint:disable-next-line: max-line-length
-    if (this.asion.length == 0 || this.asan.length == 0 || this.themea.length == 0 || this.curateda.length == 0 || this.metala.length == 0 || this.festia.length == 0) {
+    if (this.asion.length === 0 || this.asan.length === 0 || this.themea.length === 0 || this.curateda.length === 0 || this.metala.length === 0 || this.festia.length === 0) {
       alert('check the confirmation checkboxex to proceed');
     } else {
-    this.userService.multi(ORNAMENT_TYPE.value ,ORNAMENT_MATERIAL.value ,ORNAMENT_SHOPFOR.value ,WEIGHT.value, this.metala, this.asion, this.asan, this.themea, this.curateda , this.festia, this.center, this.stone, this.gem,this.color, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
+          // tslint:disable-next-line: max-line-length
+    this.userService.multi(ORNAMENT_TYPE.value , ORNAMENT_MATERIAL.value , ORNAMENT_SHOPFOR.value , WEIGHT.value, this.metala, this.asion, this.asan, this.themea, this.curateda , this.festia, this.center, this.stone, this.gem, this.color, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
       (data: any) => {
         console.log('done', data);
-        if (data.status == 201) {
+        if (data.status === 201) {
           this.toastr.success('Ornament Succesfully Created');
           this.router.navigate(['./ornamentread']);
         }
