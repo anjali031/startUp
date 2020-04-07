@@ -42,6 +42,9 @@ export class LoginComponent implements OnInit {
    });
  }
 
+ Signin() {
+  this.router.navigate(['/jeweler']);
+}
 }
 
 

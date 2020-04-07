@@ -63,6 +63,9 @@ export class AsJewelerComponent implements OnInit {
       }
     );
   }
+  Login() {
+    this.router.navigate(['login']);
+  }
 }
 
 // ((data: any) => {

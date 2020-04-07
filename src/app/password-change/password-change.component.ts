@@ -30,9 +30,14 @@ export class PasswordChangeComponent implements OnInit {
   OnSubmit(form: NgForm) {
     this.userService.changePassword(form.value)
       .subscribe(
-        res => {
-          console.log(res);
-          this.router.navigate(['/forms']);
+        (data: any) => {
+          console.log(data);
+          if (data.status === 200)  {
+            this.toastr.success(data.message);
+            this.router.navigate(['/read']);
+          } else  {
+            this.toastr.error(data.message);
+          }
         },
         err => {
           console.log(err.message);

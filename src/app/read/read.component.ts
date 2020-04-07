@@ -22,7 +22,6 @@ export class ReadComponent implements OnInit {
       console.log(data);
       this.data = data;
       if (this.data.statuscode === 200) {
-        this.toastr.success('welcome back');
       } else {
         this.toastr.success('As you are our New Customer we want you to fill this form to complete your profile');
         this.router.navigate (['/radiofill']);
