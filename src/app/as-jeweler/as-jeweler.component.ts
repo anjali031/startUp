@@ -12,7 +12,8 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AsJewelerComponent implements OnInit {
   user: User;
-  passwordPattern = '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}';
+  userpattern = '^[a-z0-9_-]{3,15}$';
+  passwordPattern = '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}';
   emailPattern = '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$';
   constructor(private userService: UserService, private router: Router, private toastr: ToastrService) { }
 

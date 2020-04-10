@@ -46,7 +46,7 @@
 
           </div>
 
-          <div class="row">
+          <div class="row" *ngIf ="date == 1 || date == 2 || date == 3">
             <div class="input-field col s8 offset-s2 ">
                 <select class="browser-default"  (change)="centerOption($event.target.value)" #ORNAMENT_CENTER_STONE_WEIGHT ngModel name="ORNAMENT_CENTER_STONE_WEIGHT" *ngIf ="date == 1 || date == 2 || date == 3"   >
                     <option value="" disabled selected>Choose CENTER STONE WEIGHT</option>
@@ -59,7 +59,7 @@
                 </select>
             </div>
           </div>
-          <div class="row"> 
+          <div class="row" *ngIf ="date == 1 || date == 2 || date == 3"> 
             <div class="input-field col s8 offset-s2 ">
                 <select class="browser-default" (change)="stoneOption($event.target.value)" #ORNAMENT_CENTER_STONE_SHAPE ngModel name="ORNAMENT_CENTER_STONE_SHAPE" *ngIf ="date == 1 || date == 2 || date == 3"   >
                     <option value="" disabled selected>Choose CENTER STONE SHAPE</option>
@@ -71,7 +71,7 @@
                 </select>
             </div>
           </div>
-          <div class="row">
+          <div class="row" *ngIf ="date == 2 || date == 3">
             <div class="input-field col s8 offset-s2 ">
                 <select class="browser-default" (change)="gemOption($event.target.value)" #ORNAMENT_GEMSTONE ngModel name="ORNAMENT_GEMSTONE" *ngIf ="date == 2 || date == 3" >
                     <option value="" disabled selected>Choose GEMSTONE</option>
@@ -115,7 +115,7 @@
                 </select>
             </div>
           </div>
-          <div class="row"> 
+          <div class="row" *ngIf ="date == 2 || date == 3"> 
             <div class="input-field col s8 offset-s2 ">
                 <select class="browser-default" (change)="colorOption($event.target.value)" #ORNAMENT_GEMSTONE_COLOR ngModel name="ORNAMENT_GEMSTONE_COLOR" *ngIf =" date == 2 || date == 3" >
                     <option value="" disabled selected>Choose GEMSTONE COLOR</option>

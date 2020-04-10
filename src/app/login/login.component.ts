@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   isLoginError: boolean = false;
   constructor(private userService: UserService, private router: Router, private toastr: ToastrService) { }
   userpattern = '^[a-z0-9_-]{3,15}$';
+  passwordPattern = '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}';
 
   ngOnInit() {
   }

@@ -131,6 +131,17 @@ export class ReadspecificComponent implements OnInit  {
       }
     });
   }
-
+  changepassword() {
+    this.router.navigate(['/changepassword']);
+  }
+  Logout() {
+    localStorage.removeItem('token');
+    console.log('You Are Logged Out');
+    this.toastr.error('logged out');
+    this.router.navigate(['/login']);
+  }
+  Createornaments() {
+    this.router.navigate(['/types']);
+  }
 
  }

@@ -1,4 +1,21 @@
-<app-navbar></app-navbar>
+<div class="navbar-fixed">
+  <nav class="blue-grey">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <a (click)="Logout()">Logout</a>
+        </li>
+        <li>
+          <a (click)=changepassword()>Change Password</a>
+        </li>
+        <li>
+          <a (click)=Createornaments()>Create new Ornament</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
 <hr>
 
 
@@ -6,9 +23,15 @@
 <div class="row">
   <div class="col s8 offset-s2 ">
     <div class="sm-jumbotron center-align">
-      <h5>Your Ornaments</h5>
+      <h5>Ornaments</h5>
     </div>
-    <div class="card" *ngFor="let question of data.results">
+    <div *ngIf="data.loading" class="uk-container uk-text-center uk-margin">
+      <div uk-spinner="ratio: 3"></div>
+    </div>
+    <div *ngIf="data.count == 0">
+      <p style="text-align: center;">No Ornament to show </p>
+    </div>
+    <div class="card" *ngFor="let question of data.results" >
       <div class="card-image" *ngIf="question.ornament_file_field">
         <img src="{{question.ornament_file_field.IMAGE_FILE_ONE}}" >
         <span class="card-title"></span>

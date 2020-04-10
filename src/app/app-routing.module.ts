@@ -44,6 +44,7 @@ const routes: Routes = [
   { path: 'customer', component: CustomerComponent},
   { path: 'read', component: ReadComponent},
   { path: 'update', component: UpdateComponent},
+
   { path: 'radiofill', component: RadiofillComponent},
   { path: 'ornamentread', component: OrnamentreadComponent},
   { path: 'Ornaringtype', component: OrnaringtypeComponent},
