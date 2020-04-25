@@ -12,6 +12,12 @@ export class BanglesupdateComponent implements OnInit {
   fileToUploadone: File = null;
   fileToUploadtwo: File = null;
   fileToUploadthree: File = null;
+  loading: any;
+  date: any;
+  center: any;
+  stone: any;
+  gem: any;
+  color: any;
   anni: any = {};
   annj: any = {};
   annk: any = {};
@@ -51,6 +57,32 @@ export class BanglesupdateComponent implements OnInit {
     this.festival();
     this.Banglesize();
     this.metal();
+    this.selectOption();
+  }
+  selectOption() {
+    console.log('null', localStorage.getItem('ORNAMENT_MATERIAL'));
+    this.date = localStorage.getItem('ORNAMENT_MATERIAL') ;
+    console.log(this.date);
+  }
+  centerOption(value) {
+    console.log(value);
+    this.center = value;
+    console.log(this.center);
+  }
+  stoneOption(value) {
+    console.log(value);
+    this.stone = value;
+    console.log(this.stone);
+  }
+  gemOption(value) {
+    console.log(value);
+    this.gem = value;
+    console.log(this.gem);
+  }
+  colorOption(value) {
+    console.log(value);
+    this.color = value;
+    console.log(this.color);
   }
 
   read() {
@@ -132,8 +164,9 @@ export class BanglesupdateComponent implements OnInit {
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
       } else {
+      // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const
       var a = [], b = [], prev;
-      this.metalb.sort();
+      this.metalb.sort(); // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.metalb.length; i++ ) {
         if ( this.metalb[i] !== prev ) {
             a.push(this.metalb[i]);
@@ -144,7 +177,8 @@ export class BanglesupdateComponent implements OnInit {
         prev = this.metalb[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -184,8 +218,10 @@ export class BanglesupdateComponent implements OnInit {
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
       } else {
+      // tslint:disable-next-line: no-var-keyword prefer-const one-variable-per-declaration
       var a = [], b = [], prev;
       this.asian.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.asian.length; i++ ) {
         if ( this.asian[i] !== prev ) {
             a.push(this.asian[i]);
@@ -196,7 +232,9 @@ export class BanglesupdateComponent implements OnInit {
         prev = this.asian[i];
       }
       // return [a, b];
+      // tslint:disable-next-line: no-var-keyword
       var i = 0;
+      // tslint:disable-next-line: prefer-for-of no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -235,8 +273,10 @@ export class BanglesupdateComponent implements OnInit {
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
       } else {
+      // tslint:disable-next-line: one-variable-per-declaration  no-var-keyword prefer-const
       var a = [], b = [], prev;
       this.asin.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.asin.length; i++ ) {
         if ( this.asin[i] !== prev ) {
             a.push(this.asin[i]);
@@ -247,7 +287,9 @@ export class BanglesupdateComponent implements OnInit {
         prev = this.asin[i];
       }
       // return [a, b];
+      // tslint:disable-next-line: no-var-keyword
       var i = 0;
+      // tslint:disable-next-line: no-var-keyword  prefer-for-of
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -287,8 +329,10 @@ export class BanglesupdateComponent implements OnInit {
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
       } else {
+      // tslint:disable-next-line: one-variable-per-declaration prefer-const no-var-keyword
       var a = [], b = [], prev;
       this.themeb.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.themeb.length; i++ ) {
         if ( this.themeb[i] !== prev ) {
             a.push(this.themeb[i]);
@@ -299,7 +343,9 @@ export class BanglesupdateComponent implements OnInit {
         prev = this.themeb[i];
       }
       // return [a, b];
+      // tslint:disable-next-line: no-var-keyword
       var i = 0;
+      // tslint:disable-next-line: prefer-for-of no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -339,9 +385,10 @@ export class BanglesupdateComponent implements OnInit {
         (document.getElementById('4')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else {      // tslint:disable-next-line: one-variable-per-declaration prefer-const no-var-keyword
       var a = [], b = [], prev;
       this.curatedb.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.curatedb.length; i++ ) {
         if ( this.curatedb[i] !== prev ) {
             a.push(this.curatedb[i]);
@@ -352,7 +399,9 @@ export class BanglesupdateComponent implements OnInit {
         prev = this.curatedb[i];
       }
       // return [a, b];
+      // tslint:disable-next-line: no-var-keyword
       var i = 0;
+      // tslint:disable-next-line: prefer-for-of no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -393,9 +442,10 @@ export class BanglesupdateComponent implements OnInit {
         (document.getElementById('5')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration prefer-const no-var-keyword
       var a = [], b = [], prev;
       this.festib.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.festib.length; i++ ) {
         if ( this.festib[i] !== prev ) {
             a.push(this.festib[i]);
@@ -406,7 +456,8 @@ export class BanglesupdateComponent implements OnInit {
         prev = this.festib[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: prefer-for-of no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -441,15 +492,16 @@ export class BanglesupdateComponent implements OnInit {
     }
 
   }
-  six(){
+  six() {
     if ((document.getElementById('6')as HTMLInputElement).checked) {
       if (this.bsizeb.length === 0 ) {
         (document.getElementById('6')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration prefer-const no-var-keyword
       var a = [], b = [], prev;
       this.bsizeb.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.bsizeb.length; i++ ) {
         if ( this.bsizeb[i] !== prev ) {
             a.push(this.bsizeb[i]);
@@ -460,7 +512,8 @@ export class BanglesupdateComponent implements OnInit {
         prev = this.bsizeb[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: prefer-for-of no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -499,13 +552,17 @@ export class BanglesupdateComponent implements OnInit {
     if (this.asion.length === 0 || this.asan.length === 0 || this.themea.length === 0 || this.curateda.length === 0 || this.metala.length === 0 || this.festia.length === 0 || this.bsizea.length === 0) {
       alert('check the confirmation checkboxex to proceed');
     } else {
+    this.loading = true;
       // tslint:disable-next-line: max-line-length
-    this.userService.banglesupdate(ORNAMENT_SHOPFOR.value , WEIGHT.value, this.metala, this.asion, this.asan, this.themea, this.curateda , this.festia, this.bsizea, ORNAMENT_BANGLE_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
+    this.userService.banglesupdate(ORNAMENT_SHOPFOR.value , WEIGHT.value, this.metala, this.asion, this.asan, this.themea, this.curateda , this.festia, this.bsizea, ORNAMENT_BANGLE_STYLE.value, this.center , this.stone, this.gem, this.color, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
       (data: any) => {
+        this.loading = false;
         console.log('done', data);
         if (data.status === 201) {
           this.toastr.success('Ornament Succesfully Created');
           this.router.navigate(['./readSpecific']);
+        } else {
+          this.toastr.error('fill the complete form');
         }
       }
     );

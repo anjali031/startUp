@@ -28,15 +28,15 @@ export class ReadComponent implements OnInit {
       }
     });
   }
-  update() {
-    this.router.navigate(['/update']);
-  }
-  ornament() {
-    this.router.navigate(['/types']);
-  }
-  ornamentread() {
-    this.router.navigate(['/ornamentread']);
-  }
+// update() {
+ // this.router.navigate(['/update']);
+ // }
+ // ornament() {
+   // this.router.navigate(['/types']);
+ // }
+ // ornamentread() {
+   // this.router.navigate(['/ornamentread']);
+ // }
   changepassword() {
     this.router.navigate(['/changepassword']);
   }

@@ -31,17 +31,18 @@ export class UpdateComponent implements OnInit {
     });
   }
   print() {
-    (document.getElementById('name_of_firm')as HTMLInputElement).value = this.data.data.NAME_OF_FIRM;
-    (document.getElementById('address_of_firm')as HTMLInputElement).value = this.data.data.ADDRESS_OF_FIRM;
-    (document.getElementById('contact_name')as HTMLInputElement).value = this.data.data.CONTACT_NAME;
-    (document.getElementById('contact_number')as HTMLInputElement).value = this.data.data.CONTACT_NUMBER;
-    (document.getElementById('contact_mail_id')as HTMLInputElement).value = this.data.data.CONTACT_MAIL_ID;
-    (document.getElementById('gst_number')as HTMLInputElement).value = this.data.data.GST_NUMBER;
-    (document.getElementById('pan_number')as HTMLInputElement).value = this.data.data.PAN_NUMBER;
-    (document.getElementById('owner_name')as HTMLInputElement).value = this.data.data.OWNER_NAME;
-    (document.getElementById('owner_number')as HTMLInputElement).value = this.data.data.OWNER_NUMBER;
-    (document.getElementById('owner_email')as HTMLInputElement).value = this.data.data.OWNER_EMAIL;
-
+    this.jeweller.NAME_OF_FIRM = this.data.data.NAME_OF_FIRM;
+    this.jeweller.ADDRESS_OF_FIRM = this.data.data.ADDRESS_OF_FIRM;
+    this.jeweller.CITY = this.data.data.CITY;
+    this.jeweller.STATE = this.data.data.STATE;
+    this.jeweller.CONTACT_NAME = this.data.data.CONTACT_NAME;
+    this.jeweller.CONTACT_NUMBER = this.data.data.CONTACT_NUMBER;
+    this.jeweller.CONTACT_MAIL_ID = this.data.data.CONTACT_MAIL_ID;
+    this.jeweller.GST_NUMBER = this.data.data.GST_NUMBER;
+    this.jeweller.PAN_NUMBER = this.data.data.PAN_NUMBER;
+    this.jeweller.OWNER_NAME = this.data.data.OWNER_NAME;
+    this.jeweller.OWNER_NUMBER = this.data.data.OWNER_NUMBER;
+    this.jeweller.OWNER_EMAIL = this.data.data.OWNER_EMAIL;
   }
 
   resetForm(form?: NgForm) {
@@ -64,36 +65,19 @@ export class UpdateComponent implements OnInit {
     };
   }
 
- // address() {
-  // if ((document.getElementById('same')as HTMLInputElement).checked)  {
-    // (document.getElementById('secondaryaddress')as HTMLInputElement).value = (document.
-      //       getElementById('primaryaddress')as HTMLInputElement).value;
-   // (document.getElementById('secondaryzip')as HTMLInputElement).value = (document.
-     //   /     getElementById('primaryzip')as HTMLInputElement).value;
-//    } else {
-  //    (document.getElementById('secondaryaddress')as HTMLInputElement).value = '';
-    //  (document.getElementById('secondaryzip')as HTMLInputElement).value = '';
-   // }
-  // (document.getElementById('secondaryaddress')as HTMLInputElement).value = (document.
-    //  getElementById('primaryaddress')as HTMLInputElement).value;
-//  (document.getElementById('secondaryzip')as HTMLInputElement).value = (document.
-  //    getElementById('primaryzip')as HTMLInputElement).value;
 
-  // }
 
   addres() {
     if ((document.getElementById('same')as HTMLInputElement).checked) {
       console.log('checked');
-      (document.getElementById('owner_number')as HTMLInputElement).value = (document.
+      this.jeweller.OWNER_NUMBER = (document.
         getElementById('contact_number')as HTMLInputElement).value;
-      (document.getElementById('owner_email')as HTMLInputElement).value = (document.
-        getElementById('contact_mail_id')as HTMLInputElement).value;
+      this.jeweller.OWNER_EMAIL = (document.getElementById('contact_mail_id')as HTMLInputElement).value;
     } else {
       console.log('uncheked');
-      (document.getElementById('owner_number')as HTMLInputElement).value = '';
-      (document.getElementById('owner_email')as HTMLInputElement).value = '';
+      this.jeweller.OWNER_NUMBER  = '';
+      this.jeweller.OWNER_EMAIL = '';
     }
-    console.log((document.getElementById('owner_email')as HTMLInputElement).value );
     }
 
   call() {

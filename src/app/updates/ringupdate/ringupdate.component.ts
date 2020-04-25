@@ -12,6 +12,12 @@ export class RingupdateComponent implements OnInit {
   fileToUploadone: File = null;
   fileToUploadtwo: File = null;
   fileToUploadthree: File = null;
+  loading: any;
+  date: any;
+  center: any;
+  stone: any;
+  gem: any;
+  color: any;
   anni: any = {};
   annj: any = {};
   annk: any = {};
@@ -52,10 +58,35 @@ export class RingupdateComponent implements OnInit {
     this.festival();
     this.ringsize();
     this.metal();
+    this.selectOption();
   }
-  // arr=[1,1,2,1,5,8,8,8,4,4,8,6,6,6,8,7]
- // var a = [], b = [], prev,final=[];
 
+
+  selectOption() {
+    console.log('null', localStorage.getItem('ORNAMENT_MATERIAL'));
+    this.date = localStorage.getItem('ORNAMENT_MATERIAL') ;
+    console.log(this.date);
+  }
+  centerOption(value) {
+    console.log(value);
+    this.center = value;
+    console.log(this.center);
+  }
+  stoneOption(value) {
+    console.log(value);
+    this.stone = value;
+    console.log(this.stone);
+  }
+  gemOption(value) {
+    console.log(value);
+    this.gem = value;
+    console.log(this.gem);
+  }
+  colorOption(value) {
+    console.log(value);
+    this.color = value;
+    console.log(this.color);
+  }
 
 read() {
     this.userService.readorn().subscribe( data => {
@@ -135,9 +166,10 @@ ringsize() {
         (document.getElementById('zero')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       var a = [], b = [], prev;
       this.metalb.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.metalb.length; i++ ) {
         if ( this.metalb[i] !== prev ) {
             a.push(this.metalb[i]);
@@ -148,7 +180,8 @@ ringsize() {
         prev = this.metalb[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -187,9 +220,10 @@ ringsize() {
         (document.getElementById('1')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       var a = [], b = [], prev;
       this.asian.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.asian.length; i++ ) {
         if ( this.asian[i] !== prev ) {
             a.push(this.asian[i]);
@@ -200,7 +234,8 @@ ringsize() {
         prev = this.asian[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -238,9 +273,10 @@ ringsize() {
         (document.getElementById('2')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       var a = [], b = [], prev;
       this.asin.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.asin.length; i++ ) {
         if ( this.asin[i] !== prev ) {
             a.push(this.asin[i]);
@@ -251,7 +287,8 @@ ringsize() {
         prev = this.asin[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -290,9 +327,10 @@ ringsize() {
         (document.getElementById('3')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       var a = [], b = [], prev;
       this.themeb.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.themeb.length; i++ ) {
         if ( this.themeb[i] !== prev ) {
             a.push(this.themeb[i]);
@@ -303,7 +341,8 @@ ringsize() {
         prev = this.themeb[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -343,9 +382,10 @@ ringsize() {
         (document.getElementById('4')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       var a = [], b = [], prev;
       this.curatedb.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.curatedb.length; i++ ) {
         if ( this.curatedb[i] !== prev ) {
             a.push(this.curatedb[i]);
@@ -356,7 +396,8 @@ ringsize() {
         prev = this.curatedb[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -397,9 +438,10 @@ ringsize() {
         (document.getElementById('5')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       var a = [], b = [], prev;
       this.festib.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.festib.length; i++ ) {
         if ( this.festib[i] !== prev ) {
             a.push(this.festib[i]);
@@ -410,7 +452,8 @@ ringsize() {
         prev = this.festib[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -445,15 +488,16 @@ ringsize() {
     }
 
   }
-  six(){
+  six() {
     if ((document.getElementById('6')as HTMLInputElement).checked) {
       if (this.rsizeb.length === 0 ) {
         (document.getElementById('6')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       var a = [], b = [], prev;
       this.rsizeb.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.rsizeb.length; i++ ) {
         if ( this.rsizeb[i] !== prev ) {
             a.push(this.rsizeb[i]);
@@ -464,7 +508,8 @@ ringsize() {
         prev = this.rsizeb[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -502,13 +547,18 @@ OnSubmit(ORNAMENT_SHOPFOR, WEIGHT , ORNAMENT_RING_STYLE, CAD_FILE , IMAGE_FILE_O
     // tslint:disable-next-line: max-line-length
     if (this.asion.length === 0 || this.asan.length === 0 || this.themea.length === 0 || this.curateda.length === 0 || this.metala.length === 0 || this.festia.length === 0 || this.rsizea.length === 0) {
       alert('check the confirmation checkboxex to proceed');
-    } else {  // tslint:disable-next-line: max-line-length
-    this.userService.mliupdate(ORNAMENT_SHOPFOR.value , WEIGHT.value, this.metala, this.asion,  this.asan,  this.themea, this.curateda , this.festia,  this.rsizea,  ORNAMENT_RING_STYLE.value, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
+    } else {
+    this.loading = true;
+      // tslint:disable-next-line: max-line-length
+    this.userService.mliupdate(ORNAMENT_SHOPFOR.value , WEIGHT.value, this.metala, this.asion,  this.asan,  this.themea, this.curateda , this.festia,  this.rsizea,  ORNAMENT_RING_STYLE.value, this.center , this.stone, this.gem, this.color, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
       (data: any) => {
+        this.loading = false;
         console.log('done', data);
         if (data.status === 201) {
           this.toastr.success('Ornament Succesfully Created');
           this.router.navigate(['./readSpecific']);
+        } else {
+          this.toastr.error('fill the complete form');
         }
       }
     );

@@ -13,44 +13,44 @@ export class OrnamentcufflinkComponent implements OnInit {
   ngOnInit() {
   }
 
-  cufflink() {
-    this.router.navigate(['/cufflink']);
-  }
-pendantwithearing() {
-  this.router.navigate(['/Pendantearringtype']);
-}
-pendant() {
-  this.router.navigate(['/Pendant']);
-}
-chain() {
-  this.router.navigate(['/chain']);
-}
-sets() {
-  this.router.navigate(['/set']);
-}
-Mangalsutra() {
-  this.router.navigate(['/mangalsutra']);
-}
-necklace() {
-  this.router.navigate(['/Necklace']);
-}
-chainwithpendant() {
-  this.router.navigate(['/chainwithpendant']);
-}
-bangles() {
-  this.router.navigate(['/Bangles']);
-}
-bracelet() {
-  this.router.navigate(['/Bracelet']);
-}
-earring() {
-  this.router.navigate(['/Ornaearringtype']);
-}
-nosepin() {
-  this.router.navigate(['/nosepin']);
-}
- ring() {
-  this.router.navigate(['/Ornaringtype']);
- }
+// cufflink() {
+ // this.router.navigate(['/cufflink']);
+// }
+// pendantwithearing() {
+ // this.router.navigate(['/Pendantearringtype']);
+// }
+// pendant() {
+ // this.router.navigate(['/Pendant']);
+// }
+// chain() {
+  // this.router.navigate(['/chain']);
+// }
+// sets() {
+  // this.router.navigate(['/set']);
+// }
+// Mangalsutra() {
+//  this.router.navigate(['/mangalsutra']);
+// }
+// necklace() {
+  // this.router.navigate(['/Necklace']);
+// }
+// chainwithpendant() {
+  // this.router.navigate(['/chainwithpendant']);
+// }
+// bangles() {
+//  this.router.navigate(['/Bangles']);
+// }
+// bracelet() {
+  // this.router.navigate(['/Bracelet']);
+// }
+// earring() {
+ // this.router.navigate(['/Ornaearringtype']);
+ // }
+// nosepin() {
+ // this.router.navigate(['/nosepin']);
+// }
+// ring() {
+ // this.router.navigate(['/Ornaringtype']);
+// }
 }
 

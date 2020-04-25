@@ -187,22 +187,22 @@ export class UserService {
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
       formData.append('ORNAMENT_METAL', i);
-      }
+      } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
@@ -226,30 +226,31 @@ export class UserService {
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
 
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
 
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
 
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of festia) {
 
     formData.append('ORNAMENT_FESTIVAL', i);
     }
     formData.append('ORNAMENT_RING_STYLE', ORNAMENT_RING_STYLE);
+    // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of rsizea) {
     formData.append('ORNAMENT_RING_SIZE', i);
     }
@@ -274,22 +275,22 @@ export class UserService {
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword  // tslint:disable-next-line: prefer-const
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
@@ -315,26 +316,26 @@ export class UserService {
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
 
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
 
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
 
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
 
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of festia) {
 
     formData.append('ORNAMENT_FESTIVAL', i);
@@ -361,21 +362,22 @@ export class UserService {
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
+    // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword  // tslint:disable-next-line: prefer-const
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
@@ -401,26 +403,27 @@ export class UserService {
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
     formData.append('ORNAMENT_BRACELET_STYLE', ORNAMENT_BRACELET_STYLE);
+    // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of bsizea) {
     formData.append('ORNAMENT_BRACELET_SIZE', i);
     }
@@ -444,26 +447,27 @@ export class UserService {
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
     formData.append('ORNAMENT_BANGLE_STYLE', ORNAMENT_BANGLE_STYLE);
+    // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of bsizea) {
     formData.append('ORNAMENT_BANGLE_SIZE', i);
     }
@@ -488,25 +492,27 @@ export class UserService {
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
+    // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
     formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
+    // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of bsizea) {
     formData.append('ORNAMENT_CHAIN_LENGTH', i);
     }
@@ -530,26 +536,27 @@ export class UserService {
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
     formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
+    // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of bsizea) {
     formData.append('ORNAMENT_CHAIN_LENGTH', i);
     }
@@ -573,22 +580,22 @@ export class UserService {
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
@@ -615,26 +622,27 @@ export class UserService {
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
     formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
+    // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of bsizea) {
     formData.append('ORNAMENT_CHAIN_LENGTH', i);
     }
@@ -658,22 +666,22 @@ export class UserService {
     formData.append('ORNAMENT_TYPE', ORNAMENT_TYPE);
     formData.append('ORNAMENT_MATERIAL', ORNAMENT_MATERIAL);
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
@@ -714,30 +722,34 @@ export class UserService {
     return this.http.put(this.rootURL + '/api/jeweller/v1/1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
     // tslint:disable-next-line: max-line-length
-  multiupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any, themea: any, curateda: any, festia: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  multiupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any, themea: any, curateda: any, festia: any, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
     formData.append('ORNAMENT_MATERIAL', localStorage.getItem('ORNAMENT_MATERIAL'));
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
       formData.append('ORNAMENT_METAL', i);
-      }
+      } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', center);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', stone);
+    formData.append('ORNAMENT_GEMSTONE', gem);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', color);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -779,39 +791,43 @@ export class UserService {
     return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
 // tslint:disable-next-line: max-line-length
-  mliupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any,  festia: any,  rsizea: any,  ORNAMENT_RING_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  mliupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any,  festia: any,  rsizea: any,  ORNAMENT_RING_STYLE: string, center: any, stone: any, gem: any, color: any,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
     formData.append('ORNAMENT_MATERIAL', localStorage.getItem('ORNAMENT_MATERIAL'));
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
 
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
 
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
 
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of festia) {
 
     formData.append('ORNAMENT_FESTIVAL', i);
     }
     formData.append('ORNAMENT_RING_STYLE', ORNAMENT_RING_STYLE);
+    // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of rsizea) {
     formData.append('ORNAMENT_RING_SIZE', i);
     }
-
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', center);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', stone);
+    formData.append('ORNAMENT_GEMSTONE', gem);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', color);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -824,32 +840,35 @@ export class UserService {
 
 
   // tslint:disable-next-line: max-line-length
-  earupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any, themea: any, curateda: any, festia: any, ORNAMENT_EARRING_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  earupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any, themea: any, curateda: any, festia: any, ORNAMENT_EARRING_STYLE: string, center: any, stone: any, gem: any, color: any,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
     formData.append('ORNAMENT_MATERIAL', localStorage.getItem('ORNAMENT_MATERIAL'));
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
     formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
-
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', center);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', stone);
+    formData.append('ORNAMENT_GEMSTONE', gem);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', color);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -862,36 +881,39 @@ export class UserService {
 
 
   // tslint:disable-next-line: max-line-length
-  nosepinupdate(ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any, festia: any,  ORNAMENT_NOSEPIN_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  nosepinupdate(ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any, festia: any,  ORNAMENT_NOSEPIN_STYLE: string, center: any, stone: any, gem: any, color: any,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
     formData.append('ORNAMENT_MATERIAL', localStorage.getItem('ORNAMENT_MATERIAL'));
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
 
     formData.append('ORNAMENT_OCCASION', i);
-    }
-
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
 
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
 
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
 
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of festia) {
 
     formData.append('ORNAMENT_FESTIVAL', i);
     }
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', center);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', stone);
+    formData.append('ORNAMENT_GEMSTONE', gem);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', color);
     formData.append('ORNAMENT_NOSEPIN_STYLE', ORNAMENT_NOSEPIN_STYLE);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
@@ -904,33 +926,36 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  pendantwithearingupdate(ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any, themea: any, curateda: any, festia: any, ORNAMENT_EARRING_STYLE: string, ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  pendantwithearingupdate(ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any, themea: any, curateda: any, festia: any, ORNAMENT_EARRING_STYLE: string, ORNAMENT_PENDANT_STYLE: string, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
     formData.append('ORNAMENT_MATERIAL', localStorage.getItem('ORNAMENT_MATERIAL'));
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
     formData.append('ORNAMENT_EARRING_STYLE', ORNAMENT_EARRING_STYLE);
     formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
-
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', center);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', stone);
+    formData.append('ORNAMENT_GEMSTONE', gem);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', color);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -942,34 +967,39 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  braceletupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any,  themea: any,  curateda: any, festia: any, bsizea: any, ORNAMENT_BRACELET_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  braceletupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any,  themea: any,  curateda: any, festia: any, bsizea: any, ORNAMENT_BRACELET_STYLE: string, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
     formData.append('ORNAMENT_MATERIAL', localStorage.getItem('ORNAMENT_MATERIAL'));
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
     formData.append('ORNAMENT_BRACELET_STYLE', ORNAMENT_BRACELET_STYLE);
+    // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of bsizea) {
     formData.append('ORNAMENT_BRACELET_SIZE', i);
     }
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', center);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', stone);
+    formData.append('ORNAMENT_GEMSTONE', gem);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', color);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -981,34 +1011,39 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  banglesupdate(ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_BANGLE_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  banglesupdate(ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any,  festia: any,  bsizea: any,  ORNAMENT_BANGLE_STYLE: string, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
     formData.append('ORNAMENT_MATERIAL', localStorage.getItem('ORNAMENT_MATERIAL'));
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     formData.append('ORNAMENT_BANGLE_STYLE', ORNAMENT_BANGLE_STYLE);
+    // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of bsizea) {
     formData.append('ORNAMENT_BANGLE_SIZE', i);
     }
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', center);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', stone);
+    formData.append('ORNAMENT_GEMSTONE', gem);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', color);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -1020,34 +1055,39 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  chainupdate(ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any, curateda: any,  festia: any,  bsizea: any,  ORNAMENT_CHAIN_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  chainupdate(ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any, curateda: any,  festia: any,  bsizea: any,  ORNAMENT_CHAIN_STYLE: string, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
     formData.append('ORNAMENT_MATERIAL', localStorage.getItem('ORNAMENT_MATERIAL'));
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
+    // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of bsizea) {
     formData.append('ORNAMENT_CHAIN_LENGTH', i);
     }
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', center);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', stone);
+    formData.append('ORNAMENT_GEMSTONE', gem);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', color);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -1059,32 +1099,35 @@ export class UserService {
   }
 
   // tslint:disable-next-line: max-line-length
-  necklaceupdate(ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any, festia: any,  ORNAMENT_NECKLACE_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  necklaceupdate(ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any,  curateda: any, festia: any,  ORNAMENT_NECKLACE_STYLE: string, center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
     formData.append('ORNAMENT_MATERIAL', localStorage.getItem('ORNAMENT_MATERIAL'));
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
-    formData.append('WEIGHT', WEIGHT);
+    formData.append('WEIGHT', WEIGHT); // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
     formData.append('ORNAMENT_NECKLACE_STYLE', ORNAMENT_NECKLACE_STYLE);
-
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', center);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', stone);
+    formData.append('ORNAMENT_GEMSTONE', gem);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', color);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -1098,36 +1141,41 @@ export class UserService {
 
 
   // tslint:disable-next-line: max-line-length
-  chaitpenupdate(ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any, themea: any, curateda: any, festia: any,  bsizea: any,  ORNAMENT_CHAIN_STYLE: string, ORNAMENT_PENDANT_STYLE: string, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  chaitpenupdate(ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any, asan: any, themea: any, curateda: any, festia: any,  bsizea: any,  ORNAMENT_CHAIN_STYLE: string, ORNAMENT_PENDANT_STYLE: string,  center: any, stone: any, gem: any, color: any, fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
     formData.append('ORNAMENT_MATERIAL', localStorage.getItem('ORNAMENT_MATERIAL'));
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
+    // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
     formData.append('ORNAMENT_CHAIN_STYLE', ORNAMENT_CHAIN_STYLE);
+    // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of bsizea) {
     formData.append('ORNAMENT_CHAIN_LENGTH', i);
     }
     formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
-
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', center);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', stone);
+    formData.append('ORNAMENT_GEMSTONE', gem);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', color);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);
@@ -1138,32 +1186,36 @@ export class UserService {
     return this.http.put(this.rootURL + '/api/jeweller/v1/ornament/' + localStorage.getItem('ORNAMENT_ID') + '/update/', formData,  {headers: Headers});
   }
 // tslint:disable-next-line: max-line-length
-  pendantupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any, curateda: any, festia: any,  ORNAMENT_PENDANT_STYLE: string,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
+  pendantupdate( ORNAMENT_SHOPFOR: string , WEIGHT: string, metala: any, asion: any,  asan: any,  themea: any, curateda: any, festia: any,  ORNAMENT_PENDANT_STYLE: string,  center: any, stone: any, gem: any, color: any,  fileToUpload: File, fileToUploadone: File, fileToUploadtwo: File , fileToUploadthree: File) {
     const formData: FormData = new FormData();
     formData.append('ORNAMENT_TYPE', localStorage.getItem('ORNAMENT_TYPE'));
     formData.append('ORNAMENT_MATERIAL', localStorage.getItem('ORNAMENT_MATERIAL'));
     formData.append('ORNAMENT_SHOPFOR', ORNAMENT_SHOPFOR);
     formData.append('WEIGHT', WEIGHT);
+    // tslint:disable-next-line: no-var-keyword
     for (var i of metala) {
     formData.append('ORNAMENT_METAL', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asion) {
     formData.append('ORNAMENT_OCCASION', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of asan) {
     formData.append('ORNAMENT_GIFT', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of themea) {
     formData.append('ORNAMENT_THEME', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword
     for (var i of curateda) {
     formData.append('ORNAMENT_CURATED_BY', i);
-    }
+    } // tslint:disable-next-line: no-var-keyword // tslint:disable-next-line: prefer-const
     for (var i of festia) {
     formData.append('ORNAMENT_FESTIVAL', i);
     }
     formData.append('ORNAMENT_PENDANT_STYLE', ORNAMENT_PENDANT_STYLE);
-
+    formData.append('ORNAMENT_CENTER_STONE_WEIGHT', center);
+    formData.append('ORNAMENT_CENTER_STONE_SHAPE', stone);
+    formData.append('ORNAMENT_GEMSTONE', gem);
+    formData.append('ORNAMENT_GEMSTONE_COLOR', color);
     formData.append('CAD_FILE', fileToUpload, fileToUpload.name);
     formData.append('IMAGE_FILE_ONE', fileToUploadone, fileToUploadone.name);
     formData.append('IMAGE_FILE_TWO', fileToUploadtwo, fileToUploadtwo.name);

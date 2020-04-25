@@ -65,16 +65,14 @@ export class RadiofillComponent implements OnInit {
   addres() {
     if ((document.getElementById('same')as HTMLInputElement).checked) {
       console.log('checked');
-      (document.getElementById('owner_number')as HTMLInputElement).value = (document.
+      this.jeweller.OWNER_NUMBER = (document.
         getElementById('contact_number')as HTMLInputElement).value;
-      (document.getElementById('owner_email')as HTMLInputElement).value = (document.
-        getElementById('contact_mail_id')as HTMLInputElement).value;
+      this.jeweller.OWNER_EMAIL = (document.getElementById('contact_mail_id')as HTMLInputElement).value;
     } else {
       console.log('uncheked');
-      (document.getElementById('owner_number')as HTMLInputElement).value = '';
-      (document.getElementById('owner_email')as HTMLInputElement).value = '';
+      this.jeweller.OWNER_NUMBER  = '';
+      this.jeweller.OWNER_EMAIL = '';
     }
-    console.log((document.getElementById('owner_email')as HTMLInputElement).value );
     }
 
   call() {

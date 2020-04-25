@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <hr>
 <div class="container">
-    <div class="row">
+    <!--div class="row">
       <div class="col s8 offset-s2">
           <div class="card-panel blue-grey">
             <h4 class="center white-text">Choose your Ornament type</h4>
@@ -22,5 +22,28 @@
           <button class="btn-large btn-submit" type="submit" (click)=cufflink()>cufflink</button><hr>
       
       </div>
-    </div>
+    </div-->
 </div>
+<div class="header col s12">
+  <h2>Choose your Ornament type</h2>
+  <ul class="link-buttons">
+    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/Ornaringtype']"><i class="material-icons right">settings_backup_restore</i>ring</a></li>
+    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/chain']"><i class="material-icons right">settings_backup_restore</i>chain</a></li>
+    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/set']" ><i class="material-icons right">mood</i>sets</a></li>
+  </ul>
+  <ul class="link-buttons">
+    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/Bangles']"><i class="material-icons right">pages</i>bangles</a></li>
+    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/Ornaearringtype']" ><i class="material-icons right">mood</i>earring</a></li>
+    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/Pendant']"><i class="material-icons right">pages</i>Pendant</a></li>
+  </ul>
+  <ul class="link-buttons">
+    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/Necklace']"><i class="material-icons right">settings_backup_restore</i>Necklace</a></li>
+    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/cufflink']" ><i class="material-icons right">mood</i>cufflink</a></li>
+    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/Bracelet']"><i class="material-icons right">settings_backup_restore</i>bracelet</a></li>
+  </ul>
+  <ul class="link-buttons">
+    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/chainwithpendant']" ><i class="material-icons right">mood</i>chain with pendant</a></li>
+    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/mangalsutra']"><i class="material-icons right">pages</i>Mangalsutra</a></li>
+    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/Pendantearringtype']" ><i class="material-icons right">mood</i>pendant with earing</a></li>
+  </ul>
+</div><hr>

@@ -11,10 +11,7 @@ import { PasswordChangeComponent } from './password-change/password-change.compo
 import { CustomerComponent } from './customer/customer.component';
 import { ReadComponent } from './read/read.component';
 import { ToastrModule } from 'ngx-toastr';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
 import { RadiofillComponent } from './radiofill/radiofill.component';
 import { OrnamentreadComponent } from './ornamentread/ornamentread.component';
 import { OrnaringtypeComponent } from './ornament/ornaringtype/ornaringtype.component';
@@ -48,7 +45,6 @@ import { NosepinupdateComponent } from './updates/nosepinupdate/nosepinupdate.co
 import { NavbarComponent } from './navbar/navbar.component';
 import { UpdateComponent } from './update/update.component';
 import { FooterComponent } from './footer/footer.component';
-
 
 @NgModule({
   declarations: [

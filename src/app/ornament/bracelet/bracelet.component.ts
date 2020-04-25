@@ -13,6 +13,7 @@ export class BraceletComponent implements OnInit {
   fileToUploadone: File = null;
   fileToUploadtwo: File = null;
   fileToUploadthree: File = null;
+  loading: any;
   date: any;
   center: any;
   stone: any;
@@ -119,14 +120,14 @@ export class BraceletComponent implements OnInit {
   }
 
   curatedby() {
-    this.userService.ornCurated().subscribe(data=> {
+    this.userService.ornCurated().subscribe(data => {
       console.log(data);
-      this.Curated =data;
+      this.Curated = data;
     });
   }
 
   festival() {
-    this.userService.ornFestival().subscribe(data=> {
+    this.userService.ornFestival().subscribe(data => {
       console.log(data);
       this.Festival = data;
     });
@@ -162,9 +163,10 @@ export class BraceletComponent implements OnInit {
         (document.getElementById('zero')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       var a = [], b = [], prev;
       this.metalb.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.metalb.length; i++ ) {
         if ( this.metalb[i] !== prev ) {
             a.push(this.metalb[i]);
@@ -175,7 +177,8 @@ export class BraceletComponent implements OnInit {
         prev = this.metalb[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -214,9 +217,10 @@ export class BraceletComponent implements OnInit {
         (document.getElementById('1')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       var a = [], b = [], prev;
       this.asian.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.asian.length; i++ ) {
         if ( this.asian[i] !== prev ) {
             a.push(this.asian[i]);
@@ -227,7 +231,8 @@ export class BraceletComponent implements OnInit {
         prev = this.asian[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -266,9 +271,10 @@ export class BraceletComponent implements OnInit {
         (document.getElementById('2')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       var a = [], b = [], prev;
       this.asin.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.asin.length; i++ ) {
         if ( this.asin[i] !== prev ) {
             a.push(this.asin[i]);
@@ -279,7 +285,8 @@ export class BraceletComponent implements OnInit {
         prev = this.asin[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -318,9 +325,10 @@ export class BraceletComponent implements OnInit {
         (document.getElementById('3')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       var a = [], b = [], prev;
       this.themeb.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.themeb.length; i++ ) {
         if ( this.themeb[i] !== prev ) {
             a.push(this.themeb[i]);
@@ -331,7 +339,8 @@ export class BraceletComponent implements OnInit {
         prev = this.themeb[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -371,9 +380,10 @@ export class BraceletComponent implements OnInit {
         (document.getElementById('4')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       var a = [], b = [], prev;
       this.curatedb.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.curatedb.length; i++ ) {
         if ( this.curatedb[i] !== prev ) {
             a.push(this.curatedb[i]);
@@ -384,7 +394,8 @@ export class BraceletComponent implements OnInit {
         prev = this.curatedb[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -424,9 +435,10 @@ export class BraceletComponent implements OnInit {
         (document.getElementById('5')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       var a = [], b = [], prev;
       this.festib.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.festib.length; i++ ) {
         if ( this.festib[i] !== prev ) {
             a.push(this.festib[i]);
@@ -437,7 +449,8 @@ export class BraceletComponent implements OnInit {
         prev = this.festib[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -477,9 +490,10 @@ export class BraceletComponent implements OnInit {
         (document.getElementById('6')as HTMLInputElement).checked = false;
         // tslint:disable-next-line: max-line-length
         alert('you cannot confirm your option without selecting any, select your option and then confirm');
-      } else {
+      } else { // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       var a = [], b = [], prev;
       this.bsizeb.sort();
+      // tslint:disable-next-line: no-var-keyword
       for ( var i = 0; i < this.bsizeb.length; i++ ) {
         if ( this.bsizeb[i] !== prev ) {
             a.push(this.bsizeb[i]);
@@ -490,7 +504,8 @@ export class BraceletComponent implements OnInit {
         prev = this.bsizeb[i];
       }
       // return [a, b];
-      var i = 0;
+      // tslint:disable-next-line: no-var-keyword
+      var i = 0; // tslint:disable-next-line: one-variable-per-declaration no-var-keyword prefer-const prefer-for-of  no-var-keyword
       for (var j = 0; j < b.length; j++) {
         if (b[j] % 2 === 0) {
 
@@ -529,13 +544,17 @@ export class BraceletComponent implements OnInit {
     if (this.asion.length === 0 || this.asan.length === 0 || this.themea.length === 0 || this.curateda.length === 0 || this.metala.length === 0 || this.festia.length === 0 || this.bsizea.length === 0) {
       alert('check the confirmation checkboxex to proceed');
     } else {
+    this.loading = true;
     // tslint:disable-next-line: max-line-length
     this.userService.bracelet(ORNAMENT_TYPE.value , ORNAMENT_MATERIAL.value , ORNAMENT_SHOPFOR.value , WEIGHT.value, this.metala, this.asion, this.asan, this.themea, this.curateda , this.festia, this.bsizea,  ORNAMENT_BRACELET_STYLE.value, this.center , this.stone, this.gem, this.color, this.fileToUpload, this.fileToUploadone, this.fileToUploadtwo, this.fileToUploadthree).subscribe(
       (data: any) => {
+        this.loading = false;
         console.log('done', data);
         if (data.status === 201) {
           this.toastr.success('Ornament Succesfully Created');
           this.router.navigate(['./ornamentread']);
+        } else {
+          this.toastr.error('fill the complete form');
         }
       }
     );
