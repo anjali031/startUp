@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class ReadspecificComponent implements OnInit  {
   data: any = {};
+  desc: any;
+  loading: any;
 
   // tslint:disable-next-line: max-line-length
 
@@ -18,7 +20,9 @@ export class ReadspecificComponent implements OnInit  {
     this.readspecific();
   }
   readspecific() {
+    this.loading = true;
     this.userService.readid().subscribe((data: any ) => {
+      this.loading = false;
       console.log(data);
       this.data = data.data;
     });

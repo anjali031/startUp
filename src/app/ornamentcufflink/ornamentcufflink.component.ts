@@ -13,44 +13,46 @@ export class OrnamentcufflinkComponent implements OnInit {
   ngOnInit() {
   }
 
-// cufflink() {
- // this.router.navigate(['/cufflink']);
-// }
-// pendantwithearing() {
- // this.router.navigate(['/Pendantearringtype']);
-// }
-// pendant() {
- // this.router.navigate(['/Pendant']);
-// }
-// chain() {
-  // this.router.navigate(['/chain']);
-// }
-// sets() {
-  // this.router.navigate(['/set']);
-// }
-// Mangalsutra() {
-//  this.router.navigate(['/mangalsutra']);
-// }
-// necklace() {
-  // this.router.navigate(['/Necklace']);
-// }
-// chainwithpendant() {
-  // this.router.navigate(['/chainwithpendant']);
-// }
-// bangles() {
-//  this.router.navigate(['/Bangles']);
-// }
-// bracelet() {
-  // this.router.navigate(['/Bracelet']);
-// }
-// earring() {
- // this.router.navigate(['/Ornaearringtype']);
- // }
-// nosepin() {
- // this.router.navigate(['/nosepin']);
-// }
-// ring() {
- // this.router.navigate(['/Ornaringtype']);
-// }
+ gemOption(value) {
+   if (value === '1') {
+     this.router.navigate(['/Ornaringtype']);
+   }
+   if (value === '2') {
+    this.router.navigate(['/nosepin']);
+  }
+   if (value === '3') {
+    this.router.navigate(['/Ornaearringtype']);
+  }
+   if (value === '4') {
+    this.router.navigate(['/Bracelet']);
+  }
+   if (value === '5') {
+    this.router.navigate(['/Bangles']);
+  }
+   if (value === '6') {
+    this.router.navigate(['/chainwithpendant']);
+  }
+   if (value === '7') {
+    this.router.navigate(['/Necklace']);
+  }
+   if (value === '8') {
+    this.router.navigate(['/mangalsutra']);
+  }
+   if (value === '9') {
+    this.router.navigate(['/set']);
+  }
+   if (value === '10') {
+    this.router.navigate(['/chain']);
+  }
+   if (value === '11') {
+    this.router.navigate(['/Pendant']);
+  }
+   if (value === '12') {
+    this.router.navigate(['/Pendantearringtype']);
+  }
+   if (value === '13') {
+    this.router.navigate(['/cufflink']);
+  }
+ }
 }
 

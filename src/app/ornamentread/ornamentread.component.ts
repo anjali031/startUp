@@ -11,13 +11,16 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class OrnamentreadComponent implements OnInit {
   data: any = {};
+  loading: any;
   constructor(private userService: UserService, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit() {
     this.page1();
   }
   page1() {
+    this.loading = true;
     this.userService.readorn().subscribe(data => {
+      this.loading = false;
       console.log(data);
       this.data = data;
 

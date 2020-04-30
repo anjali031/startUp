@@ -25,9 +25,6 @@
     <div class="sm-jumbotron center-align">
       <h5>Ornaments</h5>
     </div>
-    <div *ngIf="data.loading" class="uk-container uk-text-center uk-margin">
-      <div uk-spinner="ratio: 3"></div>
-    </div>
     <div *ngIf="data.count == 0">
       <p style="text-align: center;">No Ornament to show </p>
     </div>
@@ -38,10 +35,16 @@
       </div>
       <hr>
       <div class="card-content">
-        <p>{{question.ORNAMENT_ID}}</p>
-        <p>{{question.WEIGHT}}</p>
+        <div class="row">
+          <div class="col s4">
+            <p>{{question.ORNAMENT_ID}}</p>
+            <p>{{question.WEIGHT}}</p>
+          </div>
+          <div class="col s8">
+            <button class="btn-large btn-submit" style="float: right;" type="submit" (click)="read(question.ORNAMENT_ID)" ><i class="material-icons right">send</i> More About this</button>
+          </div>
+        </div>
       </div>
-      <button class="btn-large btn-submit" type="submit" (click)="read(question.ORNAMENT_ID)">More About this</button>
     </div>
     <div class="row">
       <div class="col s8 offset s2" *ngIf="data.previous" >

@@ -11,6 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ReadComponent implements OnInit {
   data: any = {};
+  loading: any;
 
   constructor(private userService: UserService, private router: Router, private toastr: ToastrService)  { }
 
@@ -18,7 +19,9 @@ export class ReadComponent implements OnInit {
     this.readuser();
   }
   readuser() {
+    this.loading = true;
     this.userService.readForm().subscribe(data => {
+      this.loading = false;
       console.log(data);
       this.data = data;
       if (this.data.statuscode === 200) {

@@ -4,88 +4,76 @@
 <div class="row" >
     <div class="col s12 ">
         <div class="sm-jumbotron center-align">
-          <h5>Your Profile</h5>
+          <h5 style="color: white">Your Profile</h5>
         </div>
-        <div class="card blue-white darken-1" *ngIf ="data.data" >
-          <div class="card-content white-text " >
-            <div class="row">
-              <div class="col s3">
-                <img src="assets\image\download.png" class= "col s6" style="border: 1px solid rgb(24, 12, 94);border-radius: 4px;padding: 5px;width: 150px;"  alt="">  
-                <p class= "col s7" style="text-transform: uppercase;"><strong>{{data.data.username}}</strong></p>            
+        <div class="card blue-white darken-1"  >
+          <div class="input-field col s6 offset-s3">
+            <img src="assets\loading-4.gif" style="width:250px;height:150px;   border: 1px solid #ddd; border-radius: 4px;padding: 5px;"  alt="" *ngIf ="loading == true">
+          </div>
+          <div class="card-content white-text " *ngIf="data.data">
+            <div class="row col s10 offset-s1 ">
+              <h5>Personal Info</h5>
+              <hr><br>
+              <p class= "col s4"><strong>Name of Your Firm : </strong></p>
+              <p class= "col s8"> {{data.data.NAME_OF_FIRM}}</p>
+              <br><br><hr><br>
+              <p class= "col s4"><strong>Firm Address: </strong></p>
+              <p class= "col s8"> {{data.data.ADDRESS_OF_FIRM}}</p>
+              <br><br><hr><br>
+              <p class= "col s4"><strong>STATE : </strong> </p>
+              <p class= "col s8">{{data.data.STATE}}</p>
+              <br><br><hr><br>
+              <p class= "col s4"><strong>City : </strong></p>
+              <p class= "col s8">{{data.data.CITY}}</p>
+            </div>
+            <div class="row col s10 offset-s1 ">
+              <h5>Contact and Details</h5>
+              <hr><br>
+              <p class= "col s4"><strong>Contact Name : </strong> </p>
+              <p class= "col s8">{{data.data.CONTACT_NAME}}</p>
+              <br><br><hr><br>
+              <p class= "col s4"><strong>Contact Number : </strong></p>
+              <p class= "col s8"> {{data.data.CONTACT_NUMBER}}</p>
+              <br><br><hr><br>
+              <p class= "col s4"><strong>Contact Mail ID : </strong></p>
+              <p class= "col s8">{{data.data.CONTACT_MAIL_ID}}</p>
+              <br><br><hr><br>
+              <p class= "col s4"><strong>GST Number : </strong></p>
+              <p class= "col s8">{{data.data.GST_NUMBER}}</p>
+              <br><br><hr><br>
+              <p class= "col s4"><strong>Pan Number: </strong></p>
+              <p class= "col s8">{{data.data.PAN_NUMBER}}</p>
+            </div>
+            <div class="row col s10 offset-s1 ">
+              <h5>Owner info</h5>
+              <hr><br>
+              <p class= "col s4"><strong>Owner Name: </strong></p>
+              <p class= "col s8">{{data.data.OWNER_NAME}}</p>
+              <br><br><hr><br>
+              <p class= "col s4"><strong>Owner Number : </strong></p>
+              <p class= "col s8">{{data.data.OWNER_NUMBER}}</p>
+              <br><br><hr><br>
+              <p class= "col s4"><strong>Owner Email : </strong></p>
+              <p class= "col s8">{{data.data.OWNER_EMAIL}}</p>
+            </div>
+            <div class="row" >
+              <div class="col s6 offset-s3">
+                  <button class="btn-large btn-submit" type="submit" [routerLink]="['/update']"><i class="material-icons right">settings_backup_restore</i>Update</button>
+                  <br><hr>
+                  <button class="btn-large btn-submit" type="submit" [routerLink]="['/types']"><i class="material-icons right">pages</i>create Your New Ornament</button>
+                  <br><hr>
+                  <button class="btn-large btn-submit" type="submit" [routerLink]="['/ornamentread']"><i class="material-icons right">mood</i>Your Ornaments</button>
               </div>
-              <div class="col s3">
-                <p class= "col s6"><strong>Name of Your Firm : </strong></p>
-                <p class= "col s6"> {{data.data.NAME_OF_FIRM}}</p>
-              </div>
-              <div class="col s3">
-                <p class= "col s6"><strong>Firm Address: </strong></p>
-                <p class= "col s6"> {{data.data.ADDRESS_OF_FIRM}}</p>
-              </div>
-              <div class="col s3">
-                <p class= "col s6"><strong>STATE : </strong> </p>
-                <p class= "col s6">{{data.data.STATE}}</p>
-              </div>
-              <br><br>
-              <div class="col s3">
-                <p class= "col s6"><strong>City : </strong></p>
-                <p class= "col s6">{{data.data.CITY}}</p>
-              </div>
-              <div class="col s3">
-                <p class= "col s6"><strong>Contact Name : </strong> </p>
-                <p class= "col s6">{{data.data.CONTACT_NAME}}</p>
-              </div>
-              <div class="col s3">
-                <p class= "col s6"><strong>Contact Number : </strong></p>
-                <p class= "col s6"> {{data.data.CONTACT_NUMBER}}</p>
-              </div>
-              <br>
-              <div class="col s3">
-                <p class= "col s6"><strong>Contact Mail ID : </strong></p>
-                <p class= "col s6">{{data.data.CONTACT_MAIL_ID}}</p>
-              </div>
-              <div class="col s3">
-                <p class= "col s6"><strong>GST Number : </strong></p>
-                <p class= "col s6">{{data.data.GST_NUMBER}}</p>
-              </div>
-              <div class="col s3">
-                <p class= "col s6"><strong>Pan Number: </strong></p>
-                <p class= "col s6">{{data.data.PAN_NUMBER}}</p>
-              </div>
-              <br>
-              <div class="col s3">
-                <p class= "col s6"><strong>Owner Name: </strong></p>
-                <p class= "col s6">{{data.data.OWNER_NAME}}</p>
-              </div>
-              <div class="col s3">
-                <p class= "col s6"><strong>Owner Number : </strong></p>
-                <p class= "col s6">{{data.data.OWNER_NUMBER}}</p>
-              </div>
-              <div class="col s3">
-                <p class= "col s6"><strong>Owner Email : </strong></p>
-                <p class= "col s6">{{data.data.OWNER_EMAIL}}</p>
-              </div>
-              <br>
-              <br>
             </div>
           </div>
         </div>
     </div>
   </div>
-  <div class="header col s12">
+  <!--div class="header col s12">
     <h2>More Interactive  Options</h2>
     <ul class="link-buttons">
         <li><a class="waves-effect waves-light btn-large" [routerLink]="['/update']"><i class="material-icons right">settings_backup_restore</i>Update your Profile</a></li>
         <li><a class="waves-effect waves-light btn-large" [routerLink]="['/types']"><i class="material-icons right">pages</i>Create new ornament</a></li>
         <li><a class="waves-effect waves-light btn-large" [routerLink]="['/ornamentread']" ><i class="material-icons right">mood</i>Your Ornaments</a></li>
     </ul>
-  </div>
-
-<div class="row" >
-    <!--div class="col s8 offset-s2">
-        <button class="btn-large btn-submit" type="submit" [routerLink]="['/update']"><i class="material-icons right">settings_backup_restore</i>Update</button>
-        <br>
-        <button class="btn-large btn-submit" type="submit" [routerLink]="['/types']"><i class="material-icons right">pages</i>create Your New Ornament</button>
-        <br> 
-        <button class="btn-large btn-submit" type="submit" [routerLink]="['/ornamentread']"><i class="material-icons right">settings_backup_restore</i>Your Ornaments</button>
-    </div-->
-</div>
+  </div-->

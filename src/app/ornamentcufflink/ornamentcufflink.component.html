@@ -1,49 +1,28 @@
 <app-navbar></app-navbar>
 <hr>
 <div class="container">
-    <!--div class="row">
-      <div class="col s8 offset-s2">
-          <div class="card-panel blue-grey">
-            <h4 class="center white-text">Choose your Ornament type</h4>
-          </div>
-          <hr>
-          <button class="btn-large btn-submit" type="submit" (click)=ring()>ring</button><hr>
-          <button class="btn-large btn-submit" type="submit" (click)=earring()>earring</button><hr>
-          <button class="btn-large btn-submit" type="submit" (click)=nosepin()>nosepin</button><hr>
-          <button class="btn-large btn-submit" type="submit" (click)=bracelet()>bracelet</button><hr>
-          <button class="btn-large btn-submit" type="submit" (click)=bangles()>bangles</button><hr>
-          <button class="btn-large btn-submit" type="submit" (click)=chain()>chain</button><hr>
-          <button class="btn-large btn-submit" type="submit" (click)=chainwithpendant()>chain with pendant</button><hr>
-          <button class="btn-large btn-submit" type="submit" (click)=necklace()>necklace</button><hr>
-          <button class="btn-large btn-submit" type="submit" (click)=Mangalsutra()>Mangalsutra</button><hr>
-          <button class="btn-large btn-submit" type="submit" (click)=sets()>sets</button><hr>
-          <button class="btn-large btn-submit" type="submit" (click)=pendant()>pendant</button><hr>
-          <button class="btn-large btn-submit" type="submit" (click)=pendantwithearing()>pendant with earing</button><hr>
-          <button class="btn-large btn-submit" type="submit" (click)=cufflink()>cufflink</button><hr>
-      
-      </div>
-    </div-->
+
 </div>
 <div class="header col s12">
   <h2>Choose your Ornament type</h2>
-  <ul class="link-buttons">
-    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/Ornaringtype']"><i class="material-icons right">settings_backup_restore</i>ring</a></li>
-    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/chain']"><i class="material-icons right">settings_backup_restore</i>chain</a></li>
-    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/set']" ><i class="material-icons right">mood</i>sets</a></li>
-  </ul>
-  <ul class="link-buttons">
-    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/Bangles']"><i class="material-icons right">pages</i>bangles</a></li>
-    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/Ornaearringtype']" ><i class="material-icons right">mood</i>earring</a></li>
-    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/Pendant']"><i class="material-icons right">pages</i>Pendant</a></li>
-  </ul>
-  <ul class="link-buttons">
-    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/Necklace']"><i class="material-icons right">settings_backup_restore</i>Necklace</a></li>
-    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/cufflink']" ><i class="material-icons right">mood</i>cufflink</a></li>
-    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/Bracelet']"><i class="material-icons right">settings_backup_restore</i>bracelet</a></li>
-  </ul>
-  <ul class="link-buttons">
-    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/chainwithpendant']" ><i class="material-icons right">mood</i>chain with pendant</a></li>
-    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/mangalsutra']"><i class="material-icons right">pages</i>Mangalsutra</a></li>
-    <li><a class="waves-effect waves-light btn-large" [routerLink]="['/Pendantearringtype']" ><i class="material-icons right">mood</i>pendant with earing</a></li>
-  </ul>
+  <div class="row" >
+    <div class="input-field col s8 offset-s2 ">
+        <select class="browser-default" (change)="gemOption($event.target.value)">
+            <option value="" disabled selected>CHOOSE YOUR ORNAMENT TYPE</option>
+            <option value="1"> Ring</option>
+            <option value="2" >Nosepin</option>
+            <option value="3" >Earring</option>
+            <option value="4" >Bracelet</option>
+            <option value="5" >Bangles</option>
+            <option value="6" >chain with pendant</option>
+            <option value="7"> Necklace</option>
+            <option value="8" >Mangalsutra</option>
+            <option value="9" >Sets</option>
+            <option value="10" >Chain</option>
+            <option value="11" >Pendant</option>
+            <option value="12" >pendant with earing</option>
+            <option value="13" >Cufflink</option>
+        </select>
+    </div>
+  </div>
 </div><hr>

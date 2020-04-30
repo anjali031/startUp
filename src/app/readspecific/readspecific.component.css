@@ -71,6 +71,27 @@ button.btn-submit{
     background-color: #38547b;
     color: #fff;
     background-image: linear-gradient(135deg, #0f2542 0%, #38547b 100%);
+    width: 57%;
+    margin-left: 19%;
+    margin-right: 16%;
+    border-radius: 15px;
+}
 
-    width: 100%;
+li.view{
+    justify-content: center;
+    display: inline-block;
+    box-shadow: black;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px;
+    color: grey;
+}
+h6.view {
+    margin-top:26px;
+    color: black;
+    font: bolder;padding-left: 6px;
+}
+th{
+    color:grey;
 }
