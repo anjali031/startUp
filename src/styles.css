@@ -30,12 +30,20 @@ div.card-panel{
   .card-content {
     padding: 2px 6px;
   }
-/*
-div.card-image{
-    padding: 4px;
-    color: #fff;
+
+.card .card-image img {
+    display: block;
+    border-radius: 2px 2px 0 0;
     position: relative;
-}*/
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 431px;
+    min-height: 375px;
+    max-width: 434px;
+    max-height: 375px;
+}
 
 div.card{
     color: #fff;
